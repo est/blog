@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html  lang="en">
+  <head>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,7 +24,8 @@
       }
     </style>
 
-  <body class="list-body">
+  </head>
+  <body class="single-body">
 <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="/" class="nav-text">
     Est's Blog
@@ -39,26 +41,27 @@
 
     </ul>
   </div>
-</nav>    <main class="card-container side-gutter">
-      <header class="list-header">
-        <p class="list-header-subtext"></p>
-        <!-- <h1 class="list-header-title">Est's Blog</h1> -->
-      </header>
+</nav>    <main class="content side-text-padding">
 
-        <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-          href="hello-again.html" class="card blog-card" rel="bookmark" >
-          <article class="card-body">
-            <h2 class="card-title">hello again</h2>
-            <p class="card-text"><p>冥冥中自有天意。让我决定再开始继续挖 blog 的坑。谁知道这次又会持续到什么时候呢。</p>
-<p>其实这篇文章更新于：2019-02-04 22:09:04</p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2017-08-05T09:48:00+00:00">Sat 05 August 2017</time></p>
-<p>misc</p>            </div>
-          </article>
-        </a>
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">“俄罗斯黑客”到底怎么黑的美国民主党全国总会</h1>
+    <p class="post-date">Posted <time datetime="2016-12-31T08:44:19+00:00">Sat 31 December 2016</time></p>
+  </header>
+
+  
+  <h2>“俄罗斯黑客”到底怎么黑的美国民主党全国总会</h2>
+<p>从<a href="https://news.ycombinator.com/item?id=13279600">这里</a> 看到的</p>
+<p>这个 pdf 和之前美国贸代办做的差远了。技术仔的审美观就是比销售查一截啊。</p>
+<p>py2exe + wmi  == rootkit?</p>
+
+</article>
+
+
     </main>
-
 <script src="theme/js/core.js"></script>
 
   </body>
+
 </html>

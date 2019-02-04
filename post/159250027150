@@ -42,10 +42,27 @@
     </ul>
   </div>
 </nav>    <main class="content side-text-padding">
-    <h1>Authors on Est's Blog</h1>
 
-    <ul>        <li><a href="/author/est.html">est</a> (8)</li>
-    </ul>
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">unbounded nondeterminism</h1>
+    <p class="post-date">Posted <time datetime="2017-04-05T22:40:58+00:00">Wed 05 April 2017</time></p>
+  </header>
+
+  
+  <p><a href="http://est.tumblr.com/post/159222269578/unbounded-nondeterminism" class="tumblr_blog">est</a>:</p>
+
+<blockquote>
+<p>图灵机原来不能实现 arbiter</p>
+
+<p><a href="https://youtu.be/7erJ1DV_Tlo?t=1570">https://youtu.be/7erJ1DV_Tlo?t=1570</a></p>
+
+<p>一个arbiter就两个并发输入，需要在两个输出中任意返回一个，但是不能同时返回</p>
+</blockquote>
+
+</article>
+
 
     </main>
 <script src="theme/js/core.js"></script>
