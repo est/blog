@@ -41,6 +41,30 @@
         <!-- new article -->
         <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
           <article class="card-body">
+            <a href="post/41430119724"  rel="bookmark" >
+              <h2 class="card-title">modify or update values django.utils.datastructures.MergeDict</h2>
+            </a>
+            <p class="card-text"><p>suppose you have a django form</p>
+<div class="highlight"><pre><span></span>f = django.forms.Form()
+f.is_valid()
+f.data[&#39;field&#39;] = &#39;new value&#39; # won&#39;t work
+f.cleaned_data[&#39;key&#39;] = &#39;value&#39; # won&#39;t work
+</pre></div>
+
+
+<p>the output of <code>f.as_p()</code> is still the old value because the <code>f.data</code> is a MergeDict.</p>
+<p>The way to modify it:</p>
+<div class="highlight"><pre><span></span>d …</pre></div></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-01-25T03:55:00+00:00">2013-01-25</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
             <a href="post/41181091688"  rel="bookmark" >
               <h2 class="card-title">Google Dict API</h2>
             </a>
@@ -469,40 +493,6 @@ cat &amp;lt;&amp;amp;3
 <div class="highlight"><pre><span></span>$ <span class="k">for</span> p in <span class="o">{</span><span class="m">1</span>..1023<span class="o">}</span><span class="p">;</span> <span class="k">do</span><span class="o">(</span><span class="nb">echo</span> <span class="p">&amp;</span>gt<span class="p">;</span>/dev/tcp/localhost/<span class="nv">$p</span><span class="o">)</span> <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null <span class="m">2</span><span class="p">&amp;</span>gt<span class="p">;&amp;</span>amp<span class="p">;</span><span class="m">1</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="nb">echo …</span></pre></div></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2012-12-06T21:38:00+00:00">2012-12-06</time></p>
-<p>text</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
-          <article class="card-body">
-            <a href="post/37177478685"  rel="bookmark" >
-              <h2 class="card-title">github多账户马甲之间ssh key切换</h2>
-            </a>
-            <p class="card-text"><p>场景：有多个github账号，比如公司一个，私人一个。现在想在同一台主机上同时维护公司的和私人的repo</p>
-<p>大家可能会尝试把一个公钥贴到两个github账户，实践告诉我们</p>
-<blockquote>
-<p>Key is already in use</p>
-</blockquote>
-<p>解决办法：</p>
-<ol>
-<li>生成第二个key <code>ssh-keygen -t rsa  -f ~/.ssh/id_rsa.est</code></li>
-<li>
-<p>编辑ssh_config <code>vim ~/.ssh/config</code> 粘贴下边的东东： </p>
-<div class="highlight"><pre><span></span>Host estgit
-HostName github.com
-User git
-IdentityFile &quot;~/.ssh/id_rsa.est&quot;
-IdentitiesOnly yes
-</pre></div>
-
-
-</li>
-<li>
-<p>用这个方式来操作git：<code>git clone estgit:/username/repo</code> ，或者编辑 <code>.git/config</code> 里边的 remote …</p></li></ol></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2012-12-04T03:17:00+00:00">2012-12-04</time></p>
 <p>text</p>            </div>
           </article>
         </div>
