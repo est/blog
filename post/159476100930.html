@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>RESTful is bad and you should feel bad</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html  lang="en">
+  <head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li><a href="/category/archive.html">text</a></li>
-                    <li class="active"><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/post/159476100930" rel="bookmark"
-           title="Permalink to RESTful is bad and you should feel bad">RESTful is bad and you should feel bad</a></h1>
-    </header>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-04-11T23:10:11+00:00">
-                Published: 2017-04-11
-        </abbr>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/est.html">est</a>
-        </address>
-<p>In <a href="/category/stderr.html">stderr</a>.</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
 
-</footer><!-- /.post-info -->      <p>From <a href="https://www.v2ex.com/t/354273">this</a> thread</p>
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">RESTful is bad and you should feel bad</h1>
+    <p class="post-date">Posted <time datetime="2017-04-11T23:10:11+00:00">2017-04-11</time></p>
+  </header>
+
+  
+  <p>From <a href="https://www.v2ex.com/t/354273">this</a> thread</p>
 <p>What's wrong with</p>
 <div class="highlight"><pre><span></span>GET     /users/                -----&amp;gt;  `list.users` 
 GET     /users/:id/            -----&amp;gt;  `retrieve.users`
@@ -58,37 +75,13 @@ DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
 <p>It's clean, it's concise, it works everywhere.</p>
 <p>Fuck those obnoxious <code>OPTIONS</code> and <code>PATCH</code>.</p>
 <p>BTW who the fuck invents a <code>users.replaec()</code> functions?</p>
-    </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </main>
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+  </body>
 
-</body>
 </html>

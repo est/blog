@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>DIY OAuth 2 library：从97KB到22行Python</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html  lang="en">
+  <head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/archive.html">text</a></li>
-                    <li><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/post/26823744858" rel="bookmark"
-           title="Permalink to DIY OAuth 2 library：从97KB到22行Python">DIY OAuth 2 library：从97KB到22行Python</a></h1>
-    </header>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-07-09T05:23:00+00:00">
-                Published: 2012-07-09
-        </abbr>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=oauth">OAuth</a> <a href="/?tag=google">Google</a> <a href="/?tag=api">API</a> <a href="/?tag=crypto">crypto</a> <a href="/?tag=python">python</a> </p>
-</footer><!-- /.post-info -->      <p>最近的项目需要用代码去读取一些Google Spreadsheet的数据，看了下Google官方的Spreadsheet API，读取数据这些好说，就是xml格式我比较讨厌。于是想用<code>alt=json</code>这个<a href="https://developers.google.com/gdata/docs/json">json输出API</a>，试用发现，对于ClientLogin（浏览器cookie）直接调用Spreadsheet API的Google Apps用户而言，这个json输出是400不可用的。于是只能撸一个OAuth读取数据试试了。</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">DIY OAuth 2 library：从97KB到22行Python</h1>
+    <p class="post-date">Posted <time datetime="2012-07-09T05:23:00+00:00">2012-07-09</time></p>
+  </header>
+
+  
+  <p>最近的项目需要用代码去读取一些Google Spreadsheet的数据，看了下Google官方的Spreadsheet API，读取数据这些好说，就是xml格式我比较讨厌。于是想用<code>alt=json</code>这个<a href="https://developers.google.com/gdata/docs/json">json输出API</a>，试用发现，对于ClientLogin（浏览器cookie）直接调用Spreadsheet API的Google Apps用户而言，这个json输出是400不可用的。于是只能撸一个OAuth读取数据试试了。</p>
 <p>看了下官方的<a href="http://code.google.com/p/gdata-python-client/">Google Data APIs Python Client Library</a>，我勒个擦啊，一大坨垃圾依赖，比如<code>OpenSSL.crypto</code>，<a href="http://code.google.com/p/httplib2/source/browse/python2/httplib2/__init__.py">httplib2</a>等。</p>
 <p>仔细看了下Google <a href="https://developers.google.com/accounts/docs/OAuth2ServiceAccount">OAuth 2.0</a>的文档，似乎也不复杂的样子，至少比<a href="http://initiative.yo2.cn/archives/633801">OAuth 1.0 那种3 legged login</a> 简单多了。于是就自己DIY了一个</p>
 <p>OAuth 2.0把流程分为了几个scenario，比如用于Web交互，客户端app，设备，等等。我需要的只是服务器读取某个Google Spreadsheet的一些数据，无须用户点击几个“确认”，所以属于Service Account</p>
@@ -101,37 +118,13 @@
 <p>其中<code>1/XXXXX</code> 就是OAuth 2.0得到的access_token。</p>
 <p>对比一下，上面提到的Google官方的OAuth 2 library是97KB大小，自己DIY的算上注释都才只有22行。。。</p>
 <p>Google客户端的代码是用了<code>import OpenSSL</code>来直接实现RSA SHA256签名，我直接先后启动两个openssl命令行实现的。好处是不用麻烦的编译pyopenssl这个库依赖了。服务器部署方便。</p>
-    </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </main>
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+  </body>
 
-</body>
 </html>

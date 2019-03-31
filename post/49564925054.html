@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>PonyORM - python的新一代黑魔法级别ORM</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html  lang="en">
+  <head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/archive.html">text</a></li>
-                    <li><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/post/49564925054" rel="bookmark"
-           title="Permalink to PonyORM - python的新一代黑魔法级别ORM">PonyORM - python的新一代黑魔法级别ORM</a></h1>
-    </header>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2013-05-03T23:33:00+00:00">
-                Published: 2013-05-03
-        </abbr>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=python">python</a> <a href="/?tag=orm">orm</a> <a href="/?tag=black-magic">black-magic</a> </p>
-</footer><!-- /.post-info -->      <p>简单的例子，来自<a href="http://ponyorm.com/">官网</a></p>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">PonyORM - python的新一代黑魔法级别ORM</h1>
+    <p class="post-date">Posted <time datetime="2013-05-03T23:33:00+00:00">2013-05-03</time></p>
+  </header>
+
+  
+  <p>简单的例子，来自<a href="http://ponyorm.com/">官网</a></p>
 <p>python的查询代码：</p>
 <div class="highlight"><pre><span></span>select(c for c in Customer
      if sum(c.orders.price) &amp;gt; 1000)
@@ -77,37 +94,13 @@ HAVING coalesce(SUM(&quot;order-1&quot;.&quot;total_price&quot;), 0) &amp;gt; 10
 
 <p>很可惜它是基于字符串的翻译，而不是原生python表达式。</p>
 <p>其他<a href="http://www.newsmth.net/bbstcon.php?board=Python&amp;gid=103169">讨论</a></p>
-    </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </main>
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+  </body>
 
-</body>
 </html>

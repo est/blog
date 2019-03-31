@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Google Spreadsheet API pitfalls</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html  lang="en">
+  <head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/archive.html">text</a></li>
-                    <li><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/post/47007003400" rel="bookmark"
-           title="Permalink to Google Spreadsheet API pitfalls">Google Spreadsheet API pitfalls</a></h1>
-    </header>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2013-04-03T02:41:00+00:00">
-                Published: 2013-04-03
-        </abbr>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=google">google</a> <a href="/?tag=pitfall">pitfall</a> <a href="/?tag=api">api</a> </p>
-</footer><!-- /.post-info -->      <ol>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Google Spreadsheet API pitfalls</h1>
+    <p class="post-date">Posted <time datetime="2013-04-03T02:41:00+00:00">2013-04-03</time></p>
+  </header>
+
+  
+  <ol>
 <li>
 <p>Don't use OAuth 2 for "Google Apps for Business", coz admin may set share option to "limit to xxx domain only", thus your poor nigga API account like "30000000000@developer.gserviceaccount.com" won't work.</p>
 </li>
@@ -57,37 +74,13 @@
 <p>The list feed contains all rows after the first row up to the first blank row. I mean, srsly WTF?</p>
 </li>
 </ol>
-    </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </main>
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+  </body>
 
-</body>
 </html>

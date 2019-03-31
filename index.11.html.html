@@ -1,67 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Est's Blog</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li><a href="/category/archive.html">text</a></li>
-                    <li><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-                <section id="content" class="body">
-                    <ol id="posts-list" class="hfeed" start="19">
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/33289020579" rel="bookmark"
-                           title="Permalink to get current 3fm song in python">get current 3fm song in python</a></h1>
-                </header>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-10-10T03:49:00+00:00">
-                Published: 2012-10-10
-        </abbr>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=python">python</a> <a href="/?tag=radio">radio</a> </p>
-</footer><!-- /.post-info -->                <p><code>&gt;&gt;&gt; import pprint, datetime, json, urllib2</code> <br>
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  <body class="list-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="card-container side-gutter">
+      <header class="list-header">
+        <p class="list-header-subtext"></p>
+        <!-- <h1 class="list-header-title">Est's Blog</h1> -->
+      </header>
+
+
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/33289020579"  rel="bookmark" >
+              <h2 class="card-title">get current 3fm song in python</h2>
+            </a>
+            <p class="card-text"><p><code>&gt;&gt;&gt; import pprint, datetime, json, urllib2</code> <br>
 <code>&gt;&gt;&gt; p=lambda:json.loads(urllib2.urlopen('http://radioplayer.omroep.nl/helper/now-on-air.json?ac=%s&amp;channel_id=3' % datetime.datetime.now().strftime('%Y%m%d%H%M')).read())</code> <br>
 <code>&gt;&gt;&gt; pprint.pprint(p()['current_song'])</code></p>
 <p>or parsing this HTML</p>
-<p>http://radioplayer.omroep.nl/helper/playlist.html?ac=201210101540&amp;channel_id …</p>
-                <a class="readmore" href="/post/33289020579">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>http://radioplayer.omroep.nl/helper/playlist.html?ac=201210101540&amp;channel_id …</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-10-10T03:49:00+00:00">2012-10-10</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/33224029027" rel="bookmark"
-                           title="Permalink to ping uwsgi">ping uwsgi</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-10-09T05:33:00+00:00">
-                Published: 2012-10-09
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=uwsgi">uwsgi</a> <a href="/?tag=python">python</a> </p>
-</footer><!-- /.post-info -->                <p>Here's a handy python script do the job of <code>uwsgi --ping &lt;address&gt;</code></p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/33224029027"  rel="bookmark" >
+              <h2 class="card-title">ping uwsgi</h2>
+            </a>
+            <p class="card-text"><p>Here's a handy python script do the job of <code>uwsgi --ping &lt;address&gt;</code></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -97,57 +106,41 @@
 33
 34
 35
-36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin …</span></pre></div></td></tr></table>
-                <a class="readmore" href="/post/33224029027">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin …</span></pre></div></td></tr></table></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-10-09T05:33:00+00:00">2012-10-09</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/33201338908" rel="bookmark"
-                           title="Permalink to 这小夜灯，德味啊">这小夜灯，德味啊</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-10-08T21:05:00+00:00">
-                Published: 2012-10-08
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=gadgets">gadgets</a> </p>
-</footer><!-- /.post-info -->                <p><img alt="" src="http://i.imgur.com/MasvHl.jpg"></p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/33201338908"  rel="bookmark" >
+              <h2 class="card-title">这小夜灯，德味啊</h2>
+            </a>
+            <p class="card-text"><p><img alt="" src="http://i.imgur.com/MasvHl.jpg"></p>
 <p><a href="http://www.etsy.com/listing/96964388/green-led-faucet-valve-night-light">etsy上边</a>有卖</p>
 <p>还有这个</p>
 <iframe width="640" height="360" src="http://www.youtube.com/embed/YyZ7tOPbrOo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 
 <p>感觉有点像jet engine。。</p>
-<p>voa <a href="http://www.reddit.com/r/pics/comments/114ye1/this_is_the_coolest_nightlamp_ive_ever_seen/">1</a>, <a href="http://www.reddit.com/r/shutupandtakemymoney/comments/115gsp/sweetest_nightlight_ever_xpost_from_rpics_pic_only/">2</a></p>
-                <a class="readmore" href="/post/33201338908">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>voa <a href="http://www.reddit.com/r/pics/comments/114ye1/this_is_the_coolest_nightlamp_ive_ever_seen/">1</a>, <a href="http://www.reddit.com/r/shutupandtakemymoney/comments/115gsp/sweetest_nightlight_ever_xpost_from_rpics_pic_only/">2</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-10-08T21:05:00+00:00">2012-10-08</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/33020945266" rel="bookmark"
-                           title="Permalink to （我的）信息危机">（我的）信息危机</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-10-06T14:31:00+00:00">
-                Published: 2012-10-06
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=random">random</a> <a href="/?tag=thoughts">thoughts</a> </p>
-</footer><!-- /.post-info -->                <p>难得夜深人静反思一下。我个人每天12个小时在网上闲逛，自个觉得我现在有几个值得警惕的危险趋势：</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/33020945266"  rel="bookmark" >
+              <h2 class="card-title">（我的）信息危机</h2>
+            </a>
+            <p class="card-text"><p>难得夜深人静反思一下。我个人每天12个小时在网上闲逛，自个觉得我现在有几个值得警惕的危险趋势：</p>
 <ol>
 <li>
 <p>输入越来越多，输出越来越少。创作能力退化。 <br>
@@ -157,54 +150,38 @@
 这个问题的各种衍生也深深影响了互联网。我觉得可以叫做consumerism。君不见各大博客、BBS、微博上，除了喷子就是小白。很少有人积极去invent有意义和价值东西了。</p>
 </li>
 <li>
-<p>过多信息时效化。（我承认我现在患“<strong>语体教</strong>”病了，我很难找到一个词语来形容这个东西）具体的描述就是，人们更加关心失效性很快的东西，更加耸人听闻的东西，和心理落差更大的东西，而偏向忽略那些永恒的东西。比如关心某软件、ROM、OS的新特性，而不去关心整个业界的完备推进程度。就举一个简单例子。Steve …</p></li></ol>
-                <a class="readmore" href="/post/33020945266">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>过多信息时效化。（我承认我现在患“<strong>语体教</strong>”病了，我很难找到一个词语来形容这个东西）具体的描述就是，人们更加关心失效性很快的东西，更加耸人听闻的东西，和心理落差更大的东西，而偏向忽略那些永恒的东西。比如关心某软件、ROM、OS的新特性，而不去关心整个业界的完备推进程度。就举一个简单例子。Steve …</p></li></ol></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-10-06T14:31:00+00:00">2012-10-06</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/32187066617" rel="bookmark"
-                           title="Permalink to 水果教向物理开炮了">水果教向物理开炮了</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-24T03:03:46+00:00">
-                Published: 2012-09-24
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=apple">apple</a> <a href="/?tag=iphone">iphone</a> <a href="/?tag=physics">physics</a> </p>
-</footer><!-- /.post-info -->                <iframe width="640" height="360" src="http://www.youtube.com/embed/V4IRsCjMqdI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/32187066617"  rel="bookmark" >
+              <h2 class="card-title">水果教向物理开炮了</h2>
+            </a>
+            <p class="card-text"><iframe width="640" height="360" src="http://www.youtube.com/embed/V4IRsCjMqdI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 
 <p>这广告做得，尼玛跟脑白金差不多了。</p>
-<p><a href="http://www.reddit.com/r/Physics/comments/10dbbt/the_iphone_5_commercial_this_is_insulting_right/">via</a></p>
-                <a class="readmore" href="/post/32187066617">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p><a href="http://www.reddit.com/r/Physics/comments/10dbbt/the_iphone_5_commercial_this_is_insulting_right/">via</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-24T03:03:46+00:00">2012-09-24</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31780723732" rel="bookmark"
-                           title="Permalink to Google的天顶星技术——Google Spanner">Google的天顶星技术——Google Spanner</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-18T00:38:14+00:00">
-                Published: 2012-09-18
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=google">google</a> <a href="/?tag=db">db</a> <a href="/?tag=tech">tech</a> </p>
-</footer><!-- /.post-info -->                <p>上次看到 <a href="http://www.csdn.net/article/2012-08-20/2808870">Google后Hadoop时代的新“三驾马车”——Caffeine、Pregel、Dremel</a></p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31780723732"  rel="bookmark" >
+              <h2 class="card-title">Google的天顶星技术——Google Spanner</h2>
+            </a>
+            <p class="card-text"><p>上次看到 <a href="http://www.csdn.net/article/2012-08-20/2808870">Google后Hadoop时代的新“三驾马车”——Caffeine、Pregel、Dremel</a></p>
 <p>感觉碉堡了。</p>
 <p>Pregel是一个graph db。这是逆NoSQL运动行之的潮流——NoSQL倡导没有<code>join</code>，而graph db则是——所有数据都可以默认join起来。</p>
 <p>Dremel 是一个query interface。</p>
@@ -212,29 +189,21 @@
 <p>什么是Google Spanner？Spanner是一个行星级别的db系统——通过GPS、原子钟实现全球数据中心timestamp同步的MVCC。</p>
 <p>和BigTable相比，BigTable的cell是mutable，Spanner是Datomic，类似函数式变成里的常量；Spanner还提供了BigTable不具备的——分布式transaction支持。比如lock-free read transaction</p>
 <p>隐隐的感觉Google的天顶星科技碉堡了。paper都非常值得一读。。。虽然不明，但觉历。</p>
-<p><a href="http://news.ycombinator.com/item?id=4526710">via</a></p>
-                <a class="readmore" href="/post/31780723732">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p><a href="http://news.ycombinator.com/item?id=4526710">via</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-18T00:38:14+00:00">2012-09-18</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31769215479" rel="bookmark"
-                           title="Permalink to Python良民证算法rev 2">Python良民证算法rev 2</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-17T21:38:00+00:00">
-                Published: 2012-09-17
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=python">python</a> </p>
-</footer><!-- /.post-info -->                <p>以前发过一个<a href="http://initiative.yo2.cn/archives/635924">良民证算法</a></p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31769215479"  rel="bookmark" >
+              <h2 class="card-title">Python良民证算法rev 2</h2>
+            </a>
+            <p class="card-text"><p>以前发过一个<a href="http://initiative.yo2.cn/archives/635924">良民证算法</a></p>
 <p>现在发现了一个碉堡的新办法：</p>
 <div class="highlight"><pre><span></span>get_id = lambda s: s + &#39;1X864209753&#39;[int(s, 13) % 11]
 </pre></div>
@@ -247,87 +216,63 @@
 
 <span class="n">get_id</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span> <span class="o">+</span> <span class="s1">&#39;1X864209753&#39;</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span><span class="p">]</span>
 <span class="err">【</span> <span class="err">在</span> <span class="n">zxn0</span> <span class="p">(</span><span class="n">est</span><span class="p">)</span> <span class="err">的大作中提到</span><span class="p">:</span> <span class="err">】</span>
-<span class="p">:</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">get_id …</span></pre></div>
-                <a class="readmore" href="/post/31769215479">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<span class="p">:</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">get_id …</span></pre></div></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-17T21:38:00+00:00">2012-09-17</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31766533896" rel="bookmark"
-                           title="Permalink to 人类花几个月工资买几克拉的碳晶体弱爆了">人类花几个月工资买几克拉的碳晶体弱爆了</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-17T21:04:00+00:00">
-                Published: 2012-09-17
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=metal">metal</a> <a href="/?tag=jewelry">jewelry</a> </p>
-</footer><!-- /.post-info -->                <p>钻石其实是宇宙中——最常见的晶体之一。。。本来应该非常便宜，但是价格是人为捧高的。</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31766533896"  rel="bookmark" >
+              <h2 class="card-title">人类花几个月工资买几克拉的碳晶体弱爆了</h2>
+            </a>
+            <p class="card-text"><p>钻石其实是宇宙中——最常见的晶体之一。。。本来应该非常便宜，但是价格是人为捧高的。</p>
 <p>毛子在70年代发现了一个陨石坑。。。。。。。。。。大概有<a href="http://www.csmonitor.com/World/Global-News/2012/0917/Russia-reveals-shiny-state-secret-It-s-awash-in-diamonds">几万亿克拉的钻石</a>。。。</p>
 <p>世界上：</p>
 <p>最稀有的宝石top 10: <br>
 Jeremejevite, Black Opal, Red Beryl Emerald, Musgravite, Grandidierite, Painite, Blue Garnet, Serendibite, Red Diamonds, Jadeite</p>
 <p>最贵重的金属top 10:<br>
 Indium, Silver, Rhenium, Palladium, Osmium, Iridium, Ruthenium, Gold, Platinum, Rhodium</p>
-<p>Rhodium就是铑，Two.And.A.Half.Men.S09E10里边Walden的那颗价值不菲的铂铑戒指。。。但是这货2007年价格崩了，从$10,000/oz垮到$1 …</p>
-                <a class="readmore" href="/post/31766533896">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>Rhodium就是铑，Two.And.A.Half.Men.S09E10里边Walden的那颗价值不菲的铂铑戒指。。。但是这货2007年价格崩了，从$10,000/oz垮到$1 …</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-17T21:04:00+00:00">2012-09-17</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31703069009" rel="bookmark"
-                           title="Permalink to iPhone 5/HTC One X/Galaxy S III 性能跑分之geekbench">iPhone 5/HTC One X/Galaxy S III 性能跑分之geekbench</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-16T21:45:00+00:00">
-                Published: 2012-09-16
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=iphone">iphone</a> <a href="/?tag=benchmark">benchmark</a> </p>
-</footer><!-- /.post-info -->                <p>iPhone 5 1601分<br>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31703069009"  rel="bookmark" >
+              <h2 class="card-title">iPhone 5/HTC One X/Galaxy S III 性能跑分之geekbench</h2>
+            </a>
+            <p class="card-text"><p>iPhone 5 1601分<br>
 <a href="http://browser.primatelabs.com/geekbench2/1030202">http://browser.primatelabs.com/geekbench2/1030202</a></p>
 <p>HTC One X 1697分<br>
 <a href="http://browser.primatelabs.com/geekbench2/989732">http://browser.primatelabs.com/geekbench2/989732</a></p>
 <p>Galaxy S III 1781分<br>
 <a href="http://browser.primatelabs.com/geekbench2/1026099">http://browser.primatelabs.com/geekbench2/1026099</a></p>
 <p>值得注意的是，iPhone 5的内存和stream IO性能屌爆了。Android被爆出翔了。</p>
-<p><a href="http://news.ycombinator.com/item?id=4530188">via</a></p>
-                <a class="readmore" href="/post/31703069009">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p><a href="http://news.ycombinator.com/item?id=4530188">via</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-16T21:45:00+00:00">2012-09-16</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31448527901" rel="bookmark"
-                           title="Permalink to CBSi's bitch">CBSi's bitch</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-13T01:09:55+00:00">
-                Published: 2012-09-13
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=company">company</a> </p>
-</footer><!-- /.post-info -->                <p>统计了一下属于<a href="http://www.cnet.com.cn/">CBS Interactive</a>旗下的网站</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31448527901"  rel="bookmark" >
+              <h2 class="card-title">CBSi's bitch</h2>
+            </a>
+            <p class="card-text"><p>统计了一下属于<a href="http://www.cnet.com.cn/">CBS Interactive</a>旗下的网站</p>
 <div class="highlight"><pre><span></span>bnet.com.cn           BNET 商业英才网
 cnetnews.com.cn       CNET 科技资讯网
 cheshi.com            网上车市
@@ -340,55 +285,39 @@ kdslife.com           KDS 宽带山
 kimiss.com            闺蜜网
 onlylady.com          OnlyLady 女人志
 pchome.net            电脑之家
-xcar.com.cn           爱卡汽车 …</pre></div>
-                <a class="readmore" href="/post/31448527901">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+xcar.com.cn           爱卡汽车 …</pre></div></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-13T01:09:55+00:00">2012-09-13</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31261368529" rel="bookmark"
-                           title="Permalink to 少女网上发微博被熊猫查水表">少女网上发微博被熊猫查水表</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-10T04:05:30+00:00">
-                Published: 2012-09-10
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=joke">joke</a> <a href="/?tag=funny">funny</a> <a href="/?tag=twitter">twitter</a> </p>
-</footer><!-- /.post-info -->                <p>开门！顺丰快递来查水表来了！</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31261368529"  rel="bookmark" >
+              <h2 class="card-title">少女网上发微博被熊猫查水表</h2>
+            </a>
+            <p class="card-text"><p>开门！顺丰快递来查水表来了！</p>
 <p><img alt="" src="http://i.imgur.com/OPNM9.jpg"></p>
 <p>新闻报道：</p>
 <p><a href="http://www.wtsp.com/politics/article/272378/36/Secret-Service-investigates-teens-tweet-about-Obama">http://www.wtsp.com/politics/article/272378/36/Secret-Service-investigates-teens-tweet-about-Obama</a></p>
-<p><a href="http://www.reddit.com/r/funny/comments/zmoh6/be_careful_what_you_tweet/">via</a></p>
-                <a class="readmore" href="/post/31261368529">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p><a href="http://www.reddit.com/r/funny/comments/zmoh6/be_careful_what_you_tweet/">via</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-10T04:05:30+00:00">2012-09-10</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31247318597" rel="bookmark"
-                           title="Permalink to 成都的交通是不是碉堡了？">成都的交通是不是碉堡了？</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-09T22:24:00+00:00">
-                Published: 2012-09-09
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=chengdu">chengdu</a> <a href="/?tag=traffic">traffic</a> </p>
-</footer><!-- /.post-info -->                <p>见过堵车的没见过这么堵车的</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31247318597"  rel="bookmark" >
+              <h2 class="card-title">成都的交通是不是碉堡了？</h2>
+            </a>
+            <p class="card-text"><p>见过堵车的没见过这么堵车的</p>
 <p><img alt="" src="http://ww4.sinaimg.cn/large/68567898jw1dwr5zfzek4j.jpg"></p>
 <p><img alt="" src="http://ww2.sinaimg.cn/large/69b8b43cjw1dwr5hmz9mhj.jpg"></p>
 <p><img alt="" src="http://ww1.sinaimg.cn/large/722fa4b4jw1dwr4zob7f7j.jpg"></p>
@@ -398,54 +327,38 @@ xcar.com.cn           爱卡汽车 …</pre></div>
 <p><img alt="" src="http://ww4.sinaimg.cn/large/81e0aee5gw1dwr7x75pcbj.jpg"></p>
 <p>然后11路也可以堵车</p>
 <p><img alt="" src="http://ww4.sinaimg.cn/bmiddle/afc91138tw1dwr5o9obndj.jpg"></p>
-<p><img alt="" src="http://ww4.sinaimg.cn/large/6e9c0579jw1dwr5m0adohj.jpg"></p>
-                <a class="readmore" href="/post/31247318597">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p><img alt="" src="http://ww4.sinaimg.cn/large/6e9c0579jw1dwr5m0adohj.jpg"></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-09T22:24:00+00:00">2012-09-09</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/31046389782" rel="bookmark"
-                           title="Permalink to 成都美领馆 PM2.5数据">成都美领馆 PM2.5数据</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-07T02:44:00+00:00">
-                Published: 2012-09-07
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=air">air</a> <a href="/?tag=twitter">twitter</a> <a href="/?tag=weather">weather</a> </p>
-</footer><!-- /.post-info -->                <p>成都 <a href="https://twitter.com/CGChengduAir">https://twitter.com/CGChengduAir</a></p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/31046389782"  rel="bookmark" >
+              <h2 class="card-title">成都美领馆 PM2.5数据</h2>
+            </a>
+            <p class="card-text"><p>成都 <a href="https://twitter.com/CGChengduAir">https://twitter.com/CGChengduAir</a></p>
 <p>魔都 <a href="https://twitter.com/CGShanghaiAir">https://twitter.com/CGShanghaiAir</a></p>
 <p>妖都 <a href="https://twitter.com/Guangzhou_Air">https://twitter.com/Guangzhou_Air</a></p>
-<p>帝都 <a href="https://twitter.com/BeijingAir">https://twitter.com/BeijingAir</a></p>
-                <a class="readmore" href="/post/31046389782">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>帝都 <a href="https://twitter.com/BeijingAir">https://twitter.com/BeijingAir</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-07T02:44:00+00:00">2012-09-07</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/30977835168" rel="bookmark"
-                           title="Permalink to 一些感受">一些感受</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-05T23:40:00+00:00">
-                Published: 2012-09-05
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=projects">projects</a> </p>
-</footer><!-- /.post-info -->                <p>最近一些项目感受：</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/30977835168"  rel="bookmark" >
+              <h2 class="card-title">一些感受</h2>
+            </a>
+            <p class="card-text"><p>最近一些项目感受：</p>
 <p>关于主管：</p>
 <ol>
 <li>拿个解决方案来寻找问题。Finding a nail with a hammer?</li>
@@ -455,51 +368,35 @@ xcar.com.cn           爱卡汽车 …</pre></div>
 <p>关于动机：</p>
 <p>最可悲的动机，不是你的目标和项目目标相反，而是你的目标和项目目标正交。。。。</p>
 <p>关于bug：</p>
-<p>出了问题怎么办？再多hire一个人，再多增加一个用于fix bug的项目！把一个bug变成两个，就可以把当前的bug推脱成别的bug了。当前的bug就解决了。</p>
-                <a class="readmore" href="/post/30977835168">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>出了问题怎么办？再多hire一个人，再多增加一个用于fix bug的项目！把一个bug变成两个，就可以把当前的bug推脱成别的bug了。当前的bug就解决了。</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-05T23:40:00+00:00">2012-09-05</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/30966653688" rel="bookmark"
-                           title="Permalink to r/gifsound">r/gifsound</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-09-05T20:55:17+00:00">
-                Published: 2012-09-05
-        </abbr>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/30966653688"  rel="bookmark" >
+              <h2 class="card-title">r/gifsound</h2>
+            </a>
+            <p class="card-text"><iframe width="640" height="360" src="http://www.youtube.com/embed/KR0EHW6IpSw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-09-05T20:55:17+00:00">2012-09-05</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=funny">funny</a> <a href="/?tag=gif">gif</a> </p>
-</footer><!-- /.post-info -->                <iframe width="640" height="360" src="http://www.youtube.com/embed/KR0EHW6IpSw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-                <a class="readmore" href="/post/30966653688">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/30566340794" rel="bookmark"
-                           title="Permalink to 为神马android NFC不能模拟RFID Tag">为神马android NFC不能模拟RFID Tag</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-08-30T23:35:00+00:00">
-                Published: 2012-08-30
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=rfid">rfid.</a> <a href="/?tag=nfc">nfc</a> <a href="/?tag=tag">tag</a> <a href="/?tag=android">android</a> </p>
-</footer><!-- /.post-info -->                <p>今天研究了一下这个玩意。先说结论：</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/30566340794"  rel="bookmark" >
+              <h2 class="card-title">为神马android NFC不能模拟RFID Tag</h2>
+            </a>
+            <p class="card-text"><p>今天研究了一下这个玩意。先说结论：</p>
 <ol>
 <li>Android手机的NFC芯片本质只是一个tag reader/writer，要把自身模拟成tag，需要在驱动里把自己改造成可以控制的Secure Element</li>
 <li>Galaxy Nexus的2.3 ROM可以用<code>com.pocketluxus.nfclassic</code> 这个 nfca.apk模拟。有人成功过</li>
@@ -511,29 +408,21 @@ xcar.com.cn           爱卡汽车 …</pre></div>
 <p>国内的一些说法是，rfid卡加密了，没法模拟。其实这是错误的。</p>
 <p>我在XDA翻了下一些理论，大概是这样的：</p>
 <p>RFID/ID卡分两种，一种是只读的，一种是可写的。</p>
-<p>比如门禁卡 …</p>
-                <a class="readmore" href="/post/30566340794">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>比如门禁卡 …</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-08-30T23:35:00+00:00">2012-08-30</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/30512755425" rel="bookmark"
-                           title="Permalink to on github wiki">on github wiki</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-08-30T05:44:48+00:00">
-                Published: 2012-08-30
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=github">github</a> <a href="/?tag=git">git</a> <a href="/?tag=wiki">wiki</a> </p>
-</footer><!-- /.post-info -->                <p>对github wiki的一些感受</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/30512755425"  rel="bookmark" >
+              <h2 class="card-title">on github wiki</h2>
+            </a>
+            <p class="card-text"><p>对github wiki的一些感受</p>
 <ul>
 <li>
 <p>wiki和source code是分开的repo。其实像google code那样内嵌的多好。</p>
@@ -551,29 +440,21 @@ xcar.com.cn           爱卡汽车 …</pre></div>
 <p>wiki pages显示不支持用户格式，比如txt之类的。</p>
 </li>
 </ul>
-<p>恩。总之没有完美的东西。但是别人hosting的东西就是不如自己可以折腾的爽。</p>
-                <a class="readmore" href="/post/30512755425">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>恩。总之没有完美的东西。但是别人hosting的东西就是不如自己可以折腾的爽。</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-08-30T05:44:48+00:00">2012-08-30</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/30489923712" rel="bookmark"
-                           title="Permalink to POTUS竞选者的捐款贡献来源top 5">POTUS竞选者的捐款贡献来源top 5</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-08-29T21:07:00+00:00">
-                Published: 2012-08-29
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=politics">politics</a> <a href="/?tag=reddit">reddit</a> </p>
-</footer><!-- /.post-info -->                <p>Barack Obama  </p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/30489923712"  rel="bookmark" >
+              <h2 class="card-title">POTUS竞选者的捐款贡献来源top 5</h2>
+            </a>
+            <p class="card-text"><p>Barack Obama  </p>
 <p>University of California      $491,868<br>
 Microsoft Corp  $443,748<br>
 Google Inc  $357,382 <br>
@@ -585,52 +466,36 @@ JPMorgan Chase &amp; Co $520,299<br>
 Morgan Stanley  $513,647<br>
 Bank of America $510,728<br>
 Credit Suisse Group $427,560  </p>
-<p>Ron Paul …</p>
-                <a class="readmore" href="/post/30489923712">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>Ron Paul …</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-08-29T21:07:00+00:00">2012-08-29</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/30284919483" rel="bookmark"
-                           title="Permalink to tubmlr主题被重置的解决办法">tubmlr主题被重置的解决办法</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-08-26T21:33:28+00:00">
-                Published: 2012-08-26
-        </abbr>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/30284919483"  rel="bookmark" >
+              <h2 class="card-title">tubmlr主题被重置的解决办法</h2>
+            </a>
+            <p class="card-text"><p><a href="http://staff.tumblr.com/post/380346543/theme-recovery">http://staff.tumblr.com/post/380346543/theme-recovery</a></p>
+<p>这么脑残的feature也有，还是标记一下吧。</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-08-26T21:33:28+00:00">2012-08-26</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=tumblr">tumblr</a> </p>
-</footer><!-- /.post-info -->                <p><a href="http://staff.tumblr.com/post/380346543/theme-recovery">http://staff.tumblr.com/post/380346543/theme-recovery</a></p>
-<p>这么脑残的feature也有，还是标记一下吧。</p>
-                <a class="readmore" href="/post/30284919483">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/post/29815635261" rel="bookmark"
-                           title="Permalink to 斐波那契数列求和">斐波那契数列求和</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-08-20T02:54:00+00:00">
-                Published: 2012-08-20
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=maths">maths</a> </p>
-</footer><!-- /.post-info -->                <p>今天<a href="http://www.reddit.com/r/math/comments/oiv7s/cool_fraction/c3hp6vb?context=3">学习到</a>了一个碉堡的斐波那契求和函数：</p>
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
+            <a href="post/29815635261"  rel="bookmark" >
+              <h2 class="card-title">斐波那契数列求和</h2>
+            </a>
+            <p class="card-text"><p>今天<a href="http://www.reddit.com/r/math/comments/oiv7s/cool_fraction/c3hp6vb?context=3">学习到</a>了一个碉堡的斐波那契求和函数：</p>
 <div class="highlight"><pre><span></span>1
  2
   3
@@ -647,44 +512,18 @@ Credit Suisse Group $427,560  </p>
 
 <p>1/89 == 0.011235955056179775</p>
 <p><a href="http://en.wikipedia.org/wiki/Generating_function">母函数</a> 这种技巧都忘记好久啦。。</p>
-<p>还有类似的 1001/997002999 == 1.004009016025036049....</p>
-                <a class="readmore" href="/post/29815635261">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-<p class="paginator">
-        <a href="/index.10.html">&laquo;</a>
-    Page 11 / 13
-        <a href="/index.12.html">&raquo;</a>
-</p>
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+<p>还有类似的 1001/997002999 == 1.004009016025036049....</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2012-08-20T02:54:00+00:00">2012-08-20</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+    </main>
+    <nav class="pagination-nav side-padding">
+<a href="index.10.html" class="pagination-newer">&lt; Newer Posts</a><a href="index.12.html" class="pagination-older">Older Posts &gt;</a>    </nav>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
+  </body>
 </html>

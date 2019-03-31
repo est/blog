@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>ownCloud, csync</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html  lang="en">
+  <head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/archive.html">text</a></li>
-                    <li><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/post/33291117111" rel="bookmark"
-           title="Permalink to ownCloud, csync">ownCloud, csync</a></h1>
-    </header>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-10-10T05:41:14+00:00">
-                Published: 2012-10-10
-        </abbr>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=cloud">cloud</a> </p>
-</footer><!-- /.post-info -->      <p>KDE那帮人觉得Dropbox不错于是搞了个山寨品 ownCloud.org 。我很是喜欢。</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">ownCloud, csync</h1>
+    <p class="post-date">Posted <time datetime="2012-10-10T05:41:14+00:00">2012-10-10</time></p>
+  </header>
+
+  
+  <p>KDE那帮人觉得Dropbox不错于是搞了个山寨品 ownCloud.org 。我很是喜欢。</p>
 <p>其中双向同步的关键核心组件是 csync，看了下，是<a href="http://news.opensuse.org/2009/01/08/opensuse-project-announces-csync/">OpenSUSE一帮人搞的</a>类unison工具。</p>
 <p>unison/csync 区别在于：</p>
 <blockquote>
@@ -61,37 +78,13 @@
 <li>不仅仅一个有版本历史的持久化工具，个人数据重要的是结构化存储知识和记忆，而不是二进制持久化工具。加上一些处理功能是重大利好。</li>
 </ul>
 <p>有点心痒痒想跳进这个坑啦。非常有趣的项目。总的来说，ownCloud前途无量。他们也有商业版本 ownCloud.com。这个模式很好，可以说潜能是是把云计算真正做到了消费者零售这个级别。</p>
-    </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </main>
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+  </body>
 
-</body>
 </html>

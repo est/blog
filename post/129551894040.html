@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>vmware 桥接网络导致linux Redirect Network(New nexthop)</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-</head>
+<html  lang="en">
+  <head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Est's Blog </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/archive.html">text</a></li>
-                    <li><a href="/category/stderr.html">stderr</a></li>
-                    <li><a href="/category/stdin.html">stdin</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/post/129551894040" rel="bookmark"
-           title="Permalink to vmware 桥接网络导致linux Redirect Network(New nexthop)">vmware 桥接网络导致linux Redirect Network(New nexthop)</a></h1>
-    </header>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-09-21T01:49:05+00:00">
-                Published: 2015-09-21
-        </abbr>
+    <title>Est's Blog</title>
+    <meta charset="utf-8" />
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
-        </address>
-<p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/?tag=networking">networking</a> <a href="/?tag=windows">windows</a> <a href="/?tag=vmware">vmware</a> </p>
-</footer><!-- /.post-info -->      <p>本来是PC，连接千兆以太网上网，vmware装了个Linux，本来好好的，后来加了个usb无线网卡当软AP用，让其他设备通过wifi共享上网， 就老出现网络时断时续，甚至完全掉线。</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/main.min.css" />
+
+    
+    <style>
+      body {
+        background: #ecedef url("theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">vmware 桥接网络导致linux Redirect Network(New nexthop)</h1>
+    <p class="post-date">Posted <time datetime="2015-09-21T01:49:05+00:00">2015-09-21</time></p>
+  </header>
+
+  
+  <p>本来是PC，连接千兆以太网上网，vmware装了个Linux，本来好好的，后来加了个usb无线网卡当软AP用，让其他设备通过wifi共享上网， 就老出现网络时断时续，甚至完全掉线。</p>
 <p>比如ping baidu.com就会出现</p>
 <div class="highlight"><pre><span></span>From 220.181.57.217: icmp_seq=5 Redirect Network(New nexthop: 220.181.57.217)
 64 bytes from 220.181.57.217: icmp_seq=5 ttl=53 time=69.6 ms
@@ -50,37 +67,13 @@ From 220.181.57.217: icmp_seq=8 Redirect Network(New nexthop: 220.181.57.217)
 <p>一开始以为是路由问题，route表看了半天，后来发现windows下 无线网络 - 属性 此连接使用以下项目 里 去掉 vmware bridge protocol就好了。保留本地网络的不变。</p>
 <p>买的设备是 Realtek RTL8192CU 的芯片，用官方驱动会出现 netsh wlan start hostednetwork 失败。用 netsh wlan show drivers 发现 支持的承载网络：否。</p>
 <p>因为Realtek官方驱动不支持 vmwifibus.sys，用微软自带的 802.11n USB 2.0 驱动就行了。</p>
-    </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </main>
+<script src="theme/js/core.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+  </body>
 
-</body>
 </html>
