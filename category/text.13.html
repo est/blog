@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Est's Blog - text</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="9">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/43538960448" rel="bookmark"
+                           title="Permalink to Install bjoern on Gentoo">Install bjoern on Gentoo</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-19T22:26:50+00:00">
+                Published: Tue 19 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/gentoo.html">gentoo</a> <a href="/tag/wsgi.html">wsgi</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <p>VPS内存小，连uWSGI这种都玩不起，只能玩玩<a href="https://github.com/jonashaag/bjoern">bjoern</a>这个神器了。<a href="http://bottlepy.org/docs/dev/deployment.html#switching-the-server-backend">Bottle.py支持的WSGI容器</a>还真多啊！</p>
+<div class="highlight"><pre><span></span>curl -O http://python-distribute.org/distribute_setup.py
+sudo  python distribute_setup.py
+curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+sudo python get-pip.py
+sudo emerge libev
+CFLAGS=-I/usr/include/libev sudo pip install bjoern
+</pre></div>
+
+
+<p>灌了个水的哟。。。</p>
+                <a class="readmore" href="/post/43538960448">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/43472256396" rel="bookmark"
+                           title="Permalink to dynamic app routing for Bottle.py based on hostname / domain">dynamic app routing for Bottle.py based on hostname / domain</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-19T01:59:57+00:00">
+                Published: Tue 19 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/bottlepy.html">bottle.py</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <p>Problem:</p>
+<p>I want ONE bottle project to display different pages for:</p>
+<ul>
+<li>http://foo.est.im</li>
+<li>http://bar.est.im</li>
+</ul>
+<p>These should be separate Bottle apps.</p>
+<p>There's <a href="http://permalink.gmane.org/gmane.comp.python.bottle.general/730">an ugly hack</a> from the official maillist, I think I can make it better.</p>
+<p>The secret is to create a customized WSGI app:</p>
+<div class="highlight"><pre><span></span><span class="kn">from …</span></pre></div>
+                <a class="readmore" href="/post/43472256396">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/43183143601" rel="bookmark"
+                           title="Permalink to Google Apps Script生成动态网页碉堡了。">Google Apps Script生成动态网页碉堡了。</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-15T18:59:56+00:00">
+                Published: Fri 15 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/javascript.html">javascript</a> <a href="/tag/google.html">Google</a> </p>
+</footer><!-- /.post-info -->                <p>Google Docs自己搞了一套类似Google App Engine的体系，只不过服务器端语言是Javascript，运行环境是 云JS——Google Apps Script</p>
+<p><a href="https://developers.google.com/apps-script/html_service">https://developers.google.com/apps-script/html_service</a></p>
+<p>看了下文档，类似php的语法，在html里嵌入js，然后服务器渲染得到一个网页。</p>
+<div class="highlight"><pre><span></span>&amp;lt;table&amp;gt;
+  &amp;lt;? var data = getData();
+     for (var i = 0; i &amp;lt; data.length; ++i) { ?&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;? for  (var j = 0; j &amp;lt; data[i].length …</pre></div>
+                <a class="readmore" href="/post/43183143601">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/43147579681" rel="bookmark"
+                           title="Permalink to 理论数学PhD被黑出翔了。">理论数学PhD被黑出翔了。</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-15T09:18:18+00:00">
+                Published: Fri 15 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/joke.html">joke</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://i.imgur.com/r396dsr.jpg"></p>
+<p>via [1]http://www.reddit.com/r/math/comments/18i7zx/which_one_is_most_different_from_the_others/), <a href="http://www.reddit.com/r/funny/comments/18j1w9/one_of_these_things_is_not_like_the_others/">2</a></p>
+                <a class="readmore" href="/post/43147579681">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/42658963921" rel="bookmark"
+                           title="Permalink to Cloud Atlas 观后">Cloud Atlas 观后</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-09T07:16:38+00:00">
+                Published: Sat 09 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/movie.html">movie</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://media.tumblr.com/abf4f9acf3481c2274e75428835327ae/tumblr_inline_mhycquVvo71qz4rgp.jpg"></p>
+<p>Freedom. The fatuous jingle of our civilization</p>
+<p>But only those deprived of it have the barest inkling
+of what it really is</p>
+                <a class="readmore" href="/post/42658963921">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/42495124744" rel="bookmark"
+                           title="Permalink to Is Discourse going to be next Wordpress?">Is Discourse going to be next Wordpress?</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-07T03:58:30+00:00">
+                Published: Thu 07 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/bbs.html">bbs</a> <a href="/tag/forum.html">forum</a> </p>
+</footer><!-- /.post-info -->                <p>I discovered <a href="http://discourse.org">Discourse</a> on HN and played with it all day. So far it looks promising.</p>
+<ul>
+<li>freshing and distinctive UI</li>
+<li>high profile blogger promotes it.</li>
+<li>haz all the basic forum functions</li>
+<li>community based moderation</li>
+<li>deadly easy distribution and (promising) install methods.</li>
+</ul>
+<p>something I think yet to improve</p>
+<ul>
+<li>Does the system …</li></ul>
+                <a class="readmore" href="/post/42495124744">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/42493400735" rel="bookmark"
+                           title="Permalink to 火控雷达意味着什么">火控雷达意味着什么</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-07T02:52:00+00:00">
+                Published: Thu 07 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/til.html">til</a> <a href="/tag/china.html">china</a> </p>
+</footer><!-- /.post-info -->                <p>形象生动</p>
+<p>&gt; Military ships and planes do not "lock onto other vessels all the time". Not with targeting radar, and not in international waters - doing so is proscribed under international law as an act of aggression. It is the high-tech equivalent of sticking a gun in someone's face and cocking the …</p>
+                <a class="readmore" href="/post/42493400735">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/42009058748" rel="bookmark"
+                           title="Permalink to Google Suggest spell checker">Google Suggest spell checker</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-01T02:02:00+00:00">
+                Published: Fri 01 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> <a href="/tag/chrome.html">chrome</a> </p>
+</footer><!-- /.post-info -->                <p>请求：</p>
+<div class="highlight"><pre><span></span>POST https://www.googleapis.com/rpc HTTP/1.1
+Host: www.googleapis.com
+Connection: keep-alive
+Content-Length: 159
+Content-Type: application/json
+
+{&quot;method&quot;:&quot;spelling.check&quot;,&quot;apiVersion&quot;:&quot;v1&quot;,&quot;params&quot;: 
+{&quot;text&quot;:&quot;cchrome&quot;,&quot;language&quot;:&quot;en&quot;,&quot;originCountry&quot;:&quot;USA&quot;, 
+&quot;key&quot;:&quot;AIzaSyCLlKc60a3z7lo8deV-hAyDU7rHYgL4HZg&quot;}}
+</pre></div>
+
+
+<p>返回：</p>
+<div class="highlight"><pre><span></span><span class="nt">HTTP</span><span class="o">/</span><span class="nt">1</span><span class="p">.</span><span class="nc">1</span> <span class="nt">200</span> <span class="nt">OK</span>
+<span class="nt">Content-Type</span><span class="o">:</span> <span class="nt">application</span><span class="o">/</span><span class="nt">json</span><span class="o">;</span> <span class="nt">charset</span><span class="o">=</span><span class="nt">UTF-8</span>
+<span class="nt">Cache-Control</span><span class="o">:</span> <span class="nt">no-cache</span><span class="o">,</span> <span class="nt">no-store</span><span class="o">,</span> <span class="nt">max-age …</span></pre></div>
+                <a class="readmore" href="/post/42009058748">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/41774190853" rel="bookmark"
+                           title="Permalink to HTML5 for TV (Big screen)">HTML5 for TV (Big screen)</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-29T03:34:05+00:00">
+                Published: Tue 29 January 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/tv.html">tv</a> <a href="/tag/cable.html">cable</a> <a href="/tag/html5.html">html5</a> </p>
+</footer><!-- /.post-info -->                <p>看到<a href="http://weibo.com/1455643221/zgI6wA2AP">一则微博</a></p>
+<blockquote>
+<p>@刘兴亮
+HTML5的突出优点是多设备、跨平台。“HTML5 for TV”是由美国Cable Labs牵头组成的国际性开源协作项目，为推动HTML5技术在电视终端上的应用。预计2013年会有更多的开发者投入到基于智能电视的应用开发。针对大屏的应用开发是个“富矿”。2013年，智能电视终端应用的重要特点是——跨屏，跨终端互操作。</p>
+</blockquote>
+<p>然后就跑去看了下他们的文档：</p>
+<p><a href="http://www.cablelabs.com/specifications/CL-SP-HTML5-MAP-I02-120510.pdf">http://www.cablelabs.com/specifications/CL-SP-HTML5-MAP-I02-120510.pdf</a></p>
+<p>觉得这个只是定制了一个节目厂商嵌入HTML的规范，然后他们的Tru2way®设备可以推送网页节目到电视。</p>
+<p>这个只解决了一部分问题。首先限定了是线性内容，其次格式居然限定死是MPEG-2 TS。这个H.265的时代来看真的有点匪夷所思。</p>
+<p>个人觉得最大的问题，是解决了HTML5 to TV，但是没有解决TV内嵌HTML5渲染引擎的问题。比如一个现实的问题：</p>
+<p>vod.xunlei.com 我已经大部分视频在这里看了。但是</p>
+<ul>
+<li>多媒体键盘的media key没法响应。这个是browser vendor的问题 …</li></ul>
+                <a class="readmore" href="/post/41774190853">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/41579628749" rel="bookmark"
+                           title="Permalink to tg威武！假证书都来了！！！">tg威武！假证书都来了！！！</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-26T23:02:00+00:00">
+                Published: Sat 26 January 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/china.html">china</a> <a href="/tag/wall.html">wall</a> </p>
+</footer><!-- /.post-info -->                <p>-----BEGIN CERTIFICATE----- <br>
+MIICszCCAhygAwIBAgIBAzANBgkqhkiG9w0BAQUFADBhMQswCQYDVQQGEwJVUzET <br>
+MBEGA1UECAwKU29tZS1TdGF0ZTETMBEGA1UECgwKZ2l0aHViLmNvbTETMBEGA1UE <br>
+CwwKZ2l0aHViLmNvbTETMBEGA1UEAwwKZ2l0aHViLmNvbTAeFw0xMzAxMjUwNjI5 <br>
+MTJaFw0xNDAxMjUwNjI5MTJaMGExCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApTb21l <br>
+LVN0YXRlMRMwEQYDVQQKDApnaXRodWIuY29tMRMwEQYDVQQLDApnaXRodWIuY29t <br>
+MRMwEQYDVQQDDApnaXRodWIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKB <br>
+gQDHp0HWucGPUs3Mawr23dJM5hLLX90VaTkV29WZTcXnfwGxWuGZvJUrKIcT5Sof <br>
+ujOqJXopEGbrsDMqYhTbcudsJKSmIHvD1wiIJTF+zgmTogk52CIWZ1coSxF3r3i5 <br>
+1R4ZOjcNMIrNdKl3lN8mDUsYIhY3UiGHlXUaRLVyJ3XNYwIDAQABo3sweTAJBgNV <br>
+HRMEAjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZp <br>
+Y2F0ZTAdBgNVHQ4EFgQUuD0FAGWs6+V2cJzEZhDnMq+MTaswHwYDVR0jBBgwFoAU <br>
+KBU3wAzcCtFAf2aj5ZRAdbXnwpgwDQYJKoZIhvcNAQEFBQADgYEAkPy6u/FEezIz <br>
+ZHESozwidrcEsBSUd9pZC1voib/RpM4/KneJnY3PygOiLkPgjVq5+YephIpSwCOg <br>
+Nr0BFgZIwmra/0EWfL6CJb1wl8qJKShfWyv3en9FiZwhACbJf53TRzdq0zAi5s0H <br>
+dU/SlEQPUcNwE2HkLxNTCqU0xcwC7uo= <br>
+-----END CERTIFICATE-----</p>
+                <a class="readmore" href="/post/41579628749">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="/category/text.12.html">&laquo;</a>
+    Page 13 / 25
+        <a href="/category/text.14.html">&raquo;</a>
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

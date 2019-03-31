@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Est's Blog</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="9">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/33289020579" rel="bookmark"
+                           title="Permalink to get current 3fm song in python">get current 3fm song in python</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-10T03:49:00+00:00">
+                Published: Wed 10 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/radio.html">radio</a> </p>
+</footer><!-- /.post-info -->                <p><code>&gt;&gt;&gt; import pprint, datetime, json, urllib2</code> <br>
+<code>&gt;&gt;&gt; p=lambda:json.loads(urllib2.urlopen('http://radioplayer.omroep.nl/helper/now-on-air.json?ac=%s&amp;channel_id=3' % datetime.datetime.now().strftime('%Y%m%d%H%M')).read())</code> <br>
+<code>&gt;&gt;&gt; pprint.pprint(p()['current_song'])</code></p>
+<p>or parsing this HTML</p>
+<p>http://radioplayer.omroep.nl/helper/playlist.html?ac=201210101540&amp;channel_id …</p>
+                <a class="readmore" href="/post/33289020579">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/33224029027" rel="bookmark"
+                           title="Permalink to ping uwsgi">ping uwsgi</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-09T05:33:00+00:00">
+                Published: Tue 09 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/uwsgi.html">uwsgi</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <p>Here's a handy python script do the job of <code>uwsgi --ping &lt;address&gt;</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin …</span></pre></div></td></tr></table>
+                <a class="readmore" href="/post/33224029027">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/33201338908" rel="bookmark"
+                           title="Permalink to 这小夜灯，德味啊">这小夜灯，德味啊</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-08T21:05:00+00:00">
+                Published: Mon 08 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/gadgets.html">gadgets</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://i.imgur.com/MasvHl.jpg"></p>
+<p><a href="http://www.etsy.com/listing/96964388/green-led-faucet-valve-night-light">etsy上边</a>有卖</p>
+<p>还有这个</p>
+<iframe width="640" height="360" src="http://www.youtube.com/embed/YyZ7tOPbrOo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<p>感觉有点像jet engine。。</p>
+<p>voa <a href="http://www.reddit.com/r/pics/comments/114ye1/this_is_the_coolest_nightlamp_ive_ever_seen/">1</a>, <a href="http://www.reddit.com/r/shutupandtakemymoney/comments/115gsp/sweetest_nightlight_ever_xpost_from_rpics_pic_only/">2</a></p>
+                <a class="readmore" href="/post/33201338908">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/33020945266" rel="bookmark"
+                           title="Permalink to （我的）信息危机">（我的）信息危机</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-06T14:31:00+00:00">
+                Published: Sat 06 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/random.html">random</a> <a href="/tag/thoughts.html">thoughts</a> </p>
+</footer><!-- /.post-info -->                <p>难得夜深人静反思一下。我个人每天12个小时在网上闲逛，自个觉得我现在有几个值得警惕的危险趋势：</p>
+<ol>
+<li>
+<p>输入越来越多，输出越来越少。创作能力退化。 <br>
+个人觉得消费信息文化这个风气是由教主Steve Jobs带来的，以iPad为代表的纯内容消费平台给大家带来的各种使用的便利和享受的同时，也剥夺了一项至关重要的权利——创作和生产。 <br>
+和PC相比，你既可以在上边消磨时光，但同时也可以用来当作生产力工具。我个人觉得PC平台是一种输入输出的平衡 <br>
+而iPad这类平台不一样，这货带来的风气，就是一种consumer culture。在iPad上外接键盘打字都十分痛苦和不友好。你在上边能做的就是消费弱智游戏，消费视频，消费小清新照片。Android似乎友好一点，甚至android上直接编写android程序。办公什么的也有可行性，但是这也最多是先驱者的尝试和号称而已。 <br>
+这个问题的各种衍生也深深影响了互联网。我觉得可以叫做consumerism。君不见各大博客、BBS、微博上，除了喷子就是小白。很少有人积极去invent有意义和价值东西了。</p>
+</li>
+<li>
+<p>过多信息时效化。（我承认我现在患“<strong>语体教</strong>”病了，我很难找到一个词语来形容这个东西）具体的描述就是，人们更加关心失效性很快的东西，更加耸人听闻的东西，和心理落差更大的东西，而偏向忽略那些永恒的东西。比如关心某软件、ROM、OS的新特性，而不去关心整个业界的完备推进程度。就举一个简单例子。Steve …</p></li></ol>
+                <a class="readmore" href="/post/33020945266">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/32187066617" rel="bookmark"
+                           title="Permalink to 水果教向物理开炮了">水果教向物理开炮了</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-24T03:03:46+00:00">
+                Published: Mon 24 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/apple.html">apple</a> <a href="/tag/iphone.html">iphone</a> <a href="/tag/physics.html">physics</a> </p>
+</footer><!-- /.post-info -->                <iframe width="640" height="360" src="http://www.youtube.com/embed/V4IRsCjMqdI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<p>这广告做得，尼玛跟脑白金差不多了。</p>
+<p><a href="http://www.reddit.com/r/Physics/comments/10dbbt/the_iphone_5_commercial_this_is_insulting_right/">via</a></p>
+                <a class="readmore" href="/post/32187066617">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/31780723732" rel="bookmark"
+                           title="Permalink to Google的天顶星技术——Google Spanner">Google的天顶星技术——Google Spanner</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-18T00:38:14+00:00">
+                Published: Tue 18 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> <a href="/tag/db.html">db</a> <a href="/tag/tech.html">tech</a> </p>
+</footer><!-- /.post-info -->                <p>上次看到 <a href="http://www.csdn.net/article/2012-08-20/2808870">Google后Hadoop时代的新“三驾马车”——Caffeine、Pregel、Dremel</a></p>
+<p>感觉碉堡了。</p>
+<p>Pregel是一个graph db。这是逆NoSQL运动行之的潮流——NoSQL倡导没有<code>join</code>，而graph db则是——所有数据都可以默认join起来。</p>
+<p>Dremel 是一个query interface。</p>
+<p>Caffeine的背后是Google True Time API，这是基于Google Spanner的一个碉堡技术。。</p>
+<p>什么是Google Spanner？Spanner是一个行星级别的db系统——通过GPS、原子钟实现全球数据中心timestamp同步的MVCC。</p>
+<p>和BigTable相比，BigTable的cell是mutable，Spanner是Datomic，类似函数式变成里的常量；Spanner还提供了BigTable不具备的——分布式transaction支持。比如lock-free read transaction</p>
+<p>隐隐的感觉Google的天顶星科技碉堡了。paper都非常值得一读。。。虽然不明，但觉历。</p>
+<p><a href="http://news.ycombinator.com/item?id=4526710">via</a></p>
+                <a class="readmore" href="/post/31780723732">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/31769215479" rel="bookmark"
+                           title="Permalink to Python良民证算法rev 2">Python良民证算法rev 2</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-17T21:38:00+00:00">
+                Published: Mon 17 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <p>以前发过一个<a href="http://initiative.yo2.cn/archives/635924">良民证算法</a></p>
+<p>现在发现了一个碉堡的新办法：</p>
+<div class="highlight"><pre><span></span>get_id = lambda s: s + &#39;1X864209753&#39;[int(s, 13) % 11]
+</pre></div>
+
+
+<p>来自newsmth的python版：</p>
+<div class="highlight"><pre><span></span><span class="err">发信人</span><span class="p">:</span> <span class="n">Andor</span> <span class="p">(</span><span class="err">珍惜</span><span class="p">),</span> <span class="err">信区</span><span class="p">:</span> <span class="n">Python</span>
+<span class="err">标</span>  <span class="err">题</span><span class="p">:</span> <span class="n">Re</span><span class="p">:</span> <span class="n">Python的良民证算法</span><span class="err">，有没有更简单的写法？</span>
+<span class="err">发信站</span><span class="p">:</span> <span class="err">水木社区</span> <span class="p">(</span><span class="n">Fri</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">15</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mo">05</span> <span class="mi">2012</span><span class="p">),</span> <span class="err">站内</span>
+
+<span class="n">get_id</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span> <span class="o">+</span> <span class="s1">&#39;1X864209753&#39;</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span><span class="p">]</span>
+<span class="err">【</span> <span class="err">在</span> <span class="n">zxn0</span> <span class="p">(</span><span class="n">est</span><span class="p">)</span> <span class="err">的大作中提到</span><span class="p">:</span> <span class="err">】</span>
+<span class="p">:</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">get_id …</span></pre></div>
+                <a class="readmore" href="/post/31769215479">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/31766533896" rel="bookmark"
+                           title="Permalink to 人类花几个月工资买几克拉的碳晶体弱爆了">人类花几个月工资买几克拉的碳晶体弱爆了</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-17T21:04:00+00:00">
+                Published: Mon 17 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/metal.html">metal</a> <a href="/tag/jewelry.html">jewelry</a> </p>
+</footer><!-- /.post-info -->                <p>钻石其实是宇宙中——最常见的晶体之一。。。本来应该非常便宜，但是价格是人为捧高的。</p>
+<p>毛子在70年代发现了一个陨石坑。。。。。。。。。。大概有<a href="http://www.csmonitor.com/World/Global-News/2012/0917/Russia-reveals-shiny-state-secret-It-s-awash-in-diamonds">几万亿克拉的钻石</a>。。。</p>
+<p>世界上：</p>
+<p>最稀有的宝石top 10: <br>
+Jeremejevite, Black Opal, Red Beryl Emerald, Musgravite, Grandidierite, Painite, Blue Garnet, Serendibite, Red Diamonds, Jadeite</p>
+<p>最贵重的金属top 10:<br>
+Indium, Silver, Rhenium, Palladium, Osmium, Iridium, Ruthenium, Gold, Platinum, Rhodium</p>
+<p>Rhodium就是铑，Two.And.A.Half.Men.S09E10里边Walden的那颗价值不菲的铂铑戒指。。。但是这货2007年价格崩了，从$10,000/oz垮到$1 …</p>
+                <a class="readmore" href="/post/31766533896">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/31703069009" rel="bookmark"
+                           title="Permalink to iPhone 5/HTC One X/Galaxy S III 性能跑分之geekbench">iPhone 5/HTC One X/Galaxy S III 性能跑分之geekbench</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-16T21:45:00+00:00">
+                Published: Sun 16 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/iphone.html">iphone</a> <a href="/tag/benchmark.html">benchmark</a> </p>
+</footer><!-- /.post-info -->                <p>iPhone 5 1601分<br>
+<a href="http://browser.primatelabs.com/geekbench2/1030202">http://browser.primatelabs.com/geekbench2/1030202</a></p>
+<p>HTC One X 1697分<br>
+<a href="http://browser.primatelabs.com/geekbench2/989732">http://browser.primatelabs.com/geekbench2/989732</a></p>
+<p>Galaxy S III 1781分<br>
+<a href="http://browser.primatelabs.com/geekbench2/1026099">http://browser.primatelabs.com/geekbench2/1026099</a></p>
+<p>值得注意的是，iPhone 5的内存和stream IO性能屌爆了。Android被爆出翔了。</p>
+<p><a href="http://news.ycombinator.com/item?id=4530188">via</a></p>
+                <a class="readmore" href="/post/31703069009">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/31448527901" rel="bookmark"
+                           title="Permalink to CBSi's bitch">CBSi's bitch</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-13T01:09:55+00:00">
+                Published: Thu 13 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/company.html">company</a> </p>
+</footer><!-- /.post-info -->                <p>统计了一下属于<a href="http://www.cnet.com.cn/">CBS Interactive</a>旗下的网站</p>
+<div class="highlight"><pre><span></span>bnet.com.cn           BNET 商业英才网
+cnetnews.com.cn       CNET 科技资讯网
+cheshi.com            网上车市
+ea3w.com              万维家电网
+fengniao.com          蜂鸟网
+gocar.cn              购车网
+zwbang.com            小学生作文
+haibao.cn             海报时尚网
+kdslife.com           KDS 宽带山
+kimiss.com            闺蜜网
+onlylady.com          OnlyLady 女人志
+pchome.net            电脑之家
+xcar.com.cn           爱卡汽车 …</pre></div>
+                <a class="readmore" href="/post/31448527901">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="/index.20.html">&laquo;</a>
+    Page 21 / 26
+        <a href="/index.22.html">&raquo;</a>
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
