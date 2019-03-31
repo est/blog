@@ -4,20 +4,15 @@
         <meta charset="utf-8" />
         <title>pin ssl fingerprint with Chrome HSTS</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Est's Blog </a></h1>
                 <nav><ul>
-                    <li><a href="/category/photo.html">photo</a></li>
+                    <li class="active"><a href="/category/archive.html">text</a></li>
                     <li><a href="/category/stderr.html">stderr</a></li>
                     <li><a href="/category/stdin.html">stdin</a></li>
-                    <li class="active"><a href="/category/text.html">text</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -31,13 +26,13 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-10-30T03:06:00+00:00">
-                Published: %F
+                Published: 2013-10-30
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/python.html">python</a> <a href="/tag/openssl.html">openssl</a> <a href="/tag/ssl.html">ssl</a> </p>
 </footer><!-- /.post-info -->      <p>code:</p>
 <div class="highlight"><pre><span></span><span class="err">$</span> <span class="s s-Atom">openssl</span> <span class="s s-Atom">x509</span> <span class="o">-</span><span class="s s-Atom">noout</span> <span class="o">-</span><span class="s s-Atom">fingerprint</span> <span class="o">-</span><span class="s s-Atom">sha1</span> <span class="o">-</span><span class="s s-Atom">in</span> <span class="s s-Atom">&amp;lt</span><span class="p">;(</span><span class="s s-Atom">openssl</span> <span class="s s-Atom">s_client</span> <span class="o">-</span><span class="s s-Atom">connect</span> <span class="s s-Atom">weibo</span><span class="p">.</span><span class="nn">cn</span><span class="p">:</span><span class="mi">443</span> <span class="o">-</span><span class="s s-Atom">prexit</span> <span class="mi">2</span><span class="s s-Atom">&amp;gt</span><span class="p">;</span><span class="o">/</span><span class="s s-Atom">dev</span><span class="o">/</span><span class="s s-Atom">null</span><span class="p">)</span> <span class="p">|</span> <span class="s s-Atom">python</span> <span class="o">-</span><span class="s s-Atom">c</span> <span class="s2">&quot;print __import__(&#39;sys&#39;).stdin.read().partition(&#39;=&#39;)[2][:-1].replace(&#39;:&#39;,&#39;&#39;).decode(&#39;hex&#39;).encode(&#39;base64&#39;)&quot;</span>

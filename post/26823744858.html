@@ -4,20 +4,15 @@
         <meta charset="utf-8" />
         <title>DIY OAuth 2 library：从97KB到22行Python</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Est's Blog </a></h1>
                 <nav><ul>
-                    <li><a href="/category/photo.html">photo</a></li>
+                    <li class="active"><a href="/category/archive.html">text</a></li>
                     <li><a href="/category/stderr.html">stderr</a></li>
                     <li><a href="/category/stdin.html">stdin</a></li>
-                    <li class="active"><a href="/category/text.html">text</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -31,13 +26,13 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-07-09T05:23:00+00:00">
-                Published: %F
+                Published: 2012-07-09
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/oauth.html">OAuth</a> <a href="/tag/google.html">Google</a> <a href="/tag/api.html">API</a> <a href="/tag/crypto.html">crypto</a> <a href="/tag/python.html">python</a> </p>
 </footer><!-- /.post-info -->      <p>最近的项目需要用代码去读取一些Google Spreadsheet的数据，看了下Google官方的Spreadsheet API，读取数据这些好说，就是xml格式我比较讨厌。于是想用<code>alt=json</code>这个<a href="https://developers.google.com/gdata/docs/json">json输出API</a>，试用发现，对于ClientLogin（浏览器cookie）直接调用Spreadsheet API的Google Apps用户而言，这个json输出是400不可用的。于是只能撸一个OAuth读取数据试试了。</p>
 <p>看了下官方的<a href="http://code.google.com/p/gdata-python-client/">Google Data APIs Python Client Library</a>，我勒个擦啊，一大坨垃圾依赖，比如<code>OpenSSL.crypto</code>，<a href="http://code.google.com/p/httplib2/source/browse/python2/httplib2/__init__.py">httplib2</a>等。</p>

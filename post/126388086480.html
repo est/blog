@@ -4,20 +4,15 @@
         <meta charset="utf-8" />
         <title>现有git项目同步到一个新svn</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Est's Blog </a></h1>
                 <nav><ul>
-                    <li><a href="/category/photo.html">photo</a></li>
+                    <li class="active"><a href="/category/archive.html">text</a></li>
                     <li><a href="/category/stderr.html">stderr</a></li>
                     <li><a href="/category/stdin.html">stdin</a></li>
-                    <li class="active"><a href="/category/text.html">text</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -31,13 +26,13 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-08-10T22:06:56+00:00">
-                Published: %F
+                Published: 2015-08-10
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/git.html">git</a> <a href="/tag/svn.html">svn</a> </p>
 </footer><!-- /.post-info -->      <p>不要问我为什么这么脑残，反正这个世界就这样。自己好好的用git管理的项目，项目组又用的是svn，把git同步更新到svn，看git-scm的教程也他妈扯蛋，所以东拼西凑撸了个方法：</p>
 <div class="highlight"><pre><span></span>svn mkdir svn://DEST/repo/projectname/{trunk,branches,tags}

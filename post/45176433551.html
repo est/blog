@@ -4,20 +4,15 @@
         <meta charset="utf-8" />
         <title>Web服这个屎盆子不够装了——记inetd的现代版Mozilla Circus</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Est's Blog </a></h1>
                 <nav><ul>
-                    <li><a href="/category/photo.html">photo</a></li>
+                    <li class="active"><a href="/category/archive.html">text</a></li>
                     <li><a href="/category/stderr.html">stderr</a></li>
                     <li><a href="/category/stdin.html">stdin</a></li>
-                    <li class="active"><a href="/category/text.html">text</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -31,13 +26,13 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-03-12T02:55:00+00:00">
-                Published: %F
+                Published: 2013-03-12
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/python.html">python</a> <a href="/tag/web.html">web</a> <a href="/tag/stack.html">stack</a> <a href="/tag/wsgi.html">wsgi</a> </p>
 </footer><!-- /.post-info -->      <p>今天瞄了下<a href="circus.rtfd.org">Mozilla Circus</a>这个项目，黑有意思。</p>
 <p>简单的说，目前Web服务器基本模型都是一个总瓢把子Nginx，后边一大堆苦力worker进程。比如Python世界的Gunicorn是这个样子的粗暴简单：</p>

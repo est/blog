@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Est's Blog</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/archive.html">text</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="19">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26823744858" rel="bookmark"
+                           title="Permalink to DIY OAuth 2 library：从97KB到22行Python">DIY OAuth 2 library：从97KB到22行Python</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-09T05:23:00+00:00">
+                Published: 2012-07-09
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/oauth.html">OAuth</a> <a href="/tag/google.html">Google</a> <a href="/tag/api.html">API</a> <a href="/tag/crypto.html">crypto</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <p>最近的项目需要用代码去读取一些Google Spreadsheet的数据，看了下Google官方的Spreadsheet API，读取数据这些好说，就是xml格式我比较讨厌。于是想用<code>alt=json</code>这个<a href="https://developers.google.com/gdata/docs/json">json输出API</a>，试用发现，对于ClientLogin（浏览器cookie）直接调用Spreadsheet API的Google Apps用户而言，这个json输出是400不可用的。于是只能撸一个OAuth读取数据试试了。</p>
+<p>看了下官方的<a href="http://code.google.com/p/gdata-python-client/">Google Data APIs Python Client Library</a>，我勒个擦啊，一大坨垃圾依赖，比如<code>OpenSSL.crypto</code>，<a href="http://code.google.com/p/httplib2/source/browse/python2/httplib2/__init__.py">httplib2</a>等。</p>
+<p>仔细看了下Google <a href="https://developers.google.com/accounts/docs/OAuth2ServiceAccount">OAuth 2.0</a>的文档，似乎也不复杂的样子，至少比<a href="http://initiative.yo2.cn/archives/633801">OAuth 1.0 那种3 legged login</a> 简单多了。于是就自己DIY了一个</p>
+<p>OAuth 2 …</p>
+                <a class="readmore" href="/post/26823744858">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26542883778" rel="bookmark"
+                           title="Permalink to [zz]最直白的解释Higgs Boson希格斯子">[zz]最直白的解释Higgs Boson希格斯子</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-05T01:53:15+00:00">
+                Published: 2012-07-05
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/science.html">science</a> <a href="/tag/physics.html">physics</a> </p>
+</footer><!-- /.post-info -->                <p>科学家很难向英国政府解释清楚希格斯场，所以在1993年，英国科学部长威廉•瓦多格列佛（William Waldegrave）向科学家发起了挑战，让他们用一页纸的篇幅向他解释希格斯场。瓦多格列佛拿出了一瓶香槟奖给了获胜者，其中就包括英国伦敦大学学院的物理学家戴维•米勒（David Miller）。米勒把希格斯场比作一个房间，房间里均匀分散着一大群为政客聚会服务的工作人员。一个无关紧要的人可以不受阻碍地在人群中穿来穿去。然而，如果是时任英国首相撒切尔夫人（Margaret Thatcher）到场，一定会吸引大量的关注：聚会工作人员会围拢在她周围，减慢她穿行的速度，使她带上某种“质量”。</p>
+<p><a href="http://www.guokr.com/post/262983/">via</a></p>
+<p>The Higgs Mechanism</p>
+<p>Imagine a cocktail party of political party workers who are uniformly distributed across the floor, all talking to their nearest …</p>
+                <a class="readmore" href="/post/26542883778">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26541183913" rel="bookmark"
+                           title="Permalink to 微信果然山寨啊">微信果然山寨啊</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-05T01:16:47+00:00">
+                Published: 2012-07-05
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/software.html">software</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://media.tumblr.com/tumblr_m6o9b8NDrK1qz5ax5.jpg"></p>
+<p>吐槽不能。这工程师就是99%打酱油的。</p>
+                <a class="readmore" href="/post/26541183913">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26483115741" rel="bookmark"
+                           title="Permalink to replay attack on Apple IAP receipt">replay attack on Apple IAP receipt</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-04T05:10:00+00:00">
+                Published: 2012-07-04
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/apple.html">apple</a> <a href="/tag/iap.html">iap</a> </p>
+</footer><!-- /.post-info -->                <p>in <a href="http://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/StoreKitGuide/APIOverview/OverviewoftheStoreKitAPI.html#//apple_ref/doc/uid/TP40008267-CH100-SW1">this senario</a></p>
+<p><img alt="" src="http://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Art/store_transactions.png"></p>
+<p>Before client sends verify receipt to developer server, the receipt data can be recorded and replayed to developer server,</p>
+<ol>
+<li>
+<p>suppose the receipt data is <code>&lt;receipt-something&gt;</code>, it's verified, and buy transaction has finished.</p>
+</li>
+<li>
+<p>add a space to receipt data <code>&lt;receipt-something&gt;&lt;space&gt;</code></p>
+</li>
+<li>
+<p>submit to developer server again</p>
+</li>
+<li>
+<p>developer server …</p></li></ol>
+                <a class="readmore" href="/post/26483115741">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26475262922" rel="bookmark"
+                           title="Permalink to 如何让python强制认为2+2==5">如何让python强制认为2+2==5</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-04T01:33:02+00:00">
+                Published: 2012-07-04
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/ctypes.html">ctypes</a> <a href="/tag/black-magic.html">black-magic</a> </p>
+</footer><!-- /.post-info -->                <p>让你丫的2+2不等于5！！！！</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="n">pyint_p</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">POINTER</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_byte</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">five</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">pyint_p</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># False</span>
+<span class="n">five</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="n">five</span><span class="o">.</span><span class="n">contents</span><span class="p">[:]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># True (must be sufficiently large values of 2 there...)</span>
+</pre></div>
+
+
+<p><a href="http://news.ycombinator.com/item?id=4197576">via</a></p>
+                <a class="readmore" href="/post/26475262922">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26457041818" rel="bookmark"
+                           title="Permalink to [视频]成都panda taxi恶搞英皇室">[视频]成都panda taxi恶搞英皇室</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-03T20:42:00+00:00">
+                Published: 2012-07-03
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/video.html">video</a> <a href="/tag/funny.html">funny</a> <a href="/tag/chengdu.html">chengdu</a> </p>
+</footer><!-- /.post-info -->                <p>youtube看这里：</p>
+<p><object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/SYwDESi8PGM?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/SYwDESi8PGM?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object></p>
+<p>youku看这里：</p>
+<p><embed src="http://player.youku.com/player.php/sid/XNDIyNzE2OTg0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+<p>其实这个片子是<a href="http://www.youtube.com/watch?v=2M-XPnldcEI">一群留学生拍的</a>，不是成都zf拍的。</p>
+<blockquote>
+<p>Published on Jun 5, 2012 by Moore Mandy<br>
+We are group of Chinese students study media in the UK,we love pandas and our hometown,so we made this video because we saw panda cabs running in London, We spent two days to make this …</p></blockquote>
+                <a class="readmore" href="/post/26457041818">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26389787349" rel="bookmark"
+                           title="Permalink to 360buy满意度评价自动填充脚本">360buy满意度评价自动填充脚本</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-02T22:01:00+00:00">
+                Published: 2012-07-02
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/shopping.html">shopping</a> <a href="/tag/javascript.html">javascript</a> </p>
+</footer><!-- /.post-info -->                <div class="highlight"><pre><span></span>[&#39;radio_option6393&#39;, &#39;radio_option6398&#39;, &#39;radio_option6403&#39;, &#39;radio_option6408&#39;, &#39;radio_option6413&#39;, &#39;radio_option6418&#39;, &#39;radio_option6423&#39;, &#39;radio_option6428&#39;, &#39;radio_option6433&#39;].map(function(s){document.getElementById(s).checked=&#39;checked&#39;});document.getElementById(&#39;radioq10&#39;).textContent=&#39;ok&#39;;form1.submit()
+</pre></div>
+
+
+<p>因为鼠标点击那个页面太蛋痛了。</p>
+<p>评价大于100元的订单可以获得2个积分，蚊子肉也是肉，所以还是坚决要。</p>
+<p>btw 360最大化薅羊毛办法：移动支付 -&gt; 各种券  -&gt; 返利 -&gt; 评价+晒单</p>
+                <a class="readmore" href="/post/26389787349">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26044006533" rel="bookmark"
+                           title="Permalink to AMOLED技术外泄。。">AMOLED技术外泄。。</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-27T22:34:00+00:00">
+                Published: 2012-06-27
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/tech.html">tech</a> </p>
+</footer><!-- /.post-info -->                <p>新闻在<a href="http://news.163.com/12/0627/17/8517P2J000014JB6.html">这里</a></p>
+<p>LG和三星AMOLED核心技术外泄 或流入中国和台湾   </p>
+<p>韩国三星和LG下一代显示器面板“AM-OLED”和“WHITE-OLED”的核心技术被曝遭外泄。资料或流向中国大陆和台湾地区等韩国企业的竞争对手。   </p>
+<p>韩国三星和LG下一代显示器面板“AM-OLED”和“WHITE-OLED”的核心技术被曝遭外泄。其中部分技术被指流入中国最大的面板生产公司。 <br>
+报导称，首尔中央地方法院尖端犯罪搜查1部27日以涉嫌盗窃三星移动显示器和LG显示器的“AM-OLED”技术，拘捕并起诉了以色列某公司（下称O公司）韩国分公司职员金某等三人。韩国检方还以同样的理由对上述三人的三名上司进行不??拘留起诉，并依法起诉了某公司的韩国分公司。 <br>
+韩国检方称，嫌疑人从去年11月至今年1月分多次窃取三星移动显示器和LG显示器的55英寸电视机用“AM-OLED”面板实物电路图等核心技术。嫌疑人将窃取的资料提供给以色列总部职员以及中国大陆和台湾地区等韩国企业的竞争对手。 <br>
+韩国检方表示，这次外泄的技术是两家公司的秘密资料，也是韩国核心技术。若国外竞争对手获取该技术，可能会在短期内缩小技术差距。检方计划对O公司总部和海外分公司职员进行进一步调查，杜绝该技术进一步外泄。   </p>
+<p>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   </p>
+<p>Samsung, LG's key display technologies leaked by Israeli firm  <br>
+SEOUL, June 27 …</p>
+                <a class="readmore" href="/post/26044006533">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/26042634878" rel="bookmark"
+                           title="Permalink to 为什么现在的变压器很小[zz]">为什么现在的变压器很小[zz]</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-27T22:13:00+00:00">
+                Published: 2012-06-27
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/electronics.html">electronics</a> <a href="/tag/science.html">science</a> </p>
+</footer><!-- /.post-info -->                <p>发信人: hcl (盐酸), 信区: DigiHome<br>
+标  题: 问一下现在小家电的变压器都是什么原理？<br>
+发信站: 水木社区 (Thu Jun 28 02:26:13 2012), 站内  </p>
+<p>我记得十几年前的时候吧，那时候什么随身听的变压器里面就是个大铁疙瘩，输出电流也才不到500ma，而且还发热量巨猛。现在随便一个usb充电器就是2A的输出电流，平时不用基本上没有发热，体积还巨小，请问是什么新技术呢？开关电源？还是别的什么？  </p>
+<p>发信人: lvsoft (Lv(The Last Guardian)), 信区: DigiHome<br>
+标  题: Re: 问一下现在小家电的变压器都是什么原理？<br>
+发信站: 水木社区 (Thu Jun 28 02:44:17 2012), 站内 …</p>
+                <a class="readmore" href="/post/26042634878">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/25542207519" rel="bookmark"
+                           title="Permalink to TF2：以帽取人">TF2：以帽取人</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-20T20:57:00+00:00">
+                Published: 2012-06-20
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/tf2.html">tf2</a> <a href="/tag/gaming.html">gaming</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://i.imgur.com/SAmmW.png"></p>
+<p><img alt="" src="http://i.imgur.com/Z3VDu.png"></p>
+<p>我日，太他妈准了。</p>
+<p><a href="http://www.reddit.com/r/tf2/comments/vbsa7/my_tf2_hat_stigmas_knowing_other_players/">via</a></p>
+                <a class="readmore" href="/post/25542207519">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/25348900812" rel="bookmark"
+                           title="Permalink to 吐槽一下日本“珍珠生活” “纯铁” 炒锅">吐槽一下日本“珍珠生活” “纯铁” 炒锅</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-18T02:08:00+00:00">
+                Published: 2012-06-18
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/gadgets.html">Gadgets</a> <a href="/tag/shopping.html">shopping</a> </p>
+</footer><!-- /.post-info -->                <p>今日忙着装修，想买一个炒锅，家里的建议都是说，现在的不锈、无油烟、不粘锅的炒锅，用了特富龙，可能会中毒。于是下定决心买铸铁炒锅。。</p>
+<p>又碰上618，发现有一种日本制造的，号称“纯铁”的炒锅，“珍珠生活”牌的。</p>
+<p>于是在网上挖了很久才发现它的官网：<a href="http://www.p-life.co.jp">http://www.p-life.co.jp</a></p>
+<p>又挖了很久才发现它的 炒锅 产品列表，这个kitchen-tool.com 是属于 パール金属 (Pearl Metal) 的。</p>
+<p><a href="http://www.kitchen-tool.com/category_2_2.html">http://www.kitchen-tool.com/category_2_2.html</a></p>
+<p>ホーム 調理器具 フライパン</p>
+<p>Home Cookware Frying pan</p>
+<p>不看不知道，一看吓一跳，尼玛基本所有型号（除了 <a href="http://www.kitchen-tool.com/category_19.html">H-8532 …</a></p>
+                <a class="readmore" href="/post/25348900812">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/24933833063" rel="bookmark"
+                           title="Permalink to ze new mbp">ze new mbp</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-11T23:56:00+00:00">
+                Published: 2012-06-11
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/apple.html">apple</a> <a href="/tag/gadgets.html">gadgets</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://media.tumblr.com/tumblr_m5hk8hSzED1qz5ax5.jpg"></p>
+<p>reminds me of the Monolith</p>
+<p><img alt="" src="http://media.tumblr.com/tumblr_m5hk949Wzr1qz5ax5.gif"></p>
+<p><a href="http://www.reddit.com/r/pics/comments/uwry3/this_is_insanity/">via</a></p>
+                <a class="readmore" href="/post/24933833063">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/24920901996" rel="bookmark"
+                           title="Permalink to 自然中贴图材质错误">自然中贴图材质错误</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-11T20:41:34+00:00">
+                Published: 2012-06-11
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/nature.html">nature</a> <a href="/tag/pics.html">pics</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://i.imgur.com/smA3Y.jpg"><img alt="" src="http://media.tumblr.com/tumblr_m5hb800zUc1qz5ax5.jpg"></a></p>
+<p>上帝快出来改bug！</p>
+<p><a href="http://www.reddit.com/r/pics/comments/uvhsp/magnificent_cloud_formation/">via</a></p>
+                <a class="readmore" href="/post/24920901996">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/24587788415" rel="bookmark"
+                           title="Permalink to minecraft都进化到如此境界了？">minecraft都进化到如此境界了？</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-06T23:35:00+00:00">
+                Published: 2012-06-06
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/gaming.html">gaming</a> <a href="/tag/minecraft.html">minecraft</a> <a href="/tag/video.html">video</a> </p>
+</footer><!-- /.post-info -->                <p>A Song of Ice and Fire的Westeros众城堡们！</p>
+<p><a href="http://image.noelshack.com/fichiers/2012/23/1338977374-winterfall.jpg"><img alt="" src="http://media.tumblr.com/tumblr_m589kpUGiq1qz5ax5.jpg"></a></p>
+<p><a href="http://image.noelshack.com/fichiers/2012/23/1338977418-dragonstone.jpg"><img alt="" src="http://media.tumblr.com/tumblr_m589kzzpZx1qz5ax5.jpg"></a></p>
+<p><object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/w0gLX_Kn_S8?version=3&feature=player_profilepage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/w0gLX_Kn_S8?version=3&feature=player_profilepage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object></p>
+<p><a href="http://www.reddit.com/r/Minecraft/comments/uo05j/castle_black/">via</a></p>
+                <a class="readmore" href="/post/24587788415">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/24186096702" rel="bookmark"
+                           title="Permalink to /r/gaming today">/r/gaming today</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-01T04:26:00+00:00">
+                Published: 2012-06-01
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/gaming.html">gaming</a> <a href="/tag/funny.html">funny</a> <a href="/tag/pics.html">pics</a> </p>
+</footer><!-- /.post-info -->                <p>今天无聊逛 /r/gaming ，贴几个好玩的</p>
+<p><a href="http://www.reddit.com/r/gaming/comments/ue8p0/my_girlfriend_and_i_wanted_to_cuddle_but_we/">宅男宅女玩屌菠萝3</a></p>
+<p><img alt="" src="http://media.tumblr.com/tumblr_m4xj0ewUbI1qz5ax5.png"></p>
+<p><a href="http://www.reddit.com/r/gaming/comments/udznp/improbably_good_morrigan_cosplay_ii/">Morrigan cosplay</a> <a href="http://kirawinter.deviantart.com/art/Morrigan-Dragon-Age-273748310">作者</a></p>
+<p><img alt="" src="http://media.tumblr.com/tumblr_m4xj5mOeRy1qz5ax5.jpg"></p>
+<p>我觉得dragon age最好玩的mod之一就是这个<a href="http://dragonage.nexusmods.com/mods/1464">Slap Morrigan</a>。很多quest你做完了大家都赞同，就Morrigan 来一个 disapprove -5 。一个耳光送上。赶紧的。</p>
+<p><a href="http://www.reddit.com/r/gaming/comments/udv4c/the_elder_scrolls_v_skyrim_dawnguard_official/">Skyrim Dawnguard trailer</a></p>
+<p><object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/3PjBSicSVqI?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/3PjBSicSVqI?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object></p>
+<p><a href="http://www.reddit.com/r/gaming/comments/ud286/starforge_a_3d_game_with_infinite_procedural/">Starforge</a> 碉堡了的超级版Minecraft。</p>
+<p><object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/YxBSYit49c8?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/YxBSYit49c8?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object></p>
+<p><a href="http://www.reddit.com/r/gaming/comments/u57vu/not_again_bomberman/">bomberman</a></p>
+<p><img alt="" src="http://i.imgur.com/cO8fU.gif"></p>
+                <a class="readmore" href="/post/24186096702">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/24174090565" rel="bookmark"
+                           title="Permalink to SQL纹身的女孩">SQL纹身的女孩</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-05-31T23:10:41+00:00">
+                Published: 2012-05-31
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/sql.html">sql</a> <a href="/tag/movie.html">movie</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://media.tumblr.com/tumblr_m4x4smDO1M1qz5ax5.jpg"></p>
+<p><img alt="" src="http://media.tumblr.com/tumblr_m4x4srTtLv1qz5ax5.jpg"></p>
+<div class="highlight"><pre><span></span>SELECT DISTINCT v.fname, v.lname, i.year, i.location, i.report_file
+FROM   Incident AS i
+       LEFT JOIN V(ictim?)...  -- presumably v.incident_id = i.id
+       LEFT JOIN Keyword AS k ON k.incident_id = i.id
+WHERE  i.year BETWEEN 1947 AND 1966
+AND    i.type = &#39;HOMICIDE&#39;
+AND    v.sex = &#39;F …</pre></div>
+                <a class="readmore" href="/post/24174090565">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/24165128755" rel="bookmark"
+                           title="Permalink to voilà">voilà</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-05-31T21:04:49+00:00">
+                Published: 2012-05-31
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/blog.html">blog</a> </p>
+</footer><!-- /.post-info -->                <p>挂了好久的blog又出来招摇撞骗了。</p>
+<p>在<a href="http://zuroc.42qu.com/">zuroc</a>大神的Gentoo VPS上编译php不成功，所以懒得折腾Wordpress了。于是就用Tumblr将就了。</p>
+<p>做了个简单的reverse proxy，大家也可以通过 <a href="http://estblog.tumblr.com/">http://estblog.tumblr.com/</a> 访问。</p>
+<p>欢迎老朋友们，新朋友们，小朋友们，基佬们来访。</p>
+<p>儿童节快乐。</p>
+                <a class="readmore" href="/post/24165128755">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="/index.12.html">&laquo;</a>
+    Page 13 / 13
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -4,25 +4,348 @@
         <meta charset="utf-8" />
         <title>Est's Blog</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Est's Blog </a></h1>
                 <nav><ul>
-                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/archive.html">text</a></li>
                     <li><a href="/category/stderr.html">stderr</a></li>
                     <li><a href="/category/stdin.html">stdin</a></li>
-                    <li><a href="/category/text.html">text</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
                 <section id="content" class="body">
-                    <ol id="posts-list" class="hfeed" start="9">
+                    <ol id="posts-list" class="hfeed" start="19">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/41181091688" rel="bookmark"
+                           title="Permalink to Google Dict API">Google Dict API</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-22T02:01:00+00:00">
+                Published: 2013-01-22
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> </p>
+</footer><!-- /.post-info -->                <p>http://www.google.com/dictionary/json?callback=dict_api.callbacks.id102&amp;q=wtf&amp;sl=en&amp;tl=en&amp;restrict=pr%2Cde%2Csy&amp;client=te</p>
+<p>https://www.google.com/dictionary/json?callback=dict_api.callbacks.id100&amp;q=test&amp;sl=en&amp;tl=en&amp;restrict=pr%2Cde%2Csy</p>
+<p>妈的居然还有存活。</p>
+                <a class="readmore" href="/post/41181091688">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/41166048787" rel="bookmark"
+                           title="Permalink to 接触Datomic">接触Datomic</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-21T22:23:00+00:00">
+                Published: 2013-01-21
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/db.html">db</a> </p>
+</footer><!-- /.post-info -->                <p>从<a href="http://news.ycombinator.com/item?id=5093037">HN</a>上看到过好多次 Datomic，但是今天才仔细看了下。</p>
+<p>看不到Infoq视频的可以看这里中文 <a href="http://www.infoq.com/cn/articles/Architecture-Datomic">Datomic的架构</a></p>
+<p>so far的一些观点：</p>
+<ul>
+<li>这货的Datom不就是典型的EAV设计么。带一个timestamp，不错。只是一般EAV的entity是类似一个class，而Datom的EAV只是一个flat展开的，entity仅仅作为类似PrimiaryKey的存在。</li>
+<li>(RDF Triple](http://www.w3.org/TR/rdf-concepts/#section-triples)跟EAV类似的思想，今天学习到了。主语 - 谓词 - 宾语 来表达数据</li>
+<li>这货的backend非常灵活，可以是传统SQL或NoSQL数据库。存储方式也可以localStorage或者MEM DB</li>
+<li>这货的query接口非常好，居然是用的Datalog。这种deductive思路跟Prolog一样都是很高阶的东西。</li>
+<li>因为Datom带了timestamp，所以数据DML模式不再是 CRUD，而是 CRA (Create Read Append)。好东西！这个就达到了data immutability。然后就可以被各种函数轮了。</li>
+<li>跟graph …</li></ul>
+                <a class="readmore" href="/post/41166048787">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/41061230598" rel="bookmark"
+                           title="Permalink to 你熟悉的计算机语言是第几代的？">你熟悉的计算机语言是第几代的？</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-20T20:20:03+00:00">
+                Published: 2013-01-20
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+
+</footer><!-- /.post-info -->                <p><a href="http://en.wikipedia.org/wiki/1GL">1GL</a> (First-generation programming language)</p>
+<p>机器语言 —— 就是传说中小刀刻光盘那哥们儿去美国之后发明的</p>
+<p><a href="http://en.wikipedia.org/wiki/Second-generation_programming_language">2GL</a>:</p>
+<ul>
+<li>汇编</li>
+</ul>
+<p><a href="http://en.wikipedia.org/wiki/Third-generation_programming_language">3GL</a>:</p>
+<ul>
+<li>Fortran</li>
+<li>COBOL</li>
+<li>Pascal</li>
+<li>C</li>
+<li>C++</li>
+<li>C#</li>
+<li>Java</li>
+<li>BASIC</li>
+<li>Delphi</li>
+<li>Ada</li>
+</ul>
+<p><a href="http://en.wikipedia.org/wiki/Fourth-generation_programming_language">4GL</a>:</p>
+<ul>
+<li>LabVIEW</li>
+<li>Progress 4GL (OpenEdge Advanced Business Language)</li>
+<li>SQL 和  PL/SQL</li>
+<li>MATLAB</li>
+<li>R</li>
+<li>Scilab</li>
+<li>XQuery</li>
+<li>XUL</li>
+<li>ColdFusion</li>
+</ul>
+<p><a href="http://en.wikipedia.org/wiki/Fifth-generation_programming_language">5GL</a></p>
+<ul>
+<li>Prolog</li>
+<li>Haskell</li>
+<li>ML</li>
+<li>Erlang</li>
+</ul>
+<p>虽然是一个过时的概念，还是拿出来玩一玩。</p>
+                <a class="readmore" href="/post/41061230598">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40724647124" rel="bookmark"
+                           title="Permalink to 圣多美的Pico Cão Grande这座山碉堡了">圣多美的Pico Cão Grande这座山碉堡了</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-16T20:16:00+00:00">
+                Published: 2013-01-16
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/funny.html">funny</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://media.tumblr.com/261c1bf3c3b46fd77eb0563f8eaa24b2/tumblr_inline_mgqwneMHce1qz5ax5.jpg"></p>
+<p><img alt="" src="http://media.tumblr.com/965e23ab483fc983b205138c5ba7c48c/tumblr_inline_mgqwnk4zfs1qz5ax5.jpg"></p>
+<p><img alt="" src="http://media.tumblr.com/114805452653a4b9e575579756d59874/tumblr_inline_mgqwyu5SY01qz5ax5.jpg"></p>
+<p><img alt="" src="http://media.tumblr.com/deee01f5d7a1cea0389da690600c33b7/tumblr_inline_mgqwz3s1v31qz5ax5.jpg"></p>
+<p><img alt="" src="http://media.tumblr.com/06226abc53ce1a7502aec18d741e3a4b/tumblr_inline_mgqwzxeHdt1qz5ax5.jpg"></p>
+<p>一座300米高，拔地而起成jj状的山。。。。。。。。。。。。名字叫 Pico Cão Grande ，人称 大狗峰</p>
+<p>São Tomé and Príncipe 圣多美这个国家在沙哈拉以南，非洲大陆西边的一个岛上。</p>
+<p><a href="http://www.reddit.com/r/geography/comments/16p6yr/10_spectacular_volcanic_plugs_and_natural/">via</a></p>
+                <a class="readmore" href="/post/40724647124">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40669670540" rel="bookmark"
+                           title="Permalink to Google的Chrome云太混乱了">Google的Chrome云太混乱了</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-16T02:44:00+00:00">
+                Published: 2013-01-16
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/chrome.html">chrome</a> <a href="/tag/google.html">google</a> </p>
+</footer><!-- /.post-info -->                <p>最近想做点Chrome方面的开发，发现太混乱了。整理一下逻辑吧：</p>
+<p>Google Chrome <br>
+这个不仅是浏览器，而且是一整套生态系统体系</p>
+<p>Google Chrome Extensions  <br>
+大家常见的 “扩展” 体系</p>
+<p>Hosted Apps <br>
+又叫 Installable Web Apps。本质还是网站，但是提供一些本地特性用来整合 <br>
+文档： https://developers.google.com/chrome/apps/ <br>
+主要特色就是：权限比普通网站更加开放，可以一次设定永久有效。支持<code>manifest.json</code>。比如在里边通过<code>background_page</code>指定一个网站URL作为后台运行的机制</p>
+<p>Packaged Apps <br>
+又叫Chrome App
+这就是可以看成exe或者dmg的东西了。本质是本地离线应用。
+文档：http://developer.chrome.com/trunk/apps …</p>
+                <a class="readmore" href="/post/40669670540">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40667426313" rel="bookmark"
+                           title="Permalink to 用1/5的薪资，把你的工作外包出去">用1/5的薪资，把你的工作外包出去</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-16T01:44:00+00:00">
+                Published: 2013-01-16
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/news.html">news</a> <a href="/tag/funny.html">funny</a> <a href="/tag/china.html">china</a> </p>
+</footer><!-- /.post-info -->                <p>看到<a href="http://www.theregister.co.uk/2013/01/16/developer_oursources_job_china/">这个新闻</a>，震惊了！</p>
+<p>猪脚是<del>Verizon</del>美国一位顶级资深码农，该公司为政府关键IT系统服务</p>
+<ul>
+<li>6位数的薪水</li>
+<li>把关键架构外包给沈阳一家公司（或者说一个作坊）了。</li>
+<li>把RSA SecurID直接快递到中国。。。。</li>
+<li>每个月把1/5的薪水用来支付</li>
+<li>然后每天上reddit看猫猫视频</li>
+</ul>
+<p>我艹，真是天才。</p>
+<p>附上Onion新闻一则：</p>
+<iframe width="640" height="360" src="http://www.youtube.com/embed/rYaZ57Bn4pQ?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<p>via <a href="http://www.reddit.com/r/technology/comments/16nxtu/man_outsources_his_own_job_to_china_spends_free/">1</a>, <a href="http://www.reddit.com/r/netsec/comments/16n1mj/the_tale_of_vpn_logs_an_rsa_key_and_and_the_best/">2</a></p>
+<p>Update: solidot和cnbeta都报道了。我out了</p>
+                <a class="readmore" href="/post/40667426313">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40590125741" rel="bookmark"
+                           title="Permalink to [zz]螺旋发展的技术">[zz]螺旋发展的技术</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-15T03:04:00+00:00">
+                Published: 2013-01-15
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/philosophy.html">philosophy</a> <a href="/tag/technology.html">technology</a> </p>
+</footer><!-- /.post-info -->                <p>看了这篇文章《<a href="http://sunng.info/blog/2012/12/%e8%9e%ba%e6%97%8b%e5%8f%91%e5%b1%95%e7%9a%84%e6%8a%80%e6%9c%af/">螺旋发展的技术</a> 》</p>
+<p>觉得很有意思。以前我也喜欢喷技术的倒退啊之类的。现在看来不是这么回事。</p>
+<p>我们理解的技术，只是现实技术 <strong><em>T</em></strong> 的绝对高度 <strong>|T|</strong>  在我们理想中的投影罢了 。一个技术的可见高度 = |<strong>T</strong>| * cos(心态) 。而技术的绝对高度的成长，则是不均衡发展的，非平衡的发展，造成的就是一种螺旋结构。</p>
+<p>这是一种自然规律，但是是人为可控的。只是工业界太大不可能有一个中心指挥机制。</p>
+<p>再也不愤了哈哈。</p>
+                <a class="readmore" href="/post/40590125741">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40579938737" rel="bookmark"
+                           title="Permalink to 自从毛子开始买行车记录仪之后">自从毛子开始买行车记录仪之后</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-14T23:40:27+00:00">
+                Published: 2013-01-14
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/videos.html">videos</a> <a href="/tag/funny.html">funny</a> </p>
+</footer><!-- /.post-info -->                <iframe width="640" height="360" src="https://www.youtube.com/embed/_WaKGOIEWQ4?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/Y5XM6r7GiUI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<p>网上的欢乐就多了好多~~</p>
+<p>via <a href="http://www.reddit.com/r/videos/comments/16j93q/this_dashcam_video_blew_my_mind/">1</a>, <a href="http://www.reddit.com/r/Roadcam/comments/16l8xa/first_day_of_owning_a_dash_camera_in_russia/">2</a></p>
+                <a class="readmore" href="/post/40579938737">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40572925039" rel="bookmark"
+                           title="Permalink to QOTD">QOTD</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-14T22:15:00+00:00">
+                Published: 2013-01-14
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/quote.html">quote</a> </p>
+</footer><!-- /.post-info -->                <p>看到这个很有趣啊</p>
+<ul>
+<li>
+<p>Analysis without numbers is only an opinion.</p>
+</li>
+<li>
+<p>There is never a single right solution. There are always multiple wrong ones, though.</p>
+</li>
+<li>
+<p>A bad design with a good presentation is doomed eventually. A good design with a bad presentation is doomed immediately. （PPT的重要性。。。）</p>
+</li>
+<li>
+<p>(Larrabee's Law) Half of everything you hear …</p></li></ul>
+                <a class="readmore" href="/post/40572925039">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/40503548806" rel="bookmark"
+                           title="Permalink to 为啥中文没有发展出这种设计风格？">为啥中文没有发展出这种设计风格？</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-14T01:28:00+00:00">
+                Published: 2013-01-14
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/fonts.html">fonts</a> <a href="/tag/calligraphy.html">Calligraphy</a> <a href="/tag/typeface.html">typeface</a> </p>
+</footer><!-- /.post-info -->                <iframe width="640" height="360" src="http://www.youtube.com/embed/yOyS8mLVb0Q?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/3OYhq6HbJ4U?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<p>准确的说，为啥中文没有在计算机上发展出连笔字体？</p>
+<p><a href="http://www.reddit.com/r/videos/comments/16iaun/calligraphy_penmanship_like_youve_never_seen/">via</a></p>
+                <a class="readmore" href="/post/40503548806">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
             <li><article class="hentry">
                 <header>
                     <h1><a href="/post/40237390809" rel="bookmark"
@@ -32,13 +355,13 @@
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-01-11T00:40:00+00:00">
-                Published: %F
+                Published: 2013-01-11
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/society.html">society</a> <a href="/tag/video.html">video</a> </p>
 </footer><!-- /.post-info -->                <iframe width="640" height="360" src="http://www.youtube.com/embed/8bWlTZZN3DY?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 
@@ -62,13 +385,13 @@
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-01-08T22:26:00+00:00">
-                Published: %F
+                Published: 2013-01-08
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/security.html">security</a> <a href="/tag/python.html">python</a> <a href="/tag/wiki.html">wiki</a> <a href="/tag/0day.html">0day</a> </p>
 </footer><!-- /.post-info -->                <p>Python声明</p>
 <p>http://pyfound.blogspot.com/2013/01/wikipythonorg-compromised.html</p>
@@ -94,13 +417,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-01-07T04:25:58+00:00">
-                Published: %F
+                Published: 2013-01-07
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/radio.html">radio</a> <a href="/tag/sdr.html">SDR</a> </p>
 </footer><!-- /.post-info -->                <p>看这里：</p>
 <p><a href="http://www.engadget.com/2013/01/07/nvidia-i500-soft-modem/">http://www.engadget.com/2013/01/07/nvidia-i500-soft-modem/</a></p>
@@ -121,13 +444,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-24T05:41:00+00:00">
-                Published: %F
+                Published: 2012-12-24
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/xunlei.html">xunlei</a> <a href="/tag/cloud.html">cloud</a> <a href="/tag/vod.html">vod</a> </p>
 </footer><!-- /.post-info -->                <div class="highlight"><pre><span></span><span class="nt">http</span><span class="o">://</span><span class="nt">i</span><span class="p">.</span><span class="nc">vod</span><span class="p">.</span><span class="nc">xunlei</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">req_history_play_list</span><span class="o">/</span><span class="nt">req_num</span><span class="o">/</span><span class="nt">30</span><span class="o">/</span><span class="nt">req_offset</span><span class="o">/</span><span class="nt">0</span><span class="o">?</span><span class="nt">type</span><span class="o">=</span><span class="nt">all</span><span class="o">&amp;</span><span class="nt">amp</span><span class="o">;</span><span class="nt">order</span><span class="o">=</span><span class="nt">create</span><span class="o">&amp;</span><span class="nt">amp</span><span class="o">;</span><span class="nt">t</span><span class="o">=</span><span class="nt">1356345404623</span>
 
@@ -151,13 +474,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-11T22:41:44+00:00">
-                Published: %F
+                Published: 2012-12-11
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/troll.html">troll</a> </p>
 </footer><!-- /.post-info -->                <p>看到这个博客《搜狐微访谈：方舟子揭露微波炉烹饪致癌谣言》</p>
 <p>方舟子跟网友互动啦， blah blah一大堆。。看到这个问答，笑喷了。</p>
@@ -179,13 +502,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-11T02:14:01+00:00">
-                Published: %F
+                Published: 2012-12-11
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/motivation.html">motivation</a> </p>
 </footer><!-- /.post-info -->                <p>Life begins at the end of comfort zone.</p>
 <p><img alt="" src="http://i.imgur.com/NhQqul.jpg"></p>
@@ -204,13 +527,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-07T23:58:03+00:00">
-                Published: %F
+                Published: 2012-12-07
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/dog.html">dog</a> <a href="/tag/video.html">video</a> </p>
 </footer><!-- /.post-info -->                <iframe width="640" height="360" src="http://www.youtube.com/embed/bO5bL77e0Rs?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
 
@@ -229,13 +552,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-07T00:27:00+00:00">
-                Published: %F
+                Published: 2012-12-07
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/china.html">china</a> </p>
 </footer><!-- /.post-info -->                <p>信息<a href="http://www.gdca.gov.cn/promise/49.asp">一</a></p>
 <p><img alt="" src="http://media.tumblr.com/tumblr_menb1ilLbt1qz5ax5.png"></p>
@@ -262,13 +585,13 @@ x <span class="nb">exec</span> __import__ …</pre></div>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-06T21:38:00+00:00">
-                Published: %F
+                Published: 2012-12-06
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/wget.html">wget</a> <a href="/tag/curll.html">curll</a> <a href="/tag/bash.html">bash</a> <a href="/tag/shellscript.html">shellscript</a> <a href="/tag/tcp.html">tcp</a> </p>
 </footer><!-- /.post-info -->                <p>马克一下。。。exec这个没想到shell里也可以用啊</p>
 <div class="highlight"><pre><span></span>exec 3&amp;lt;&amp;gt;/dev/tcp/www.google.com/80
@@ -292,13 +615,13 @@ cat &amp;lt;&amp;amp;3
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2012-12-04T03:17:00+00:00">
-                Published: %F
+                Published: 2012-12-04
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
-<p>In <a href="/category/text.html">text</a>.</p>
+<p>In <a href="/category/archive.html">text</a>.</p>
 <p>tags: <a href="/tag/github.html">github</a> <a href="/tag/git.html">git</a> <a href="/tag/ssh.html">ssh</a> </p>
 </footer><!-- /.post-info -->                <p>场景：有多个github账号，比如公司一个，私人一个。现在想在同一台主机上同时维护公司的和私人的repo</p>
 <p>大家可能会尝试把一个公钥贴到两个github账户，实践告诉我们</p>
@@ -326,9 +649,9 @@ IdentitiesOnly yes
             </article></li>
                 </ol><!-- /#posts-list -->
 <p class="paginator">
-        <a href="/index.15.html">&laquo;</a>
-    Page 16 / 26
-        <a href="/index.17.html">&raquo;</a>
+        <a href="/index.07.html">&laquo;</a>
+    Page 8 / 13
+        <a href="/index.09.html">&raquo;</a>
 </p>
                 </section><!-- /#content -->
         <section id="extras" class="body">

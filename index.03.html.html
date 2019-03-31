@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Est's Blog</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/archive.html">text</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="19">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/73498209959" rel="bookmark"
+                           title="Permalink to Manually resolve any DNS A record">Manually resolve any DNS A record</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-01-16T03:31:00+00:00">
+                Published: 2014-01-16
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/dns.html">dns</a> </p>
+</footer><!-- /.post-info -->                <div class="highlight"><pre><span></span>printf &quot;\0\1\1\0\0\1\0\0\0\0\0\0\6reddit\3com\0\0\1\0\1&quot; |nc -vvuq1 8.8.8.8  53 |xxd
+</pre></div>
+
+
+<p>Explain:</p>
+<p>0x0001 means transaction ID. Invent one as you like  <br>
+0x0100 Flag. Always this for all requests  <br>
+0x0001 number of requests: always …</p>
+                <a class="readmore" href="/post/73498209959">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/73082214124" rel="bookmark"
+                           title="Permalink to The Girl With The Dragon Tattoo">The Girl With The Dragon Tattoo</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-01-12T07:07:47+00:00">
+                Published: 2014-01-12
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/movie.html">movie</a> <a href="/tag/quotes.html">quotes</a> </p>
+</footer><!-- /.post-info -->                <p>很早就知道这部神片，知道最近才在avfun上看了。记录一下影响最深的一句话，就是 Michel 准备逃下山却被喊住回去，然后被抓到地下室的情节：</p>
+<p>Let me ask you something. Why don't people trust their instincts?</p>
+<p>They sense something is wrong, someone is walking too close behind them. You knew something was wrong. But you came back into the house.</p>
+<p>Did I force you? Did I drag you …</p>
+                <a class="readmore" href="/post/73082214124">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/71820720131" rel="bookmark"
+                           title="Permalink to 情绪 和 人体">情绪 和 人体</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-01-01T01:01:42+00:00">
+                Published: 2014-01-01
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/paper.html">paper</a> </p>
+</footer><!-- /.post-info -->                <p><img alt="" src="http://ww1.sinaimg.cn/large/572b82eagw1ec405q0ggaj20nn0i70wk.jpg"></p>
+<p><img alt="" src="http://ww1.sinaimg.cn/large/572b82eagw1ec405q0y9xj20tb08d40c.jpg"></p>
+<p><img alt="" src="http://ww2.sinaimg.cn/large/572b82eagw1ec405szsmpj20nw0h977f.jpg"></p>
+<p>第二张图看片jj看硬了么。。</p>
+<p><a href="https://news.ycombinator.com/item?id=6991309">via</a></p>
+                <a class="readmore" href="/post/71820720131">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/71512957062" rel="bookmark"
+                           title="Permalink to mptcp一些乱猜想">mptcp一些乱猜想</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-29T07:00:12+00:00">
+                Published: 2013-12-29
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/tcp.html">tcp</a> <a href="/tag/nginx.html">nginx</a> </p>
+</footer><!-- /.post-info -->                <p>很老的一个新闻了 <a href="http://appleinsider.com/articles/13/09/20/apple-found-to-be-using-advanced-multipath-tcp-networking-in-ios-7">ios7 支持 multipath tcp</a></p>
+<p><img alt="" src="http://cdn1.appleinsider.com/13.09.20-Multipath_TCP.jpg"></p>
+<p><a href="http://www.slashroot.in/what-tcp-multipath-and-how-does-multipath-tcp-work">原理</a>也很简单，就是个inverse  multiplexer</p>
+<p><img alt="" src="http://www.slashroot.in/sites/default/files/Multipath%20TCP%20handshake.png"></p>
+<p>我越来越觉得现在技术变化太快了。</p>
+<p>比如nginx现在就不支持MPTCP。假设一个客户端下载一个MP3文件，经历了有线 -&gt; WIFI -&gt; 3G 三个步骤，那么access_log该怎么记录呢？记录几个IP呢？是否需要记录channel join和 断开时间呢？</p>
+<p>太多了问题了。</p>
+<p>感叹python再不拥抱realtime web就要被node和go淘汰了 :)</p>
+                <a class="readmore" href="/post/71512957062">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/69464913766" rel="bookmark"
+                           title="Permalink to 8皇后问题 - python解">8皇后问题 - python解</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-09T01:34:00+00:00">
+                Published: 2013-12-09
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <p>看到<a href="http://www.newsmth.net/bbscon.php?bid=284&amp;id=109693">javaboy在python版的发言</a> 然后发现<a href="http://rosettacode.org/wiki/N-queens_problem#Python">Raymond Hettinger的解</a></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">permutations</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1"># number of bitches</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">vec</span> <span class="ow">in</span> <span class="n">permutations</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">))</span> \
+         <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">)):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;.&#39;</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="s1">&#39;Q&#39;</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1 …</span></pre></div>
+                <a class="readmore" href="/post/69464913766">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/69161031446" rel="bookmark"
+                           title="Permalink to 疑Google员工把8w行Python项目用4w行Java重写了">疑Google员工把8w行Python项目用4w行Java重写了</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-06T05:50:00+00:00">
+                Published: 2013-12-06
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/java.html">java</a> </p>
+</footer><!-- /.post-info -->                <p>看发帖IP是亮点。后面后贴的一堆喷子。   </p>
+<p>发信人: daluobu (阿土仔), 信区: Python    <br>
+标  题: 终于把一个8万行的Python程序用Java重写了    <br>
+发信站: 水木社区 (Fri Dec  6 08:10:26 2013), 转信      </p>
+<p>在噩梦般地维护了一年多一个8万多行的Python程序之后，终于争取到机会把这个破烂玩意用Java重写了一遍，大概是4万行Java左右。说说效果吧：    <br>
+1. 从过去平均每周down一次，到现在连续运转近半年只down过一次。    <br>
+2. 节省超过80%的cpu和内存    <br>
+3. 代码多了很多功能，过去无数因为系统太复杂无法实现的功能现在都能简单清爽地实现了。    <br>
+4. 单元测试真管用了，不是过去那种把代码反过来写一遍的滥用mock了。  <br>
+前后代码都是同一个team写的，写代码的人都不是菜鸟（顶级公司的核心团队）区别只有语言和几年的经验积累。      </p>
+<p>总结一句话就是：动态语言滥用起来真是可怕      </p>
+<p>珍惜生命，远离Python。      </p>
+<p>--      </p>
+<p>※ 来源:·水木社区 http://newsmth.net·[FROM …</p>
+                <a class="readmore" href="/post/69161031446">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/68859719896" rel="bookmark"
+                           title="Permalink to 1995年预言的互联网">1995年预言的互联网</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-03T01:27:50+00:00">
+                Published: 2013-12-03
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/digest.html">digest</a> </p>
+</footer><!-- /.post-info -->                <p>Every voice can be heard cheaply and instantly. The result? Every voice is heard. The cacophany more closely resembles citizens band radio, complete with handles, harrasment, and anonymous threats. When most everyone shouts, few listen.</p>
+<p><a href="http://www.reddit.com/r/technology/comments/1rwuhw/predictions_about_the_web_from_1995_the_truth_in/cdrx2ep">via</a></p>
+                <a class="readmore" href="/post/68859719896">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/68759151296" rel="bookmark"
+                           title="Permalink to GoLang with Sublime on Windows">GoLang with Sublime on Windows</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-02T01:25:18+00:00">
+                Published: 2013-12-02
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/golang.html">golang</a> <a href="/tag/sublimetext.html">sublimetext</a> </p>
+</footer><!-- /.post-info -->                <p>好吧。还在力战渣windows。非管理员权限。<a href="http://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DArchive">下载zip包</a>解压到 D:\dev\go</p>
+<p>sublime处理中文路径一直很bug。需要修改 /Data/Packages/Default/exec.py:45 行：</p>
+<div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">proc_env</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="n">nv</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">unicode</span><span class="p">):</span>
+            <span class="kn">import</span> <span class="nn">locale</span>
+            <span class="n">nv</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">getdefaultlocale</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">proc_env</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">nv</span>
+</pre></div>
+
+
+<p>然后菜单 Tools -&gt; Build System -&gt; New...</p>
+<div class="highlight"><pre><span></span>{
+    &quot;cmd&quot;: [&quot;go …</pre></div>
+                <a class="readmore" href="/post/68759151296">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/68445610297" rel="bookmark"
+                           title="Permalink to SSRF - 看了这个slides，再也不相信procfs里的fd了">SSRF - 看了这个slides，再也不相信procfs里的fd了</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-11-29T03:02:37+00:00">
+                Published: 2013-11-29
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/security.html">security</a> <a href="/tag/hacks.html">hacks</a> </p>
+</footer><!-- /.post-info -->                <iframe src="http://www.slideshare.net/slideshow/embed_code/15264310" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+
+<p><div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/d0znpp/ssrf-attacks-and-sockets-smorgasbord-of-vulnerabilities" title="SSRF attacks and sockets: smorgasbord of vulnerabilities" target="_blank">SSRF attacks and sockets: smorgasbord of vulnerabilities</a> </strong> from <strong><a href="http://www.slideshare.net/d0znpp" target="_blank">Ivan Novikov</a></strong> </div></p>
+                <a class="readmore" href="/post/68445610297">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/68199814606" rel="bookmark"
+                           title="Permalink to bitcoin —— 末日的狂欢">bitcoin —— 末日的狂欢</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-11-26T17:17:00+00:00">
+                Published: 2013-11-26
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/bitcoin.html">bitcoin</a> </p>
+</footer><!-- /.post-info -->                <p>bitcoin —— 末日的狂欢</p>
+<p>bitcoin的出现，对于每一个geek和码农都是boner级别的兴奋的。码农对金融这块“白富美”垂涎已久，过去能接入银行API的，少之又少。而bitcoin直接把胚胎状的一个“白富美”免费送给了每一个愿意上的人。Programmable money。多么响亮的口号。</p>
+<p>bitcoin有更多响亮的口号，让一批先驱者坚信不移的认为这是未来。也让另一部分怀疑者直接给bitcoin打上“传销”的标签。</p>
+<p>比如说p2p。对于geek来说，这就是 安全，潮，不可阻止。对于hash构成的blockchain，对于pseudo geek来说，这就是牛逼算法和创新。但是我觉得，blockchain就是末日的狂欢。</p>
+<p>什么是bitcoin？bitcoin就是一个冻结blockchian的p2p网络。为什么bitcoin能火？我觉得这就得从货币、交易和支付的本质说起。钱是啥？钱的<a href="http://www.douban.com/note/317278205/">本质就是个“账簿”</a> 。A把10元钱给B，这个本质就是A的账簿-10，B的账簿+10 。交易本生，其实就是信息传递。</p>
+<p>过去信息传递的方式是什么？物物交换、黄金货币 …</p>
+                <a class="readmore" href="/post/68199814606">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/65846958713" rel="bookmark"
+                           title="Permalink to [zz]为啥转基因双方互相无法说服对方？">[zz]为啥转基因双方互相无法说服对方？</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-11-02T22:05:18+00:00">
+                Published: 2013-11-02
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/science.html">science</a> </p>
+</footer><!-- /.post-info -->                <p>est注：这文章很好。说明了现在一个audience问题。</p>
+<ol>
+<li>支持转基因的，基本都不是需要天天做饭买粮的</li>
+<li>真正转基因种子消费者——种地的，压根不会理会那些科普辟谣</li>
+</ol>
+<p>发信人: zrliu (skywalker), 信区: GuoJiXue <br>
+标  题:  为啥转基因双方互相无法说服对方？zz <br>
+发信站: 水木社区 (Sat Nov  2 01:03:47 2013), 站内   </p>
+<p>【 以下文字转载自 EconForum 讨论区 】 <br>
+发信人: zrliu (skywalker), 信区: EconForum <br>
+标  题:  为啥转基因双方互相无法说服对方？zz <br>
+发信站: 水木社区 (Sat Nov  2 01:02:37 2013), 站内   </p>
+<p>http …</p>
+                <a class="readmore" href="/post/65846958713">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/65574918947" rel="bookmark"
+                           title="Permalink to Google Read-time Bidding (doubleclick RTB)">Google Read-time Bidding (doubleclick RTB)</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-30T21:33:58+00:00">
+                Published: 2013-10-30
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> </p>
+</footer><!-- /.post-info -->                <p>http://www.youtube.com/watch?v=NoGgLxky1FE</p>
+<p>视频大概这么个意思：</p>
+<ul>
+<li>Google Ads会花100ms告诉广告买主，用户IP，所在位置，广告大小，网站分类</li>
+<li>Google Ads在100ms把广告位卖给出价最高的。</li>
+</ul>
+<p>真是碉堡了。If You're Not Paying for It; You're the Product</p>
+                <a class="readmore" href="/post/65574918947">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/65507202324" rel="bookmark"
+                           title="Permalink to pin ssl fingerprint with Chrome HSTS">pin ssl fingerprint with Chrome HSTS</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-30T03:06:00+00:00">
+                Published: 2013-10-30
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/openssl.html">openssl</a> <a href="/tag/ssl.html">ssl</a> </p>
+</footer><!-- /.post-info -->                <p>code:</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="s s-Atom">openssl</span> <span class="s s-Atom">x509</span> <span class="o">-</span><span class="s s-Atom">noout</span> <span class="o">-</span><span class="s s-Atom">fingerprint</span> <span class="o">-</span><span class="s s-Atom">sha1</span> <span class="o">-</span><span class="s s-Atom">in</span> <span class="s s-Atom">&amp;lt</span><span class="p">;(</span><span class="s s-Atom">openssl</span> <span class="s s-Atom">s_client</span> <span class="o">-</span><span class="s s-Atom">connect</span> <span class="s s-Atom">weibo</span><span class="p">.</span><span class="nn">cn</span><span class="p">:</span><span class="mi">443</span> <span class="o">-</span><span class="s s-Atom">prexit</span> <span class="mi">2</span><span class="s s-Atom">&amp;gt</span><span class="p">;</span><span class="o">/</span><span class="s s-Atom">dev</span><span class="o">/</span><span class="s s-Atom">null</span><span class="p">)</span> <span class="p">|</span> <span class="s s-Atom">python</span> <span class="o">-</span><span class="s s-Atom">c</span> <span class="s2">&quot;print __import__(&#39;sys&#39;).stdin.read().partition(&#39;=&#39;)[2][:-1].replace(&#39;:&#39;,&#39;&#39;).decode(&#39;hex&#39;).encode(&#39;base64&#39;)&quot;</span>
+<span class="s s-Atom">fUWlLfAlsHpGFDfI4XsFOUWkA7Q</span><span class="o">=</span>
+</pre></div>
+
+
+<p>website: https://www.grc.com/fingerprints.htm</p>
+                <a class="readmore" href="/post/65507202324">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/64187857134" rel="bookmark"
+                           title="Permalink to ubuntu / python编码坑一则">ubuntu / python编码坑一则</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-16T01:59:00+00:00">
+                Published: 2013-10-16
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/ubuntu.html">ubuntu</a> </p>
+</footer><!-- /.post-info -->                <p>一个django文件上传老是出现unicode error</p>
+<div class="highlight"><pre><span></span>UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode character u&#39;\uWTFH&#39; in position 0: ordinal not in range(128)
+</pre></div>
+
+
+<p>折腾了好久 reload(sys) sys.setdefaultencoding() locale.setdefaultlocale() </p>
+<p>后来发现是os.environ["LANG"]居然为空。这尼玛为毛啊。</p>
+<p>LANG为空也就算了，发现另外一个神奇的bug：</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF8
+$ python -c <span class="s2">&quot;print __import__(&#39;locale&#39;).getdefaultlocale()&quot;</span>
+<span class="o">(</span><span class="s1">&#39;en_US&#39;</span>, <span class="s1">&#39;UTF8&#39;</span><span class="o">)</span>
+
+$ <span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>en_US
+$ python -c …</pre></div>
+                <a class="readmore" href="/post/64187857134">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/63515206207" rel="bookmark"
+                           title="Permalink to 为什么说Google已经没救了。">为什么说Google已经没救了。</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-08T21:04:02+00:00">
+                Published: 2013-10-08
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> </p>
+</footer><!-- /.post-info -->                <p>Nikesh Arora － Senior Vice President and Chief Business Officer  <br>
+Sridhar Ramaswamy － Senior Vice President, Ads &amp; Commerce  <br>
+Amit Singhal - Senior Vice President and software engineer (  <br>
+Principal Scientist, Search)  <br>
+Sundar Pichai －Senior Vice President, Android, Chrome &amp; Apps  <br>
+Vic Gundotra － Senior Vice President, Social (Google plus,  <br>
+Hangouts, etc.)  <br>
+Krishna Bharat - Principal Scientist (User …</p>
+                <a class="readmore" href="/post/63515206207">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/61186052291" rel="bookmark"
+                           title="Permalink to 如何禁用win7下wfpdiag.etl大量写磁盘">如何禁用win7下wfpdiag.etl大量写磁盘</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-09-14T03:52:53+00:00">
+                Published: 2013-09-14
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/win7.html">win7</a> </p>
+</footer><!-- /.post-info -->                <p>netsh wfp set options netevents = off</p>
+<p>好久不写blog，登录session都过期了。</p>
+                <a class="readmore" href="/post/61186052291">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/60413259400" rel="bookmark"
+                           title="Permalink to 小米电视在newsmth上的Q&A">小米电视在newsmth上的Q&A</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-09-05T22:00:46+00:00">
+                Published: 2013-09-05
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/gadgets.html">Gadgets</a> </p>
+</footer><!-- /.post-info -->                <p>发信人: x414 (安卓工程师), 信区: DigiHome <br>
+标  题: 小米电视研发工程师在线答疑 仅限今晚 <br>
+发信站: 水木社区 (Thu Sep  5 20:07:39 2013), 站内   </p>
+<p>Q: 哪家的主控芯片？ <br>
+A: 高通8064    </p>
+<p>Q: 为啥没分量 <br>
+A: 印象中有 待确认  另外即使没有也没什么   </p>
+<p>Q: 遥控器2.4G么 <br>
+A: 遥控器有红外和蓝牙两款   </p>
+<p>Q: 内置了有线机顶盒吗？ <br>
+A:没有 不过可和平相处   </p>
+<p>Q: 以后硬件像CPU内存主板什么的如何升级呢？能整体拆下来更换吗？ <br>
+A: 整个使用寿命应该无需升级了  软件会保持升级   </p>
+<p>Q: : 这是操作系统的cpu？电视上有没有视频主控或者音频主控这么个概念？这玩意儿一个人兼任了？还是用了别家产品 …</p>
+                <a class="readmore" href="/post/60413259400">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/58751318832" rel="bookmark"
+                           title="Permalink to 小费">小费</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-19T22:21:39+00:00">
+                Published: 2013-08-19
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/culture.html">culture</a> </p>
+</footer><!-- /.post-info -->                <p>都无聊得去逛 r/china 了</p>
+<blockquote>
+<p>Tipping was a custom invented by employers as a way to justify paying lower wages. Basically employers can say I don't need to give you a living wage because you can depend on the customers for charity.
+Also don't forget it places pressure on the rest …</p></blockquote>
+                <a class="readmore" href="/post/58751318832">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/58311721863" rel="bookmark"
+                           title="Permalink to PyPy performance post is very misleading">PyPy performance post is very misleading</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-15T02:06:22+00:00">
+                Published: 2013-08-15
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/julia.html">julia</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->                <blockquote>
+<p>PyPy performance post is very misleading. PyPy only has better printf performance than C in the particular case where you print the same expression twice. Specifically, their JIT figures out that it can decode the value only once instead of twice, which C cannot do because libc's printf is all …</p></blockquote>
+                <a class="readmore" href="/post/58311721863">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/post/57663601114" rel="bookmark"
+                           title="Permalink to Chromecast的操作系统和硬件是什么">Chromecast的操作系统和硬件是什么</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-07T21:56:00+00:00">
+                Published: 2013-08-07
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/archive.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> <a href="/tag/android.html">android</a> </p>
+</footer><!-- /.post-info -->                <p>前几天的<a href="http://blog.gtvhacker.com/2013/chromecast-exploiting-the-newest-device-by-google/">chromecast签名绕过破解</a>)</p>
+<p>Is it really ChromeOS?</p>
+<p>No, it’s not. We had a lot of internal discussion on this, and have concluded that it’s more Android than ChromeOS. To be specific, it’s actually a modified Google TV release, but with all of the Bionic / Dalvik stripped out and …</p>
+                <a class="readmore" href="/post/57663601114">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="/index.02.html">&laquo;</a>
+    Page 3 / 13
+        <a href="/index.04.html">&raquo;</a>
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
