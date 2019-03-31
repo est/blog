@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>比奥数题还脑残的Python题</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/50388604760" rel="bookmark"
+           title="Permalink to 比奥数题还脑残的Python题">比奥数题还脑残的Python题</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-13T21:55:01+00:00">
+                Published: Mon 13 May 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->      <p>下边的问题是在CPython interactive shell 里<strong>按顺序</strong>执行的，请在 下划线处  ____  填上答案。</p>
+<div class="highlight"><pre><span></span>&amp;gt;&amp;gt;&amp;gt; x = [1, 2, 3]
+&amp;gt;&amp;gt;&amp;gt; for number in x:
+...     number += 1
+... 
+&amp;gt;&amp;gt;&amp;gt; print x
+__________________
+&amp;gt;&amp;gt;&amp;gt; print 1 == True
+__________________
+&amp;gt;&amp;gt;&amp;gt; print 0 == False
+__________________
+&amp;gt;&amp;gt;&amp;gt; print 2 == True
+__________________
+&amp;gt;&amp;gt;&amp;gt; item = &#39;x&#39;
+&amp;gt;&amp;gt;&amp;gt; print item == &quot;y&quot; or &quot;z&quot;
+___________________
+&amp;gt;&amp;gt;&amp;gt; l = [1,6,4,2,3,9,4,6]
+&amp;gt;&amp;gt;&amp;gt; l = l.sort()
+&amp;gt;&amp;gt;&amp;gt; print l
+___________________
+&amp;gt;&amp;gt;&amp;gt; ll = [lambda: n for n in range(5)]
+&amp;gt;&amp;gt;&amp;gt; print [l() for l in ll]
+___________________
+&amp;gt;&amp;gt;&amp;gt; my_gen = (i for i in range(10))
+&amp;gt;&amp;gt;&amp;gt; print(3 in my_gen)
+___________________
+&amp;gt;&amp;gt;&amp;gt; print(7 in my_gen)
+___________________
+&amp;gt;&amp;gt;&amp;gt; print(2 in my_gen)
+___________________
+</pre></div>
+
+
+<p><a href="http://www.reddit.com/r/Python/comments/1e8xw5/common_misconceptions_in_python/">via</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

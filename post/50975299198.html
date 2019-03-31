@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Python zfec howto/example</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/50975299198" rel="bookmark"
+           title="Permalink to Python zfec howto/example">Python zfec howto/example</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-21T03:07:00+00:00">
+                Published: Tue 21 May 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python-fec-parity.html">python fec parity</a> </p>
+</footer><!-- /.post-info -->      <p>To install</p>
+<div class="highlight"><pre><span></span>$ pip install zfec
+</pre></div>
+
+
+<p>Suppose I have two blocks of data and want a third block as redundancy</p>
+<div class="highlight"><pre><span></span>&amp;gt;&amp;gt;&amp;gt; zfec.Encoder(2, 3).encode([&#39;ab&#39;, &#39;cd&#39;])
+[&#39;ab&#39;, &#39;cd&#39;, &#39;en&#39;]
+&amp;gt;&amp;gt;&amp;gt; zfec.Decoder(2, 3).decode([&#39;ab&#39;, &#39;cd&#39;, ], [0, 1])
+[&#39;ab&#39;, &#39;cd&#39;]
+# somehow lost the second block, use the third block the recover
+&amp;gt;&amp;gt;&amp;gt; zfec.Decoder(2, 3).decode([&#39;ab&#39;, &#39;en&#39;, ], [0, 2])
+[&#39;ab&#39;, &#39;cd&#39;]
+</pre></div>
+
+
+<p>In the above example, k=2 and m=3</p>
+<p>ref: https://pypi.python.org/pypi/zfec</p>
+<p>btw <a href="http://en.wikipedia.org/wiki/Secret_sharing#Trivial_secret_sharing">Trivial secret sharing</a></p>
+<div class="highlight"><pre><span></span>secret = 123
+a, b, c = [int((random.random() * 256)) for x in range(3)]
+d = map(xor, [secret, a, b, c])
+</pre></div>
+
+
+<p>so 4 players has each a share of secret. </p>
+<p>This is kinda lame... Shamir's scheme is much better</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>get current 3fm song in python</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/33289020579" rel="bookmark"
+           title="Permalink to get current 3fm song in python">get current 3fm song in python</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-10T03:49:00+00:00">
+                Published: Wed 10 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/radio.html">radio</a> </p>
+</footer><!-- /.post-info -->      <p><code>&gt;&gt;&gt; import pprint, datetime, json, urllib2</code> <br>
+<code>&gt;&gt;&gt; p=lambda:json.loads(urllib2.urlopen('http://radioplayer.omroep.nl/helper/now-on-air.json?ac=%s&amp;channel_id=3' % datetime.datetime.now().strftime('%Y%m%d%H%M')).read())</code> <br>
+<code>&gt;&gt;&gt; pprint.pprint(p()['current_song'])</code></p>
+<p>or parsing this HTML</p>
+<p>http://radioplayer.omroep.nl/helper/playlist.html?ac=201210101540&amp;channel_id=3</p>
+<p><code>ac</code> is the timestamp. channel_id=3 is 3FM Serious Radio.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

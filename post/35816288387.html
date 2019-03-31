@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>install uwsgi 1.4 on Ubuntu Lucid 10.04.2 LTS</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/35816288387" rel="bookmark"
+           title="Permalink to install uwsgi 1.4 on Ubuntu Lucid 10.04.2 LTS">install uwsgi 1.4 on Ubuntu Lucid 10.04.2 LTS</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-11-15T21:40:50+00:00">
+                Published: Thu 15 November 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/ubuntu.html">ubuntu</a> <a href="/tag/apt-get.html">apt-get</a> <a href="/tag/build.html">build</a> </p>
+</footer><!-- /.post-info -->      <p>Instasll new shit on legacy OS is always pain in the ass.</p>
+<p>Uwsgi 1.4 includes some awesome new features using zeromq, but it's impossible to install directly using <code>pip</code>. So here's the patch</p>
+<ol>
+<li>Download <a href="https://launchpad.net/~mojocode/+archive/ppa/+build/3440831/+files/libpgm-5.1-0_5.1.116~dfsg-2~lucid1_i386.deb">libpgm 5.1.116</a>. This library is multicast protocol blah used by zmq.</li>
+<li><code>dpkg -i</code> that shit</li>
+<li>sudo apt-get install libzmq1</li>
+<li>sudo apt-get install libzmq-dev</li>
+<li>sudo pip install uwsgi</li>
+</ol>
+<p>Aaaaaaand you are done.</p>
+<p>Ubuntu Lucid 10.04.2 LTS is such old system, even the libc6 is lack behind, A LOT.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

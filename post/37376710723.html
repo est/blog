@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>/dev/tcp</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/37376710723" rel="bookmark"
+           title="Permalink to /dev/tcp">/dev/tcp</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-12-06T21:38:00+00:00">
+                Published: Thu 06 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/wget.html">wget</a> <a href="/tag/curll.html">curll</a> <a href="/tag/bash.html">bash</a> <a href="/tag/shellscript.html">shellscript</a> <a href="/tag/tcp.html">tcp</a> </p>
+</footer><!-- /.post-info -->      <p>马克一下。。。exec这个没想到shell里也可以用啊</p>
+<div class="highlight"><pre><span></span>exec 3&amp;lt;&amp;gt;/dev/tcp/www.google.com/80
+echo -e &quot;GET / HTTP/1.1\n\n&quot;&amp;gt;&amp;amp;3
+cat &amp;lt;&amp;amp;3
+</pre></div>
+
+
+<p>简单的端口扫描：</p>
+<div class="highlight"><pre><span></span>$ <span class="k">for</span> p in <span class="o">{</span><span class="m">1</span>..1023<span class="o">}</span><span class="p">;</span> <span class="k">do</span><span class="o">(</span><span class="nb">echo</span> <span class="p">&amp;</span>gt<span class="p">;</span>/dev/tcp/localhost/<span class="nv">$p</span><span class="o">)</span> <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null <span class="m">2</span><span class="p">&amp;</span>gt<span class="p">;&amp;</span>amp<span class="p">;</span><span class="m">1</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$p</span><span class="s2"> open&quot;</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+
+
+<p>btw 最近看到好多openvpn被k掉了。看了下sshd的[源码](xasprintf(&amp;server_version_string, "SSH-%d.%d-%.100s%s%s%s",)</p>
+<p>这一行： </p>
+<div class="highlight"><pre><span></span>  xasprintf(&amp;amp;server_version_string, &quot;SSH-%d.%d-%.100s%s%s%s&quot;,
+</pre></div>
+
+
+<p>真尼玛坑爹，真心不安全啊。还是brl的patch好用。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

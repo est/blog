@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Return twice in a python function</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/44271333529" rel="bookmark"
+           title="Permalink to Return twice in a python function">Return twice in a python function</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-28T22:59:00+00:00">
+                Published: Thu 28 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->      <p>1.py:</p>
+<div class="highlight"><pre><span></span>def foo():
+ try:
+  return &#39;foo&#39;
+ finally:
+  return &#39;bar&#39;
+
+
+print foo()
+</pre></div>
+
+
+<p>2.py</p>
+<div class="highlight"><pre><span></span>def foo():
+ try:
+  return &#39;foo&#39;
+ finally:
+  print &#39;bar&#39;
+
+
+print foo()
+</pre></div>
+
+
+<p>The result is shocking...</p>
+<div class="highlight"><pre><span></span>$ python <span class="m">1</span>.py 
+bar
+$ python <span class="m">2</span>.py 
+bar
+foo
+</pre></div>
+
+
+<p>I think this particular behavior is well abused in <a href="http://code.google.com/p/modwsgi/wiki/RegisteringCleanupCode">WSGI</a></p>
+<p>two cents:</p>
+<ul>
+<li><code>return</code> does not actually leave the function immediately</li>
+<li>a function without <code>return</code> statement returns None, but explicitly return None is not the same. <code>None</code> is the most abused thing in all programming languages.</li>
+</ul>
+<p>to quote <a href="http://docs.python.org/2/reference/simple_stmts.html#return">the official doc</a>:</p>
+<blockquote>
+<p>When return passes control out of a try statement with a finally clause, that finally clause is executed before really leaving the function. <br>
+In a generator function, the return statement is not allowed to include an expression_list. In that context, a bare return indicates that the generator is done and will cause StopIteration to be raised.</p>
+</blockquote>
+<p>As to <code>yield</code>:</p>
+<blockquote>
+<p>As of Python version 2.5, the yield statement is now allowed in the try clause of a try ... finally construct. If the generator is not resumed before it is finalized (by reaching a zero reference count or by being garbage collected), the generator-iterator’s close() method will be called, allowing any pending finally clauses to execute.</p>
+</blockquote>
+<p>Black magic!</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

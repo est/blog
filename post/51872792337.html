@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>bluetooth dongle blacklist otg android linux</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/51872792337" rel="bookmark"
+           title="Permalink to bluetooth dongle blacklist otg android linux">bluetooth dongle blacklist otg android linux</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-06-01T06:12:00+00:00">
+                Published: Sat 01 June 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/android.html">android</a> <a href="/tag/otg.html">otg</a> <a href="/tag/linux.html">linux</a> <a href="/tag/bluetooth.html">bluetooth</a> <a href="/tag/dongle.html">dongle</a> </p>
+</footer><!-- /.post-info -->      <p>贪便宜去淘宝买了个10元的USB蓝牙适配器</p>
+<p>一查：Cambridge Silicon Radio Ltd</p>
+<p>USB\VID_0A12&amp;PID_0001&amp;REV_1989</p>
+<p>结果linux内核屏蔽了这个设备。</p>
+<p>http://lxr.free-electrons.com/source/drivers/bluetooth/btusb.c?v=3.0#L96</p>
+<div class="highlight"><pre><span></span>static struct usb_device_id blacklist_table[] = {
+    /* CSR BlueCore devices */
+    { USB_DEVICE(0x0a12, 0x0001), .driver_info = BTUSB_CSR },
+</pre></div>
+
+
+<p>所以如果你也有CSR芯片(BlueCore® BC7820™)的蓝牙，那么恭喜你，Android OTG和Linux都没法用。</p>
+<p>当时觉得悲剧了。<a href="http://www.slatedroid.com/topic/46457-bluetooth-dongle/page__view__findpost__p__504113">via</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

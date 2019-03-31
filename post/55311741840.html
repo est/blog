@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>android cid</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/55311741840" rel="bookmark"
+           title="Permalink to android cid">android cid</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-07-12T23:30:03+00:00">
+                Published: Fri 12 July 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/android.html">android</a> </p>
+</footer><!-- /.post-info -->      <p>this pdf</p>
+<p>http://events.ccc.de/congress/2010/Fahrplan/attachments/1781_27c3-android-geolocation.pdf</p>
+<p>注意看截图：</p>
+<p><img alt="" src="http://media.tumblr.com/1aba685c56c3d52e21ee5130a554724a/tumblr_inline_mpuuw8l0Vj1qz4rgp.png"></p>
+<p>20801，其中MCC=208，MNC=01
+LAC=0403 
+CID=61E00</p>
+<p>有这个信息之后，我们打开国产CID定位工具：</p>
+<p>http://www.minigps.net/map.html</p>
+<p><img alt="" src="http://media.tumblr.com/afc8be934f582937cbfc61193e242d5c/tumblr_inline_mpuuztfM431qz4rgp.png"></p>
+<p>就得到了基站位置。</p>
+<p>在自己手机上也可以直接通过下边命令来即时刷新：</p>
+<div class="highlight"><pre><span></span># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
+# logcat -b radio RILJ:D | grep SM | grep OPERA
+</pre></div>
+
+
+<p>当然，这些信息可以通过Android的 <em>#</em>#INFO#<em>#</em>直接看到。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

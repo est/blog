@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>测试ssh连接速度和带宽</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/34207514410" rel="bookmark"
+           title="Permalink to 测试ssh连接速度和带宽">测试ssh连接速度和带宽</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-23T22:30:00+00:00">
+                Published: Tue 23 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/pv.html">pv</a> <a href="/tag/bash.html">bash</a> <a href="/tag/shellscript.html">shellscript</a> <a href="/tag/bandwidth.html">bandwidth</a> <a href="/tag/networking.html">networking</a> </p>
+</footer><!-- /.post-info -->      <p>安装pv： <br>
+<code>sudo apt-get install pv</code></p>
+<p>下行： <br>
+<code>$ ssh est@my_host 'cat /dev/zero'  | pv &gt; /dev/null</code> <br>
+<code>144kB 0:00:05 [ 121kB/s] [ &lt;=&gt;                                               ]</code></p>
+<p>上行：   <br>
+<code>$ yes | pv | ssh est@my_host "cat &gt; /dev/null"</code>   <br>
+<code>2.06MB 0:00:05 [1.96MB/s] [  &lt;=&gt;                                              ]</code></p>
+<p>测试本机IO能力：  <br>
+<code>$ pv /dev/zero &gt; /dev/null</code> <br>
+<code>75.3GB 0:00:09 [8.56GB/s] [        &lt;=&gt;                                        ]</code></p>
+<p>其他技巧： <br>
+<a href="http://blog.urfix.com/9-tricks-pv-pipe-viewer/">http://blog.urfix.com/9-tricks-pv-pipe-viewer/</a></p>
+<p>恩。真好玩。我发现办公室的商用ADSL对称上下行就是屌啊。2MB上传速度我擦不用来挂PT可惜了。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

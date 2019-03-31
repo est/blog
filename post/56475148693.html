@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>为什么很多机器不能升级Android 4.3 (4.0/4.x/ICS/JB)</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/56475148693" rel="bookmark"
+           title="Permalink to 为什么很多机器不能升级Android 4.3 (4.0/4.x/ICS/JB)">为什么很多机器不能升级Android 4.3 (4.0/4.x/ICS/JB)</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-07-25T21:34:00+00:00">
+                Published: Thu 25 July 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Android 4.3发布了。最好用的功能不是媒体报道的那些，而是可以<a href="http://www.reddit.com/r/Android/comments/1j10zq/app_ops_android_43s_hidden_app_permission_manager/">对每个app进行单独的权限设置</a></p>
+<p>今天在<a href="http://www.reddit.com/r/Android/comments/1j13xd/how_oems_havent_announced_43_updates_for_the/">reddit上看到一个帖子</a>，解释了为啥很多Android机器不提供ICS和JB升级，我蛋痛，所以就来翻译下：</p>
+<ul>
+<li>OEM不直接从Google得到Android的源码</li>
+<li>做SoC芯片的厂商可以从Google得到源码，然后开发BSP(Board Support Package)。里边包含了驱动和优化</li>
+<li>BSP就交付给OEM厂商，厂商就可以给设备发布Android升级包。</li>
+</ul>
+<p>所以。现在的手机厂商都在等SoC厂商发布Android 4.3 BSP</p>
+<p>例如，高通(Qualcomm)前不久宣布对Snapdragon S3芯片放弃Android 4.2.2的BSP开发。所以HTC就不得不宣布 One S 不再有升级。骚尼(Sony)的Xperia S, SL, Acro S 和 ION 同理。因为都是基于 S3 SoC</p>
+<p>如果大家还记得的话，Thunderbolt 和 Sensation (包括LTE版本) 都用的是 Scorpion MSM8655，高通宣布不继续支持，所以用这个芯片的OEM也没得玩了。（译者注：狗日的海信EG900，原来我错怪你不能升级JB了）</p>
+<p>但是三爽(Samsung)是个例外。他们本身是SoC提供商(Exynos系列)，自身本身也是OEM厂商。所以自家的嫡系真是碉堡了。不过Galaxy S II 的 LTE 版本用了高通的Scorpion SoC，也就不再更新了</p>
+<p>虽然这个系统不完美，但是这就是业界的现状。</p>
+<p>译者补充：为什么G家亲儿子可以升级，因为G家牛逼，可以跟SoC谈判，保证超长时间的芯片支持周期。</p>
+<p>tl;dr 一句话：艹你娘的蛋的高通。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

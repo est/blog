@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>pin ssl fingerprint with Chrome HSTS</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/65507202324" rel="bookmark"
+           title="Permalink to pin ssl fingerprint with Chrome HSTS">pin ssl fingerprint with Chrome HSTS</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-30T03:06:00+00:00">
+                Published: Wed 30 October 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/openssl.html">openssl</a> <a href="/tag/ssl.html">ssl</a> </p>
+</footer><!-- /.post-info -->      <p>code:</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="s s-Atom">openssl</span> <span class="s s-Atom">x509</span> <span class="o">-</span><span class="s s-Atom">noout</span> <span class="o">-</span><span class="s s-Atom">fingerprint</span> <span class="o">-</span><span class="s s-Atom">sha1</span> <span class="o">-</span><span class="s s-Atom">in</span> <span class="s s-Atom">&amp;lt</span><span class="p">;(</span><span class="s s-Atom">openssl</span> <span class="s s-Atom">s_client</span> <span class="o">-</span><span class="s s-Atom">connect</span> <span class="s s-Atom">weibo</span><span class="p">.</span><span class="nn">cn</span><span class="p">:</span><span class="mi">443</span> <span class="o">-</span><span class="s s-Atom">prexit</span> <span class="mi">2</span><span class="s s-Atom">&amp;gt</span><span class="p">;</span><span class="o">/</span><span class="s s-Atom">dev</span><span class="o">/</span><span class="s s-Atom">null</span><span class="p">)</span> <span class="p">|</span> <span class="s s-Atom">python</span> <span class="o">-</span><span class="s s-Atom">c</span> <span class="s2">&quot;print __import__(&#39;sys&#39;).stdin.read().partition(&#39;=&#39;)[2][:-1].replace(&#39;:&#39;,&#39;&#39;).decode(&#39;hex&#39;).encode(&#39;base64&#39;)&quot;</span>
+<span class="s s-Atom">fUWlLfAlsHpGFDfI4XsFOUWkA7Q</span><span class="o">=</span>
+</pre></div>
+
+
+<p>website: https://www.grc.com/fingerprints.htm</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

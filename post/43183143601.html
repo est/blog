@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Google Apps Script生成动态网页碉堡了。</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/43183143601" rel="bookmark"
+           title="Permalink to Google Apps Script生成动态网页碉堡了。">Google Apps Script生成动态网页碉堡了。</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-15T18:59:56+00:00">
+                Published: Fri 15 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/javascript.html">javascript</a> <a href="/tag/google.html">Google</a> </p>
+</footer><!-- /.post-info -->      <p>Google Docs自己搞了一套类似Google App Engine的体系，只不过服务器端语言是Javascript，运行环境是 云JS——Google Apps Script</p>
+<p><a href="https://developers.google.com/apps-script/html_service">https://developers.google.com/apps-script/html_service</a></p>
+<p>看了下文档，类似php的语法，在html里嵌入js，然后服务器渲染得到一个网页。</p>
+<div class="highlight"><pre><span></span>&amp;lt;table&amp;gt;
+  &amp;lt;? var data = getData();
+     for (var i = 0; i &amp;lt; data.length; ++i) { ?&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;? for  (var j = 0; j &amp;lt; data[i].length; ++j) { ?&amp;gt;
+        &amp;lt;td&amp;gt;&amp;lt;?= data[i][j]?&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;? } ?&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;? } ?&amp;gt;
+&amp;lt;/table&amp;gt;
+</pre></div>
+
+
+<p>这是得有多蛋痛啊。那个结尾的<code>&lt;? } ?&gt;</code>更是让人菊花一紧！</p>
+<p>感脚Excel里边的VBA被秒杀了！</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

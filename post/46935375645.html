@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>OS X Mountain Lion 修改 openssh sshd_config 配置</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/46935375645" rel="bookmark"
+           title="Permalink to OS X Mountain Lion 修改 openssh sshd_config 配置">OS X Mountain Lion 修改 openssh sshd_config 配置</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-04-02T09:52:47+00:00">
+                Published: Tue 02 April 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/osx.html">osx</a> </p>
+</footer><!-- /.post-info -->      <p>OS X的蛋痛特性是  <code>`launched</code> 。如果你需要修改sshd的监听端口，那么</p>
+<p>编辑 /System/Library/LaunchDaemons/ssh.plist </p>
+<div class="highlight"><pre><span></span>        &amp;lt;key&amp;gt;Listeners&amp;lt;/key&amp;gt;
+        &amp;lt;dict&amp;gt;
+                &amp;lt;key&amp;gt;SockServiceName&amp;lt;/key&amp;gt;
+                &amp;lt;string&amp;gt;ssh-alt&amp;lt;/string&amp;gt;
+        &amp;lt;/dict&amp;gt;
+</pre></div>
+
+
+<p>然后在<code>/etc/services</code>里定义：</p>
+<div class="highlight"><pre><span></span> ssh-alt 12345/tcp # ssh-alt
+</pre></div>
+
+
+<p>然后重启sshd服务：</p>
+<div class="highlight"><pre><span></span>sudo launchctl uload /System/Library/LaunchDaemons/ssh.plist 
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+</pre></div>
+
+
+<p>蛋碎！</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

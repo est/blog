@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>[zz]Windows的cmd.exe使用consolas加中文雅黑字体的方法</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/28448766013" rel="bookmark"
+           title="Permalink to [zz]Windows的cmd.exe使用consolas加中文雅黑字体的方法">[zz]Windows的cmd.exe使用consolas加中文雅黑字体的方法</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-31T20:44:00+00:00">
+                Published: Tue 31 July 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/windows.html">windows</a> <a href="/tag/cmd.html">cmd</a> </p>
+</footer><!-- /.post-info -->      <p>发信人: timepp (时间调色板), 信区: NewSoftware
+标  题: [原创]控制台使用consolas加中文雅黑字体的方法
+发信站: 水木社区 (Fri Jul 27 11:32:10 2012), 站内</p>
+<p>中间很多坑,能达到截图的效果真是太不容易了. 过程我就不说了, 直接说怎么改吧
+(过程涉及注册表, 感兴趣的同学请小心修改)</p>
+<ol>
+<li>
+<p>设置控制台字体属性
+  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
+    (REG_SZ)00 = Consolas  注: 貌似WINDOWS缺省就是这样的啦
+    (REG_SZ)0936 = aaa     注: 这步是必须的, 注意ValueName是0936, value随便弄个不存在的字体</p>
+</li>
+<li>
+<p>把consolas连接到雅黑
+  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink
+      (REG_MULTI_SZ)Consolas = MSYH.TTC,微软雅黑,128,96
+  (修改了字体链接需要注销重登录才能生效)</p>
+</li>
+<li>
+<p>修改控制台属性(也可以在控制台属性页中直接设,需要自己摸索下规律)
+  HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe
+    修改FaceName为Consolas
+    修改FontSize为1179648</p>
+</li>
+<li>
+<p>这时在控制台依然显示很虚的宋体! 需要这第四步, 这步是我蒙对的(运气好啊)
+  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\RasterFonts
+    (REG_SZ)微软雅黑=msyh.ttc
+  (这步可能需要注销一下)</p>
+</li>
+</ol>
+<p>至此就结束了. 在控制台属性页中找不到consolas的同学, 先把代码页设成65001
+  chcp 65001</p>
+<p>cygwin也从中受益了, 呵呵, 见附图</p>
+<p>不知道这个cmd不知道能不能用mactype渲染,如果可以的话显示效果应该会更好(见附件MADEDIT截图), 我是64位的WIN8, 试不了.</p>
+<p><img alt="" src="http://media.tumblr.com/tumblr_m827a3Q5RM1qz5ax5.png"></p>
+<p>虽然我不用cmd，但是转载1下。。。就不吐槽了。。。。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

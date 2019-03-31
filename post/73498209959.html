@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Manually resolve any DNS A record</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/73498209959" rel="bookmark"
+           title="Permalink to Manually resolve any DNS A record">Manually resolve any DNS A record</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-01-16T03:31:00+00:00">
+                Published: Thu 16 January 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/dns.html">dns</a> </p>
+</footer><!-- /.post-info -->      <div class="highlight"><pre><span></span>printf &quot;\0\1\1\0\0\1\0\0\0\0\0\0\6reddit\3com\0\0\1\0\1&quot; |nc -vvuq1 8.8.8.8  53 |xxd
+</pre></div>
+
+
+<p>Explain:</p>
+<p>0x0001 means transaction ID. Invent one as you like  <br>
+0x0100 Flag. Always this for all requests  <br>
+0x0001 number of requests: always 1. because DNS RFC sucks  <br>
+0x0000 Response: 0  <br>
+0x0000 Authority Response: 0  <br>
+0x0000 Additional Response: 0  <br>
+\6 reddit The string reddit has length of 6  <br>
+\3 com The string com has length of 3  <br>
+0x0001 Record Type: A  <br>
+0x0001: Class: IN. Always this.    </p>
+<p>then ping the last four bytes</p>
+<div class="highlight"><pre><span></span>$ ping 0x60.0x11.0xb4.0x89
+PING 0x60.0x11.0xb4.0x89 <span class="o">(</span><span class="m">96</span>.17.180.137<span class="o">)</span> <span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span> bytes of data.
+</pre></div>
+
+
+<p>Why DNS Resource Record Name is always C0 0C?</p>
+<p>It's compression.</p>
+<p>C00C = 11000000 00001100</p>
+<p>First two bits means it's a pointer, b1100 = 12 bytes offset.</p>
+<p>Reference:</p>
+<p>http://www.ccs.neu.edu/home/amislove/teaching/cs4700/fall09/handouts/project1-primer.pdf</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

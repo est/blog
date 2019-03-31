@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Google的天顶星技术——Google Spanner</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/31780723732" rel="bookmark"
+           title="Permalink to Google的天顶星技术——Google Spanner">Google的天顶星技术——Google Spanner</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-09-18T00:38:14+00:00">
+                Published: Tue 18 September 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> <a href="/tag/db.html">db</a> <a href="/tag/tech.html">tech</a> </p>
+</footer><!-- /.post-info -->      <p>上次看到 <a href="http://www.csdn.net/article/2012-08-20/2808870">Google后Hadoop时代的新“三驾马车”——Caffeine、Pregel、Dremel</a></p>
+<p>感觉碉堡了。</p>
+<p>Pregel是一个graph db。这是逆NoSQL运动行之的潮流——NoSQL倡导没有<code>join</code>，而graph db则是——所有数据都可以默认join起来。</p>
+<p>Dremel 是一个query interface。</p>
+<p>Caffeine的背后是Google True Time API，这是基于Google Spanner的一个碉堡技术。。</p>
+<p>什么是Google Spanner？Spanner是一个行星级别的db系统——通过GPS、原子钟实现全球数据中心timestamp同步的MVCC。</p>
+<p>和BigTable相比，BigTable的cell是mutable，Spanner是Datomic，类似函数式变成里的常量；Spanner还提供了BigTable不具备的——分布式transaction支持。比如lock-free read transaction</p>
+<p>隐隐的感觉Google的天顶星科技碉堡了。paper都非常值得一读。。。虽然不明，但觉历。</p>
+<p><a href="http://news.ycombinator.com/item?id=4526710">via</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

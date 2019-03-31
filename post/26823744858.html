@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>DIY OAuth 2 library：从97KB到22行Python</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/26823744858" rel="bookmark"
+           title="Permalink to DIY OAuth 2 library：从97KB到22行Python">DIY OAuth 2 library：从97KB到22行Python</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-09T05:23:00+00:00">
+                Published: Mon 09 July 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/oauth.html">OAuth</a> <a href="/tag/google.html">Google</a> <a href="/tag/api.html">API</a> <a href="/tag/crypto.html">crypto</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->      <p>最近的项目需要用代码去读取一些Google Spreadsheet的数据，看了下Google官方的Spreadsheet API，读取数据这些好说，就是xml格式我比较讨厌。于是想用<code>alt=json</code>这个<a href="https://developers.google.com/gdata/docs/json">json输出API</a>，试用发现，对于ClientLogin（浏览器cookie）直接调用Spreadsheet API的Google Apps用户而言，这个json输出是400不可用的。于是只能撸一个OAuth读取数据试试了。</p>
+<p>看了下官方的<a href="http://code.google.com/p/gdata-python-client/">Google Data APIs Python Client Library</a>，我勒个擦啊，一大坨垃圾依赖，比如<code>OpenSSL.crypto</code>，<a href="http://code.google.com/p/httplib2/source/browse/python2/httplib2/__init__.py">httplib2</a>等。</p>
+<p>仔细看了下Google <a href="https://developers.google.com/accounts/docs/OAuth2ServiceAccount">OAuth 2.0</a>的文档，似乎也不复杂的样子，至少比<a href="http://initiative.yo2.cn/archives/633801">OAuth 1.0 那种3 legged login</a> 简单多了。于是就自己DIY了一个</p>
+<p>OAuth 2.0把流程分为了几个scenario，比如用于Web交互，客户端app，设备，等等。我需要的只是服务器读取某个Google Spreadsheet的一些数据，无须用户点击几个“确认”，所以属于Service Account</p>
+<p>当然，官方<a href="https://developers.google.com/accounts/docs/OAuth2ServiceAccount#overview">强烈不推荐</a>你自己去实现OAuth 2.0这一套流程</p>
+<p>&gt; The rest of this article describes the specifics of creating a JWT, signing the JWT, forming the access token request, and handling the response. Libraries should abstract these specifics from your application. Again, developers are strongly encouraged to attempt to use an existing library <strong>rather than building your own</strong> support for server-to-server interactions.</p>
+<p>所以我就直接去逆向他们的<a href="http://code.google.com/p/google-api-python-client/source/browse/samples/service_account/tasks.py">Tasks API with a Service account</a> sample</p>
+<p>安装了一大票依赖，痛苦编译好pyopenssl之后，直接运行，出错：</p>
+<div class="highlight"><pre><span></span>oauth2client.client.AccessTokenRefreshError: invalid_grant
+</pre></div>
+
+
+<p>加个Fiddler代理调试：</p>
+<div class="highlight"><pre><span></span>http = httplib2.Http(
+  proxy_info=httplib2.ProxyInfo(
+    httplib2.socks.PROXY_TYPE_HTTP, 
+    proxy_host=&#39;10.0.18.2&#39;, 
+    proxy_port=8888
+), ca_certs=&#39;FiddlerRoot.cer&#39;)
+</pre></div>
+
+
+<p>发现https不支持。于是</p>
+<div class="highlight"><pre><span></span>httplib2.debuglevel = 4
+</pre></div>
+
+
+<p>终于看到一坨东西了。</p>
+<p>对比上面那个 OAuth 2文档，可以轻松写出OAuth 2.0获得access_token的代码：</p>
+<p>需要用到API用户email，p12密钥两个东西，可以从Google API Console里获得。</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
+
+<span class="n">b64</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;{&quot;alg&quot;:&quot;RS256&quot;,&quot;typ&quot;:&quot;JWT&quot;}&#39;</span>
+<span class="n">ts_now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+
+<span class="n">claim_set</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;iss&quot;</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span>
+    <span class="s2">&quot;scope&quot;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scope</span><span class="p">),</span>
+    <span class="s2">&quot;aud&quot;</span><span class="p">:</span> <span class="s2">&quot;https://accounts.google.com/o/oauth2/token&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;exp&quot;</span><span class="p">:</span> <span class="n">ts_now</span><span class="o">+</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="s2">&quot;iat&quot;</span><span class="p">:</span> <span class="n">ts_now</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">jwt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url_b64</span><span class="p">(</span><span class="n">header</span><span class="p">),</span> <span class="n">url_b64</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">claim_set</span><span class="p">)))</span>
+<span class="c1"># convert pkcs12 to private key</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;openssl pkcs12 -in key.p12 -nocerts -passin stdin -nodes -out key.pem&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stdin</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;notasecret&#39;</span><span class="p">)</span> <span class="c1"># Google&#39;s key default password</span>
+<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<span class="c1"># RSA sign with sha256 using private key</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;openssl dgst -sha256 -sign &#39;</span><span class="n">key</span><span class="o">.</span><span class="n">pem</span><span class="s1">&#39; -keyform PEM&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stdin</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">jwt</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">sig</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">jwt</span><span class="p">,</span> <span class="n">url_b64</span><span class="p">(</span><span class="n">sig</span><span class="p">))</span>
+</pre></div>
+
+
+<p>有了access_token之后，获取spreadsheet数据就很简单了，我也拿<a href="https://developers.google.com/gdata/samples/spreadsheet_sample">sample里</a>的spreadsheet作为例子：</p>
+<p>https://spreadsheets.google.com/feeds/list/o13394135408524254648.240766968415752635/od6/public/values?alt=json&amp;access_token=1/XXXXX</p>
+<p>其中<code>1/XXXXX</code> 就是OAuth 2.0得到的access_token。</p>
+<p>对比一下，上面提到的Google官方的OAuth 2 library是97KB大小，自己DIY的算上注释都才只有22行。。。</p>
+<p>Google客户端的代码是用了<code>import OpenSSL</code>来直接实现RSA SHA256签名，我直接先后启动两个openssl命令行实现的。好处是不用麻烦的编译pyopenssl这个库依赖了。服务器部署方便。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

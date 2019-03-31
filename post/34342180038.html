@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>bottle.py: better reloader with django's</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/34342180038" rel="bookmark"
+           title="Permalink to bottle.py: better reloader with django's">bottle.py: better reloader with django's</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-25T23:42:00+00:00">
+                Published: Thu 25 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+
+</footer><!-- /.post-info -->      <p>The most depression thing today, is I found a solution to a problem from <a href="http://initiative.yo2.cn/archives/625499">my OWN BLOG FOUR years ago</a>!</p>
+<p>Bottle.py's dev server <a href="http://bottlepy.org/docs/stable/tutorial.html#auto-reloading">auto-reloading</a> sucks hell. </p>
+<blockquote>
+<p>The child process will have os.environ['BOTTLE_CHILD'] set to True and start as a normal non-reloading app server. As soon as any of the loaded modules changes, the child process is terminated and re-spawned by the main process. Changes in template files will not trigger a reload. Please use debug mode to deactivate template caching.</p>
+</blockquote>
+<p>The fact is it will neither reload, nor the child process will terminate when you Ctrl+C the main process.</p>
+<p>Let's use Django's reloader for bottlepy development!</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">run</span><span class="p">,</span> <span class="n">Bottle</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">dev_server</span><span class="p">():</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s1">&#39;__main__&#39;</span> <span class="o">==</span> <span class="vm">__name__</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">autoreload</span>
+    <span class="n">autoreload</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">dev_server</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Everything went better than expected.</p>
+<p>btw my Tumblr Markdown editor can not accept capital E and R, using PinYin IME is OK. strange!</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

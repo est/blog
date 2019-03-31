@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>@cached_property</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/34212978554" rel="bookmark"
+           title="Permalink to @cached_property">@cached_property</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-24T00:00:00+00:00">
+                Published: Wed 24 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/django.html">django</a> <a href="/tag/oop.html">oop</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->      <p>在<code>django.utils.functional</code> 里发现的。</p>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">cached_property</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Decorator that creates converts a method with a single</span>
+<span class="s2">    self argument into a property cached on the instance.</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">func</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">func</span> <span class="o">=</span> <span class="nx">func</span>
+
+    <span class="nx">def</span> <span class="nx">__get__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">instance</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">res</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">__dict__</span><span class="p">[</span><span class="nx">self</span><span class="p">.</span><span class="nx">func</span><span class="p">.</span><span class="nx">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="nx">self</span><span class="p">.</span><span class="nx">func</span><span class="p">(</span><span class="nx">instance</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nx">res</span>
+</pre></div>
+
+
+<p>这玩意好用啊，比如</p>
+<div class="highlight"><pre><span></span>&amp;gt;&amp;gt;&amp;gt; class A(object):
+...   @cached_property
+...   def val(self):
+...     print &#39;calc&#39;
+...     return 1
+... 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; a=A()
+&amp;gt;&amp;gt;&amp;gt; a.val
+calc
+1
+&amp;gt;&amp;gt;&amp;gt; a.val
+1
+</pre></div>
+
+
+<p>以前自己山寨个 <code>def val(): self._val =</code> 什么的太烂了。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

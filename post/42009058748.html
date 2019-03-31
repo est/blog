@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Google Suggest spell checker</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/42009058748" rel="bookmark"
+           title="Permalink to Google Suggest spell checker">Google Suggest spell checker</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-01T02:02:00+00:00">
+                Published: Fri 01 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/google.html">google</a> <a href="/tag/chrome.html">chrome</a> </p>
+</footer><!-- /.post-info -->      <p>请求：</p>
+<div class="highlight"><pre><span></span>POST https://www.googleapis.com/rpc HTTP/1.1
+Host: www.googleapis.com
+Connection: keep-alive
+Content-Length: 159
+Content-Type: application/json
+
+{&quot;method&quot;:&quot;spelling.check&quot;,&quot;apiVersion&quot;:&quot;v1&quot;,&quot;params&quot;: 
+{&quot;text&quot;:&quot;cchrome&quot;,&quot;language&quot;:&quot;en&quot;,&quot;originCountry&quot;:&quot;USA&quot;, 
+&quot;key&quot;:&quot;AIzaSyCLlKc60a3z7lo8deV-hAyDU7rHYgL4HZg&quot;}}
+</pre></div>
+
+
+<p>返回：</p>
+<div class="highlight"><pre><span></span><span class="nt">HTTP</span><span class="o">/</span><span class="nt">1</span><span class="p">.</span><span class="nc">1</span> <span class="nt">200</span> <span class="nt">OK</span>
+<span class="nt">Content-Type</span><span class="o">:</span> <span class="nt">application</span><span class="o">/</span><span class="nt">json</span><span class="o">;</span> <span class="nt">charset</span><span class="o">=</span><span class="nt">UTF-8</span>
+<span class="nt">Cache-Control</span><span class="o">:</span> <span class="nt">no-cache</span><span class="o">,</span> <span class="nt">no-store</span><span class="o">,</span> <span class="nt">max-age</span><span class="o">=</span><span class="nt">0</span><span class="o">,</span> <span class="nt">must-revalidate</span>
+<span class="nt">Pragma</span><span class="o">:</span> <span class="nt">no-cache</span>
+<span class="nt">Expires</span><span class="o">:</span> <span class="nt">Fri</span><span class="o">,</span> <span class="nt">01</span> <span class="nt">Jan</span> <span class="nt">1990</span> <span class="nt">00</span><span class="p">:</span><span class="nd">00</span><span class="p">:</span><span class="nd">00</span> <span class="nt">GMT</span>
+<span class="nt">Date</span><span class="o">:</span> <span class="nt">Fri</span><span class="o">,</span> <span class="nt">01</span> <span class="nt">Feb</span> <span class="nt">2013</span> <span class="nt">07</span><span class="p">:</span><span class="nd">01</span><span class="p">:</span><span class="nd">26</span> <span class="nt">GMT</span>
+<span class="nt">X-Content-Type-Options</span><span class="o">:</span> <span class="nt">nosniff</span>
+<span class="nt">X-Frame-Options</span><span class="o">:</span> <span class="nt">SAMEORIGIN</span>
+<span class="nt">X-XSS-Protection</span><span class="o">:</span> <span class="nt">1</span><span class="o">;</span> <span class="nt">mode</span><span class="o">=</span><span class="nt">block</span>
+<span class="nt">Content-Length</span><span class="o">:</span> <span class="nt">209</span>
+<span class="nt">Server</span><span class="o">:</span> <span class="nt">GSE</span>
+
+<span class="p">{</span>
+ <span class="err">&quot;result&quot;:</span> <span class="err">{</span>
+  <span class="err">&quot;spellingCheckResponse&quot;:</span> <span class="err">{</span>
+   <span class="err">&quot;misspellings&quot;:</span> <span class="cp">[</span>
+    <span class="p">{</span>
+     <span class="s2">&quot;charStart&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="s2">&quot;charLength&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+     <span class="s2">&quot;suggestions&quot;</span><span class="p">:</span> <span class="err">[</span>
+      <span class="p">{</span>
+       <span class="s2">&quot;suggestion&quot;</span><span class="p">:</span> <span class="s2">&quot;chrome&quot;</span>
+      <span class="p">}</span>
+     <span class="cp">]</span>
+    <span class="p">}</span>
+   <span class="o">]</span>
+  <span class="err">}</span>
+ <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>看来是没法利用了。shit。</p>
+<p><a href="http://googlesystem.blogspot.com/2011/09/chromes-spell-checker-gets-smarter.html">参考</a></p>
+<p>更新：</p>
+<p>似乎可以利用。那个API Key似乎又是可以用的</p>
+<p>https://www.google.be/complete/search?sugexp=chrome,mod=17&amp;client=chrome&amp;hl=nl&amp;q=about&amp;sugkey=AIzaSyCLlKc60a3z7lo8deV-hAyDU7rHYgL4HZg</p>
+<p>["about",["http:\/\/www.imdb.com\/title\/tt0276751\/","about cherry","about a boy"],["About a Boy (2002) - IMDb","",""],[],{"google:suggesttype":["NAVIGATION","QUERY","QUERY"],"google:suggestrelevance":[1200,600,551],"google:verbatimrelevance":1300}]</p>
+<p>Google的各种黑科技真是多啊</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

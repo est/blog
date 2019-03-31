@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>github多账户马甲之间ssh key切换</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/37177478685" rel="bookmark"
+           title="Permalink to github多账户马甲之间ssh key切换">github多账户马甲之间ssh key切换</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-12-04T03:17:00+00:00">
+                Published: Tue 04 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/github.html">github</a> <a href="/tag/git.html">git</a> <a href="/tag/ssh.html">ssh</a> </p>
+</footer><!-- /.post-info -->      <p>场景：有多个github账号，比如公司一个，私人一个。现在想在同一台主机上同时维护公司的和私人的repo</p>
+<p>大家可能会尝试把一个公钥贴到两个github账户，实践告诉我们</p>
+<blockquote>
+<p>Key is already in use</p>
+</blockquote>
+<p>解决办法：</p>
+<ol>
+<li>生成第二个key <code>ssh-keygen -t rsa  -f ~/.ssh/id_rsa.est</code></li>
+<li>
+<p>编辑ssh_config <code>vim ~/.ssh/config</code> 粘贴下边的东东： </p>
+<div class="highlight"><pre><span></span>Host estgit
+HostName github.com
+User git
+IdentityFile &quot;~/.ssh/id_rsa.est&quot;
+IdentitiesOnly yes
+</pre></div>
+
+
+</li>
+<li>
+<p>用这个方式来操作git：<code>git clone estgit:/username/repo</code> ，或者编辑 <code>.git/config</code> 里边的 remote - url</p>
+</li>
+</ol>
+<p>原理就是，指定一个ssh的Host的单独IdentityFile，然后因为git是基于ssh的，所以用Host名称连接github.com就会用那个单独的公钥了。</p>
+<p>github真是好东西，免费的网盘啊有木有！</p>
+<p><a href="http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/">参考</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

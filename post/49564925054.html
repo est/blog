@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>PonyORM - python的新一代黑魔法级别ORM</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/49564925054" rel="bookmark"
+           title="Permalink to PonyORM - python的新一代黑魔法级别ORM">PonyORM - python的新一代黑魔法级别ORM</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-03T23:33:00+00:00">
+                Published: Fri 03 May 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/orm.html">orm</a> <a href="/tag/black-magic.html">black-magic</a> </p>
+</footer><!-- /.post-info -->      <p>简单的例子，来自<a href="http://ponyorm.com/">官网</a></p>
+<p>python的查询代码：</p>
+<div class="highlight"><pre><span></span>select(c for c in Customer
+     if sum(c.orders.price) &amp;gt; 1000)
+</pre></div>
+
+
+<p>通过PonyORM翻译成SQL：</p>
+<div class="highlight"><pre><span></span>SELECT &quot;c&quot;.&quot;id&quot;
+FROM &quot;Customer&quot; &quot;c&quot;
+  LEFT JOIN &quot;Order&quot; &quot;order-1&quot;
+    ON &quot;c&quot;.&quot;id&quot; = &quot;order-1&quot;.&quot;customer&quot;
+GROUP BY &quot;c&quot;.&quot;id&quot;
+HAVING coalesce(SUM(&quot;order-1&quot;.&quot;total_price&quot;), 0) &amp;gt; 1000
+</pre></div>
+
+
+<p>以前觉得<a href="http://peewee.readthedocs.org/en/latest/peewee/querying.html">peewee的查询语法</a>很clever，比Django那种丑爆的 <code>price__gt=1000</code> 好出一条街。那么PonyORM就超出其他python ORM一条银河系了。</p>
+<p>这个PonyORM的黑魔法在哪里呢？</p>
+<ol>
+<li>首先<code>select(x for x in ...)</code> 这是一个generator comprehension，和list comprehension不同的是，返回的是一个惰性求值的生成器，于是</li>
+<li>该表达式bytecode可以反编译</li>
+<li>把Python的AST翻译成SQL的AST</li>
+<li>分离和优化查询。</li>
+<li>把SQL AST生成为特定数据库的query</li>
+<li>执行SQL query</li>
+<li>把返回构造成python对象，并且缓存。</li>
+</ol>
+<p><a href="http://www.reddit.com/r/Python/comments/1co1pz/pony_orm_use_pure_python_to_speak_to_your_data/c9k6wrg">出自</a>PonyORM开发者 u/amalashkevich。更加详细的黑魔法解释可以<a href="http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks/16118756#16118756">在stackoverflow上</a>看到。</p>
+<p>可以说Peewee和PonyORM的设计才是优雅的。但是<a href="https://news.ycombinator.com/item?id=5576562">PonyORM更加高级</a>，基本接近了LINQ和超过了Hibernate HQL。</p>
+<p>顺便提一下，有一个另外<a href="http://www.reddit.com/r/Python/comments/1ctlml/pql_02_is_out_converts_python_expressions_to/">类似的</a>ORM——PQL，用于MongoDB：</p>
+<p>比如：</p>
+<div class="highlight"><pre><span></span>pql.find(&quot;a &amp;amp;gt; 1 and b == &#39;foo&#39; or not c.d == False&quot;)
+</pre></div>
+
+
+<p>翻译成MongoDB的查询：</p>
+<div class="highlight"><pre><span></span>{&#39;$or&#39;: [{&#39;$and&#39;: [{&#39;a&#39;: {&#39;$gt&#39;: 1}}, {&#39;b&#39;: &#39;foo&#39;}]}, {&#39;$not&#39;: {&#39;c.d&#39;: False}}]}
+</pre></div>
+
+
+<p>很可惜它是基于字符串的翻译，而不是原生python表达式。</p>
+<p>其他<a href="http://www.newsmth.net/bbstcon.php?board=Python&amp;gid=103169">讨论</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

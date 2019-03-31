@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>replay attack on Apple IAP receipt</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Est's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/photo.html">photo</a></li>
+                    <li><a href="/category/stderr.html">stderr</a></li>
+                    <li><a href="/category/stdin.html">stdin</a></li>
+                    <li class="active"><a href="/category/text.html">text</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/post/26483115741" rel="bookmark"
+           title="Permalink to replay attack on Apple IAP receipt">replay attack on Apple IAP receipt</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-04T05:10:00+00:00">
+                Published: Wed 04 July 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/estblog.html">estblog</a>
+        </address>
+<p>In <a href="/category/text.html">text</a>.</p>
+<p>tags: <a href="/tag/apple.html">apple</a> <a href="/tag/iap.html">iap</a> </p>
+</footer><!-- /.post-info -->      <p>in <a href="http://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/StoreKitGuide/APIOverview/OverviewoftheStoreKitAPI.html#//apple_ref/doc/uid/TP40008267-CH100-SW1">this senario</a></p>
+<p><img alt="" src="http://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Art/store_transactions.png"></p>
+<p>Before client sends verify receipt to developer server, the receipt data can be recorded and replayed to developer server,</p>
+<ol>
+<li>
+<p>suppose the receipt data is <code>&lt;receipt-something&gt;</code>, it's verified, and buy transaction has finished.</p>
+</li>
+<li>
+<p>add a space to receipt data <code>&lt;receipt-something&gt;&lt;space&gt;</code></p>
+</li>
+<li>
+<p>submit to developer server again</p>
+</li>
+<li>
+<p>developer server will first <code>base64</code> the <code>&lt;receipt-something&gt;</code>, with a trailing space, the wrap it into a JSON object like <code>{'receipt-data': &lt;receipt-something&gt;&lt;space&gt;}</code>, then send it to <code>https://buy.itunes.apple.com/verifyReceipt</code></p>
+</li>
+<li>
+<p>apple server will return status = 0</p>
+</li>
+<li>
+<p>now you can buy IAP stuff using the same receipt over and over and over again.</p>
+</li>
+<li>
+<p>???</p>
+</li>
+<li>
+<p>Profit!!!11!111</p>
+</li>
+</ol>
+<p>see also this <a href="http://stackoverflow.com/questions/1298998/verify-receipt-for-in-app-purchase">thread</a>, especially comment by <code>Ben S</code> </p>
+<p>btw I am still trying to figure out how to do a rollback transaction. lol</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
