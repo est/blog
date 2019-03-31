@@ -33,7 +33,7 @@
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
 <p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/tag/networking.html">networking</a> </p>
+<p>tags: <a href="/?tag=networking">networking</a> </p>
 </footer><!-- /.post-info -->      <blockquote>
 <p>It is a bit different than your standard FEC. Traditionally, FEC works on a block (of bits/bytes) by block basis. You need to the entire block to decode the message. So the transmitter needs a good guess on the channel capacity to choose the correct coding strength for the block. If the sender guesses wrong, the channel is either under utilized (sending too slow) or over utilized (lost packet). In practice it is hard to guess the channel state.<br>
 The novelty is their work is the use of network coding, a form of rateless coding. A rateless code does not operate on a block by block basis. Instead once enough bits are received, the message can be decoded. The rate automatically adapts to the channel's capacity because of the encoding/decoding of the code.<br>

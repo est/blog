@@ -33,7 +33,7 @@
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
 <p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/radio.html">radio</a> </p>
+<p>tags: <a href="/?tag=python">python</a> <a href="/?tag=radio">radio</a> </p>
 </footer><!-- /.post-info -->      <p><code>&gt;&gt;&gt; import pprint, datetime, json, urllib2</code> <br>
 <code>&gt;&gt;&gt; p=lambda:json.loads(urllib2.urlopen('http://radioplayer.omroep.nl/helper/now-on-air.json?ac=%s&amp;channel_id=3' % datetime.datetime.now().strftime('%Y%m%d%H%M')).read())</code> <br>
 <code>&gt;&gt;&gt; pprint.pprint(p()['current_song'])</code></p>

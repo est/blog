@@ -33,7 +33,7 @@
                 By                         <a class="url fn" href="/author/estblog.html">estblog</a>
         </address>
 <p>In <a href="/category/archive.html">text</a>.</p>
-<p>tags: <a href="/tag/oauth.html">OAuth</a> <a href="/tag/google.html">Google</a> <a href="/tag/api.html">API</a> <a href="/tag/crypto.html">crypto</a> <a href="/tag/python.html">python</a> </p>
+<p>tags: <a href="/?tag=oauth">OAuth</a> <a href="/?tag=google">Google</a> <a href="/?tag=api">API</a> <a href="/?tag=crypto">crypto</a> <a href="/?tag=python">python</a> </p>
 </footer><!-- /.post-info -->      <p>最近的项目需要用代码去读取一些Google Spreadsheet的数据，看了下Google官方的Spreadsheet API，读取数据这些好说，就是xml格式我比较讨厌。于是想用<code>alt=json</code>这个<a href="https://developers.google.com/gdata/docs/json">json输出API</a>，试用发现，对于ClientLogin（浏览器cookie）直接调用Spreadsheet API的Google Apps用户而言，这个json输出是400不可用的。于是只能撸一个OAuth读取数据试试了。</p>
 <p>看了下官方的<a href="http://code.google.com/p/gdata-python-client/">Google Data APIs Python Client Library</a>，我勒个擦啊，一大坨垃圾依赖，比如<code>OpenSSL.crypto</code>，<a href="http://code.google.com/p/httplib2/source/browse/python2/httplib2/__init__.py">httplib2</a>等。</p>
 <p>仔细看了下Google <a href="https://developers.google.com/accounts/docs/OAuth2ServiceAccount">OAuth 2.0</a>的文档，似乎也不复杂的样子，至少比<a href="http://initiative.yo2.cn/archives/633801">OAuth 1.0 那种3 legged login</a> 简单多了。于是就自己DIY了一个</p>
