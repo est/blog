@@ -42,6 +42,21 @@
         <!-- new article -->
         <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
           <article class="card-body">
+            <a href="post/58311721863"  rel="bookmark" >
+              <h2 class="card-title">PyPy performance post is very misleading</h2>
+            </a>
+            <p class="card-text"><blockquote>
+<p>PyPy performance post is very misleading. PyPy only has better printf performance than C in the particular case where you print the same expression twice. Specifically, their JIT figures out that it can decode the value only once instead of twice, which C cannot do because libc's printf is all …</p></blockquote></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-08-15T02:06:22+00:00">2013-08-15</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
+          <article class="card-body">
             <a href="post/57663601114"  rel="bookmark" >
               <h2 class="card-title">Chromecast的操作系统和硬件是什么</h2>
             </a>
@@ -87,7 +102,7 @@
               <h2 class="card-title">肉鸡国真的有那么多网络部队天天去黑美帝吗？</h2>
             </a>
             <p class="card-text"><p>NSA笑而不语啊</p>
-<p><img alt="" src="http://media.tumblr.com/a6afe745f6d4ba77939d86083e57cdc7/tumblr_inline_mqttx8TnUB1qz4rgp.png"></p>
+<p><img alt="" src="http://media.tumblr.com/a6afe745f6d4ba77939d86083e57cdc7/tumblr_inline_mqttx8TnUB1qz4rgp.png" /></p>
 <p>看到<a href="http://www.theguardian.com/world/interactive/2013/jul/31/nsa-xkeyscore-program-full-presentation">XKS</a> 真心吓尿了！PRISM什么的比起来弱爆了。</p>
 <p>这一系列事件，最让人感到恐怖的，不是gov的强大能力，而是Snowden这个私人第三方承包商，一个在夏威夷年薪20万美元的网管，也就是乙方，非编制，派遣工，都能接触到这么强大的工具。</p>
 <p>其实GFW的运营商，启明星辰，不也是这么屌的么。参考Freebuf的大作：《<a href="http://www.myhack58.com/Article/html/1/4/2013/39619.htm">揭秘黑客界：黑吃黑到底谁吃谁</a>》</p>
@@ -149,7 +164,7 @@ fallback_host:tc.v11.cache6.c.youtube.com</p></p>
             <a href="post/56693166618"  rel="bookmark" >
               <h2 class="card-title">Google的代码质量</h2>
             </a>
-            <p class="card-text"><p><img alt="" src="http://media.tumblr.com/a16cd191de383fa135796b3fcd3b5035/tumblr_inline_mqnj02Ra1B1qz4rgp.png"></p>
+            <p class="card-text"><p><img alt="" src="http://media.tumblr.com/a16cd191de383fa135796b3fcd3b5035/tumblr_inline_mqnj02Ra1B1qz4rgp.png" /></p>
 <p>世界上的代码就没有不是面条形状的。</p>
 <p><a href="http://talks.golang.org/2013/oscon-dl.slide#21">via</a></p></p>
             <div class="card-subtext muted-text">
@@ -260,17 +275,17 @@ fallback_host:tc.v11.cache6.c.youtube.com</p></p>
             <p class="card-text"><p>this pdf</p>
 <p>http://events.ccc.de/congress/2010/Fahrplan/attachments/1781_27c3-android-geolocation.pdf</p>
 <p>注意看截图：</p>
-<p><img alt="" src="http://media.tumblr.com/1aba685c56c3d52e21ee5130a554724a/tumblr_inline_mpuuw8l0Vj1qz4rgp.png"></p>
+<p><img alt="" src="http://media.tumblr.com/1aba685c56c3d52e21ee5130a554724a/tumblr_inline_mpuuw8l0Vj1qz4rgp.png" /></p>
 <p>20801，其中MCC=208，MNC=01
 LAC=0403 
 CID=61E00</p>
 <p>有这个信息之后，我们打开国产CID定位工具：</p>
 <p>http://www.minigps.net/map.html</p>
-<p><img alt="" src="http://media.tumblr.com/afc8be934f582937cbfc61193e242d5c/tumblr_inline_mpuuztfM431qz4rgp.png"></p>
+<p><img alt="" src="http://media.tumblr.com/afc8be934f582937cbfc61193e242d5c/tumblr_inline_mpuuztfM431qz4rgp.png" /></p>
 <p>就得到了基站位置。</p>
 <p>在自己手机上也可以直接通过下边命令来即时刷新：</p>
-<div class="highlight"><pre><span></span># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
-# logcat -b radio RILJ:D | grep SM | grep OPERA …</pre></div></p>
+<pre><code># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
+# logcat -b radio RILJ:D | grep SM | grep OPERA …</code></pre></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-07-12T23:30:03+00:00">2013-07-12</time></p>
 <p>text</p>            </div>
@@ -286,7 +301,7 @@ CID=61E00</p>
             </a>
             <p class="card-text"><p>想去瞅瞅看看 李笑来 的 bitcoin 讲座，结果发现尼玛1200大洋收费的。屌丝就默默逆了。但是看到他其他讲座，有个叫《以理服己》，于是看了会儿。其中第二课第二页，出自：</p>
 <p>http://www.duobei.com/room/course/1057408405</p>
-<p><img alt="" src="http://media.tumblr.com/ebdcc09b6639df66809e23f9bbc3225c/tumblr_inline_mprw9sC4RW1qz4rgp.png"></p>
+<p><img alt="" src="http://media.tumblr.com/ebdcc09b6639df66809e23f9bbc3225c/tumblr_inline_mprw9sC4RW1qz4rgp.png" /></p>
 <p>大概就是说，生男生女全靠男性。跟女性无关吧。</p>
 <p>原因是男性染色体是 XY，女性是 XX，所以全靠男方决定。</p>
 <p>这个说法是错误的，逻辑有bug的。</p>
@@ -346,10 +361,10 @@ CID=61E00</p>
               <h2 class="card-title">[zz]百度地图的研发们</h2>
             </a>
             <p class="card-text"><p>http://www.douban.com/note/284760511/   </p>
-<p>三鲜 <br>
-主页 广播 相册 喜欢 活动 发豆邮 <br>
-去年我开始有抬头纹 <br>
-2013-06-27 01:11:37 <br>
+<p>三鲜 <br />
+主页 广播 相册 喜欢 活动 发豆邮 <br />
+去年我开始有抬头纹 <br />
+2013-06-27 01:11:37 <br />
 今天发现，百度地图的研发们都玩起新浪微博，互相 at 得不亦乐乎，看样子是经常齐刷刷地去登山、长跑。在我心中他们都是同一类的人，龙叔也如是说。   </p>
 <p>这种感觉很奇怪，我离开快一年了，他们看上去变得更凝聚温馨。以前我高嗓门的架构讲座、开会时候对项目代码的怒斥，突然感觉就像只是破坏团队氛围的东西。记得我写的那个树状脑图，讲模块劣化的现象、原因、改进措施，21寸显示器两屏才显示得完，经理看了一个劲的笑，其他同事充满不理解不赞同，有人还公然拥护全局变量，我操。   </p>
 <p>去年我一个人重构搜索后端，披星戴月，脑浆迸裂。说是重构实际上就是重写。除非当时内部的人，很少人愿意相信地图搜索引擎的代码的所有函数都只传一个参数，而这个参数就是传说中的全局变量，每个服务模块这个全局结构体的成员变量大概四五百个吧 …</p></p>
@@ -368,14 +383,14 @@ CID=61E00</p>
             </a>
             <p class="card-text"><p>First you need to <a href="http://mxcl.github.io/homebrew/">install Homebrew</a></p>
 <p>Then you need to <a href="http://stackoverflow.com/a/9329325/41948">install GCC from XCode "command line tools"</a></p>
-<p><img alt="" src="http://i.stack.imgur.com/SMQvZ.jpg"></p>
-<div class="highlight"><pre><span></span>$ brew install gfortran umfpack swig
+<p><img alt="" src="http://i.stack.imgur.com/SMQvZ.jpg" /></p>
+<pre><code>$ brew install gfortran umfpack swig
 $ sudo pip install  numpy Cheetah lxml scipy matplotlib
 $ brew tap ksnieck/homebrew-gnuradio
-$ <span class="nb">cd</span> /usr/local/Library/Taps/
+$ cd /usr/local/Library/Taps/
 $ mv ksnieck-gnuradio/ titanous/homebrew-gnuradio
 $ brew install gnuradio
-$ brew install rtlsdr gr-osmosdr …</pre></div></p>
+$ brew install rtlsdr gr-osmosdr …</code></pre></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-06-27T01:35:04+00:00">2013-06-27</time></p>
 <p>text</p>            </div>
@@ -393,8 +408,8 @@ $ brew install rtlsdr gr-osmosdr …</pre></div></p>
 打了招行和支付宝两边的客服，确认了：招行这边扣款已经发生，支付宝交易也已经提交，但是因为从昨晚开始招行这边系统出错，支付宝已经堆积了大量从招行这边没拿过来的款项，已经收到大量客户电话，但需要到周一两边交易核对成功之后再处理。假如我着急还款的话，需要我再换一次，但千万不要使用招行。
 (1)| 转发(5) | 评论(4) 6月22日 16:18来自新浪微博</p>
 <p>@ACE1997：RT @Arctosia RT @jiezitui: 上海工商银行网络现全面崩溃，ATM等全面停止服务，工行内部系统一级抢修中……</p>
-<p><img alt="" src="http://media.tumblr.com/55ae52d561161a3ad7563b06144a8677/tumblr_inline_motuj09O4J1qz4rgp.png"></p>
-<p><img alt="" src="http://wp2.sina.cn/woriginal/7a0fab34gw1e5xvtkk63cj20gj0n0n05.jpg"></p></p>
+<p><img alt="" src="http://media.tumblr.com/55ae52d561161a3ad7563b06144a8677/tumblr_inline_motuj09O4J1qz4rgp.png" /></p>
+<p><img alt="" src="http://wp2.sina.cn/woriginal/7a0fab34gw1e5xvtkk63cj20gj0n0n05.jpg" /></p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-06-22T23:47:44+00:00">2013-06-22</time></p>
 <p>text</p>            </div>
@@ -409,16 +424,16 @@ $ brew install rtlsdr gr-osmosdr …</pre></div></p>
               <h2 class="card-title">2013-06-20 发生了啥事</h2>
             </a>
             <p class="card-text"><p>【银行大闹钱荒 宏观信号拒绝“放水” 】没见过隔夜上30%的交易员，人生是不圆满的。6月20日，疯狂的一天，足以载入中国银行间市场史册。当日银行间隔夜回购利率最高达到史无前例的30%，7天回购利率最高达28%。近年这两项利率往往不到3%</p>
-<p><img alt="" src="http://ww1.sinaimg.cn/large/6438e10ejw1e5vq1wsjnnj20c81mm7el.jpg"></p>
+<p><img alt="" src="http://ww1.sinaimg.cn/large/6438e10ejw1e5vq1wsjnnj20c81mm7el.jpg" /></p>
 <p>《央行择机推存款保险制度若破产每账户或赔50万》</p>
-<p><img alt="" src="http://ww4.sinaimg.cn/large/633151d5jw1e5v2sa1vxfj20c811o452.jpg"></p>
-<p><img alt="" src="http://ww2.sinaimg.cn/large/626ece26jw1e5uw41m3znj20lg0b8myo.jpg"></p>
+<p><img alt="" src="http://ww4.sinaimg.cn/large/633151d5jw1e5v2sa1vxfj20c811o452.jpg" /></p>
+<p><img alt="" src="http://ww2.sinaimg.cn/large/626ece26jw1e5uw41m3znj20lg0b8myo.jpg" /></p>
 <p>第二件事：</p>
 <p>http://www.solidot.org/story?sid=35250</p>
 <blockquote>
 <p>今天(2013/06/20)下午三点左右，中国大陆的用户访问境外使用StartSSL、Thawte等提供的免费SSL证书作为HTTP加密访问方式的IP地址疑似被中国国家网络防火墙屏蔽。   </p>
-<p>陈少举(1916)  Neutral 发表于2013年06月21日 11时22分 星期五 <br>
-今天（2013/06/21）上午１０点左右，有推友报告开始陆续解封。<br>
+<p>陈少举(1916)  Neutral 发表于2013年06月21日 11时22分 星期五 <br />
+今天（2013/06/21）上午１０点左右，有推友报告开始陆续解封。<br />
 我自己的也在11:15分左右解封。    </p>
 <p>感觉这次是一个技术警告（或称为技术示威），告诉大家墙目前具备了什么样的能力。    </p>
 <p>买证书去。    </p>
@@ -448,21 +463,6 @@ $ brew install rtlsdr gr-osmosdr …</pre></div></p>
 <p><a href="http://www.reddit.com/r/China/comments/1fvhod/">via</a></p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-06-07T21:30:00+00:00">2013-06-07</time></p>
-<p>text</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" class="card blog-card">
-          <article class="card-body">
-            <a href="post/52422267446"  rel="bookmark" >
-              <h2 class="card-title">le reddit</h2>
-            </a>
-            <p class="card-text"><p><img alt="" src="http://i.minus.com/itTDtHa1I0lKN.gif"></p>
-<p><a href="http://www.reddit.com/r/gifs/comments/1fuxl3/the_truth_about_reddit_oc/">via</a></p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-06-07T21:09:17+00:00">2013-06-07</time></p>
 <p>text</p>            </div>
           </article>
         </div>

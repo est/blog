@@ -51,51 +51,47 @@
 
   
   <p>请求：</p>
-<div class="highlight"><pre><span></span>POST https://www.googleapis.com/rpc HTTP/1.1
+<pre><code>POST https://www.googleapis.com/rpc HTTP/1.1
 Host: www.googleapis.com
 Connection: keep-alive
 Content-Length: 159
 Content-Type: application/json
 
-{&quot;method&quot;:&quot;spelling.check&quot;,&quot;apiVersion&quot;:&quot;v1&quot;,&quot;params&quot;: 
-{&quot;text&quot;:&quot;cchrome&quot;,&quot;language&quot;:&quot;en&quot;,&quot;originCountry&quot;:&quot;USA&quot;, 
-&quot;key&quot;:&quot;AIzaSyCLlKc60a3z7lo8deV-hAyDU7rHYgL4HZg&quot;}}
-</pre></div>
-
-
+{"method":"spelling.check","apiVersion":"v1","params": 
+{"text":"cchrome","language":"en","originCountry":"USA", 
+"key":"AIzaSyCLlKc60a3z7lo8deV-hAyDU7rHYgL4HZg"}}
+</code></pre>
 <p>返回：</p>
-<div class="highlight"><pre><span></span><span class="nt">HTTP</span><span class="o">/</span><span class="nt">1</span><span class="p">.</span><span class="nc">1</span> <span class="nt">200</span> <span class="nt">OK</span>
-<span class="nt">Content-Type</span><span class="o">:</span> <span class="nt">application</span><span class="o">/</span><span class="nt">json</span><span class="o">;</span> <span class="nt">charset</span><span class="o">=</span><span class="nt">UTF-8</span>
-<span class="nt">Cache-Control</span><span class="o">:</span> <span class="nt">no-cache</span><span class="o">,</span> <span class="nt">no-store</span><span class="o">,</span> <span class="nt">max-age</span><span class="o">=</span><span class="nt">0</span><span class="o">,</span> <span class="nt">must-revalidate</span>
-<span class="nt">Pragma</span><span class="o">:</span> <span class="nt">no-cache</span>
-<span class="nt">Expires</span><span class="o">:</span> <span class="nt">Fri</span><span class="o">,</span> <span class="nt">01</span> <span class="nt">Jan</span> <span class="nt">1990</span> <span class="nt">00</span><span class="p">:</span><span class="nd">00</span><span class="p">:</span><span class="nd">00</span> <span class="nt">GMT</span>
-<span class="nt">Date</span><span class="o">:</span> <span class="nt">Fri</span><span class="o">,</span> <span class="nt">01</span> <span class="nt">Feb</span> <span class="nt">2013</span> <span class="nt">07</span><span class="p">:</span><span class="nd">01</span><span class="p">:</span><span class="nd">26</span> <span class="nt">GMT</span>
-<span class="nt">X-Content-Type-Options</span><span class="o">:</span> <span class="nt">nosniff</span>
-<span class="nt">X-Frame-Options</span><span class="o">:</span> <span class="nt">SAMEORIGIN</span>
-<span class="nt">X-XSS-Protection</span><span class="o">:</span> <span class="nt">1</span><span class="o">;</span> <span class="nt">mode</span><span class="o">=</span><span class="nt">block</span>
-<span class="nt">Content-Length</span><span class="o">:</span> <span class="nt">209</span>
-<span class="nt">Server</span><span class="o">:</span> <span class="nt">GSE</span>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Date: Fri, 01 Feb 2013 07:01:26 GMT
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 209
+Server: GSE
 
-<span class="p">{</span>
- <span class="err">&quot;result&quot;:</span> <span class="err">{</span>
-  <span class="err">&quot;spellingCheckResponse&quot;:</span> <span class="err">{</span>
-   <span class="err">&quot;misspellings&quot;:</span> <span class="cp">[</span>
-    <span class="p">{</span>
-     <span class="s2">&quot;charStart&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-     <span class="s2">&quot;charLength&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-     <span class="s2">&quot;suggestions&quot;</span><span class="p">:</span> <span class="err">[</span>
-      <span class="p">{</span>
-       <span class="s2">&quot;suggestion&quot;</span><span class="p">:</span> <span class="s2">&quot;chrome&quot;</span>
-      <span class="p">}</span>
-     <span class="cp">]</span>
-    <span class="p">}</span>
-   <span class="o">]</span>
-  <span class="err">}</span>
- <span class="err">}</span>
-<span class="err">}</span>
-</pre></div>
-
-
+{
+ "result": {
+  "spellingCheckResponse": {
+   "misspellings": [
+    {
+     "charStart": 0,
+     "charLength": 7,
+     "suggestions": [
+      {
+       "suggestion": "chrome"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
+</code></pre>
 <p>看来是没法利用了。shit。</p>
 <p><a href="http://googlesystem.blogspot.com/2011/09/chromes-spell-checker-gets-smarter.html">参考</a></p>
 <p>更新：</p>

@@ -51,38 +51,36 @@
 
   
   <p>下边的问题是在CPython interactive shell 里<strong>按顺序</strong>执行的，请在 下划线处  ____  填上答案。</p>
-<div class="highlight"><pre><span></span>&amp;gt;&amp;gt;&amp;gt; x = [1, 2, 3]
-&amp;gt;&amp;gt;&amp;gt; for number in x:
+<pre><code>&gt;&gt;&gt; x = [1, 2, 3]
+&gt;&gt;&gt; for number in x:
 ...     number += 1
 ... 
-&amp;gt;&amp;gt;&amp;gt; print x
+&gt;&gt;&gt; print x
 __________________
-&amp;gt;&amp;gt;&amp;gt; print 1 == True
+&gt;&gt;&gt; print 1 == True
 __________________
-&amp;gt;&amp;gt;&amp;gt; print 0 == False
+&gt;&gt;&gt; print 0 == False
 __________________
-&amp;gt;&amp;gt;&amp;gt; print 2 == True
+&gt;&gt;&gt; print 2 == True
 __________________
-&amp;gt;&amp;gt;&amp;gt; item = &#39;x&#39;
-&amp;gt;&amp;gt;&amp;gt; print item == &quot;y&quot; or &quot;z&quot;
+&gt;&gt;&gt; item = 'x'
+&gt;&gt;&gt; print item == "y" or "z"
 ___________________
-&amp;gt;&amp;gt;&amp;gt; l = [1,6,4,2,3,9,4,6]
-&amp;gt;&amp;gt;&amp;gt; l = l.sort()
-&amp;gt;&amp;gt;&amp;gt; print l
+&gt;&gt;&gt; l = [1,6,4,2,3,9,4,6]
+&gt;&gt;&gt; l = l.sort()
+&gt;&gt;&gt; print l
 ___________________
-&amp;gt;&amp;gt;&amp;gt; ll = [lambda: n for n in range(5)]
-&amp;gt;&amp;gt;&amp;gt; print [l() for l in ll]
+&gt;&gt;&gt; ll = [lambda: n for n in range(5)]
+&gt;&gt;&gt; print [l() for l in ll]
 ___________________
-&amp;gt;&amp;gt;&amp;gt; my_gen = (i for i in range(10))
-&amp;gt;&amp;gt;&amp;gt; print(3 in my_gen)
+&gt;&gt;&gt; my_gen = (i for i in range(10))
+&gt;&gt;&gt; print(3 in my_gen)
 ___________________
-&amp;gt;&amp;gt;&amp;gt; print(7 in my_gen)
+&gt;&gt;&gt; print(7 in my_gen)
 ___________________
-&amp;gt;&amp;gt;&amp;gt; print(2 in my_gen)
+&gt;&gt;&gt; print(2 in my_gen)
 ___________________
-</pre></div>
-
-
+</code></pre>
 <p><a href="http://www.reddit.com/r/Python/comments/1e8xw5/common_misconceptions_in_python/">via</a></p>
 
 </article>

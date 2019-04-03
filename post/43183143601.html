@@ -53,19 +53,17 @@
   <p>Google Docs自己搞了一套类似Google App Engine的体系，只不过服务器端语言是Javascript，运行环境是 云JS——Google Apps Script</p>
 <p><a href="https://developers.google.com/apps-script/html_service">https://developers.google.com/apps-script/html_service</a></p>
 <p>看了下文档，类似php的语法，在html里嵌入js，然后服务器渲染得到一个网页。</p>
-<div class="highlight"><pre><span></span>&amp;lt;table&amp;gt;
-  &amp;lt;? var data = getData();
-     for (var i = 0; i &amp;lt; data.length; ++i) { ?&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;? for  (var j = 0; j &amp;lt; data[i].length; ++j) { ?&amp;gt;
-        &amp;lt;td&amp;gt;&amp;lt;?= data[i][j]?&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;? } ?&amp;gt;
-    &amp;lt;/tr&amp;gt;
-  &amp;lt;? } ?&amp;gt;
-&amp;lt;/table&amp;gt;
-</pre></div>
-
-
+<pre><code>&lt;table&gt;
+  &lt;? var data = getData();
+     for (var i = 0; i &lt; data.length; ++i) { ?&gt;
+    &lt;tr&gt;
+      &lt;? for  (var j = 0; j &lt; data[i].length; ++j) { ?&gt;
+        &lt;td&gt;&lt;?= data[i][j]?&gt;&lt;/td&gt;
+      &lt;? } ?&gt;
+    &lt;/tr&gt;
+  &lt;? } ?&gt;
+&lt;/table&gt;
+</code></pre>
 <p>这是得有多蛋痛啊。那个结尾的<code>&lt;? } ?&gt;</code>更是让人菊花一紧！</p>
 <p>感脚Excel里边的VBA被秒杀了！</p>
 

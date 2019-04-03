@@ -51,43 +51,35 @@
 
   
   <p>Haskell:   </p>
-<div class="highlight"><pre><span></span>unwords . reverse . words $ sentence
-</pre></div>
-
-
+<pre><code>unwords . reverse . words $ sentence
+</code></pre>
 <p>Ruby:   </p>
-<div class="highlight"><pre><span></span>sentence.split.reverse.join &#39; &#39;
-</pre></div>
-
-
+<pre><code>sentence.split.reverse.join ' '
+</code></pre>
 <p>Python:   </p>
-<div class="highlight"><pre><span></span>&quot; &quot;.join(reversed(sentence.split()))
-</pre></div>
-
-
+<pre><code>" ".join(reversed(sentence.split()))
+</code></pre>
 <p>Node.js:    </p>
-<div class="highlight"><pre><span></span>var EventEmitter = require(&#39;events&#39;).EventEmitter;
+<pre><code>var EventEmitter = require('events').EventEmitter;
 
 var emitter = new EventEmitter();
 
-emitter.on(&#39;got sentence&#39;, function(sentence) {
-    emitter.emit(&#39;split sentense&#39;, sentence.split(&#39; &#39;));
+emitter.on('got sentence', function(sentence) {
+    emitter.emit('split sentense', sentence.split(' '));
 });
-emitter.on(&#39;split sentense&#39;, function(splitted) {
-    emitter.emit(&#39;reversed&#39;, splitted.reverse());
+emitter.on('split sentense', function(splitted) {
+    emitter.emit('reversed', splitted.reverse());
 });
-emitter.on(&#39;reversed&#39;, function(reversed) {
-    emitter.emit(&#39;joined&#39;, reversed.join(&#39; &#39;));
+emitter.on('reversed', function(reversed) {
+    emitter.emit('joined', reversed.join(' '));
 });
-emitter.on(&#39;joined&#39;, function(sentence) {
+emitter.on('joined', function(sentence) {
     console.log(sentence);
-    emitter.emit(&#39;got sentence&#39;, sentence);
+    emitter.emit('got sentence', sentence);
 });
 
-emitter.emit(&#39;got sentence&#39;, &#39;hello world&#39;);
-</pre></div>
-
-
+emitter.emit('got sentence', 'hello world');
+</code></pre>
 <p>Nodejs胜出。谁不服就是不客观。</p>
 <p><a href="http://www.reddit.com/r/programming/comments/24ni6v/this_is_ruby_who_the_fheck_is_tadayoshi_funaba/#ch8yhwo">via</a></p>
 

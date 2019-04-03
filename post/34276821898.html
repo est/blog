@@ -51,8 +51,8 @@
 
   
   <blockquote>
-<p>It is a bit different than your standard FEC. Traditionally, FEC works on a block (of bits/bytes) by block basis. You need to the entire block to decode the message. So the transmitter needs a good guess on the channel capacity to choose the correct coding strength for the block. If the sender guesses wrong, the channel is either under utilized (sending too slow) or over utilized (lost packet). In practice it is hard to guess the channel state.<br>
-The novelty is their work is the use of network coding, a form of rateless coding. A rateless code does not operate on a block by block basis. Instead once enough bits are received, the message can be decoded. The rate automatically adapts to the channel's capacity because of the encoding/decoding of the code.<br>
+<p>It is a bit different than your standard FEC. Traditionally, FEC works on a block (of bits/bytes) by block basis. You need to the entire block to decode the message. So the transmitter needs a good guess on the channel capacity to choose the correct coding strength for the block. If the sender guesses wrong, the channel is either under utilized (sending too slow) or over utilized (lost packet). In practice it is hard to guess the channel state.<br />
+The novelty is their work is the use of network coding, a form of rateless coding. A rateless code does not operate on a block by block basis. Instead once enough bits are received, the message can be decoded. The rate automatically adapts to the channel's capacity because of the encoding/decoding of the code.<br />
 Rateless codes are also known by different names, e.g. fountain (LT) codes, raptor codes, tornado codes, hybrid-ARQ, strider codes, spinal codes, and in a sense network coding (though this may have more applications).  </p>
 </blockquote>
 <p>最近一篇paper在网上吵得很火，这段话基本总结了这个技术的思想。</p>

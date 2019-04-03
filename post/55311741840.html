@@ -53,20 +53,18 @@
   <p>this pdf</p>
 <p>http://events.ccc.de/congress/2010/Fahrplan/attachments/1781_27c3-android-geolocation.pdf</p>
 <p>注意看截图：</p>
-<p><img alt="" src="http://media.tumblr.com/1aba685c56c3d52e21ee5130a554724a/tumblr_inline_mpuuw8l0Vj1qz4rgp.png"></p>
+<p><img alt="" src="http://media.tumblr.com/1aba685c56c3d52e21ee5130a554724a/tumblr_inline_mpuuw8l0Vj1qz4rgp.png" /></p>
 <p>20801，其中MCC=208，MNC=01
 LAC=0403 
 CID=61E00</p>
 <p>有这个信息之后，我们打开国产CID定位工具：</p>
 <p>http://www.minigps.net/map.html</p>
-<p><img alt="" src="http://media.tumblr.com/afc8be934f582937cbfc61193e242d5c/tumblr_inline_mpuuztfM431qz4rgp.png"></p>
+<p><img alt="" src="http://media.tumblr.com/afc8be934f582937cbfc61193e242d5c/tumblr_inline_mpuuztfM431qz4rgp.png" /></p>
 <p>就得到了基站位置。</p>
 <p>在自己手机上也可以直接通过下边命令来即时刷新：</p>
-<div class="highlight"><pre><span></span># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
+<pre><code># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
 # logcat -b radio RILJ:D | grep SM | grep OPERA
-</pre></div>
-
-
+</code></pre>
 <p>当然，这些信息可以通过Android的 <em>#</em>#INFO#<em>#</em>直接看到。</p>
 
 </article>

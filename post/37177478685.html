@@ -60,14 +60,12 @@
 <li>生成第二个key <code>ssh-keygen -t rsa  -f ~/.ssh/id_rsa.est</code></li>
 <li>
 <p>编辑ssh_config <code>vim ~/.ssh/config</code> 粘贴下边的东东： </p>
-<div class="highlight"><pre><span></span>Host estgit
+<pre><code>Host estgit
 HostName github.com
 User git
-IdentityFile &quot;~/.ssh/id_rsa.est&quot;
+IdentityFile "~/.ssh/id_rsa.est"
 IdentitiesOnly yes
-</pre></div>
-
-
+</code></pre>
 </li>
 <li>
 <p>用这个方式来操作git：<code>git clone estgit:/username/repo</code> ，或者编辑 <code>.git/config</code> 里边的 remote - url</p>

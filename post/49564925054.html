@@ -52,21 +52,17 @@
   
   <p>简单的例子，来自<a href="http://ponyorm.com/">官网</a></p>
 <p>python的查询代码：</p>
-<div class="highlight"><pre><span></span>select(c for c in Customer
-     if sum(c.orders.price) &amp;gt; 1000)
-</pre></div>
-
-
+<pre><code>select(c for c in Customer
+     if sum(c.orders.price) &gt; 1000)
+</code></pre>
 <p>通过PonyORM翻译成SQL：</p>
-<div class="highlight"><pre><span></span>SELECT &quot;c&quot;.&quot;id&quot;
-FROM &quot;Customer&quot; &quot;c&quot;
-  LEFT JOIN &quot;Order&quot; &quot;order-1&quot;
-    ON &quot;c&quot;.&quot;id&quot; = &quot;order-1&quot;.&quot;customer&quot;
-GROUP BY &quot;c&quot;.&quot;id&quot;
-HAVING coalesce(SUM(&quot;order-1&quot;.&quot;total_price&quot;), 0) &amp;gt; 1000
-</pre></div>
-
-
+<pre><code>SELECT "c"."id"
+FROM "Customer" "c"
+  LEFT JOIN "Order" "order-1"
+    ON "c"."id" = "order-1"."customer"
+GROUP BY "c"."id"
+HAVING coalesce(SUM("order-1"."total_price"), 0) &gt; 1000
+</code></pre>
 <p>以前觉得<a href="http://peewee.readthedocs.org/en/latest/peewee/querying.html">peewee的查询语法</a>很clever，比Django那种丑爆的 <code>price__gt=1000</code> 好出一条街。那么PonyORM就超出其他python ORM一条银河系了。</p>
 <p>这个PonyORM的黑魔法在哪里呢？</p>
 <ol>
@@ -82,15 +78,11 @@ HAVING coalesce(SUM(&quot;order-1&quot;.&quot;total_price&quot;), 0) &amp;gt; 10
 <p>可以说Peewee和PonyORM的设计才是优雅的。但是<a href="https://news.ycombinator.com/item?id=5576562">PonyORM更加高级</a>，基本接近了LINQ和超过了Hibernate HQL。</p>
 <p>顺便提一下，有一个另外<a href="http://www.reddit.com/r/Python/comments/1ctlml/pql_02_is_out_converts_python_expressions_to/">类似的</a>ORM——PQL，用于MongoDB：</p>
 <p>比如：</p>
-<div class="highlight"><pre><span></span>pql.find(&quot;a &amp;amp;gt; 1 and b == &#39;foo&#39; or not c.d == False&quot;)
-</pre></div>
-
-
+<pre><code>pql.find("a &amp;gt; 1 and b == 'foo' or not c.d == False")
+</code></pre>
 <p>翻译成MongoDB的查询：</p>
-<div class="highlight"><pre><span></span>{&#39;$or&#39;: [{&#39;$and&#39;: [{&#39;a&#39;: {&#39;$gt&#39;: 1}}, {&#39;b&#39;: &#39;foo&#39;}]}, {&#39;$not&#39;: {&#39;c.d&#39;: False}}]}
-</pre></div>
-
-
+<pre><code>{'$or': [{'$and': [{'a': {'$gt': 1}}, {'b': 'foo'}]}, {'$not': {'c.d': False}}]}
+</code></pre>
 <p>很可惜它是基于字符串的翻译，而不是原生python表达式。</p>
 <p>其他<a href="http://www.newsmth.net/bbstcon.php?board=Python&amp;gid=103169">讨论</a></p>
 

@@ -51,27 +51,23 @@
 
   
   <p>一个django文件上传老是出现unicode error</p>
-<div class="highlight"><pre><span></span>UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode character u&#39;\uWTFH&#39; in position 0: ordinal not in range(128)
-</pre></div>
-
-
+<pre><code>UnicodeEncodeError: 'ascii' codec can't encode character u'\uWTFH' in position 0: ordinal not in range(128)
+</code></pre>
 <p>折腾了好久 reload(sys) sys.setdefaultencoding() locale.setdefaultlocale() </p>
 <p>后来发现是os.environ["LANG"]居然为空。这尼玛为毛啊。</p>
 <p>LANG为空也就算了，发现另外一个神奇的bug：</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF8
-$ python -c <span class="s2">&quot;print __import__(&#39;locale&#39;).getdefaultlocale()&quot;</span>
-<span class="o">(</span><span class="s1">&#39;en_US&#39;</span>, <span class="s1">&#39;UTF8&#39;</span><span class="o">)</span>
+<pre><code>$ export LC_ALL=en_US.UTF8
+$ python -c "print __import__('locale').getdefaultlocale()"
+('en_US', 'UTF8')
 
-$ <span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>en_US
-$ python -c <span class="s2">&quot;print __import__(&#39;locale&#39;).getdefaultlocale()&quot;</span>
-<span class="o">(</span><span class="s1">&#39;en_US&#39;</span>, <span class="s1">&#39;ISO8859-1&#39;</span><span class="o">)</span>
+$ export LC_ALL=en_US
+$ python -c "print __import__('locale').getdefaultlocale()"
+('en_US', 'ISO8859-1')
 
-$ <span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>
-$ python -c <span class="s2">&quot;print __import__(&#39;locale&#39;).getdefaultlocale()&quot;</span>
-<span class="o">(</span><span class="s1">&#39;en_US&#39;</span>, <span class="s1">&#39;ISO8859-1&#39;</span><span class="o">)</span>
-</pre></div>
-
-
+$ export LANG=
+$ python -c "print __import__('locale').getdefaultlocale()"
+('en_US', 'ISO8859-1')
+</code></pre>
 <p>ISO8859-1 就是臭名昭著的latin-1编码也就是最脑残不过的 ascii 编码。反生产力啊。</p>
 <p>感谢 killkeeper :D</p>
 

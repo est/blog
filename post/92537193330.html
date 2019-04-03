@@ -59,17 +59,15 @@
 <p>com.apple.syslog_relay 用来NSLog()的</p>
 <p>iOS 7做了一个重要的安全改进：不能连接到localhost或者本地IP了。比如localhost:62078</p>
 <p>如何在Info.plist指定后台运行的app</p>
-<div class="highlight"><pre><span></span>&amp;lt;key&amp;gt;SBAppTags&amp;lt;/key&amp;gt; 
-&amp;lt;array&amp;gt; 
-&amp;lt;string&amp;gt;hidden&amp;lt;/string&amp;gt; 
-&amp;lt;/array&amp;gt; 
-&amp;lt;key&amp;gt;UIBackgroundModes&amp;lt;/key&amp;gt; 
-&amp;lt;array&amp;gt; 
-&amp;lt;string&amp;gt;voip&amp;lt;/string&amp;gt; 
-&amp;lt;/array&amp;gt;
-</pre></div>
-
-
+<pre><code>&lt;key&gt;SBAppTags&lt;/key&gt; 
+&lt;array&gt; 
+&lt;string&gt;hidden&lt;/string&gt; 
+&lt;/array&gt; 
+&lt;key&gt;UIBackgroundModes&lt;/key&gt; 
+&lt;array&gt; 
+&lt;string&gt;voip&lt;/string&gt; 
+&lt;/array&gt;
+</code></pre>
 <p><a href="http://www.zdziarski.com/blog/wp-content/uploads/2014/07/iOS_Backdoors_Attack_Points_Surveillance_Mechanisms.pdf">来源</a>，作者 @JZdziarski</p>
 
 </article>

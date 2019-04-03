@@ -52,15 +52,13 @@
   
   <p>This is what you do when you have a shitting Internet connection:</p>
 <p>$ vim ~/.bash_aliases</p>
-<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">retry</span><span class="p">(){</span>
-  <span class="kc">false</span><span class="p">;</span>
-  <span class="k">while</span> <span class="p">[</span> <span class="nx">$</span><span class="o">?</span> <span class="o">-</span><span class="nx">gt</span> <span class="mi">0</span> <span class="p">];</span>
-    <span class="k">do</span> <span class="nx">$</span><span class="err">@</span><span class="p">;</span>
-  <span class="nx">done</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
+<pre><code>function retry(){
+  false;
+  while [ $? -gt 0 ];
+    do $@;
+  done;
+}
+</code></pre>
 <p>To rape your server, just <code>retry ssh -o ConnectTimeout=1 blah@foobar</code></p>
 <p>Shit just got working for now.</p>
 

@@ -50,27 +50,23 @@
   </header>
 
   
-  <div class="highlight"><pre><span></span>printf &quot;\0\1\1\0\0\1\0\0\0\0\0\0\6reddit\3com\0\0\1\0\1&quot; |nc -vvuq1 8.8.8.8  53 |xxd
-</pre></div>
-
-
+  <pre><code>printf "\0\1\1\0\0\1\0\0\0\0\0\0\6reddit\3com\0\0\1\0\1" |nc -vvuq1 8.8.8.8  53 |xxd
+</code></pre>
 <p>Explain:</p>
-<p>0x0001 means transaction ID. Invent one as you like  <br>
-0x0100 Flag. Always this for all requests  <br>
-0x0001 number of requests: always 1. because DNS RFC sucks  <br>
-0x0000 Response: 0  <br>
-0x0000 Authority Response: 0  <br>
-0x0000 Additional Response: 0  <br>
-\6 reddit The string reddit has length of 6  <br>
-\3 com The string com has length of 3  <br>
-0x0001 Record Type: A  <br>
+<p>0x0001 means transaction ID. Invent one as you like  <br />
+0x0100 Flag. Always this for all requests  <br />
+0x0001 number of requests: always 1. because DNS RFC sucks  <br />
+0x0000 Response: 0  <br />
+0x0000 Authority Response: 0  <br />
+0x0000 Additional Response: 0  <br />
+\6 reddit The string reddit has length of 6  <br />
+\3 com The string com has length of 3  <br />
+0x0001 Record Type: A  <br />
 0x0001: Class: IN. Always this.    </p>
 <p>then ping the last four bytes</p>
-<div class="highlight"><pre><span></span>$ ping 0x60.0x11.0xb4.0x89
-PING 0x60.0x11.0xb4.0x89 <span class="o">(</span><span class="m">96</span>.17.180.137<span class="o">)</span> <span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span> bytes of data.
-</pre></div>
-
-
+<pre><code>$ ping 0x60.0x11.0xb4.0x89
+PING 0x60.0x11.0xb4.0x89 (96.17.180.137) 56(84) bytes of data.
+</code></pre>
 <p>Why DNS Resource Record Name is always C0 0C?</p>
 <p>It's compression.</p>
 <p>C00C = 11000000 00001100</p>

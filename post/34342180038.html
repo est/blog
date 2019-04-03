@@ -57,19 +57,17 @@
 </blockquote>
 <p>The fact is it will neither reload, nor the child process will terminate when you Ctrl+C the main process.</p>
 <p>Let's use Django's reloader for bottlepy development!</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">run</span><span class="p">,</span> <span class="n">Bottle</span>
+<pre><code>from bottle import run, Bottle
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+app = Bottle()
 
-<span class="k">def</span> <span class="nf">dev_server</span><span class="p">():</span>
-    <span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+def dev_server():
+    run(app, host='0.0.0.0', port=8080, debug=True)
 
-<span class="k">if</span> <span class="s1">&#39;__main__&#39;</span> <span class="o">==</span> <span class="vm">__name__</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">autoreload</span>
-    <span class="n">autoreload</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">dev_server</span><span class="p">)</span>
-</pre></div>
-
-
+if '__main__' == __name__:
+    from django.utils import autoreload
+    autoreload.main(dev_server)
+</code></pre>
 <p>Everything went better than expected.</p>
 <p>btw my Tumblr Markdown editor can not accept capital E and R, using PinYin IME is OK. strange!</p>
 

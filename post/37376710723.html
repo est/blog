@@ -51,23 +51,17 @@
 
   
   <p>马克一下。。。exec这个没想到shell里也可以用啊</p>
-<div class="highlight"><pre><span></span>exec 3&amp;lt;&amp;gt;/dev/tcp/www.google.com/80
-echo -e &quot;GET / HTTP/1.1\n\n&quot;&amp;gt;&amp;amp;3
-cat &amp;lt;&amp;amp;3
-</pre></div>
-
-
+<pre><code>exec 3&lt;&gt;/dev/tcp/www.google.com/80
+echo -e "GET / HTTP/1.1\n\n"&gt;&amp;3
+cat &lt;&amp;3
+</code></pre>
 <p>简单的端口扫描：</p>
-<div class="highlight"><pre><span></span>$ <span class="k">for</span> p in <span class="o">{</span><span class="m">1</span>..1023<span class="o">}</span><span class="p">;</span> <span class="k">do</span><span class="o">(</span><span class="nb">echo</span> <span class="p">&amp;</span>gt<span class="p">;</span>/dev/tcp/localhost/<span class="nv">$p</span><span class="o">)</span> <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null <span class="m">2</span><span class="p">&amp;</span>gt<span class="p">;&amp;</span>amp<span class="p">;</span><span class="m">1</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$p</span><span class="s2"> open&quot;</span><span class="p">;</span> <span class="k">done</span>
-</pre></div>
-
-
+<pre><code>$ for p in {1..1023}; do(echo &gt;/dev/tcp/localhost/$p) &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo "$p open"; done
+</code></pre>
 <p>btw 最近看到好多openvpn被k掉了。看了下sshd的[源码](xasprintf(&amp;server_version_string, "SSH-%d.%d-%.100s%s%s%s",)</p>
 <p>这一行： </p>
-<div class="highlight"><pre><span></span>  xasprintf(&amp;amp;server_version_string, &quot;SSH-%d.%d-%.100s%s%s%s&quot;,
-</pre></div>
-
-
+<pre><code>  xasprintf(&amp;server_version_string, "SSH-%d.%d-%.100s%s%s%s",
+</code></pre>
 <p>真尼玛坑爹，真心不安全啊。还是brl的patch好用。</p>
 
 </article>

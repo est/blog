@@ -51,30 +51,24 @@
 
   
   <p>To install</p>
-<div class="highlight"><pre><span></span>$ pip install zfec
-</pre></div>
-
-
+<pre><code>$ pip install zfec
+</code></pre>
 <p>Suppose I have two blocks of data and want a third block as redundancy</p>
-<div class="highlight"><pre><span></span>&amp;gt;&amp;gt;&amp;gt; zfec.Encoder(2, 3).encode([&#39;ab&#39;, &#39;cd&#39;])
-[&#39;ab&#39;, &#39;cd&#39;, &#39;en&#39;]
-&amp;gt;&amp;gt;&amp;gt; zfec.Decoder(2, 3).decode([&#39;ab&#39;, &#39;cd&#39;, ], [0, 1])
-[&#39;ab&#39;, &#39;cd&#39;]
+<pre><code>&gt;&gt;&gt; zfec.Encoder(2, 3).encode(['ab', 'cd'])
+['ab', 'cd', 'en']
+&gt;&gt;&gt; zfec.Decoder(2, 3).decode(['ab', 'cd', ], [0, 1])
+['ab', 'cd']
 # somehow lost the second block, use the third block the recover
-&amp;gt;&amp;gt;&amp;gt; zfec.Decoder(2, 3).decode([&#39;ab&#39;, &#39;en&#39;, ], [0, 2])
-[&#39;ab&#39;, &#39;cd&#39;]
-</pre></div>
-
-
+&gt;&gt;&gt; zfec.Decoder(2, 3).decode(['ab', 'en', ], [0, 2])
+['ab', 'cd']
+</code></pre>
 <p>In the above example, k=2 and m=3</p>
 <p>ref: https://pypi.python.org/pypi/zfec</p>
 <p>btw <a href="http://en.wikipedia.org/wiki/Secret_sharing#Trivial_secret_sharing">Trivial secret sharing</a></p>
-<div class="highlight"><pre><span></span>secret = 123
+<pre><code>secret = 123
 a, b, c = [int((random.random() * 256)) for x in range(3)]
 d = map(xor, [secret, a, b, c])
-</pre></div>
-
-
+</code></pre>
 <p>so 4 players has each a share of secret. </p>
 <p>This is kinda lame... Shamir's scheme is much better</p>
 

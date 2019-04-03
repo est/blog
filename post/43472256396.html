@@ -59,40 +59,38 @@
 <p>These should be separate Bottle apps.</p>
 <p>There's <a href="http://permalink.gmane.org/gmane.comp.python.bottle.general/730">an ugly hack</a> from the official maillist, I think I can make it better.</p>
 <p>The secret is to create a customized WSGI app:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fnmatch</span> <span class="kn">import</span> <span class="n">fnmatch</span>
-<span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">Bottle</span><span class="p">,</span> <span class="n">default_app</span><span class="p">,</span> <span class="n">run</span>
+<pre><code>from fnmatch import fnmatch
+from bottle import Bottle, default_app, run
 
-<span class="n">foo</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
-<span class="n">foo</span><span class="o">.</span><span class="n">hostnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;foo.est.im&#39;</span><span class="p">]</span>
-<span class="nd">@foo.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;hello!&#39;</span>
+foo = Bottle()
+foo.hostnames = ['foo.est.im']
+@foo.route('/')
+def hello():
+    return 'hello!'
 
-<span class="n">bar</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
-<span class="n">bar</span><span class="o">.</span><span class="n">hostnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bar.est.im&#39;</span><span class="p">]</span>
-<span class="nd">@bar.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">hi</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;hi~&#39;</span>
+bar = Bottle()
+bar.hostnames = ['bar.est.im']
+@bar.route('/')
+def hi():
+    return 'hi~'
 
-<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s1">&#39;hello world&#39;</span>
+@route('/')
+def index():
+    print 'hello world'
 
-<span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="p">[</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">]:</span>
-        <span class="n">hostnames</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s1">&#39;hostnames&#39;</span><span class="p">,</span> <span class="p">[])</span>
-        <span class="k">if</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">hostnames</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">default_app</span><span class="p">()(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
-</pre></div>
-
-
+def application(environ, start_response):
+    for app in [foo, bar]:
+        hostnames = getattr(app, 'hostnames', [])
+        if filter(lambda x:fnmatch(hostname, x), hostnames):
+            return app(environ, start_response)
+    return default_app()(environ, start_response)
+</code></pre>
 <p>Then run this motherfucker:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">autoreload</span>
-<span class="k">def</span> <span class="nf">dev_server</span><span class="p">():</span>
-    <span class="n">run</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8002</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">autoreload</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">dev_server</span><span class="p">)</span>
-</pre></div>
+<pre><code>from django.utils import autoreload
+def dev_server():
+    run(application, host='0.0.0.0', port=8002, debug=True)
+autoreload.main(dev_server)
+</code></pre>
 
 </article>
 

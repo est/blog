@@ -51,21 +51,21 @@
 
   
   <p>最近想做点Chrome方面的开发，发现太混乱了。整理一下逻辑吧：</p>
-<p>Google Chrome <br>
+<p>Google Chrome <br />
 这个不仅是浏览器，而且是一整套生态系统体系</p>
-<p>Google Chrome Extensions  <br>
+<p>Google Chrome Extensions  <br />
 大家常见的 “扩展” 体系</p>
-<p>Hosted Apps <br>
-又叫 Installable Web Apps。本质还是网站，但是提供一些本地特性用来整合 <br>
-文档： https://developers.google.com/chrome/apps/ <br>
+<p>Hosted Apps <br />
+又叫 Installable Web Apps。本质还是网站，但是提供一些本地特性用来整合 <br />
+文档： https://developers.google.com/chrome/apps/ <br />
 主要特色就是：权限比普通网站更加开放，可以一次设定永久有效。支持<code>manifest.json</code>。比如在里边通过<code>background_page</code>指定一个网站URL作为后台运行的机制</p>
-<p>Packaged Apps <br>
+<p>Packaged Apps <br />
 又叫Chrome App
 这就是可以看成exe或者dmg的东西了。本质是本地离线应用。
-文档：http://developer.chrome.com/trunk/apps/ <br>
-其中这一篇很核心：http://developer.chrome.com/trunk/apps/app_lifecycle.html <br>
-有比较严格的CSP安全机制和MVC开发体系。 <br>
-支持很多和OS整合的特性，比如控制计算机硬件，双击本地文件，在Chrome里用指定的intent打开 <br>
+文档：http://developer.chrome.com/trunk/apps/ <br />
+其中这一篇很核心：http://developer.chrome.com/trunk/apps/app_lifecycle.html <br />
+有比较严格的CSP安全机制和MVC开发体系。 <br />
+支持很多和OS整合的特性，比如控制计算机硬件，双击本地文件，在Chrome里用指定的intent打开 <br />
 支持Chrome Storage &amp; Sync，也就是说数据、配置可以云漫游。（碉堡啦）</p>
 <p>我非常郁闷，Packaged Apps不允许 <code>background_page</code> ，正在探索这是怎么一回事。</p>
 <p>有一篇又臭又长的文章专门讲这个区别。注意这个文章有很多错误，加深了概念的混淆。囧。</p>

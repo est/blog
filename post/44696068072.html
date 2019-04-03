@@ -53,28 +53,24 @@
   <p>suppose you have url like this:</p>
 <p><code>/api/&lt;method&gt;</code></p>
 <p>In function based view it's like:</p>
-<div class="highlight"><pre><span></span>def myview(req, method=&#39;&#39;):
-  if method==&#39;callA&#39;:
-    return &quot;&quot;
-  elif method==&#39;callB&#39;:
-    return &quot;&quot;
+<pre><code>def myview(req, method=''):
+  if method=='callA':
+    return ""
+  elif method=='callB':
+    return ""
   else:
-    return &quot;&quot;
-</pre></div>
-
-
+    return ""
+</code></pre>
 <p>The problem is you can't enumerate every callA and callB.</p>
 <p>But for class based view it's trivial to write more elegant code like:</p>
-<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">myview</span><span class="p">(</span><span class="nx">ViewRouter</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">def</span> <span class="nx">callA</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-    <span class="nx">def</span> <span class="nx">callB</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-    <span class="nx">def</span> <span class="k">default</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-</pre></div>
-
-
+<pre><code>class myview(ViewRouter):
+    def callA(req):
+        return ''
+    def callB(req):
+        return ''
+    def default(req):
+        return ''
+</code></pre>
 <p>Just want to put up an example of what class-based views are useful in Web development. The powerful object introspection allows you to map URL behaviors to a well defined class.</p>
 
 </article>

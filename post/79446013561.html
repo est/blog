@@ -51,19 +51,15 @@
 
   
   <p>Look Before You Leap</p>
-<div class="highlight"><pre><span></span>if key in mapping:
+<pre><code>if key in mapping:
     return mapping[key]
-</pre></div>
-
-
+</code></pre>
 <p>Ask Forgiveness than Permission</p>
-<div class="highlight"><pre><span></span><span class="k">try</span><span class="o">:</span>
-    <span class="k">return</span> <span class="n">mapping</span><span class="o">[</span><span class="n">key</span><span class="o">]</span>
-<span class="k">catch</span> <span class="n">KeyError</span><span class="o">:</span>
-    <span class="n">pass</span>
-</pre></div>
-
-
+<pre><code>try:
+    return mapping[key]
+catch KeyError:
+    pass
+</code></pre>
 <p><a href="http://www.reddit.com/r/Python/comments/209k8h/pep_463_exceptioncatching_expressions_has_been/">via</a></p>
 
 </article>

@@ -52,25 +52,21 @@
   
   <p>好吧。还在力战渣windows。非管理员权限。<a href="http://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DArchive">下载zip包</a>解压到 D:\dev\go</p>
 <p>sublime处理中文路径一直很bug。需要修改 /Data/Packages/Default/exec.py:45 行：</p>
-<div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">proc_env</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
-        <span class="n">nv</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">unicode</span><span class="p">):</span>
-            <span class="kn">import</span> <span class="nn">locale</span>
-            <span class="n">nv</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">getdefaultlocale</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="n">proc_env</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">nv</span>
-</pre></div>
-
-
+<pre><code>    for k, v in proc_env.iteritems():
+        nv =  os.path.expandvars(v)
+        if isinstance(v, unicode):
+            import locale
+            nv = nv.encode(locale.getdefaultlocale()[1])
+        proc_env[k] = nv
+</code></pre>
 <p>然后菜单 Tools -&gt; Build System -&gt; New...</p>
-<div class="highlight"><pre><span></span>{
-    &quot;cmd&quot;: [&quot;go&quot;, &quot;run&quot;, &quot;$file&quot;],
-    &quot;path&quot;: &quot;D:/dev/go/bin&quot;,
-    &quot;file_regex&quot;: &quot;^(.+):([0-9]+):.*&quot;,
-    &quot;env&quot;: {&quot;GOROOT&quot;: &quot;D:/dev/go&quot;}
+<pre><code>{
+    "cmd": ["go", "run", "$file"],
+    "path": "D:/dev/go/bin",
+    "file_regex": "^(.+):([0-9]+):.*",
+    "env": {"GOROOT": "D:/dev/go"}
 }
-</pre></div>
-
-
+</code></pre>
 <p>这就是Go的配置咯。然后就Ctrl+B了。</p>
 
 </article>

@@ -51,80 +51,43 @@
 
   
   <p>Here's a handy python script do the job of <code>uwsgi --ping &lt;address&gt;</code></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-<span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">print_function</span>
+<pre><code>#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, print_function
 
-<span class="kn">import</span> <span class="nn">socket</span>
-<span class="kn">import</span> <span class="nn">struct</span>
+import socket
+import struct
 
-<span class="c1">#---------------------------------------------------------------</span>
-<span class="c1">#---------------------------------------------------------------</span>
-<span class="k">def</span> <span class="nf">ping_uwsgi</span><span class="p">(</span><span class="n">sock_file</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Ping UWSGI process trought socket. Return [True,...] if OK,</span>
-<span class="sd">    return [False,error] if UWSGO not pinging, or</span>
-<span class="sd">    [None,error] if common error (ex. socket file not found)</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
-    <span class="n">fmt_h</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;&amp;lt;BHB&#39;</span><span class="p">)</span>
-    <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_UNIX</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sock_file</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">,</span><span class="n">e</span><span class="p">:</span>
-        <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span><span class="n">e</span><span class="p">]</span>
-    <span class="n">sock</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">sock</span><span class="p">):</span>
-        <span class="n">ping</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fmt_h</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">ping</span><span class="p">)</span>
-        <span class="n">pong</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">calcsize</span><span class="p">(</span><span class="n">fmt_h</span><span class="p">))</span>
-        <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="n">fmt_h</span><span class="p">,</span><span class="n">pong</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)):</span>
-        <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="s1">&#39;OK&#39;</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;ERR&#39;</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">rv</span>
-<span class="c1">#---------------------------------------------------------------</span>
-<span class="c1">#---------------------------------------------------------------</span>
-</pre></div>
-</td></tr></table>
-
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+def ping_uwsgi(sock_file):
+    '''
+    Ping UWSGI process trought socket. Return [True,...] if OK,
+    return [False,error] if UWSGO not pinging, or
+    [None,error] if common error (ex. socket file not found)
+    '''
+    rv = [None,'']
+    fmt_h = str('&lt;BHB')
+    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+    try:
+        sock.connect(sock_file)
+    except socket.error,e:
+        rv = [None,e]
+    sock = None
+    if (sock):
+        ping = struct.pack(fmt_h,100,0,0)
+        sock.send(ping)
+        pong = sock.recv(struct.calcsize(fmt_h))
+        sock.close()
+        p = struct.unpack(fmt_h,pong)
+    if (p == (100,0,1)):
+        rv = [True, 'OK']
+    else:
+        rv = [False, 'ERR']
+    return rv
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+</code></pre>
 <p>via <a href="http://pypi.python.org/pypi/nust">http://pypi.python.org/pypi/nust</a></p>
 
 </article>

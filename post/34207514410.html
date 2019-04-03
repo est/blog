@@ -50,18 +50,18 @@
   </header>
 
   
-  <p>安装pv： <br>
+  <p>安装pv： <br />
 <code>sudo apt-get install pv</code></p>
-<p>下行： <br>
-<code>$ ssh est@my_host 'cat /dev/zero'  | pv &gt; /dev/null</code> <br>
+<p>下行： <br />
+<code>$ ssh est@my_host 'cat /dev/zero'  | pv &gt; /dev/null</code> <br />
 <code>144kB 0:00:05 [ 121kB/s] [ &lt;=&gt;                                               ]</code></p>
-<p>上行：   <br>
-<code>$ yes | pv | ssh est@my_host "cat &gt; /dev/null"</code>   <br>
+<p>上行：   <br />
+<code>$ yes | pv | ssh est@my_host "cat &gt; /dev/null"</code>   <br />
 <code>2.06MB 0:00:05 [1.96MB/s] [  &lt;=&gt;                                              ]</code></p>
-<p>测试本机IO能力：  <br>
-<code>$ pv /dev/zero &gt; /dev/null</code> <br>
+<p>测试本机IO能力：  <br />
+<code>$ pv /dev/zero &gt; /dev/null</code> <br />
 <code>75.3GB 0:00:09 [8.56GB/s] [        &lt;=&gt;                                        ]</code></p>
-<p>其他技巧： <br>
+<p>其他技巧： <br />
 <a href="http://blog.urfix.com/9-tricks-pv-pipe-viewer/">http://blog.urfix.com/9-tricks-pv-pipe-viewer/</a></p>
 <p>恩。真好玩。我发现办公室的商用ADSL对称上下行就是屌啊。2MB上传速度我擦不用来挂PT可惜了。</p>
 

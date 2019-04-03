@@ -51,18 +51,16 @@
 
   
   <p>Suppose you have the following model:</p>
-<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">MyModel</span><span class="p">(</span><span class="nx">models</span><span class="p">.</span><span class="nx">Model</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">def</span> <span class="nx">get_absolute_url</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="o">*</span><span class="nx">args</span><span class="p">,</span> <span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="s1">&#39;/show/%s&#39;</span> <span class="o">%</span> <span class="nx">self</span><span class="p">.</span><span class="nx">pk</span>
-</pre></div>
-
-
+<pre><code>class MyModel(models.Model):
+    def get_absolute_url(self, *args, **kwargs):
+        return '/show/%s' % self.pk
+</code></pre>
 <p>The "View on site" button on admin will always take you to example.com, which is bullshit.</p>
 <p>Even if you override it with <code>ABSOLUTE_URL_OVERRIDES</code> in settings.py.</p>
 <p>The solution is to fuck Django's default Site in your models.py:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.contrib.sites</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">SiteModels</span>
-<span class="n">SiteModels</span><span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">_meta</span><span class="o">.</span><span class="n">installed</span> <span class="o">=</span> <span class="bp">False</span>
-</pre></div>
+<pre><code>from django.contrib.sites import models as SiteModels
+SiteModels.Site._meta.installed = False
+</code></pre>
 
 </article>
 

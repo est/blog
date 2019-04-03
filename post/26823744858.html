@@ -58,60 +58,52 @@
 <p>&gt; The rest of this article describes the specifics of creating a JWT, signing the JWT, forming the access token request, and handling the response. Libraries should abstract these specifics from your application. Again, developers are strongly encouraged to attempt to use an existing library <strong>rather than building your own</strong> support for server-to-server interactions.</p>
 <p>所以我就直接去逆向他们的<a href="http://code.google.com/p/google-api-python-client/source/browse/samples/service_account/tasks.py">Tasks API with a Service account</a> sample</p>
 <p>安装了一大票依赖，痛苦编译好pyopenssl之后，直接运行，出错：</p>
-<div class="highlight"><pre><span></span>oauth2client.client.AccessTokenRefreshError: invalid_grant
-</pre></div>
-
-
+<pre><code>oauth2client.client.AccessTokenRefreshError: invalid_grant
+</code></pre>
 <p>加个Fiddler代理调试：</p>
-<div class="highlight"><pre><span></span>http = httplib2.Http(
+<pre><code>http = httplib2.Http(
   proxy_info=httplib2.ProxyInfo(
     httplib2.socks.PROXY_TYPE_HTTP, 
-    proxy_host=&#39;10.0.18.2&#39;, 
+    proxy_host='10.0.18.2', 
     proxy_port=8888
-), ca_certs=&#39;FiddlerRoot.cer&#39;)
-</pre></div>
-
-
+), ca_certs='FiddlerRoot.cer')
+</code></pre>
 <p>发现https不支持。于是</p>
-<div class="highlight"><pre><span></span>httplib2.debuglevel = 4
-</pre></div>
-
-
+<pre><code>httplib2.debuglevel = 4
+</code></pre>
 <p>终于看到一坨东西了。</p>
 <p>对比上面那个 OAuth 2文档，可以轻松写出OAuth 2.0获得access_token的代码：</p>
 <p>需要用到API用户email，p12密钥两个东西，可以从Google API Console里获得。</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
+<pre><code>import base64
 
-<span class="n">b64</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+b64 = lambda x:base64.urlsafe_b64encode(x).rstrip('=')
 
-<span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;{&quot;alg&quot;:&quot;RS256&quot;,&quot;typ&quot;:&quot;JWT&quot;}&#39;</span>
-<span class="n">ts_now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+header = '{"alg":"RS256","typ":"JWT"}'
+ts_now = int(time.time())
 
-<span class="n">claim_set</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;iss&quot;</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span>
-    <span class="s2">&quot;scope&quot;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scope</span><span class="p">),</span>
-    <span class="s2">&quot;aud&quot;</span><span class="p">:</span> <span class="s2">&quot;https://accounts.google.com/o/oauth2/token&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;exp&quot;</span><span class="p">:</span> <span class="n">ts_now</span><span class="o">+</span><span class="mi">3600</span><span class="p">,</span>
-    <span class="s2">&quot;iat&quot;</span><span class="p">:</span> <span class="n">ts_now</span><span class="p">,</span>
-<span class="p">}</span>
+claim_set = {
+    "iss": email,
+    "scope": ' '.join(scope),
+    "aud": "https://accounts.google.com/o/oauth2/token",
+    "exp": ts_now+3600,
+    "iat": ts_now,
+}
 
-<span class="n">jwt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url_b64</span><span class="p">(</span><span class="n">header</span><span class="p">),</span> <span class="n">url_b64</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">claim_set</span><span class="p">)))</span>
-<span class="c1"># convert pkcs12 to private key</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;openssl pkcs12 -in key.p12 -nocerts -passin stdin -nodes -out key.pem&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stdin</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;notasecret&#39;</span><span class="p">)</span> <span class="c1"># Google&#39;s key default password</span>
-<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-<span class="c1"># RSA sign with sha256 using private key</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;openssl dgst -sha256 -sign &#39;</span><span class="n">key</span><span class="o">.</span><span class="n">pem</span><span class="s1">&#39; -keyform PEM&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stdin</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">jwt</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">sig</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+jwt = '%s.%s' % (url_b64(header), url_b64(json.dumps(claim_set)))
+# convert pkcs12 to private key
+p = Popen('openssl pkcs12 -in key.p12 -nocerts -passin stdin -nodes -out key.pem', shell=True, stdin=PIPE, stdout=PIPE)
+p.stdin.write('notasecret') # Google's key default password
+p.stdin.close()
+p.wait()
+# RSA sign with sha256 using private key
+p = Popen('openssl dgst -sha256 -sign 'key.pem' -keyform PEM', shell=True, stdin=PIPE, stdout=PIPE)
+p.stdin.write(jwt)
+p.stdin.close()
+sig = p.stdout.read()
+p.wait()
 
-<span class="k">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">jwt</span><span class="p">,</span> <span class="n">url_b64</span><span class="p">(</span><span class="n">sig</span><span class="p">))</span>
-</pre></div>
-
-
+print '%s.%s' % (jwt, url_b64(sig))
+</code></pre>
 <p>有了access_token之后，获取spreadsheet数据就很简单了，我也拿<a href="https://developers.google.com/gdata/samples/spreadsheet_sample">sample里</a>的spreadsheet作为例子：</p>
 <p>https://spreadsheets.google.com/feeds/list/o13394135408524254648.240766968415752635/od6/public/values?alt=json&amp;access_token=1/XXXXX</p>
 <p>其中<code>1/XXXXX</code> 就是OAuth 2.0得到的access_token。</p>

@@ -52,25 +52,21 @@
   
   <p>From <a href="https://www.v2ex.com/t/354273">this</a> thread</p>
 <p>What's wrong with</p>
-<div class="highlight"><pre><span></span>GET     /users/                -----&amp;gt;  `list.users` 
-GET     /users/:id/            -----&amp;gt;  `retrieve.users`
-POST    /users/                -----&amp;gt;  `create.users`
-PUT     /users/:id/password/   -----&amp;gt;  `replace.users`
-PATCH   /users/:id/            -----&amp;gt;  `update.users`
-DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
-</pre></div>
-
-
+<pre><code>GET     /users/                -----&gt;  `list.users` 
+GET     /users/:id/            -----&gt;  `retrieve.users`
+POST    /users/                -----&gt;  `create.users`
+PUT     /users/:id/password/   -----&gt;  `replace.users`
+PATCH   /users/:id/            -----&gt;  `update.users`
+DELETE  /users/:id/            -----&gt;  `destroy.users`
+</code></pre>
 <p>You will find these URL super ugly and annoying when doing log analysis, you have to monkey craft <code>regexp</code>s to truncate the useless <code>:id</code> part from the url so your aggregator would work properly.</p>
 <p>I prefer simply use <code>GET</code> for read and <code>POST</code> for writes. Like this</p>
-<div class="highlight"><pre><span></span><span class="err">GET /users/list</span>
-<span class="err">GET /users/retrieve</span>
-<span class="err">POST /users/create</span>
-<span class="err">POST /users/update</span>
-<span class="err">POST /users/destroy</span>
-</pre></div>
-
-
+<pre><code>GET /users/list
+GET /users/retrieve
+POST /users/create
+POST /users/update
+POST /users/destroy
+</code></pre>
 <p>It's clean, it's concise, it works everywhere.</p>
 <p>Fuck those obnoxious <code>OPTIONS</code> and <code>PATCH</code>.</p>
 <p>BTW who the fuck invents a <code>users.replaec()</code> functions?</p>

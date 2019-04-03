@@ -51,38 +51,32 @@
 
   
   <p>1.py:</p>
-<div class="highlight"><pre><span></span>def foo():
+<pre><code>def foo():
  try:
-  return &#39;foo&#39;
+  return 'foo'
  finally:
-  return &#39;bar&#39;
+  return 'bar'
 
 
 print foo()
-</pre></div>
-
-
+</code></pre>
 <p>2.py</p>
-<div class="highlight"><pre><span></span>def foo():
+<pre><code>def foo():
  try:
-  return &#39;foo&#39;
+  return 'foo'
  finally:
-  print &#39;bar&#39;
+  print 'bar'
 
 
 print foo()
-</pre></div>
-
-
+</code></pre>
 <p>The result is shocking...</p>
-<div class="highlight"><pre><span></span>$ python <span class="m">1</span>.py 
+<pre><code>$ python 1.py 
 bar
-$ python <span class="m">2</span>.py 
+$ python 2.py 
 bar
 foo
-</pre></div>
-
-
+</code></pre>
 <p>I think this particular behavior is well abused in <a href="http://code.google.com/p/modwsgi/wiki/RegisteringCleanupCode">WSGI</a></p>
 <p>two cents:</p>
 <ul>
@@ -91,7 +85,7 @@ foo
 </ul>
 <p>to quote <a href="http://docs.python.org/2/reference/simple_stmts.html#return">the official doc</a>:</p>
 <blockquote>
-<p>When return passes control out of a try statement with a finally clause, that finally clause is executed before really leaving the function. <br>
+<p>When return passes control out of a try statement with a finally clause, that finally clause is executed before really leaving the function. <br />
 In a generator function, the return statement is not allowed to include an expression_list. In that context, a bare return indicates that the generator is done and will cause StopIteration to be raised.</p>
 </blockquote>
 <p>As to <code>yield</code>:</p>
