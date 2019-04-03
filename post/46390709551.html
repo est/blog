@@ -58,7 +58,7 @@ upstream.write(localstream.read(1024))
 <p>其中1024为业界良心艹榴网的chunk或者一个buffer size。这样的操作在各种router, proxy, firewall 里太常见了。</p>
 <p>那么HAProxy有什么<a href="http://stackoverflow.com/a/2120295/41948">特别的地方</a>呢？秘密就是，上游socket的接受buffer和本地socket的发送buffer为同一块内存。也就是说，上游socket数据来了，本地socket自动发送这一块buffer的数据。效率真是高爆了。这块buffer数据还可以用内核调用<code>splice()</code> 和 <code>tee()</code> 来达到分流和分离信号的目的。</p>
 <p>btw sendfile() 是不行的，源必须是可以mmap的buffer，目标必须是个socket。</p>
-<p>那么弱爆了的python可否跪舔这种高级特性呢？2.7和3.X里是可以的，因为现在PEP 3118统一了各种streaming object 的buffer protocol。只需要用一个<a href="http://docs.python.org/2/library/stdtypes.html#memoryview">叫memoryview的引用</a>
+<p>那么弱爆了的python可否跪舔这种高级特性呢？2.7和3.X里是可以的，因为现在PEP 3118统一了各种streaming object 的buffer protocol。只需要用一个<a href="http://docs.python.org/2/library/stdtypes.html#memoryview">叫memoryview的引用</a><br />
 就可以实现共享buffer而达到zero-copy的目的了。</p>
 <p>C API见<a href="http://eli.thegreenplace.net/2011/11/28/less-copies-in-python-with-the-buffer-protocol-and-memoryviews/">这里</a>，python代码例子在<a href="https://profiles.google.com/116139041198229909169/buzz/SmLJKHwpLPC">这里</a>，具体核心调用就是 <code>file.readinto()</code> 和 <code>socket.recv_into()</code> 方法。具体代码留作读者课后练习。</p>
 

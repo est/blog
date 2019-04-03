@@ -116,7 +116,7 @@ upstream.write(localstream.read(1024))
 <p>其中1024为业界良心艹榴网的chunk或者一个buffer size。这样的操作在各种router, proxy, firewall 里太常见了。</p>
 <p>那么HAProxy有什么<a href="http://stackoverflow.com/a/2120295/41948">特别的地方</a>呢？秘密就是，上游socket的接受buffer和本地socket的发送buffer为同一块内存。也就是说，上游socket数据来了，本地socket自动发送这一块buffer的数据。效率真是高爆了。这块buffer数据还可以用内核调用<code>splice()</code> 和 <code>tee()</code> 来达到分流和分离信号的目的。</p>
 <p>btw sendfile() 是不行的，源必须是可以mmap的buffer，目标必须是个socket。</p>
-<p>那么弱爆了的python可否跪舔这种高级特性呢？2.7和3.X里是可以的，因为现在PEP 3118统一了各种streaming object 的buffer protocol。只需要用一个<a href="http://docs.python.org/2/library/stdtypes.html#memoryview">叫memoryview的引用</a>
+<p>那么弱爆了的python可否跪舔这种高级特性呢？2.7和3.X里是可以的，因为现在PEP 3118统一了各种streaming object 的buffer protocol。只需要用一个<a href="http://docs.python.org/2/library/stdtypes.html#memoryview">叫memoryview的引用</a><br />
 就可以实现共享buffer而达到zero-copy的目的了 …</p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-03-26T22:39:00+00:00">2013-03-26</time></p>
@@ -576,7 +576,7 @@ CFLAGS=-I/usr/include/libev sudo pip install bjoern
             </a>
             <p class="card-text"><p><img alt="" src="http://media.tumblr.com/abf4f9acf3481c2274e75428835327ae/tumblr_inline_mhycquVvo71qz4rgp.jpg" /></p>
 <p>Freedom. The fatuous jingle of our civilization</p>
-<p>But only those deprived of it have the barest inkling
+<p>But only those deprived of it have the barest inkling<br />
 of what it really is</p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-02-09T07:16:38+00:00">2013-02-09</time></p>
@@ -660,7 +660,7 @@ Cache-Control: no-cache, no-store, max-age …</code></pre></p>
             </a>
             <p class="card-text"><p>看到<a href="http://weibo.com/1455643221/zgI6wA2AP">一则微博</a></p>
 <blockquote>
-<p>@刘兴亮
+<p>@刘兴亮<br />
 HTML5的突出优点是多设备、跨平台。“HTML5 for TV”是由美国Cable Labs牵头组成的国际性开源协作项目，为推动HTML5技术在电视终端上的应用。预计2013年会有更多的开发者投入到基于智能电视的应用开发。针对大屏的应用开发是个“富矿”。2013年，智能电视终端应用的重要特点是——跨屏，跨终端互操作。</p>
 </blockquote>
 <p>然后就跑去看了下他们的文档：</p>
@@ -858,8 +858,8 @@ f.cleaned_data['key'] = 'value' # won't work
 文档： https://developers.google.com/chrome/apps/ <br />
 主要特色就是：权限比普通网站更加开放，可以一次设定永久有效。支持<code>manifest.json</code>。比如在里边通过<code>background_page</code>指定一个网站URL作为后台运行的机制</p>
 <p>Packaged Apps <br />
-又叫Chrome App
-这就是可以看成exe或者dmg的东西了。本质是本地离线应用。
+又叫Chrome App<br />
+这就是可以看成exe或者dmg的东西了。本质是本地离线应用。<br />
 文档：http://developer.chrome.com/trunk/apps …</p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-01-16T02:44:00+00:00">2013-01-16</time></p>

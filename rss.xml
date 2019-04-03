@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 03 Apr 2019 09:47:59 +0800</lastBuildDate><item><title>群众治理和民科</title><link>https://blog.est.im/201904/crackpots</link><description>&lt;p&gt;在 zhihu 上看到一个巨糟糕的问题：《反对民科是不是反对民主？》(https://www.zhihu.com/question/41737110/answer/256504039)&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 03 Apr 2019 09:47:59 +0800</lastBuildDate><item><title>群众治理和民科</title><link>https://blog.est.im/201904/crackpots</link><description>&lt;p&gt;在 zhihu 上看到一个巨糟糕的问题：《&lt;a href="https://www.zhihu.com/question/41737110/answer/256504039"&gt;反对民科是不是反对民主？&lt;/a&gt;》&lt;/p&gt;
 &lt;p&gt;有个回答眼前一亮：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;姜源 法学、法律 话题的优秀回答者
-这个问题并没有看上去那么糟糕，实际上这是个极其经典而且不那么容易回答的问题。
+&lt;p&gt;姜源 法学、法律 话题的优秀回答者&lt;br /&gt;
+这个问题并没有看上去那么糟糕，实际上这是个极其经典而且不那么容易回答的问题。&lt;br /&gt;
 最早提出这个问题的人是柏拉图。柏拉图的问题是：既然我们在医学领域依赖拥有专业知识技术的权威也就是医生，在航海领域依赖拥有专业知识技术的权威也就是船长（所以有个冷笑话说，“大海航行靠舵手”最早由柏拉图提出），那么为什么在政治领域却拒绝权威，反而依赖缺乏专业知识技术的大众？当然，柏拉图的问题和我们现在的问题恰好相反。在柏拉图心目中，自然科学领域（尽管当时不存在这个概念）相信权威是显而易见的，而在政治领域相信民主却是可疑的。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我的想法：&lt;/p&gt;
 &lt;p&gt;自然科学，对于绝大多数智人来说，是身外之物。无论对于个体和群体，面对自然的利益关系的是一致的。君王拿氧化还原反应来打仗，农民拿氧化还原来吃土。建立一个直观统一的理性方法论，这就是科学。&lt;/p&gt;
-&lt;p&gt;而社会和人类学其实要解决的根本问题就是个体和群体之间的价值冲突。社会分工导致一部分人肯定要依附他人才能生存的。从这个角度出发，「群众治理」是一种妥协的艺术 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 03 Apr 2019 09:47:59 +0800</pubDate><guid isPermaLink="false">tag:None,2019-04-03:/201904/crackpots</guid></item><item><title>Jinja2 不能覆盖 include 里的 block</title><link>https://blog.est.im/201903/stdout-001</link><description>&lt;p&gt;记录一下&lt;/p&gt;
+&lt;p&gt;而社会和人类学其实要解决的根本问题就是个体和群体之间的价值冲突。社会分工导致一部分人肯定要依附他人才能生存的。从这个角度出发，「群众治理」是一种妥协的艺术。不是科学。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 03 Apr 2019 09:47:59 +0800</pubDate><guid isPermaLink="false">tag:None,2019-04-03:/201904/crackpots</guid></item><item><title>Jinja2 不能覆盖 include 里的 block</title><link>https://blog.est.im/201903/stdout-001</link><description>&lt;p&gt;记录一下&lt;/p&gt;
 &lt;p&gt;https://github.com/pallets/jinja/issues/169&lt;/p&gt;
 &lt;p&gt;https://github.com/pallets/jinja/issues/243&lt;/p&gt;
 &lt;p&gt;开发这个主题 &lt;a href="https://github.com/est/aether-pelican"&gt;https://github.com/est/aether-pelican&lt;/a&gt; 时候遇到的。&lt;/p&gt;
@@ -53,7 +53,7 @@ DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
 &lt;p&gt;节选一些。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;BOOKFI &amp;amp; LIBGEN 电子书网站&lt;/li&gt;
-&lt;li&gt;NANJING IMPERIOSUS TECHNOLOGY CO., LTD
+&lt;li&gt;NANJING IMPERIOSUS TECHNOLOGY CO., LTD&lt;br /&gt;
    拥有24,375个域名，900个皮包公司的南京网上假药集团。域名持有人是个德国人。旗下域名占整个南京市数量的10%。厉害了我的哥！&lt;/li&gt;
 &lt;li&gt;gongchang.com 一看域名就知道是 A 货集散地。&lt;/li&gt;
 &lt;li&gt;muaban.com 越南猴子的电商网站&lt;/li&gt;
@@ -66,7 +66,7 @@ DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
 &lt;p&gt;小镇上的人际关系如图，一个圆表示一个人，圆的颜色表示他们更加喜欢哪种色彩。线表示人际交往关系。&lt;/p&gt;
 &lt;p&gt;现在需要投票，选出小镇 最流行的颜色。是橙色呢，还是青色？&lt;/p&gt;
 &lt;p&gt;从图来看，橙色是毫无疑问的多数色。&lt;/p&gt;
-&lt;p&gt;但是你从每一个圆的角度去看，大多数人都会从自己的交往圈子里得出“青色最流行”的结论。
+&lt;p&gt;但是你从每一个圆的角度去看，大多数人都会从自己的交往圈子里得出“青色最流行”的结论。&lt;br /&gt;
 &lt;img alt="" src="https://40.media.tumblr.com/ab7d87c70d09ca91cdefd97f9aa5bff0/tumblr_inline_nvzcabnDGx1qz5ax5_540.png" /&gt;&lt;/p&gt;
 &lt;p&gt;这也是为什么邪教比如 scientology 都积极向名人传教，影响力大嘛。&lt;/p&gt;
 &lt;p&gt;仔细想了下，这也是为什么 “物以稀为贵” 。其实物以稀不贵，但是遇到poweruser（大V）传播，就贵了。&lt;/p&gt;
