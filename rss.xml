@@ -13,7 +13,13 @@
 &lt;p&gt;https://github.com/pallets/jinja/issues/243&lt;/p&gt;
 &lt;p&gt;开发这个主题 &lt;a href="https://github.com/est/aether-pelican"&gt;https://github.com/est/aether-pelican&lt;/a&gt; 时候遇到的。&lt;/p&gt;
 &lt;p&gt;btw 还有好多 css 问题需要改。有问题可以 &lt;a href="https://github.com/est/estblog/issues"&gt;提issue&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sun, 31 Mar 2019 23:51:56 +0000</pubDate><guid isPermaLink="false">tag:None,2019-03-31:/201903/stdout-001</guid></item><item><title>数学中可以把标量当成一维的矢量吗？</title><link>https://blog.est.im/201902/stdin-001</link><description>&lt;p&gt;数学上的向量不是实数组，实数组是向量的一个特例，数学对向量的定义应该是，定义了加法和数乘并满足8条基本规律的几何叫线性空间，向量是线性空间中元素。&lt;/p&gt;
-&lt;p&gt;https://www.zhihu.com/question/311932671/answer/596573722&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 13 Feb 2019 11:07:27 +0000</pubDate><guid isPermaLink="false">tag:None,2019-02-13:/201902/stdin-001</guid></item><item><title>hello again</title><link>https://blog.est.im/201902/hello</link><description>&lt;p&gt;冥冥中自有天意。让我决定再开始继续挖 blog 的坑。谁知道这次又会持续到什么时候呢。&lt;/p&gt;
+&lt;p&gt;https://www.zhihu.com/question/311932671/answer/596573722&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 13 Feb 2019 11:07:27 +0000</pubDate><guid isPermaLink="false">tag:None,2019-02-13:/201902/stdin-001</guid></item><item><title>现代知识产权才是阻碍生产力的东西</title><link>https://blog.est.im/post/175729214088</link><description>&lt;p&gt;今天 Gmail 收到一封邮件说我2010年上传youṫube的一个视频被下架了。理由是侵犯了 Organizações Globo 的音乐版权。&lt;/p&gt;
+&lt;p&gt;我看了下这个视频，就是一个市民日常街拍，从一个繁杂的闹市区路过，有一些 动次打次动次打次 的田园慢摇背景音乐，淹没在人说话、车辆路过的噪音里。&lt;/p&gt;
+&lt;p&gt;我当然提交了 dispute ，说这个音乐根本不可能构成侵权，因为就是一段有节奏的鼓点，即便沾边，也肯定属于 fair use 范围。&lt;/p&gt;
+&lt;p&gt;当然 秒回复了 dispute 无效。&lt;/p&gt;
+&lt;p&gt;这个时候我才能深刻体会，国外很多 youṫube drama 上争论的内容。为什么很多 youṫuber 都开始吐槽这套糟糕的体系。&lt;/p&gt;
+&lt;p&gt;我记得最夸张是有人吧一段静音也做成版权所有，然后下架了很多无声的视频。。。。这都是什么鬼&lt;/p&gt;
+&lt;p&gt;话说回来，现在贸易战打得火热，其中最核心的一点就是美国指责中国「盗窃」IP。其实我觉得 IP 这个东西在现代社会其实很不合理。本质就是用一个 1800s 年代的制度强行在21世纪实施 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2018-07-09:/post/175729214088</guid></item><item><title>hello again</title><link>https://blog.est.im/201902/hello</link><description>&lt;p&gt;冥冥中自有天意。让我决定再开始继续挖 blog 的坑。谁知道这次又会持续到什么时候呢。&lt;/p&gt;
 &lt;p&gt;其实这篇文章创作于：2017-08-05。更新于：2019-02-04 22:09:04&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 05 Aug 2017 09:48:00 +0000</pubDate><guid isPermaLink="false">tag:None,2017-08-05:/201902/hello</guid></item><item><title>RESTful is bad and you should feel bad</title><link>https://blog.est.im/post/159476100930</link><description>&lt;p&gt;From &lt;a href="https://www.v2ex.com/t/354273"&gt;this&lt;/a&gt; thread&lt;/p&gt;
 &lt;p&gt;What's wrong with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;GET     /users/                -----&amp;gt;  `list.users` 
@@ -103,19 +109,4 @@ git rebase --onto remotes/git-svn --root master
 git svn dcommit
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;搞定。&lt;/p&gt;
-&lt;p&gt;btw 提交日期全部被fuck。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 10 Aug 2015 22:06:56 +0000</pubDate><guid isPermaLink="false">tag:None,2015-08-10:/post/126388086480</guid><category>git</category><category>svn</category></item><item><title>小白涨姿势之GIS系统</title><link>https://blog.est.im/post/126387391475</link><description>&lt;p&gt;小白涨姿势之gis系统&lt;/p&gt;
-&lt;p&gt;好久没写blog，最近去知乎问了这样一个问题 &lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.zhihu.com/question/34387819"&gt;有现成的 GIS 系统能处理 河流、立交桥、单行道、限行 等限制条件下求最近距离叫车的问题吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;终于把心中的疑惑解决了。也怪自己笨，导航问题跟游戏寻路算法不一回事嘛！&lt;/p&gt;
-&lt;p&gt;参考ArcGIS的文档（&lt;a href="http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//004700000053000000"&gt;英文&lt;/a&gt;，&lt;a href="http://help.arcgis.com/zh-cn/arcgisdesktop/10.0/help/index.html#//004700000053000000"&gt;中文&lt;/a&gt;）：&lt;/p&gt;
-&lt;p&gt;网络分析主要解决下列几个问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;导航 routing：&lt;/li&gt;
-&lt;li&gt;单行道限制 one-way restrictions&lt;/li&gt;
-&lt;li&gt;转弯限制 turn restrictions&lt;/li&gt;
-&lt;li&gt;交汇点阻抗 junction impedance&lt;/li&gt;
-&lt;li&gt;障碍 barriers&lt;/li&gt;
-&lt;li&gt;街边约束 side-of-street constraints&lt;/li&gt;
-&lt;li&gt;最近设施点 Closest facility 这个好像就是已知多家医院和多起事故，如何找最短路径把尽量多的伤者送到最近的医院？&lt;/li&gt;
-&lt;li&gt;OD矩阵 (origin-destination matrix)：多个出发地和多个目的地，形成一个“价格阶梯表”&lt;/li&gt;
-&lt;li&gt;服务区分析 service area 。这个是我想了很久的。一个外勤警察5分钟能到达的区域范围是那些 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 10 Aug 2015 21:57:19 +0000</pubDate><guid isPermaLink="false">tag:None,2015-08-10:/post/126387391475</guid><category>gis</category><category>Algorithms</category></item></channel></rss>
+&lt;p&gt;btw 提交日期全部被fuck。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 10 Aug 2015 22:06:56 +0000</pubDate><guid isPermaLink="false">tag:None,2015-08-10:/post/126388086480</guid><category>git</category><category>svn</category></item></channel></rss>
