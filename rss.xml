@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 03 Apr 2019 09:47:59 +0800</lastBuildDate><item><title>群众治理和民科</title><link>https://blog.est.im/201904/crackpots</link><description>&lt;p&gt;在 zhihu 上看到一个巨糟糕的问题：《&lt;a href="https://www.zhihu.com/question/41737110/answer/256504039"&gt;反对民科是不是反对民主？&lt;/a&gt;》&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Mon, 08 Apr 2019 15:14:15 +0000</lastBuildDate><item><title>财富分配服从于幂律分布</title><link>https://blog.est.im/201904/stdin-002</link><description>&lt;p&gt;大量的研究显示，各个国家的财富分配服从于幂律分布。幂律分布能导出著名的二八法则：20%的人掌握了80%的财富。&lt;/p&gt;
+&lt;p&gt;幂律分布还有一个很有趣的性质：它具有自相似性（是不是想到了神奇的分形？）。假如说你是一个点，你不管站在这个分布曲线的哪个位置，都无法通过向前看或者向后看来判断出你所在的坐标。直白地说，穷人遇到的困境与富人遇到的困境是一样的（当然这里所说的困境是指因财富间比较而引起的困境）。在理想情况下，假如你是个穷人，那么总有比你更穷的；假如你是个富人，那么总有比你更富的。&lt;/p&gt;
+&lt;p&gt;经过计算得出基尼系数为 1/2 。这在国际通用标准中已经几乎到了“收入悬殊”的地步！一个看似十分公平的分配方式，竟然会导致悬殊的财富分配，不得不说这是一个反直觉的数学结论。&lt;/p&gt;
+&lt;p&gt;不过这个结论可能并非那么反直觉。哪怕所有人的财富分布都严格服从均匀分布，最后计算的基尼系数也会到达 1/3（这个例子不是那么准确，因为均匀分布不代表所有人的财富是均匀的，均匀分布只是表示每个财富值的概率都是相等的；事实上，如果财富分配绝对均匀，那么财富的分布应该是退化分布，对应地，退化分布的基尼系数为0）。这是因为即使是均匀分布也会有不小的方差存在，而方差会使得大家的收入分配不均。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zhuanlan.zhihu.com/p/58116077"&gt;via&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;相关话题：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.zhihu.com/question/62250384"&gt;房间内 100 个人，每人有 …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 08 Apr 2019 15:14:15 +0000</pubDate><guid isPermaLink="false">tag:None,2019-04-08:/201904/stdin-002</guid></item><item><title>群众治理和民科</title><link>https://blog.est.im/201904/crackpots</link><description>&lt;p&gt;在 zhihu 上看到一个巨糟糕的问题：《&lt;a href="https://www.zhihu.com/question/41737110/answer/256504039"&gt;反对民科是不是反对民主？&lt;/a&gt;》&lt;/p&gt;
 &lt;p&gt;有个回答眼前一亮：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;姜源 法学、法律 话题的优秀回答者&lt;br /&gt;
@@ -101,12 +107,4 @@ From 220.181.57.217: icmp_seq=6 Redirect Network …&lt;/code&gt;&lt;/pre&gt;</d
 &lt;p&gt;https://www.youtube.com/watch?v=Tfh0ytz8S0k&lt;/p&gt;
 &lt;p&gt;讲 C64 6502，在320x240，16K内存的限制下，如何绘制彩图。&lt;/p&gt;
 &lt;p&gt;简单计算：320x240每个RGB像素占用24bit，16KB内存就立刻泪流满面了。。。。当时还没有显存的概念，显存就是一块低位内存范围。前人是怎么做到的呢？上一半的色彩拉伸，或者每16x16的像素hack出只包含4种颜色！这他妈碉堡了。Super Mario甚至还在这基础上做出动画！&lt;/p&gt;
-&lt;p&gt;今天又念念不忘的想起这个事情 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Wed, 02 Sep 2015 02:27:53 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-02:/post/128169614555</guid><category>quotes</category></item><item><title>现有git项目同步到一个新svn</title><link>https://blog.est.im/post/126388086480</link><description>&lt;p&gt;不要问我为什么这么脑残，反正这个世界就这样。自己好好的用git管理的项目，项目组又用的是svn，把git同步更新到svn，看git-scm的教程也他妈扯蛋，所以东拼西凑撸了个方法：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;svn mkdir svn://DEST/repo/projectname/{trunk,branches,tags}
-git svn init svn://DEST/repo/projectname/{trunk,branches,tags}
-git svn fetch --username blah
-git rebase --onto remotes/git-svn --root master
-git svn dcommit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;搞定。&lt;/p&gt;
-&lt;p&gt;btw 提交日期全部被fuck。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 10 Aug 2015 22:06:56 +0000</pubDate><guid isPermaLink="false">tag:None,2015-08-10:/post/126388086480</guid><category>git</category><category>svn</category></item></channel></rss>
+&lt;p&gt;今天又念念不忘的想起这个事情 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Wed, 02 Sep 2015 02:27:53 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-02:/post/128169614555</guid><category>quotes</category></item></channel></rss>
