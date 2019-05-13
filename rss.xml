@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 24 Apr 2019 18:28:35 +0000</lastBuildDate><item><title>Ubuntu Server 为什么这么成功？Wardley 地图</title><link>https://blog.est.im/201904/stdout-002</link><description>&lt;p&gt;从 &lt;a href="https://www.thoughtworks.com/cn/radar"&gt;https://www.thoughtworks.com/cn/radar&lt;/a&gt; 看到的一个新概念，Wardley mapping&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Mon, 13 May 2019 10:49:30 +0000</lastBuildDate><item><title>Conan Exiles 与 镶嵌</title><link>https://blog.est.im/201905/stdin-003</link><description>&lt;p&gt;最近迷上了这货。简直就是高配版的 miencraft 啊。这种镶嵌用来修城堡特别有意思。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.redd.it/xyfnxl119bs21.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;感觉好神奇。正方形+正三角形来模拟圆形。到后面其实还可以模拟得很严密。&lt;/p&gt;
+&lt;p&gt;via &lt;a href="https://www.reddit.com/r/ConanExiles/comments/bd8utp/"&gt;For all the new tower builders out there&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 13 May 2019 10:49:30 +0000</pubDate><guid isPermaLink="false">tag:None,2019-05-13:/201905/stdin-003</guid></item><item><title>Ubuntu Server 为什么这么成功？Wardley 地图</title><link>https://blog.est.im/201904/stdout-002</link><description>&lt;p&gt;从 &lt;a href="https://www.thoughtworks.com/cn/radar"&gt;https://www.thoughtworks.com/cn/radar&lt;/a&gt; 看到的一个新概念，Wardley mapping&lt;/p&gt;
 &lt;p&gt;其实也不新了，2014年就出来了。见：&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=NnFeIt-uaEc"&gt;Simon Wardley OSCON 2014 Keynote: "Introduction to Value Chain Mapping"&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;如果你觉得各种软件工程 和 商业 diagram 很无聊，其实这视频前半部分也是讲为什么他们很无聊。&lt;/p&gt;
@@ -103,10 +106,4 @@ From 220.181.57.217: icmp_seq=6 Redirect Network …&lt;/code&gt;&lt;/pre&gt;</d
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;p&gt;https://bitbucket.org/olauzanne/pyquery/issues/10/pyquery-fails-without-errors-when&lt;/p&gt;
 &lt;p&gt;https://bitbucket.org/olauzanne/pyquery/issues/17/pyquery-fails-when-trying-to-query-a&lt;/p&gt;
-&lt;p&gt;https://bitbucket.org/olauzanne …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 07 Sep 2015 23:06:48 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-07:/post/128609730850</guid><category>xml</category><category>python</category></item><item><title>出土文物</title><link>https://blog.est.im/post/128545056770</link><description>&lt;p&gt;现在回想起来，央视老版《三国演义》里室内布景，一副坟墓里拍戏的感觉。&lt;/p&gt;
-&lt;p&gt;今天在newsmth的history版看到这个：&lt;/p&gt;
-&lt;p&gt;bearn (秉烛堂主) 于  (Sun Sep  6 14:38:05 2015)  提到:&lt;/p&gt;
-&lt;p&gt;好像出土汉简有一些就是古代粪坑里的擦屁股简&lt;/p&gt;
-&lt;p&gt;molar (molar，嗯。molar，哦？molar，噢！) 于  (Sun Sep  6 14:45:52 2015)  提到:&lt;/p&gt;
-&lt;p&gt;嗯，对，是有的，而且俺记得认为发现的那地方就是当时的茅坑。所以有可能用废弃的简牍做厕筹是习惯性的，而不是临时性的。看来那个时候还没有用有字的“纸”擦屁股会遭报应的忌讳。&lt;/p&gt;
-&lt;p&gt;证实了我之前一个想法。为什么会有“出土文物”这一说法呢？莫非古人会成建制的往土里埋东西？估计大多数挖出来的“文物 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 07 Sep 2015 03:49:44 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-07:/post/128545056770</guid><category>history</category></item></channel></rss>
+&lt;p&gt;https://bitbucket.org/olauzanne …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 07 Sep 2015 23:06:48 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-07:/post/128609730850</guid><category>xml</category><category>python</category></item></channel></rss>
