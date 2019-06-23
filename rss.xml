@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 17 May 2019 10:30:38 +0000</lastBuildDate><item><title>焦虑是唯一真实的情感</title><link>https://blog.est.im/201905/stdin-004</link><description>&lt;p&gt;&lt;img alt="" src="https://pics.me.me/the-only-emotion-which-doesnt-deceive-is-anxiety-all-other-32596442.png" /&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Sun, 23 Jun 2019 08:17:19 +0000</lastBuildDate><item><title>认知和表达</title><link>https://blog.est.im/201906/stderr_003</link><description>&lt;p&gt;在 zhihu 上关注了一个康巴人，他写的一些科普知识比较有趣（真的有趣，而不是有用）。比如这篇 &lt;a href="https://zhuanlan.zhihu.com/p/32803427"&gt;你所不知道的藏族—藏区鬼神的命根儿&lt;br /&gt;
+&lt;/a&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先，藏区的鬼神都拥有所谓的命根子，也就是敌人可以将其制伏的弱点之一，也是藏传佛教祖师中最常见的降伏手段之一。&lt;br /&gt;
+那么什么是命根子呢？命根子其实就是鬼神的几样珍贵的法宝，如果交出了其中的任何一个，也就可以制其为死地。&lt;br /&gt;
+命根子有几种呢？一般据我所知，有四种：&lt;br /&gt;
+1. 名字&lt;br /&gt;
+2. 种子字&lt;br /&gt;
+3. 咒语&lt;br /&gt;
+4. 宝贝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有的读者可能在这里会想，est 你又在怪力乱神了。且慢，有一句话叫什么来着，人类的恐惧归根结底来自于无知。所以如果从「认知」的角度来说，人们可以把不能理解的事物叫做拦路的妖魔鬼怪，有意思的一点是，如果能呼出问题的正确名字，问题就解决了一大半。&lt;/p&gt;
+&lt;p&gt;怎么讲？我们做程序开发的时候，有的时候就会遇到一些拦路怪。比如我最近需要计算比较2个用户相距距离。如果在方圆1公里则进行一些操作。db 里保存的是用户的一个最近足迹的经纬度，所以2个用户构成一对二元组 &lt;code&gt;(lat1 …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sun, 23 Jun 2019 08:17:19 +0000</pubDate><guid isPermaLink="false">tag:None,2019-06-23:/201906/stderr_003</guid></item><item><title>焦虑是唯一真实的情感</title><link>https://blog.est.im/201905/stdin-004</link><description>&lt;p&gt;&lt;img alt="" src="https://pics.me.me/the-only-emotion-which-doesnt-deceive-is-anxiety-all-other-32596442.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The only emotion that doesn't deceive is anxiety. All other emotions are fake&lt;/p&gt;
 &lt;p&gt;By Slavoj Žižek，齐泽克，唯物主义者&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.reddit.com/r/zizek/comments/bomsww/your_thoughts_on_zizeks_famous_quote_the_only/eni8xk9/"&gt;via&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 17 May 2019 10:30:38 +0000</pubDate><guid isPermaLink="false">tag:None,2019-05-17:/201905/stdin-004</guid></item><item><title>Conan Exiles 与 镶嵌</title><link>https://blog.est.im/201905/stdin-003</link><description>&lt;p&gt;最近迷上了这货。简直就是高配版的 miencraft 啊。这种镶嵌用来修城堡特别有意思。&lt;/p&gt;
@@ -103,6 +115,4 @@ DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
 &lt;p&gt;比如ping baidu.com就会出现&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;From 220.181.57.217: icmp_seq=5 Redirect Network(New nexthop: 220.181.57.217)
 64 bytes from 220.181.57.217: icmp_seq=5 ttl=53 time=69.6 ms
-From 220.181.57.217: icmp_seq=6 Redirect Network …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 21 Sep 2015 01:49:05 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-21:/post/129551894040</guid><category>networking</category><category>windows</category><category>vmware</category></item><item><title>AI自动做作业？作业帮？</title><link>https://blog.est.im/post/129271276635</link><description>&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/9kQsYtq.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;可以通过这个设计一个水印/隐写术系统，精确跟踪学生作业是哪里抄袭的。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/funny/comments/3l6xjt/my_buddy_teaches_english_in_china_his_student/"&gt;via&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Thu, 17 Sep 2015 04:21:48 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-17:/post/129271276635</guid><category>funny</category></item></channel></rss>
+From 220.181.57.217: icmp_seq=6 Redirect Network …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">estblog</dc:creator><pubDate>Mon, 21 Sep 2015 01:49:05 +0000</pubDate><guid isPermaLink="false">tag:None,2015-09-21:/post/129551894040</guid><category>networking</category><category>windows</category><category>vmware</category></item></channel></rss>
