@@ -16,7 +16,7 @@
 
 
     <link rel="stylesheet" href="/theme/css/normalize.min.css" />
-    <link rel="stylesheet" href="/theme/css/main.min.css" />
+    <link rel="stylesheet" href="/theme/css/style.css" />
 
     <style>
       body {
@@ -85,14 +85,17 @@
     var disqus_identifier = 'archives/2958';
     var disqus_url = location.href;
     (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var dsq = document.createElement('script'); 
+
+    dsq.type = 'text/javascript';
+    dsq.defer = true;
     dsq.src = '//estblog.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    (document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0]).appendChild(dsq);
     })();
   </script>
   <noscript>Please enable JavaScript to view the comments.</noscript>
 </div>    </main>
-<script src="/theme/js/core.js"></script>
+<!-- <script src="/theme/js/core.js"></script> -->
 
   </body>
 
