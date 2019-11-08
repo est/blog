@@ -48,6 +48,47 @@
         <!-- new article -->
         <div class="card blog-card">
           <article class="card-body">
+            <a href="post/68759151296"  rel="bookmark" >
+              <h2 class="card-title">GoLang with Sublime on Windows</h2>
+            </a>
+            <p class="card-text"><p>好吧。还在力战渣windows。非管理员权限。<a href="http://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DArchive">下载zip包</a>解压到 D:\dev\go</p>
+<p>sublime处理中文路径一直很bug。需要修改 /Data/Packages/Default/exec.py:45 行：</p>
+<pre><code>    for k, v in proc_env.iteritems():
+        nv =  os.path.expandvars(v)
+        if isinstance(v, unicode):
+            import locale
+            nv = nv.encode(locale.getdefaultlocale()[1])
+        proc_env[k] = nv
+</code></pre>
+<p>然后菜单 Tools -&gt; Build System -&gt; New...</p>
+<pre><code>{
+    "cmd": ["go …</code></pre></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-12-02T01:25:18+00:00">2013-12-02</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="post/68445610297"  rel="bookmark" >
+              <h2 class="card-title">SSRF - 看了这个slides，再也不相信procfs里的fd了</h2>
+            </a>
+            <p class="card-text"><iframe src="http://www.slideshare.net/slideshow/embed_code/15264310" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+
+<p><div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/d0znpp/ssrf-attacks-and-sockets-smorgasbord-of-vulnerabilities" title="SSRF attacks and sockets: smorgasbord of vulnerabilities" target="_blank">SSRF attacks and sockets: smorgasbord of vulnerabilities</a> </strong> from <strong><a href="http://www.slideshare.net/d0znpp" target="_blank">Ivan Novikov</a></strong> </div></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-11-29T03:02:37+00:00">2013-11-29</time></p>
+<p>text</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
             <a href="post/68199814606"  rel="bookmark" >
               <h2 class="card-title">bitcoin —— 末日的狂欢</h2>
             </a>
@@ -412,49 +453,6 @@ fallback_host:tc.v11.cache6.c.youtube.com</p></p>
 <p>同时，我越来越觉得Google像Microsoft了。很多 NIH 综合症。Airplay不支持也就算了，现有的Miracast，DLNA都被华丽的无视了。非得自己搞个专有的websocket协议。</p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-07-25T09:17:50+00:00">2013-07-25</time></p>
-<p>text</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="post/55847613758"  rel="bookmark" >
-              <h2 class="card-title">菊花塞个涡喷发动机 + 滑雪</h2>
-            </a>
-            <p class="card-text"><iframe width="640" height="360" src="http://www.youtube.com/embed/icUCcDucII8?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-
-<p>开挂的老外</p>
-<p><a href="http://www.reddit.com/r/videos/comments/1il8zi/snow_ski_jet_pack_awesome/">via</a></p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-07-19T01:23:23+00:00">2013-07-19</time></p>
-<p>text</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="post/55421780172"  rel="bookmark" >
-              <h2 class="card-title">Sally-Anne test</h2>
-            </a>
-            <p class="card-text"><p>好吧，看了这么久acfun居然<a href="http://www.acfun.tv/v/ac644991">学到了姿势</a></p>
-<p>这是一个心理学和认知学的实验。Sally-Anne test</p>
-<p>Sally和Anne在同一个房间</p>
-<p>Sally有一个<strong>盒子</strong></p>
-<p>Anne有一个<strong>篮子</strong></p>
-<p>这两个容器都是有盖不透明的。</p>
-<p>现在Sally把一块饼干放在<strong>盒子</strong>里，然后出门离开了</p>
-<p>Anne 随后，把饼干从 <strong>盒子</strong> 取出来，放到自己的<strong>篮子</strong>里，盖好。</p>
-<p>一会儿，Sally回到房间。这个时候她去寻找自己的饼干，请问Sally会去 盒子 还是 篮子 寻找？</p>
-<p>心智不成熟，小于四岁的孩子会回答：篮子。</p>
-<p>其他参考：</p>
-<p>译言： http://article.yeeyan.org/compare/322659</p>
-<p>http://www.huanqiukexue.com/html/newgc …</p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-07-14T09:34:42+00:00">2013-07-14</time></p>
 <p>text</p>            </div>
           </article>
         </div>
