@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 08 Nov 2019 19:50:57 +0000</lastBuildDate><item><title>出纳会计 和 华为 HR</title><link>https://blog.est.im/201911/stderr-004</link><description>&lt;p&gt;最近码农圈(juan)和 IT 界沸沸扬扬一个帖子是《&lt;a href="https://www.zhihu.com/question/353381490/"&gt;华为HR胡玲于 2019.10.30 在华为内部论坛心声社区的发帖&lt;/a&gt;》。其大概意思是：&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Mon, 30 Dec 2019 16:22:09 +0000</lastBuildDate><item><title>Year review of 2019</title><link>https://blog.est.im/201912/stderr-005</link><description>&lt;p&gt;(Note: This article is written with the help of &lt;a href="https://app.mtutor.engkoo.com/englishwriting/"&gt;Engkoo from Microsoft&lt;/a&gt;, an English writing review service much like Grammar.ly)&lt;/p&gt;
+&lt;p&gt;The year 2019 is coming to an end, this is a year full of ups and downs for me.&lt;br /&gt;
+I started a small Internet company last year during spring …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 30 Dec 2019 16:22:09 +0000</pubDate><guid isPermaLink="false">tag:None,2019-12-30:/201912/stderr-005</guid></item><item><title>出纳会计 和 华为 HR</title><link>https://blog.est.im/201911/stderr-004</link><description>&lt;p&gt;最近码农圈(juan)和 IT 界沸沸扬扬一个帖子是《&lt;a href="https://www.zhihu.com/question/353381490/"&gt;华为HR胡玲于 2019.10.30 在华为内部论坛心声社区的发帖&lt;/a&gt;》。其大概意思是：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;一个基层HR 胡玲 平时辛苦统计员工反馈，却被中层管理HR绩效打了差评，用来私密反馈情况的内部群，甚至被中层管理要求交出员工名单。&lt;/li&gt;
 &lt;li&gt;中层HR甚至说"应该看看反馈问题的人是谁，天天有时间在这琢磨班车食堂的，清退算了"。——这是华为中层管理 杨瑞锋 的「原话」&lt;/li&gt;
@@ -127,7 +129,4 @@ DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
 &lt;li&gt;象征“基督之剑(Arma Christi)” 。&lt;/li&gt;
 &lt;li&gt;象征罗马帝国骑士团战旗。这个看起来和宗教无关，但是骑士团其实有多个战旗，其中和瑞士国旗最相似的两个，一个是条顿骑士团的，一个是马耳他骑士团，这两个都是天主教的十字军东征赫赫有名的骑士团，一个是后来成为英联邦国旗一部分的圣乔治十字。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Flag_of_Switzerland#History"&gt;via&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 24 Mar 2017 10:33:05 +0000</pubDate><guid isPermaLink="false">tag:None,2017-03-24:/post/158777447480</guid><category>history</category></item><item><title>“俄罗斯黑客”到底怎么黑的美国民主党全国总会</title><link>https://blog.est.im/post/155207055110</link><description>&lt;h2&gt;“俄罗斯黑客”到底怎么黑的美国民主党全国总会&lt;/h2&gt;
-&lt;p&gt;从&lt;a href="https://news.ycombinator.com/item?id=13279600"&gt;这里&lt;/a&gt; 看到的&lt;/p&gt;
-&lt;p&gt;这个 pdf 和之前美国贸代办做的差远了。技术仔的审美观就是比销售查一截啊。&lt;/p&gt;
-&lt;p&gt;py2exe + wmi  == rootkit?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 31 Dec 2016 08:44:19 +0000</pubDate><guid isPermaLink="false">tag:None,2016-12-31:/post/155207055110</guid></item></channel></rss>
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Flag_of_Switzerland#History"&gt;via&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 24 Mar 2017 10:33:05 +0000</pubDate><guid isPermaLink="false">tag:None,2017-03-24:/post/158777447480</guid><category>history</category></item></channel></rss>
