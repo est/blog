@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Mon, 30 Dec 2019 16:22:09 +0000</lastBuildDate><item><title>Year review of 2019</title><link>https://blog.est.im/201912/stderr-005</link><description>&lt;p&gt;(Note: This article is written with the help of &lt;a href="https://app.mtutor.engkoo.com/englishwriting/"&gt;Engkoo from Microsoft&lt;/a&gt;, an English writing review service much like Grammar.ly)&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 07 Feb 2020 23:51:59 +0000</lastBuildDate><item><title>减速玻璃的原理</title><link>https://blog.est.im/202002/stdout-001</link><description>&lt;p&gt;原来&lt;a href="https://www.zhihu.com/question/20084003/answer/490712357"&gt;发表在 zhihu&lt;/a&gt;，可惜不绑手机不让发帖了。就自己写个 blog 备忘一下。&lt;/p&gt;
+&lt;p&gt;减速玻璃这个都会传说，买车前听说过，买车后也百思不得其解。今天突然想明白了。&lt;/p&gt;
+&lt;p&gt;减速玻璃靠的不是玻璃，而是靠挡风玻璃倾斜角度、中控台长度、驾驶者座位、A 柱宽度决定的。&lt;/p&gt;
+&lt;p&gt;简单的说，和 FOV 有关。&lt;/p&gt;
+&lt;p&gt;人对速度的感知，其实不是视野中心决定的，而是视野左右边缘两侧物体移动速度决定的。&lt;/p&gt;
+&lt;p&gt;25° FOV 视野：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/stdout-001-1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;45°视野&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/stdout-001-2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;90°视野&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/stdout-001-3.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;不同视野角度的对比：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/stdout-001-4.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;所以市面上为什么你们觉得捷达就没有减速玻璃？因为挡风玻璃比较垂直，驾驶者很容易看到车头，开车位置考前，在 A 柱范围内，更容易看到更开阔的路面。然后你的视觉感受就是车速很快&lt;/p&gt;
+&lt;p&gt;为什么好一点的车子觉得安装了「减速玻璃」？因为中控台厚，玻璃比较倾斜，看不到车头，A 柱粗。你们的视野受限，就觉得视野两侧物体运动慢 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 07 Feb 2020 23:51:59 +0000</pubDate><guid isPermaLink="false">tag:None,2020-02-07:/202002/stdout-001</guid></item><item><title>Year review of 2019</title><link>https://blog.est.im/201912/stderr-005</link><description>&lt;p&gt;(Note: This article is written with the help of &lt;a href="https://app.mtutor.engkoo.com/englishwriting/"&gt;Engkoo from Microsoft&lt;/a&gt;, an English writing review service much like Grammar.ly)&lt;/p&gt;
 &lt;p&gt;The year 2019 is coming to an end, this is a year full of ups and downs for me.&lt;/p&gt;
 &lt;p&gt;I started a small Internet company last year spring as …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 30 Dec 2019 16:22:09 +0000</pubDate><guid isPermaLink="false">tag:None,2019-12-30:/201912/stderr-005</guid></item><item><title>出纳会计 和 华为 HR</title><link>https://blog.est.im/201911/stderr-004</link><description>&lt;p&gt;最近码农圈(juan)和 IT 界沸沸扬扬一个帖子是《&lt;a href="https://www.zhihu.com/question/353381490/"&gt;华为HR胡玲于 2019.10.30 在华为内部论坛心声社区的发帖&lt;/a&gt;》。其大概意思是：&lt;/p&gt;
 &lt;ol&gt;
@@ -121,12 +135,4 @@ DELETE  /users/:id/            -----&amp;gt;  `destroy.users`
 &lt;p&gt;&lt;a href="https://youtu.be/7erJ1DV_Tlo?t=1570"&gt;https://youtu.be/7erJ1DV_Tlo?t=1570&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;一个arbiter就两个并发输入，需要在两个输出中任意返回一个，但是不能同时返回&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 05 Apr 2017 22:40:58 +0000</pubDate><guid isPermaLink="false">tag:None,2017-04-05:/post/159250027150</guid></item><item><title>雪佛兰车标的十字</title><link>https://blog.est.im/post/158777447480</link><description>&lt;p&gt;抄袭一下 wikipedia&lt;/p&gt;
-&lt;p&gt;雪佛兰的标志是个十字，是用来纪念创始人 Louis Chevrolet 父母的祖国瑞士。瑞士的国旗也是个十字&lt;/p&gt;
-&lt;p&gt;瑞士国旗的十字来源有三个说法：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;来自罗马的底本圣战军团(Theban Legion)，圣徒传里也称 阿高努姆(Agaunum)修道院殉教士团。一共6666人的基佬军团&lt;/li&gt;
-&lt;li&gt;象征“基督之剑(Arma Christi)” 。&lt;/li&gt;
-&lt;li&gt;象征罗马帝国骑士团战旗。这个看起来和宗教无关，但是骑士团其实有多个战旗，其中和瑞士国旗最相似的两个，一个是条顿骑士团的，一个是马耳他骑士团，这两个都是天主教的十字军东征赫赫有名的骑士团，一个是后来成为英联邦国旗一部分的圣乔治十字。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Flag_of_Switzerland#History"&gt;via&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 24 Mar 2017 10:33:05 +0000</pubDate><guid isPermaLink="false">tag:None,2017-03-24:/post/158777447480</guid><category>history</category></item></channel></rss>
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 05 Apr 2017 22:40:58 +0000</pubDate><guid isPermaLink="false">tag:None,2017-04-05:/post/159250027150</guid></item></channel></rss>
