@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Sat, 25 Apr 2020 11:03:49 +0000</lastBuildDate><item><title>论驯化孩子，甩锅同事、家庭撕逼的沟通的技巧——不要用第二人称，用 i-message</title><link>https://blog.est.im/202004/stderr-006</link><description>&lt;p&gt;今天听 SO 说起来一个女同事抱怨家庭矛盾，任何一点小事都上纲上线。&lt;/p&gt;
 &lt;p&gt;比如煤气灶开关没完全按下去就开始旋转，老公在一旁就怒斥“你是要把我们全家炸死么！”&lt;/p&gt;
-&lt;p&gt;然后就一顿吵。SO 说这是婚姻不幸福。我想起来，其实老公这一方只是表达一个觉得极度危险的感受，老婆这一方觉得自己只是一个小动作没必要被吼成这样，肯定不服要找其他角度骂回去，比如“我做饭你吃现成，还要求这么多，你来做”之类的。&lt;/p&gt;
+&lt;p&gt;然后就一顿吵。SO 说这是婚姻不幸福。我想起来，其实老公这一方只是表达一个觉得极度危险的感受，老婆这一方觉得自己只是一个小动作没必要被吼成这样，肯定不服要找其他角度骂回去，比如“我做饭你吃现成，还要求这么多，你来做”之类的，然后接下去就会新帐旧帐一起算没完没了。&lt;/p&gt;
 &lt;p&gt;这就是一个两个节点间 IO 协议不畅导致双方炸毛的案例。我就跟 SO 分享了我去年学习到了一个最有用的人际沟通技巧：&lt;a href="https://en.wikipedia.org/wiki/I-message"&gt;i-message&lt;/a&gt;。我觉得长这么大，这是我看到的最有价值的交流原则。&lt;/p&gt;
 &lt;p&gt;注意这里不是水果的 &lt;img alt="" src="https://help.apple.com/assets/5E6F03560946225E2308D0A0/5E6F035F0946225E2308D0C3/en_US/88372f9cf93681d70c01df147daeb12c.png" /&gt; iMessage，是 i-meesage，著名教授 Thomas Gordon 在1970年畅销书 &lt;em&gt;P.E.T.: Parent Effectiveness Training&lt;/em&gt; 里浓墨重彩总结的。很可惜对人类社会这么有用的沟通技巧的名字，搜索引擎被水果的渣 app 淹没了。&lt;/p&gt;
-&lt;p&gt;i-message 简单的说，就是一个固定句型 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 25 Apr 2020 11:03:49 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-25:/202004/stderr-006</guid></item><item><title>Covid-19 一些基本常识</title><link>https://blog.est.im/202003/stdout-004</link><description>&lt;ol&gt;
+&lt;p&gt;i-message 简单的说 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 25 Apr 2020 11:03:49 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-25:/202004/stderr-006</guid></item><item><title>守株待兔</title><link>https://blog.est.im/202004/stderr-005</link><description>&lt;p&gt;以下内容转自 D版网友：&lt;code&gt;猫了个咪的&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人教版三年级语文正在学古文，内容是 韩非子五蠹里面的守株待兔。韩非子在故事最后，其实还有一句话“今欲以先王之政，治当世之民，皆守株之类也。”&lt;br /&gt;
+这点明这个故事是讽刺当政者因循守旧不知变通的愚蠢。&lt;br /&gt;
+现在，这个故事出现在三年级课文中，主要是教育小朋友不能不劳而获，想着天上掉馅饼。中国读书人自古以来几乎都会学习这样的寓言成语，所以对守株待兔不劳而获的批评是刻在骨子里的文化基因，反映在生活中，大部分中国人都认同做人做事要老老实实，勤勤恳恳，至少表面上大家都赞同认真工作勤劳致富，孔子也说君子爱财取之有道嘛。&lt;br /&gt;
+但是，世道慢慢变化，普通中国人对于老实做人认真干事的人现在的评价反而成了一个字，蠢。韩非子如果活在当下，只怕也会哑口无言吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我觉得这个成语太它妈的自我讽刺了。是以为记。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 02 Apr 2020 20:35:59 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-02:/202004/stderr-005</guid></item><item><title>Covid-19 一些基本常识</title><link>https://blog.est.im/202003/stdout-004</link><description>&lt;ol&gt;
 &lt;li&gt;检测 Covid-19 有几种手段：&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
@@ -21,14 +28,7 @@
 &lt;li&gt;免疫系统还没反应过来。病毒还在悄悄感染。&lt;/li&gt;
 &lt;li&gt;免疫球蛋白 IgG/IgM 已经不顶用了。免疫系统被摧毁了，或者要开始细胞因子风暴了。&lt;/li&gt;
 &lt;li&gt;也可能代表你的鼻腔 swab 没挖对。&lt;/li&gt;
-&lt;li&gt;拭子挖对了但是未达到能显色的剂量 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 26 Mar 2020 17:34:30 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-26:/202003/stdout-004</guid></item><item><title>守株待兔</title><link>https://blog.est.im/202003/stderr-005</link><description>&lt;p&gt;以下内容转自 D版网友：&lt;code&gt;猫了个咪的&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;人教版三年级语文正在学古文，内容是 韩非子五蠹里面的守株待兔。韩非子在故事最后，其实还有一句话“今欲以先王之政，治当世之民，皆守株之类也。”&lt;br /&gt;
-这点明这个故事是讽刺当政者因循守旧不知变通的愚蠢。&lt;br /&gt;
-现在，这个故事出现在三年级课文中，主要是教育小朋友不能不劳而获，想着天上掉馅饼。中国读书人自古以来几乎都会学习这样的寓言成语，所以对守株待兔不劳而获的批评是刻在骨子里的文化基因，反映在生活中，大部分中国人都认同做人做事要老老实实，勤勤恳恳，至少表面上大家都赞同认真工作勤劳致富，孔子也说君子爱财取之有道嘛。&lt;br /&gt;
-但是，世道慢慢变化，普通中国人对于老实做人认真干事的人现在的评价反而成了一个字，蠢。韩非子如果活在当下，只怕也会哑口无言吧。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我觉得这个成语太它妈的自我讽刺了。是以为记。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 20 Mar 2020 20:35:59 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-20:/202003/stderr-005</guid></item><item><title>为什么会有数学家反对对无穷集合使用排中律？</title><link>https://blog.est.im/202003/stdout-003</link><description>&lt;p&gt;因为现在 zhihu 要绑手机才能回答，所以还是写自己 blog 上吧。&lt;/p&gt;
+&lt;li&gt;拭子挖对了但是未达到能显色的剂量 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 26 Mar 2020 17:34:30 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-26:/202003/stdout-004</guid></item><item><title>为什么会有数学家反对对无穷集合使用排中律？</title><link>https://blog.est.im/202003/stdout-003</link><description>&lt;p&gt;因为现在 zhihu 要绑手机才能回答，所以还是写自己 blog 上吧。&lt;/p&gt;
 &lt;p&gt;对「&lt;a href="https://www.zhihu.com/question/375363116"&gt;为什么会有数学家反对对无穷集合使用排中律&lt;/a&gt; 」这个问题，我有一个胡思乱想的回答：&lt;/p&gt;
 &lt;p&gt;房间里的小明如果不是男生，那么他一定是女生。&lt;/p&gt;
 &lt;p&gt;其实也不一定。小明是个物品。&lt;/p&gt;
