@@ -5,8 +5,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.est.im/</loc>
-<lastmod>2020-04-25T11:53:58-00:00</lastmod>
+<lastmod>2020-05-01T12:12:26-00:00</lastmod>
 <changefreq>always</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/202005/stdin-002</loc>
+<lastmod>2020-05-01T12:02:15+00:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/202004/stderr-007</loc>
+<lastmod>2020-04-25T18:30:47+00:00</lastmod>
+<changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -18,7 +32,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.est.im/202004/stderr-005</loc>
+<loc>https://blog.est.im/202004/stdin-001</loc>
 <lastmod>2020-04-02T20:35:59+00:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -8264,8 +8278,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.est.im/201912/stderr-005</loc>
-<lastmod>2019-12-30T16:22:09+00:00</lastmod>
+<loc>https://blog.est.im/201904/stdin-002</loc>
+<lastmod>2019-04-08T15:14:15+00:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/201902/stdin-001</loc>
+<lastmod>2019-02-13T11:07:27+00:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -8313,13 +8334,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.est.im/202004/stderr-005</loc>
-<lastmod>2020-04-02T20:35:59+00:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://blog.est.im/202003/stderr-004</loc>
 <lastmod>2020-03-04T23:01:01+00:00</lastmod>
 <changefreq>hourly</changefreq>
@@ -8355,8 +8369,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.est.im/202005/stdin-002</loc>
+<lastmod>2020-05-01T12:02:15+00:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.est.im/202002/stdout-001</loc>
 <lastmod>2020-02-07T23:51:59+00:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/202004/stdin-001</loc>
+<lastmod>2020-04-02T20:35:59+00:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
