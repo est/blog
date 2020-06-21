@@ -5,8 +5,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.est.im/</loc>
-<lastmod>2020-06-11T21:29:05-00:00</lastmod>
+<lastmod>2020-06-21T23:35:28-00:00</lastmod>
 <changefreq>always</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/202006/stdout-006</loc>
+<lastmod>2020-06-21T18:02:00+00:00</lastmod>
+<changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -8306,6 +8313,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.est.im/201910/stdout-006</loc>
+<lastmod>2019-10-04T18:16:00+00:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.est.im/201905/stdin-004</loc>
 <lastmod>2019-05-17T10:30:38+00:00</lastmod>
 <changefreq>hourly</changefreq>
@@ -8378,6 +8392,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.est.im/202003/stderr-004</loc>
 <lastmod>2020-03-04T23:01:01+00:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/202006/stdout-006</loc>
+<lastmod>2020-06-21T18:02:00+00:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>

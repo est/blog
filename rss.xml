@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Thu, 11 Jun 2020 21:12:26 +0000</lastBuildDate><item><title>反抗制度</title><link>https://blog.est.im/202006/stdin-005</link><description>&lt;p&gt;以下内容节选自：《&lt;a href="https://m.igetget.com/share/course/article?id=2m845Ln7q69yKOvx6XrkebvGDYjglp"&gt;罗辑思维第247期 平庸之恶&lt;/a&gt;》。有删节&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Sun, 21 Jun 2020 18:02:00 +0000</lastBuildDate><item><title>热水器 洗碗机 垃圾处理器 洗衣机 安装经验</title><link>https://blog.est.im/202006/stdout-006</link><description>&lt;p&gt;记录几条可能对其他人有用的经验：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;西门子8套洗碗机，西班牙进口型号都老。比如 SC73E810TI SC73M612TI&lt;br /&gt;
+&lt;img alt="Simens dishwasher" src="/images/2020/stdout-006-01.jpg" /&gt;&lt;/li&gt;
+&lt;li&gt;美的 华帝等国内洗碗机都有 PTC 加热。比西门子的余温烘干好得多。是一个非常实用的技术。加上 UV 紫外杀菌、空气对流就可以充当消毒柜用了。&lt;/li&gt;
+&lt;li&gt;美的几个型号 Vie6 K2 X4 X4-S 大同小异哪个便宜买那个。我1799买的其中一款，6·18活动的时候选地址慢了没能最低价抢购。有很多1499到手的。&lt;br /&gt;
+这几款有通病就是漏液。软水液 还是 亮碟剂忘记了&lt;/li&gt;
+&lt;li&gt;国产的洗碗机都是强排的，可以排出到底部40cm 高左右的位置&lt;/li&gt;
+&lt;li&gt;「比佛利」是「小天鹅」洗衣机的高端品牌&lt;/li&gt;
+&lt;li&gt;我买了一个 B1DV100TG 。然后收到一条短信：请到 midea.com 查看你的点子发票。？？？&lt;/li&gt;
+&lt;li&gt;才知道2018年小天鹅被美的收购了，搞了半天买了一条美的的洗衣机。然后 B1DV100TG 挺坑的。三江的电机 …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sun, 21 Jun 2020 18:02:00 +0000</pubDate><guid isPermaLink="false">tag:None,2020-06-21:/202006/stdout-006</guid></item><item><title>反抗制度</title><link>https://blog.est.im/202006/stdin-005</link><description>&lt;p&gt;以下内容节选自：《&lt;a href="https://m.igetget.com/share/course/article?id=2m845Ln7q69yKOvx6XrkebvGDYjglp"&gt;罗辑思维第247期 平庸之恶&lt;/a&gt;》。有删节&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;官僚主义到底是什么东西？   &lt;/p&gt;
 &lt;p&gt;官僚主义，其实是现代社会的产物。现代社会的本质，是陌生人之间的大规模协作，来完成形形色色的任务。   &lt;/p&gt;
@@ -186,10 +196,4 @@ A: 存在的最根本属性是稳定性。&lt;br /&gt;
     古希腊有个悖论说一艘船叫 忒修斯（ship of Theseus），船上的木头因为损坏和腐烂被一块一块随着时间逐渐替换，如果有一天所有的木头都不是出厂的原装的木头，那这艘船还是原来的那艘船吗？&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;所以这里的存在分两个层面的稳定。从船的用途来说，忒修斯号因为设计没变，用途一致，所以忒修斯号依然存在；从忒修斯原装价值来说，因为木头都被换过一轮了，所以追求「原汁原味」的价值已经不存在了。这艘船至少还在「设计用途」这个层面保持了稳定，所以这艘船还有一定的存在意义。如果这艘船的木头被拆下来烧掉了，空气中的 Co2 和 地上一堆灰没有人会认为这是一艘船。
 
-如果一个物体不停的变化，变化周期甚至小于普朗克时间长度，那么这样的东西压根无法观察，也无法影响我们的生活，所以就不存在 …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 04 Oct 2019 18:16:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-10-04:/201910/stdout-006</guid></item><item><title>Fix Paladins stuck at Completing Login</title><link>https://blog.est.im/201908/stdout-005</link><description>&lt;p&gt;&lt;a href="https://store.steampowered.com/app/444090/Paladins/"&gt;Paladins&lt;/a&gt; is one of the F2P games on Steam. It's called 枪火游侠 in Chinese market with Tencent as its Partner operator.&lt;/p&gt;
-&lt;p&gt;To play it on Steam:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add any game to cart&lt;/li&gt;
-&lt;li&gt;Modify region to US on the checkout page&lt;/li&gt;
-&lt;li&gt;Type the following script into browser's DevTool&lt;br /&gt;
-&lt;code&gt;jQuery.post('//store.steampowered …&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 21 Aug 2019 20:43:54 +0000</pubDate><guid isPermaLink="false">tag:None,2019-08-21:/201908/stdout-005</guid></item></channel></rss>
+如果一个物体不停的变化，变化周期甚至小于普朗克时间长度，那么这样的东西压根无法观察，也无法影响我们的生活，所以就不存在 …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 04 Oct 2019 18:16:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-10-04:/201910/stdout-006</guid></item></channel></rss>
