@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 01 Jul 2020 10:38:09 +0000</lastBuildDate><item><title>成绩单和名次的副作用</title><link>https://blog.est.im/202007/stdin-006</link><description>&lt;blockquote&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Mon, 06 Jul 2020 17:01:55 +0000</lastBuildDate><item><title>China's AI Dominance Does Not Depends On Math</title><link>https://blog.est.im/202007/stdout-007</link><description>&lt;p&gt;There was a not-so-interesting article on reddit that says &lt;a href="https://www.reddit.com/r/technology/comments/hlttg0/why_chinas_race_for_ai_dominance_depends_on_math/"&gt;China's Race For AI Dominance Depends On Math&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The arguments looks flawed in several ways.&lt;/p&gt;
+&lt;p&gt;First of all, yes Chinese students &lt;em&gt;do&lt;/em&gt; performs well in math, but only in one narrow specific branch of math: alrithmetics. Once they graduate into college …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 06 Jul 2020 17:01:55 +0000</pubDate><guid isPermaLink="false">tag:None,2020-07-06:/202007/stdout-007</guid></item><item><title>成绩单和名次的副作用</title><link>https://blog.est.im/202007/stdin-006</link><description>&lt;blockquote&gt;
 &lt;p&gt;日本思想家 大前研一 有一本著作叫《低智商社会》提到：日本的新一代，读的书越来越幼稚，对各种谣言丝毫不会思考，很容易遭到媒体的操纵。为啥呢？ &lt;br /&gt;
 其中一个小原因，大前研一认为，是日本政府推行的“偏差值教育制度”造成的。简单说，就是对学生进行能力测试，把各项能力数字化。给某项技能找到一个中间值，然后每个人就知道自己的这项能力，跟中间值相比是高还是低。 &lt;br /&gt;
 这种技术本身可能是善意的，但是当大家都接受了技术的权威性，问题就出现了。 &lt;br /&gt;
@@ -185,16 +187,4 @@
 &lt;p&gt;所以市面上为什么你们觉得捷达就没有减速玻璃？因为挡风玻璃比较垂直，驾驶者很容易看到车头，开车位置考前，在 A 柱范围内，更容易看到更开阔的路面。然后你的视觉感受就是车速很快&lt;/p&gt;
 &lt;p&gt;为什么好一点的车子觉得安装了「减速玻璃」？因为中控台厚，玻璃比较倾斜，看不到车头，A 柱粗。你们的视野受限，就觉得视野两侧物体运动慢 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 07 Feb 2020 23:51:59 +0000</pubDate><guid isPermaLink="false">tag:None,2020-02-07:/202002/stdout-001</guid></item><item><title>Year review of 2019</title><link>https://blog.est.im/201912/stderr-005</link><description>&lt;p&gt;(Note: This article is written with the help of &lt;a href="https://app.mtutor.engkoo.com/englishwriting/"&gt;Engkoo from Microsoft&lt;/a&gt;, an English writing review service much like Grammar.ly)&lt;/p&gt;
 &lt;p&gt;The year 2019 is coming to an end, this is a year full of ups and downs for me.&lt;/p&gt;
-&lt;p&gt;I started a small Internet company last year spring as …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 30 Dec 2019 16:22:09 +0000</pubDate><guid isPermaLink="false">tag:None,2019-12-30:/201912/stderr-005</guid></item><item><title>出纳会计 和 华为 HR</title><link>https://blog.est.im/201911/stderr-004</link><description>&lt;p&gt;最近码农圈(juan)和 IT 界沸沸扬扬一个帖子是《&lt;a href="https://www.zhihu.com/question/353381490/"&gt;华为HR胡玲于 2019.10.30 在华为内部论坛心声社区的发帖&lt;/a&gt;》。其大概意思是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;一个基层HR 胡玲 平时辛苦统计员工反馈，却被中层管理HR绩效打了差评，用来私密反馈情况的内部群，甚至被中层管理要求交出员工名单。&lt;/li&gt;
-&lt;li&gt;中层HR甚至说"应该看看反馈问题的人是谁，天天有时间在这琢磨班车食堂的，清退算了"。——这是华为中层管理 杨瑞锋 的「原话」&lt;/li&gt;
-&lt;li&gt;中层管理 杨瑞锋 说，"BCM项目都结项了，加班数据早降下来了"。实际上通过数据分析最近加班更加严重，升高得更多&lt;/li&gt;
-&lt;li&gt;中层管理最大的业绩就是紧急处理员工自杀、猝死这种突发事件。平时吃香喝辣上班时间全国到处飞围着领导转HR转就是不围着员工转&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;当然这个事在各个群里被讨论烂了。大概讨论分2个思路：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;世道不公，程序员青春饭吃苦，996.icu 。。。马云的福报论等等&lt;/li&gt;
-&lt;li&gt;HR 本来就应该是大老板的打手。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;甚至 zhihu 有回答把这个比喻成明朝司礼监。。什么 HR 是帮皇上挡子弹 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 08 Nov 2019 19:50:57 +0000</pubDate><guid isPermaLink="false">tag:None,2019-11-08:/201911/stderr-004</guid></item></channel></rss>
+&lt;p&gt;I started a small Internet company last year spring as …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 30 Dec 2019 16:22:09 +0000</pubDate><guid isPermaLink="false">tag:None,2019-12-30:/201912/stderr-005</guid></item></channel></rss>
