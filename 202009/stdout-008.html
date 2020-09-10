@@ -59,7 +59,7 @@
 <pre><code>new Date(2020, 0, 24).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12))
 乙亥腊月30 上午12:00:00
 new Date(2020, 0, 25).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12))
-庚子正月30 上午12:00:00
+庚子正月1 上午12:00:00
 </code></pre>
 <p>连 腊月 正月 都能显示。还是挺 6 的。浏览器支持的话 Edge, Chrome 都可以，Firefox 和 Safari 的 ICU 版本太老需要微调一下。</p>
 <p>23:39更新：网友 sarvatathagata 发现了个更简单的方法：</p>
