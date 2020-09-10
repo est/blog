@@ -62,6 +62,9 @@ new Date(2020, 0, 25).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, 
 庚子正月30 上午12:00:00
 </code></pre>
 <p>连 腊月 正月 都能显示。还是挺 6 的。浏览器支持的话 Edge, Chrome 都可以，Firefox 和 Safari 的 ICU 版本太老需要微调一下。</p>
+<p>23:39更新：网友 sarvatathagata 发现了个更简单的方法：</p>
+<pre><code>new Date().toLocaleString('ja-JP-u-ca-chinese')
+</code></pre>
 <p>稍微解释下 <code>zh-Hans-CN-u-ca-chinese</code> 是什么意思。这个叫 locale 也叫 language tag。<br />
 zh-Hans 是一门语言，简体中文。<code>CN</code> 表示在大陆地区用的。 <code>-u-key1-value1-key2-value2...</code> 表示打开 <em>Unicode extension</em> 模式，<code>-ca</code> 表示 calendar 日历，<code>-chinese</code> 表示农历。</p>
 <p>如果把 <code>-chinese</code> 改成 <code>-roc</code> 还可以得到今年是民国109年。奇怪的姿势又增加了。</p>
