@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 26 Aug 2020 08:22:14 +0000</lastBuildDate><item><title>策略性同理心</title><link>https://blog.est.im/202008/stdin-008</link><description>&lt;blockquote&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Thu, 10 Sep 2020 22:39:01 +0000</lastBuildDate><item><title>javascript 一句话算农历</title><link>https://blog.est.im/202009/stdout-008</link><description>&lt;p&gt;同步发帖在 &lt;a href="https://www.v2ex.com/t/705897"&gt;v2ex&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今天发现 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"&gt;Intl&lt;/a&gt; 这个 ECMAscript 内置对象，可以一句话算农历。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;new Date().toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)\s*?年/, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;算农历最麻烦就是跨年。这个 API 处理得还挺好的。比如2020年1月的除夕夜+春节&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;new Date(2020, 0, 24).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 10 Sep 2020 22:39:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-10:/202009/stdout-008</guid></item><item><title>策略性同理心</title><link>https://blog.est.im/202008/stdin-008</link><description>&lt;blockquote&gt;
 &lt;p&gt;我们大脑里的一个结构，叫杏仁核。杏仁核是掌管情绪的，杏仁核越活跃，人的情绪就越高涨，人就不能理性地思考和做事。那怎么对付杏仁核呢？有一个办法，那就是让它去思考一件严肃的事，杏仁核不能思考，一思考，立刻就歇菜了，就懵了。&lt;br /&gt;
 为什么？因为杏仁核是大脑中非常原始的一部分，它有一个绰号，叫爬行脑，就是当动物还是爬行动物的时候就已经进化出来的部分，所以它的情绪功能强大，但是智力不行。你一给它出难题，它不管多活跃，都只好把大脑的控制权交出来，交给理性能力更发达的大脑皮层。这个时候杏仁核就歇菜了，情绪就平复了。&lt;br /&gt;
 比如我家女儿，两岁多，正是情绪不太稳定的时候，如果她要是哭闹，就是不穿衣服，这时候讲道理是没有用的。最好用的办法，是让她们思考问题，比如问她们，你是要穿绿色的衣服还是红色的衣服呀？她一思考，一选择，情绪性的反抗马上就停止了。这就是把杏仁核打败的方法。&lt;br /&gt;
@@ -156,16 +161,4 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;img alt="" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Human_Metabolism_-_Pathways.jpg" /&gt;&lt;/p&gt;
 &lt;ol start="4"&gt;
-&lt;li&gt;中药的精髓是道地药材。比如2018年人民日报报道 …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 22 Feb 2020 00:26:16 +0000</pubDate><guid isPermaLink="false">tag:None,2020-02-22:/202002/stderr-003</guid></item><item><title>后工业化时代的老师，和主播应该是同一类职业</title><link>https://blog.est.im/202002/stderr-002</link><description>&lt;p&gt;最近新冠病毒带来的疫情，导致很多家庭被隔离在家，包括我。小孩都不能上课，一些中学、高中纷纷开始网课。&lt;/p&gt;
-&lt;p&gt;今晚微信朋友圈里传播一个截图，英语老师，网课上完之后忘记关直播了，听上去就是跟男友开始嘿咻嘿咻，结果学生的小弟弟一个一个都震惊了。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="仙桃一中教学事故" src="/images/2020/stder-002-1.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;话说回来，其实可能大多数人都觉得老师变身主播怪怪的，我这几天也在思考这个问题。先说我的观点结论&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;直播才是教育的本质。&lt;/li&gt;
-&lt;li&gt;教师和主播应该是同一类职业&lt;/li&gt;
-&lt;li&gt;或许21世纪，正经的职业就是主播——这个观点是罗辑思维的。我比较赞同。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其实近现代学校不是一个常见的社会机构。古人猿时代，都是氏族群居，集体扶养后代。甚至小孩不能分辨自己的父亲是谁。&lt;/p&gt;
-&lt;p&gt;由于没有避孕措施，人们定居或者游牧的生活里，一般小孩根本没有受教育的机会，稍微长大就要干活，大的带小的。子承父业，家族传承，比如英语 Smith 就表示祖宗是个匠人。&lt;/p&gt;
-&lt;p&gt;就算现在的印度的种姓制度，也是跟职业挂钩的，其实就等同一个受教育范围选择器。中国就算在明朝也有军籍、贱籍的继承制。&lt;/p&gt;
-&lt;p&gt;由于子嗣众多，中世纪的贵族和上流社会，城堡领主一般会让孩子去别的城堡学习长大；中国的士大夫阶层，会有私塾，让教书先生来教育一个最有学习潜力的。其他的可能喜欢体力的，喜欢武术的，喜欢经商的 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 11 Feb 2020 21:24:55 +0000</pubDate><guid isPermaLink="false">tag:None,2020-02-11:/202002/stderr-002</guid></item></channel></rss>
+&lt;li&gt;中药的精髓是道地药材。比如2018年人民日报报道 …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 22 Feb 2020 00:26:16 +0000</pubDate><guid isPermaLink="false">tag:None,2020-02-22:/202002/stderr-003</guid></item></channel></rss>
