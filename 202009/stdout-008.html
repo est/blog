@@ -62,7 +62,7 @@ new Date(2020, 0, 25).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, 
 庚子正月1 上午12:00:00
 </code></pre>
 <p>连 腊月 正月 都能显示。还是挺 6 的。浏览器支持的话 Edge, Chrome 都可以，Firefox 和 Safari 的 ICU 版本太老需要微调一下。</p>
-<p>23:39更新：网友 sarvatathagata 发现了个更简单的方法：</p>
+<p>23:39更新：网友 sarvatathagata 发现了个如下更简单的方法。不过这个方法无法地道的显示 腊月、正月。</p>
 <pre><code>new Date().toLocaleString('ja-JP-u-ca-chinese')
 </code></pre>
 <p>稍微解释下 <code>zh-Hans-CN-u-ca-chinese</code> 是什么意思。这个叫 locale 也叫 language tag。<br />
