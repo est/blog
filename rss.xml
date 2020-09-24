@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Thu, 17 Sep 2020 23:21:57 +0000</lastBuildDate><item><title>罗马教廷要整顿一下中国传教事务</title><link>https://blog.est.im/202009/stdin-010</link><description>&lt;blockquote&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Thu, 24 Sep 2020 22:42:45 +0000</lastBuildDate><item><title>创意类工作应该怎么算绩效奖励</title><link>https://blog.est.im/202009/stdin-011</link><description>&lt;blockquote&gt;
+&lt;p&gt;Mayo Clinic 梅奥诊所是全美规模最大、设备最先进的综合性医院。有多大呢？梅奥总部所在的罗切斯特市一共有十一万人，梅奥就占了三万多。现在医学体系上的很多创新，比如第一台救护车，第一个重症监护室，第一个病历系统，都是梅奥诊所率先创造出来的。&lt;br /&gt;
+聚集了那么多高级知识分子，那么多世界顶级医生的梅奥诊所，用的居然是固定工资制度。就是没有任何绩效激励，对，没有奖金、没有销售提成、也没有分红，所有我们熟悉的，一系列工资激励制度，什么都没有。当然，梅奥每年也会对一些医生涨薪，但如果你在梅奥待够5年之后，工资基本就固定了，再也不会涨了。&lt;br /&gt;
+不同的工资水平评定，靠的是什么？当然是人。是同行评议&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;很是神奇。来自《&lt;a href="https://m.igetget.com/share/course/article?id=5Yejy8dqoQD9JoQmy5KR1r0xpgmWk3"&gt;罗辑思维 第706期 | 创造性的工作怎么激励？&lt;/a&gt;》&lt;/p&gt;
+&lt;p&gt;另外又看到一篇《&lt;a href="https://www.sohu.com/a/25179920_105067"&gt;精致的利己主义者和常青藤的绵羊 by 万维钢&lt;/a&gt;》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Joe为什么要参加那么多课外活动？因为这些活动是美国学生评价体系的重要组成部分，像考试分数一样重要。跟小明刷GPA（平均学分绩点）一样，Joe刷课外活动的经验值也只不过是完成各种考核指标而已。每天忙得焦头烂额的Joe，对这些事情并没有真正的热情 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 24 Sep 2020 22:42:45 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-24:/202009/stdin-011</guid></item><item><title>罗马教廷要整顿一下中国传教事务</title><link>https://blog.est.im/202009/stdin-010</link><description>&lt;blockquote&gt;
 &lt;p&gt;利玛窦也是很有弹性，也在儒家学说和天主教之间和稀泥。他说，儒家和天主教本就是一回事。儒家所崇尚的“天”，和天主教的上帝，没有什么不同啊。“天道”和天主教教义，也没有什么不同啊。&lt;br /&gt;
 你看，很有弹性吧？很智慧吧？其实，跳出来一看，你想，如果你的公司派你到一个人生地不熟的陌生市场推销一个当地人从来没有见过的产品，你也能想出这样的招。核心就是两条。第一，借用当地成熟的社会网络。第二，把陌生的东西包装成当地人熟悉的东西。当年利玛窦这么干，和我们今天一个普通的推销员这么干，底层原因都一样：这个时候的耶稣会或者今天的一个推销公司，都是一个绩效导向的组织，只要能传教、能卖东西，怎么有效怎么来。&lt;br /&gt;
 但是到了清朝康熙皇帝时期，这时间可又过去了100多年，欧洲的政治形势出现了很多变化。比如教廷的靠山从葡萄牙变成了法国。比如，耶稣会觉得在中国已经有了几十万信众，传教成功，站稳脚跟了。&lt;br /&gt;
@@ -14,7 +22,7 @@
 &lt;pre&gt;&lt;code&gt;new Date().toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)\s*?年/, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;算农历最麻烦就是跨年。这个 API 处理得还挺好的。比如2020年1月的除夕夜+春节&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;new Date(2020, 0, 24).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 10 Sep 2020 22:39:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-10:/202009/stdout-008</guid></item><item><title>策略性同理心</title><link>https://blog.est.im/202008/stdin-008</link><description>&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;new Date(2020, 0, 24).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 10 Sep 2020 22:39:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-10:/202009/stdout-008</guid></item><item><title>策略性同理心：小孩哭闹不穿衣服怎么办</title><link>https://blog.est.im/202008/stdin-008</link><description>&lt;blockquote&gt;
 &lt;p&gt;我们大脑里的一个结构，叫杏仁核。杏仁核是掌管情绪的，杏仁核越活跃，人的情绪就越高涨，人就不能理性地思考和做事。那怎么对付杏仁核呢？有一个办法，那就是让它去思考一件严肃的事，杏仁核不能思考，一思考，立刻就歇菜了，就懵了。&lt;br /&gt;
 为什么？因为杏仁核是大脑中非常原始的一部分，它有一个绰号，叫爬行脑，就是当动物还是爬行动物的时候就已经进化出来的部分，所以它的情绪功能强大，但是智力不行。你一给它出难题，它不管多活跃，都只好把大脑的控制权交出来，交给理性能力更发达的大脑皮层。这个时候杏仁核就歇菜了，情绪就平复了。&lt;br /&gt;
 比如我家女儿，两岁多，正是情绪不太稳定的时候，如果她要是哭闹，就是不穿衣服，这时候讲道理是没有用的。最好用的办法，是让她们思考问题，比如问她们，你是要穿绿色的衣服还是红色的衣服呀？她一思考，一选择，情绪性的反抗马上就停止了。这就是把杏仁核打败的方法。&lt;br /&gt;
@@ -135,24 +143,4 @@
 &lt;blockquote&gt;
 &lt;p&gt;The opposite of love is not hate but apathy。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;所谓 those who are heartless, once cared too much&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 04 Mar 2020 23:17:50 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-04:/202003/stdout-003</guid></item><item><title>古人去山里找人喝酒是怎么样一种感受</title><link>https://blog.est.im/202003/stderr-004</link><description>&lt;p&gt;最近偶然读到李白的一首诗，对于在家里憋久的我来说感觉格外超凡脱俗。必须记下来。&lt;/p&gt;
-&lt;p&gt;标题叫《山中与幽人对酌》，这首诗读完之后感觉几个字就把很多口水话很精炼的寥寥数笔就描写出来了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;两个人在山花漫烂的地方喝酒，吹了一杯一杯又一杯。&lt;br /&gt;
-我现在喝醉了，想瞌睡了。老兄要走随意。明天如果还有意，抱乐器来high。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如果没读过这首诗的，觉得自己文字功底好的可以尝试逆向工程还原一下这首七言绝句。&lt;/p&gt;
-&lt;p&gt;原文是：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;两人对酌山花开，一杯一杯复一杯。 &lt;br /&gt;
-我醉欲眠卿且去，明朝有意抱琴来。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;感觉结构很巧妙的地方：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;现代汉语都说 主语在什么地方做什么事。李白说我做事身边的事同时发生。特别有现场感&lt;/li&gt;
-&lt;li&gt;在我的后园，可以看见墙外有两株树，一株是枣树，还有一株也是枣树（还是很难理解里面的美妙）&lt;/li&gt;
-&lt;li&gt;我习惯说，我要做什么因为什么 这种句式。被英语从句的习惯带歪了。这句话如果 我欲 开头，就怎么也写不下这么多意思&lt;/li&gt;
-&lt;li&gt;一个「且」字就代替了太多意思。很难想到表达一种客气话一个字就搞定了。&lt;/li&gt;
-&lt;li&gt;这特么用典了。相传东晋有个摇滚青年叫渊明，不解音律，而蓄无弦电吉他一张，每酒适，辄抚弄以寄其意。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;感觉惜字如金古代的作品，得静下心来才能欣赏 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 04 Mar 2020 23:01:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-04:/202003/stderr-004</guid></item></channel></rss>
+&lt;p&gt;所谓 those who are heartless, once cared too much&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 04 Mar 2020 23:17:50 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-04:/202003/stdout-003</guid></item></channel></rss>
