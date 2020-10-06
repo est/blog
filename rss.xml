@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 29 Sep 2020 23:34:07 +0000</lastBuildDate><item><title>儿童是一种阶级</title><link>https://blog.est.im/202009/stdin-012</link><description>&lt;blockquote&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 06 Oct 2020 08:07:56 +0000</lastBuildDate><item><title>《论语》by Philosophy Tube</title><link>https://blog.est.im/202010/stdin-013</link><description>&lt;iframe width="1239" height="528" src="https://www.youtube.com/embed/bFeXJkcKYaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;最喜欢 9:15 处关于对 恕 的论述。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do unto others as you would have them do unto you&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这句话是按作者的说法，是《圣经》《Torah》《圣训》里 Golden rule of morality 。但是 恕 还有一层意思是我之前完全没预料到的，那就是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do not do to others what you wouldn't want them to do to you&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这两句话区别很大。作者举了个例子，第一句话表达的其实更加 demanding，比如 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 06 Oct 2020 08:07:56 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-06:/202010/stdin-013</guid></item><item><title>儿童是一种阶级</title><link>https://blog.est.im/202009/stdin-012</link><description>&lt;blockquote&gt;
 &lt;p&gt;儿童这个阶层的成型是很近的事情，这是美国传播学者尼尔·波兹曼的一个洞见。&lt;br /&gt;
 在传统社会，儿童和成年之间的界限是非常模糊的。因为大家用的都是一套学习和传播工具，那就是口语。只要都会说话，听得懂别人的话，那小孩和大人，就只有体能和见识上的区别。那小孩做大人的工作，就也没有什么了不起。&lt;br /&gt;
 但是印刷机出现之后，人类文化的传承，主要靠文字了。而熟练使用文字，那是需要漫长的学习和训练的。你才能熟练用文字表达，或者说阅读文本。是因为传播媒介的这个变化，才塑造了“童年”这个概念。&lt;br /&gt;
@@ -122,21 +132,4 @@
 现在，这个故事出现在三年级课文中，主要是教育小朋友不能不劳而获，想着天上掉馅饼。中国读书人自古以来几乎都会学习这样的寓言成语，所以对守株待兔不劳而获的批评是刻在骨子里的文化基因，反映在生活中，大部分中国人都认同做人做事要老老实实，勤勤恳恳，至少表面上大家都赞同认真工作勤劳致富，孔子也说君子爱财取之有道嘛。&lt;br /&gt;
 但是，世道慢慢变化，普通中国人对于老实做人认真干事的人现在的评价反而成了一个字，蠢。韩非子如果活在当下，只怕也会哑口无言吧。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;我觉得这个成语太它妈的自我讽刺了。是以为记。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 02 Apr 2020 20:35:59 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-02:/202004/stdin-001</guid></item><item><title>Covid-19 一些基本常识</title><link>https://blog.est.im/202003/stdout-004</link><description>&lt;ol&gt;
-&lt;li&gt;检测 Covid-19 有几种手段：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;症状。比如发烧，呼吸困难，血氧浓度低&lt;/li&gt;
-&lt;li&gt;影像。比如胸部 CT&lt;/li&gt;
-&lt;li&gt;抗体。IgG/IgM。耗时短。比如15分钟。但是正确率 75% &lt;/li&gt;
-&lt;li&gt;核酸。用 PCR 。耗时长，需要 BSL 高等级生物实验室。正确率 &amp;gt;90%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其中抗体检测主要是用来区分你得的是普通流感还是 Covid-19。并不能直接检测出 SARS-CoV-2。&lt;/p&gt;
-&lt;p&gt;而且：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;检测出抗体，（小概率）不一定是 SARS-CoV-2 导致的。&lt;/li&gt;
-&lt;li&gt;没检测出抗体，也可能代表你&lt;ul&gt;
-&lt;li&gt;免疫系统还没反应过来。病毒还在悄悄感染。&lt;/li&gt;
-&lt;li&gt;免疫球蛋白 IgG/IgM 已经不顶用了。免疫系统被摧毁了，或者要开始细胞因子风暴了。&lt;/li&gt;
-&lt;li&gt;也可能代表你的鼻腔 swab 没挖对。&lt;/li&gt;
-&lt;li&gt;拭子挖对了但是未达到能显色的剂量 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 26 Mar 2020 17:34:30 +0000</pubDate><guid isPermaLink="false">tag:None,2020-03-26:/202003/stdout-004</guid></item></channel></rss>
+&lt;p&gt;我觉得这个成语太它妈的自我讽刺了。是以为记。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 02 Apr 2020 20:35:59 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-02:/202004/stdin-001</guid></item></channel></rss>
