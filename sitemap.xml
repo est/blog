@@ -5,8 +5,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.est.im/</loc>
-<lastmod>2020-10-09T22:33:59-00:00</lastmod>
+<lastmod>2020-10-21T23:52:24-00:00</lastmod>
 <changefreq>always</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.est.im/202010/stderr-010</loc>
+<lastmod>2020-10-21T23:39:55+00:00</lastmod>
+<changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 

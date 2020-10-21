@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 09 Oct 2020 21:26:07 +0000</lastBuildDate><item><title>996的内在机制是什么（提示：并不是劳动剥削）</title><link>https://blog.est.im/202010/stdin-014</link><description>&lt;blockquote&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 21 Oct 2020 23:39:55 +0000</lastBuildDate><item><title>人和动物有什么区别——est 的看法</title><link>https://blog.est.im/202010/stderr-010</link><description>&lt;p&gt;上下班通勤极度无聊，就趁着罗胖的10元优惠券买了 学而时嘻之 博主开设的 199元的 精英日课。之前一直讨厌这个名字，但是很喜欢 &lt;a href="http://www.geekonomics10000.com"&gt;学而时嘻之  geekonomics10000&lt;/a&gt; 这个博客。&lt;/p&gt;
+&lt;p&gt;回到正题，人和动物的区别，马克思认为是使用工具。&lt;/p&gt;
+&lt;p&gt;很多人不认同，觉得这纯粹是为了引出劳动论，其二的确很多动物也会用工具。&lt;/p&gt;
+&lt;p&gt;《Homo Deus 未来简史》的作者 尤瓦尔·赫拉利 说，人和动物的区别区别是意识。但&lt;a href="https://en.wikipedia.org/wiki/Animal_consciousness"&gt;动物也是有意识&lt;/a&gt;的，甚至自我意识。比如鹦鹉会照镜子，认出自己，并且梳妆脸上的异物。和人相处的宠物很明显有情绪表达。&lt;/p&gt;
+&lt;p&gt;我认为，人类是地球上第一个进化出来能&lt;strong&gt;远程攻击&lt;/strong&gt;的动物，而且是大规模群体协作那种，脱离了近身肉搏的低级趣味。如果你玩 RTS 就知道，远程兵种出现的意义是多么牛逼。&lt;/p&gt;
+&lt;p&gt;远程攻击带来上肢的解放，还有一个巨大的副作用，那就是极大的锻炼了大脑预判能力。这里就牵扯到点燃智力的一个关键，那就是 &lt;strong&gt;因果论&lt;/strong&gt;。因为抛射物有弹道飞行时间 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 21 Oct 2020 23:39:55 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-21:/202010/stderr-010</guid></item><item><title>996的内在机制是什么（提示：并不是劳动剥削）</title><link>https://blog.est.im/202010/stdin-014</link><description>&lt;blockquote&gt;
 &lt;p&gt;1955年，有位英国的政治学家，叫帕金森，提出了一个“帕金森定律”。简单说就是：一个组织，总是会趋向于层级越来越多，规模越来越膨胀，人越来越忙，但组织效率越来越低下。&lt;br /&gt;
 组织变大不是因为要干的事越来越多，而是因为只要有资源，组织就会大到把资源用满而且还渴求新的资源的程度。反过来，把资源砍掉，未必影响干事的效果。&lt;br /&gt;
 回到时间资源，也就是拖延症这个话题。上面讲的这个规律也适用于时间资源：并不是需要多少用多少，而是有多少你就会用光多少。&lt;br /&gt;
@@ -127,9 +132,4 @@
 自去自来堂上燕，相亲相近水中鸥。&lt;br /&gt;
 老妻画纸为棋局，稚子敲针作钓钩。&lt;br /&gt;
 但有故人供禄米，微躯此外更何求。&lt;/p&gt;
-&lt;p&gt;——《江村》。唐肃宗上元元年（760）夏，杜甫 写于在成都刚刚建成的草堂&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 25 Apr 2020 18:30:47 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-25:/202004/stdin-002</guid></item><item><title>论驯化孩子、甩锅同事、家庭撕逼的沟通技巧——不要用第二人称，用 i-message</title><link>https://blog.est.im/202004/stderr-006</link><description>&lt;p&gt;今天听 SO 说起来一个女同事抱怨家庭矛盾，任何一点小事都上纲上线。&lt;/p&gt;
-&lt;p&gt;比如煤气灶开关没完全按下去就开始旋转，老公在一旁就怒斥“你是要把我们全家炸死么！”&lt;/p&gt;
-&lt;p&gt;然后就一顿吵。SO 说这是婚姻不幸福。我想起来，其实老公这一方只是表达一个觉得极度危险的感受，老婆这一方觉得自己只是一个小动作没必要被吼成这样，肯定不服要找其他角度骂回去，比如“我做饭你吃现成，还要求这么多，你来做”之类的，然后接下去就会新帐旧帐一起算没完没了。&lt;/p&gt;
-&lt;p&gt;这就是一个两个节点间 IO 协议不畅导致双方炸毛的案例。我就跟 SO 分享了我去年学习到了一个最有用的人际沟通技巧：&lt;a href="https://en.wikipedia.org/wiki/I-message"&gt;i-message&lt;/a&gt;。我觉得长这么大，这是我看到的最有价值的交流原则。&lt;/p&gt;
-&lt;p&gt;注意这里不是水果的 &lt;img alt="" src="https://help.apple.com/assets/5E6F03560946225E2308D0A0/5E6F035F0946225E2308D0C3/en_US/88372f9cf93681d70c01df147daeb12c.png" /&gt; iMessage，是 i-meesage，著名教授 Thomas Gordon 在1970年畅销书 &lt;em&gt;P.E.T.: Parent Effectiveness Training&lt;/em&gt; 里浓墨重彩总结的。很可惜对人类社会这么有用的沟通技巧的名字，搜索引擎被水果的渣 app 淹没了。&lt;/p&gt;
-&lt;p&gt;i-message 简单的说 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 25 Apr 2020 11:03:49 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-25:/202004/stderr-006</guid></item></channel></rss>
+&lt;p&gt;——《江村》。唐肃宗上元元年（760）夏，杜甫 写于在成都刚刚建成的草堂&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 25 Apr 2020 18:30:47 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-25:/202004/stdin-002</guid></item></channel></rss>
