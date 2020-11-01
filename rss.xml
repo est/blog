@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Wed, 21 Oct 2020 23:39:55 +0000</lastBuildDate><item><title>人和动物有什么区别</title><link>https://blog.est.im/202010/stdout-010</link><description>&lt;p&gt;上下班通勤极度无聊，就趁着罗胖的10元优惠券买了 学而时嘻之 博主开设的 199元的 精英日课。之前一直讨厌这个名字，但是很喜欢 &lt;a href="http://www.geekonomics10000.com"&gt;学而时嘻之  geekonomics10000&lt;/a&gt; 这个博客，就买了当付费 podcast 了。听第二课就讲了《未来简史2：我有意识，它有吗》，就提到了本篇的问题：&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 30 Oct 2020 15:35:45 +0000</lastBuildDate><item><title>nsq-py, pynsq, gnsq compared</title><link>https://blog.est.im/202010/stdout-011</link><description>&lt;p&gt;&lt;a href="https://nsq.io"&gt;nsq&lt;/a&gt; is a lightweight message queue like Kafka/RabbitMQ/RocketMQ/RedisQueue/Celery.&lt;/p&gt;
+&lt;p&gt;For pythong bindings there ware three libraries out there:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pynsq: the official build, but requires &lt;code&gt;tornado&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;gnsq: the gevent only consumer/publisher, might have race condition in state machine. Don't use.&lt;/li&gt;
+&lt;li&gt;nsq-py: &lt;code&gt;select()&lt;/code&gt; based, but compatible with gevent …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 30 Oct 2020 15:35:45 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-30:/202010/stdout-011</guid></item><item><title>人和动物有什么区别</title><link>https://blog.est.im/202010/stdout-010</link><description>&lt;p&gt;上下班通勤极度无聊，就趁着罗胖的10元优惠券买了 学而时嘻之 博主开设的 199元的 精英日课。之前一直讨厌这个名字，但是很喜欢 &lt;a href="http://www.geekonomics10000.com"&gt;学而时嘻之  geekonomics10000&lt;/a&gt; 这个博客，就买了当付费 podcast 了。听第二课就讲了《未来简史2：我有意识，它有吗》，就提到了本篇的问题：&lt;/p&gt;
 &lt;p&gt;人和动物的区别是什么？&lt;/p&gt;
 &lt;p&gt;马克思认为是使用工具。很多人不认同，觉得这纯粹是为了引出劳动论，其二的确很多动物也会用工具。&lt;/p&gt;
 &lt;p&gt;《Homo Deus 未来简史》的作者 尤瓦尔·赫拉利 说，人和动物的区别区别是意识。但&lt;a href="https://en.wikipedia.org/wiki/Animal_consciousness"&gt;动物也是有意识&lt;/a&gt;的，甚至自我意识。比如鹦鹉会照镜子，认出自己，并且梳妆脸上的异物。和人相处的宠物很明显有情绪表达。&lt;/p&gt;
@@ -126,9 +131,4 @@
 &lt;blockquote&gt;
 &lt;p&gt;发信人: musashino (四月), 信区: GreenAuto&lt;br /&gt;
 标  题: 特斯拉就是死脑筋，不肯用传统4S店的定价套路&lt;br /&gt;
-发信站: 水木社区 (Thu Apr 30 13:10 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 01 May 2020 12:02:15 +0000</pubDate><guid isPermaLink="false">tag:None,2020-05-01:/202005/stdin-003</guid></item><item><title>公元760年，锦江边小村庄</title><link>https://blog.est.im/202004/stdin-002</link><description>&lt;p&gt;偶遇一首之前没读过的古诗，记录一下。&lt;/p&gt;
-&lt;p&gt;清江一曲抱村流，长夏江村事事幽。&lt;br /&gt;
-自去自来堂上燕，相亲相近水中鸥。&lt;br /&gt;
-老妻画纸为棋局，稚子敲针作钓钩。&lt;br /&gt;
-但有故人供禄米，微躯此外更何求。&lt;/p&gt;
-&lt;p&gt;——《江村》。唐肃宗上元元年（760）夏，杜甫 写于在成都刚刚建成的草堂&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 25 Apr 2020 18:30:47 +0000</pubDate><guid isPermaLink="false">tag:None,2020-04-25:/202004/stdin-002</guid></item></channel></rss>
+发信站: 水木社区 (Thu Apr 30 13:10 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 01 May 2020 12:02:15 +0000</pubDate><guid isPermaLink="false">tag:None,2020-05-01:/202005/stdin-003</guid></item></channel></rss>
