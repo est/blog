@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 30 Oct 2020 15:35:45 +0000</lastBuildDate><item><title>nsq-py, pynsq, gnsq compared</title><link>https://blog.est.im/202010/stdout-011</link><description>&lt;p&gt;&lt;a href="https://nsq.io"&gt;nsq&lt;/a&gt; is a lightweight message queue like Kafka/RabbitMQ/RocketMQ/RedisQueue/Celery.&lt;/p&gt;
-&lt;p&gt;For pythong bindings there ware three libraries out there:&lt;/p&gt;
+&lt;p&gt;For python bindings there ware three libraries out there:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pynsq: the official build, but requires &lt;code&gt;tornado&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;gnsq: the gevent only consumer/publisher, might have race condition in state machine. Don't use.&lt;/li&gt;

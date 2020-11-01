@@ -52,7 +52,7 @@
 
   
   <p><a href="https://nsq.io">nsq</a> is a lightweight message queue like Kafka/RabbitMQ/RocketMQ/RedisQueue/Celery.</p>
-<p>For pythong bindings there ware three libraries out there:</p>
+<p>For python bindings there ware three libraries out there:</p>
 <ul>
 <li>pynsq: the official build, but requires <code>tornado</code></li>
 <li>gnsq: the gevent only consumer/publisher, might have race condition in state machine. Don't use.</li>
@@ -74,7 +74,7 @@
 <blockquote>
 <p>The Linux kernel imposes no fixed limit, but the glibc implementation makes fd_set a fixed- size type, with FD_SETSIZE defined as 1024, and the FD_*() macros operating according to that limit.  To monitor file descriptors greater than 1023, use poll(2) or epoll(7) instead.</p>
 </blockquote>
-<p>Lessons I learned today: don't use libraries based on <code>select.select()</code> if you have too many connections. Even with Gevent's monkey patch, <code>select()</code> wont block on each eventlet, but still it will not allow fileno greater than 1024. Sad.</p>
+<p>Lessons I learned today: don't use libraries based on <code>select.select()</code> if you have too many connections. Even with Gevent's monkey patch, <code>select()</code> wont block on each eventlet, but still it will not allow fileno greater or equal to 1024. Sad.</p>
 
 </article>
 
