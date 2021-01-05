@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 01 Jan 2021 00:27:52 +0000</lastBuildDate><item><title>OpenWRT 随机设置 PPPoE 拨号的 MAC 地址</title><link>https://blog.est.im/202101/stdout-001</link><description>&lt;p&gt;新年第一贴！&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 05 Jan 2021 23:36:09 +0000</lastBuildDate><item><title>OpenWRT 实现 Cloudflare 动态域名 dynamic DNS</title><link>https://blog.est.im/202101/stdout-002</link><description>&lt;p&gt;首先得有公网 IP （废话），然后你得 OpenWRT 路由器桥接直播。&lt;/p&gt;
+&lt;p&gt;这个方法的核心是通过 &lt;code&gt;ifstatus wan |  jsonfilter -e '@["ipv4-address"][0].address'&lt;/code&gt; 命令得到本机 WAN 的公网 IP。&lt;/p&gt;
+&lt;p&gt;根据官方的&lt;a href="https://support.cloudflare.com/hc/en-us/articles/360020524512-Manage-dynamic-IPs-in-Cloudflare-DNS-programmatically"&gt;说明&lt;/a&gt;走&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建 &lt;a href="https://dash.cloudflare.com/profile/api-tokens"&gt;API Token&lt;/a&gt; 。权限选 &lt;code&gt;All Zones&lt;/code&gt;，得到 &lt;code&gt;TOKEN&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;验证 API 是否 ok&lt;br /&gt;
+    curl - X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \&lt;br /&gt;
+      -H "Authorization: Bearer TOKEN" \&lt;br /&gt;
+      -H …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 05 Jan 2021 23:36:09 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-05:/202101/stdout-002</guid></item><item><title>OpenWRT 随机设置 PPPoE 拨号的 MAC 地址 Randomize WAN MAC address in OpenWRT PPPoE</title><link>https://blog.est.im/202101/stdout-001</link><description>&lt;p&gt;新年第一贴！&lt;/p&gt;
+&lt;p&gt;Run the command before connect to PPPoE or as cronjob&lt;/p&gt;
 &lt;p&gt;添加一个重启的定时任务，在重启之间执行一个命令：&lt;/p&gt;
-&lt;p&gt;uci set network.wan.mac_addr=$(hexdump -n3 -e'1/3 "8c:8d:8e" 3/1 ":%02X" "\n"' /dev/random) &amp;amp;&amp;amp; uci commit network&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;uci set network.wan.mac_addr=$(hexdump -n3 -e'1/3 "8c:8d:8e" 3/1 ":%02X" "\n"' /dev/random) &amp;amp;&amp;amp; uci commit network
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;为什么要在拨号前随机生成WAN口的 MAC 地址呢？嘿嘿。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 01 Jan 2021 00:27:52 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-01:/202101/stdout-001</guid></item><item><title>北美 VPS 推荐：Racknerd</title><link>https://blog.est.im/202012/stderr-012</link><description>&lt;p&gt;以前买的 hostmem 总感觉高峰期速度不行。Racknerd 这家看上去英语比较地道，感觉还行？于是跑了个脚本把它家的套餐遍历了一下：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;mkdir -p ~/Downloads/racknerd; cd $_
 
@@ -100,12 +110,4 @@ for i in $(seq 1 423); do wget -t 0 -T 5  -U 'Mozilla/5.0 (iPhone; CPU iPhone OS
 &lt;p&gt;一般都以为，脏话基本上都和性、排泄功能有关。但是，如果你理解了我们上面说的原理，你就会发现，脏话其实只和禁忌有关，有什么样的禁忌，就有什么样的脏话。&lt;a href="https://m.igetget.com/share/audio/aid/Vo8Yvhb1tRY4Q4C99q1K"&gt;第219期丨脏话&lt;/a&gt;。 想起现在 tg 在打击祖安文化。hhhh&lt;/p&gt;
 &lt;p&gt;丹麦的一所正常中学，跟同一水平的中国黑龙江省一所正常中学的孩子组织起来比赛了一下，分别从阅读、数学、英语、团队协作能力和创新能力五个方面衡量两个国家学生的水平。你猜猜结果怎样？中国孩子们会在哪些方面胜出？结果你可能没想到：除了英语之外，中国孩子在阅读、数学、团队协作能力和创新能力上全部大比分胜出丹麦孩子 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 14 Aug 2020 22:26:12 +0000</pubDate><guid isPermaLink="false">tag:None,2020-08-14:/202008/stdin-007</guid></item><item><title>China's AI Dominance Does Not Depend On Math</title><link>https://blog.est.im/202007/stdout-007</link><description>&lt;p&gt;There was a not-so-interesting article on reddit that says &lt;a href="https://www.reddit.com/r/technology/comments/hlttg0/why_chinas_race_for_ai_dominance_depends_on_math/"&gt;China's Race For AI Dominance Depends On Math&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The arguments looks flawed in several ways.&lt;/p&gt;
-&lt;p&gt;First of all, yes Chinese students &lt;em&gt;do&lt;/em&gt; performs well in math, but only in one narrow specific branch of math: alrithmetics. Once they graduate into college …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 06 Jul 2020 17:01:55 +0000</pubDate><guid isPermaLink="false">tag:None,2020-07-06:/202007/stdout-007</guid></item><item><title>成绩单和名次的副作用</title><link>https://blog.est.im/202007/stdin-006</link><description>&lt;blockquote&gt;
-&lt;p&gt;日本思想家 大前研一 有一本著作叫《低智商社会》提到：日本的新一代，读的书越来越幼稚，对各种谣言丝毫不会思考，很容易遭到媒体的操纵。为啥呢？ &lt;br /&gt;
-其中一个小原因，大前研一认为，是日本政府推行的“偏差值教育制度”造成的。简单说，就是对学生进行能力测试，把各项能力数字化。给某项技能找到一个中间值，然后每个人就知道自己的这项能力，跟中间值相比是高还是低。 &lt;br /&gt;
-这种技术本身可能是善意的，但是当大家都接受了技术的权威性，问题就出现了。 &lt;br /&gt;
-很多低偏差值的人就会认为，自己怎么努力也是没用的，社会问题，会由那些高偏差值的人去解决。而自己，只要照着别人说的做就可以了。 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;via &lt;a href="https://m.igetget.com/share/course/article?id=0kzlWERBr6meVbByWV2j7LD4Od3ZpP"&gt;罗辑思维335期：奶头乐理论&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;罗胖的看法是：技术越发达，人对技术的依赖就越严重。最后，意志力不强的人在技术面前，就会彻底放弃自己的主动性。技术的发展，固化了人类的分层。&lt;/p&gt;
-&lt;p&gt;我的看法是：这个技术问题也可以通过技术手段解决，比如不告知成绩排第几名，而是告知如果在 X、Y、Z 地方进行改进，那么还可以再前进多少名次 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 01 Jul 2020 10:38:09 +0000</pubDate><guid isPermaLink="false">tag:None,2020-07-01:/202007/stdin-006</guid></item></channel></rss>
+&lt;p&gt;First of all, yes Chinese students &lt;em&gt;do&lt;/em&gt; performs well in math, but only in one narrow specific branch of math: alrithmetics. Once they graduate into college …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 06 Jul 2020 17:01:55 +0000</pubDate><guid isPermaLink="false">tag:None,2020-07-06:/202007/stdout-007</guid></item></channel></rss>
