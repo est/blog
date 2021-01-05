@@ -52,15 +52,15 @@
             <a href="202101/stdout-002"  rel="bookmark" >
               <h2 class="card-title">OpenWRT 实现 Cloudflare 动态域名 dynamic DNS</h2>
             </a>
-            <p class="card-text"><p>首先得有公网 IP （废话），然后你得 OpenWRT 路由器桥接直播。</p>
+            <p class="card-text"><p>首先得有公网 IP （废话），然后你得 OpenWRT 路由器桥接直拨。</p>
 <p>这个方法的核心是通过 <code>ifstatus wan |  jsonfilter -e '@["ipv4-address"][0].address'</code> 命令得到本机 WAN 的公网 IP。</p>
 <p>根据官方的<a href="https://support.cloudflare.com/hc/en-us/articles/360020524512-Manage-dynamic-IPs-in-Cloudflare-DNS-programmatically">说明</a>走</p>
 <ol>
 <li>创建 <a href="https://dash.cloudflare.com/profile/api-tokens">API Token</a> 。权限选 <code>All Zones</code>，得到 <code>TOKEN</code></li>
 <li>验证 API 是否 ok<br />
-    curl - X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \<br />
-      -H "Authorization: Bearer TOKEN" \<br />
-      -H …</li></ol></p>
+        curl - X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \<br />
+          -H "Authorization: Bearer TOKEN" \<br />
+          -H …</li></ol></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2021-01-05T23:36:09+00:00">2021-01-05</time></p>
 <p>stdout</p>            </div>

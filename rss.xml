@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 05 Jan 2021 23:36:09 +0000</lastBuildDate><item><title>OpenWRT 实现 Cloudflare 动态域名 dynamic DNS</title><link>https://blog.est.im/202101/stdout-002</link><description>&lt;p&gt;首先得有公网 IP （废话），然后你得 OpenWRT 路由器桥接直播。&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 05 Jan 2021 23:36:09 +0000</lastBuildDate><item><title>OpenWRT 实现 Cloudflare 动态域名 dynamic DNS</title><link>https://blog.est.im/202101/stdout-002</link><description>&lt;p&gt;首先得有公网 IP （废话），然后你得 OpenWRT 路由器桥接直拨。&lt;/p&gt;
 &lt;p&gt;这个方法的核心是通过 &lt;code&gt;ifstatus wan |  jsonfilter -e '@["ipv4-address"][0].address'&lt;/code&gt; 命令得到本机 WAN 的公网 IP。&lt;/p&gt;
 &lt;p&gt;根据官方的&lt;a href="https://support.cloudflare.com/hc/en-us/articles/360020524512-Manage-dynamic-IPs-in-Cloudflare-DNS-programmatically"&gt;说明&lt;/a&gt;走&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;创建 &lt;a href="https://dash.cloudflare.com/profile/api-tokens"&gt;API Token&lt;/a&gt; 。权限选 &lt;code&gt;All Zones&lt;/code&gt;，得到 &lt;code&gt;TOKEN&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;验证 API 是否 ok&lt;br /&gt;
-    curl - X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \&lt;br /&gt;
-      -H "Authorization: Bearer TOKEN" \&lt;br /&gt;
-      -H …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 05 Jan 2021 23:36:09 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-05:/202101/stdout-002</guid></item><item><title>OpenWRT 随机设置 PPPoE 拨号的 MAC 地址 Randomize WAN MAC address in OpenWRT PPPoE</title><link>https://blog.est.im/202101/stdout-001</link><description>&lt;p&gt;新年第一贴！&lt;/p&gt;
+        curl - X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \&lt;br /&gt;
+          -H "Authorization: Bearer TOKEN" \&lt;br /&gt;
+          -H …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 05 Jan 2021 23:36:09 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-05:/202101/stdout-002</guid></item><item><title>OpenWRT 随机设置 PPPoE 拨号的 MAC 地址 Randomize WAN MAC address in OpenWRT PPPoE</title><link>https://blog.est.im/202101/stdout-001</link><description>&lt;p&gt;新年第一贴！&lt;/p&gt;
 &lt;p&gt;Run the command before connect to PPPoE or as cronjob&lt;/p&gt;
 &lt;p&gt;添加一个重启的定时任务，在重启之间执行一个命令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;uci set network.wan.mac_addr=$(hexdump -n3 -e'1/3 "8c:8d:8e" 3/1 ":%02X" "\n"' /dev/random) &amp;amp;&amp;amp; uci commit network
