@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 19 Jan 2021 20:53:44 +0000</lastBuildDate><item><title>阶级滑落已经在发生</title><link>https://blog.est.im/202101/stdin-002</link><description>&lt;p&gt;刷到个视频&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 26 Jan 2021 05:49:36 +0000</lastBuildDate><item><title>双亲+子女组成的核心家庭(Nuclear Family)</title><link>https://blog.est.im/202101/stderr-001</link><description>&lt;p&gt;最近几个月最大的认知冲击是，我们这一代人可能是人类作为灵长类动物历史上非常罕见的核心家庭时期。&lt;/p&gt;
+&lt;p&gt;所谓「核心家庭」是 &lt;a href="https://en.wikipedia.org/wiki/Nuclear_family"&gt;nuclear family&lt;/a&gt; 这一概念的直译，表示一个最小、最基本的家庭单元。与该概念相对的是单亲家庭(single-parent family)，或者家族(extended family)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="guan video" src="/images/2021/stderr-001-1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/ashExaHC9cg?t=909"&gt;马前卒说&lt;/a&gt;，「三五个人组成的小家庭，彻底成为独立的基层单位，在中国是80年代以后的事情」，所以差不多就是我们这代才人发生的。而且更为奇葩的是我们这一带是前无古人后无来者的独生子女一代。&lt;/p&gt;
+&lt;p&gt;无独有偶，在&lt;a href="https://news.ycombinator.com/item?id=25723851"&gt;Hacker News上&lt;/a&gt;也看到一篇趣文 「&lt;a href="https://boyle.substack.com/p/can-zoom-save-the-american-family"&gt;视频聊天软件 ZOOM 能拯救美式家庭吗 Can Zoom Save the American Family?&lt;br /&gt;
+&lt;/a&gt;」&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Corporate families, as defined by Steven Ruggles, a professor of history at the University …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 26 Jan 2021 05:49:36 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-26:/202101/stderr-001</guid></item><item><title>阶级滑落已经在发生</title><link>https://blog.est.im/202101/stdin-002</link><description>&lt;p&gt;刷到个视频&lt;/p&gt;
 &lt;div class="div-iframe"&gt;&lt;iframe src="https://www.youtube.com/embed/XXWYPeEfOb8?start=12:10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;p&gt;12:10 开始那个哥说的话，很有感触&lt;/p&gt;
@@ -111,8 +118,4 @@ for i in $(seq 1 423); do wget -t 0 -T 5  -U 'Mozilla/5.0 (iPhone; CPU iPhone OS
 &lt;pre&gt;&lt;code&gt;new Date().toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)\s*?年/, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt((y-4)%12))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;算农历最麻烦就是跨年。这个 API 处理得还挺好的。比如2020年1月的除夕夜+春节&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;new Date(2020, 0, 24).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 10 Sep 2020 22:39:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-10:/202009/stdout-008</guid></item><item><title>策略性同理心：小孩哭闹不穿衣服怎么办</title><link>https://blog.est.im/202008/stdin-008</link><description>&lt;blockquote&gt;
-&lt;p&gt;我们大脑里的一个结构，叫杏仁核。杏仁核是掌管情绪的，杏仁核越活跃，人的情绪就越高涨，人就不能理性地思考和做事。那怎么对付杏仁核呢？有一个办法，那就是让它去思考一件严肃的事，杏仁核不能思考，一思考，立刻就歇菜了，就懵了。&lt;br /&gt;
-为什么？因为杏仁核是大脑中非常原始的一部分，它有一个绰号，叫爬行脑，就是当动物还是爬行动物的时候就已经进化出来的部分，所以它的情绪功能强大，但是智力不行。你一给它出难题，它不管多活跃，都只好把大脑的控制权交出来，交给理性能力更发达的大脑皮层。这个时候杏仁核就歇菜了，情绪就平复了。&lt;br /&gt;
-比如我家女儿，两岁多，正是情绪不太稳定的时候，如果她要是哭闹，就是不穿衣服，这时候讲道理是没有用的。最好用的办法，是让她们思考问题，比如问她们，你是要穿绿色的衣服还是红色的衣服呀？她一思考，一选择，情绪性的反抗马上就停止了。这就是把杏仁核打败的方法。&lt;br /&gt;
-我们刚才说的“策略性同理心”，其实用的是一样的机制。替谈判对手把他现在的情绪说出来，其实就是利用了这个机制。他正在被杏仁核的情绪控制，你替他说出来，他马上就要启动大脑皮层思考，我是这个情绪么？我是对方说的这样吗 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Wed, 26 Aug 2020 08:22:14 +0000</pubDate><guid isPermaLink="false">tag:None,2020-08-26:/202008/stdin-008</guid></item></channel></rss>
+&lt;pre&gt;&lt;code&gt;new Date(2020, 0, 24).toLocaleString('zh-CN-u-ca-chinese').replace(/(\d+)年 /, (_,y)=&amp;gt;"甲乙丙丁戊己庚辛壬癸".charAt((y-4)%10) + "子丑寅卯辰巳午未申酉戌亥".charAt …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 10 Sep 2020 22:39:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-10:/202009/stdout-008</guid></item></channel></rss>
