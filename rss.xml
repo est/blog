@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 12 Feb 2021 23:18:45 +0000</lastBuildDate><item><title>Clubhouse 一些感受</title><link>https://blog.est.im/202102/stderr-002</link><description>&lt;p&gt;clubhouse 总体感觉，自从被那啥之后，群体就基本一岸两地的人，和大陆留学生为主了。而且真的以学生为主。如果有家业压力人，要么就是创投圈要么就是币圈大佬。&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Thu, 25 Mar 2021 23:56:41 +0000</lastBuildDate><item><title>纪念 Sewall Wright</title><link>https://blog.est.im/202103/stderr-003</link><description>&lt;p&gt;在这个3月即将结束的特殊日子里，纪念 Sewall Wright。尤其是那石破天惊的从相关性反推因果性的豚鼠花色实验。&lt;/p&gt;
+&lt;p&gt;豚鼠的花色，按照我们一般的理解是遗传的。但是两只豚鼠很多代近亲繁殖也不可能生产出纯色的豚鼠。那花色和遗传的因果性能通过相关性推出吗？&lt;/p&gt;
+&lt;p&gt;这位大神还真推断出来了&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sewall Wright first path diagram guinea pigs" src="/images/2021/stderr-003-1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;插图来自最近听的一本书 &lt;em&gt;The Book of Why: The New Science of Cause and Effect&lt;/em&gt; 第二章 From Buccaneers to Guinea Pigs: The Genesis of Causal Inference 。网上有 pdf 直接看：&lt;/p&gt;
+&lt;p&gt;http://bayes.cs.ucla.edu/WHY/why-ch2.pdf&lt;/p&gt;
+&lt;p&gt;要知道他做出这个研究的时候，遗传学也就孟德尔水平，DNA 尚未发现！他假设豚鼠双亲各自有遗传因素 &lt;code&gt;H'' …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 25 Mar 2021 23:56:41 +0000</pubDate><guid isPermaLink="false">tag:None,2021-03-25:/202103/stderr-003</guid></item><item><title>Clubhouse 一些感受</title><link>https://blog.est.im/202102/stderr-002</link><description>&lt;p&gt;clubhouse 总体感觉，自从被那啥之后，群体就基本一岸两地的人，和大陆留学生为主了。而且真的以学生为主。如果有家业压力人，要么就是创投圈要么就是币圈大佬。&lt;/p&gt;
 &lt;p&gt;第一次发言是在一个 English Lounge 里面有几个英语老师在聊 dyslexia 。这单词我都不认识但是还是强行尬聊了。&lt;/p&gt;
 &lt;p&gt;我当时就胡扯说中文这种文字为载体的语言，符号和读音分离，可能压根就不存在拼音字母类语言的发音乱序导致的理解能力的问题。&lt;/p&gt;
 &lt;p&gt;房主后来因为要去讨论女权，就早早的关闭了房间。不知道是被我的暴论或无知吓到了。我也因为时间太晚就睡了。第二天醒来，觉得不过瘾，就去搜了一下  dyslexia 这个概念。发现果然汉语里也是存在的。而且 HK 有个调查发现有这个问题的学生比例(10%)比 UK (5%-7%) 还高。&lt;/p&gt;
@@ -111,10 +117,4 @@ for i in $(seq 1 423); do wget -t 0 -T 5  -U 'Mozilla/5.0 (iPhone; CPU iPhone OS
 &lt;p&gt;利玛窦也是很有弹性，也在儒家学说和天主教之间和稀泥。他说，儒家和天主教本就是一回事。儒家所崇尚的“天”，和天主教的上帝，没有什么不同啊。“天道”和天主教教义，也没有什么不同啊。&lt;br /&gt;
 你看，很有弹性吧？很智慧吧？其实，跳出来一看，你想，如果你的公司派你到一个人生地不熟的陌生市场推销一个当地人从来没有见过的产品，你也能想出这样的招。核心就是两条。第一，借用当地成熟的社会网络。第二，把陌生的东西包装成当地人熟悉的东西。当年利玛窦这么干，和我们今天一个普通的推销员这么干，底层原因都一样：这个时候的耶稣会或者今天的一个推销公司，都是一个绩效导向的组织，只要能传教、能卖东西，怎么有效怎么来。&lt;br /&gt;
 但是到了清朝康熙皇帝时期，这时间可又过去了100多年，欧洲的政治形势出现了很多变化。比如教廷的靠山从葡萄牙变成了法国。比如，耶稣会觉得在中国已经有了几十万信众，传教成功，站稳脚跟了。&lt;br /&gt;
-总之，这个时候的罗马教廷，觉得有可能要整顿一下中国传教事务，和中国文化的那些陋习要掰掰腕子了。看看谁才是真理。具体过程就不细说了，过程中很多八卦。到了1704年，罗马教皇克雷芒十一世就最终搞了七条专门针对中国天主教徒的规定。简单说说 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 17 Sep 2020 23:21:57 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-17:/202009/stdin-010</guid></item><item><title>褚时健去世，网上出现了两种评价的声音</title><link>https://blog.est.im/202009/stdin-009</link><description>&lt;blockquote&gt;
-&lt;p&gt;褚时健老爷子，前一阵去世。网上出现了两种评价的声音。一种说老爷子了不起，人生大起大落，一直在努力。还有一种说，这个人犯过法、坐过牢，你们咋还这么吹捧他呢？&lt;br /&gt;
-这两种观点都各有道理。但是，如果从我们今天节目的这个逻辑来说，还是有高下之分的。&lt;br /&gt;
-我们先看第一种观点，如果你说老爷子了不起。请注意，在你的生命中，这不是一个对你不认识的人的评价。而是你有自己的总目标，你把褚时健的人生当成了自己人生舞台上要模仿的那个角色。他的某些套路，会变成你的套路。他的某些做法，会激发你自己的做法。你在夸奖褚时健，但其实你是在努力演好自己的角色。&lt;br /&gt;
-如果你说，这是个犯过法的人，所以不值得吹捧。道理也许没错。那请问，你说这句话的时候，你心里的总目标是啥呢？你想扮演一个推进社会正义的人？国家司法机构都释放他了啊，你代表谁在追求社会正义，穷追猛打呢？也就是说，你在说这句话的时候，可能是在没有总目标，没有自己的角色，没有舞台的情况下，在讲一句你自己以为正确的话。你不在表演，所以，即使观点没错，这种观点你也没有收获。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;有意思。来自 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sun, 13 Sep 2020 00:18:01 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-13:/202009/stdin-009</guid></item></channel></rss>
+总之，这个时候的罗马教廷，觉得有可能要整顿一下中国传教事务，和中国文化的那些陋习要掰掰腕子了。看看谁才是真理。具体过程就不细说了，过程中很多八卦。到了1704年，罗马教皇克雷芒十一世就最终搞了七条专门针对中国天主教徒的规定。简单说说 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Thu, 17 Sep 2020 23:21:57 +0000</pubDate><guid isPermaLink="false">tag:None,2020-09-17:/202009/stdin-010</guid></item></channel></rss>
