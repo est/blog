@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html">
+  <head>
+    <title>FastAPI+Requests实现反向代理 - Est's Blog</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta charset="utf-8" />
+    <link href="https://feeds.feedburner.com/initiative" type="application/rss+xml" rel="alternate" title="Est's Blog RSS Feed" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="FastAPI+Requests实现反向代理" />
+
+
+
+
+    <link rel="stylesheet" href="/theme/css/normalize.min.css" />
+    <link rel="stylesheet" href="/theme/css/style.css" />
+
+
+    <style>
+      body {
+        background: #ecedef url("/theme/img/ignasi_pattern_s.png") repeat;
+      }
+    </style>
+  </head>
+  <body class="single-body">
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    Est's Blog
+  </a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="" class="hamburger-menu-overlay-link">Home</a></li>
+
+
+    </ul>
+  </div>
+</nav>    <main class="content side-text-padding">
+
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">FastAPI+Requests实现反向代理</h1>
+    <p class="post-date">📅 <time datetime="2021-03-30T15:07:01+00:00">2021-03-30</time></p>📌 <span>stdout</span>
+  </header>
+
+  
+  <p>因为某些拉垮的业务需要，不得不在代码里去反向代理别的 HTTP API</p>
+<p>一般格式如下：</p>
+<pre><code>@app.get('/other/{other_path:path}')
+@app.post('/other/{other_path:path}')
+async def other_api(other_path: str, req: Request):
+    """透传 API"""
+    host = 'http://example.intranet'
+    url = '{}/other/{}'.format(host, other_path)
+    body = bytes(await req.body()) or None
+    r = requests.request(
+        req.method, url,
+        headers={
+            'Cookie': req.headers.get('cookie') or '',
+            'Content-Type': req.headers.get('Content-Type')},
+        params=req.query_params, data=body, stream=True,
+        allow_redirects=False)
+
+    h = dict(r.headers)
+    h.pop('Content-Length', None)
+    return StreamingResponse(r.raw, headers=h, status_code=r.status_code)
+</code></pre>
+<p>解释一下为啥要这么写：</p>
+<ol>
+<li>采用 <code>stream=True</code> + <code>StreamingResponse</code>，防止上游给你返回一个GB体量的文件把 FastAPI 撑爆</li>
+<li>只摘取浏览器的 <code>Cookie</code> + <code>Content-Type</code> 两个头。别的不给。</li>
+<li>要去掉返回的 Content-Length 头。因为 StreamingResponse 会自己定义返回形式。</li>
+</ol>
+<p>这样写基本能跑起来了，但是有2个问题：</p>
+<ol>
+<li>如果上游返回一个 302/303/307 的跳转，那么很有可能把内网的跳转网址直接返回给浏览器了。因为 <a href="https://tools.ietf.org/html/rfc2616#section-14.30">HTTP/1.1 的标准 RFC2616</a> 强制规定，<code>Location</code> 的值必须是一个绝对网址。所以这个时候就冒犯一下这个规定，强行截断：<pre><code>loc = h.pop('Location', '')
+if loc.startswith(host):
+    h['Location'] = loc[len(host):]
+</code></pre>
+</li>
+</ol>
+<p>注意这里不要用 <code>.lstrip()</code> 。这方法和你想象的完全不是一回事。它是基于单个字符的挨个替换而不是整个字符串。<br />
+2. 实测这种在业务代码实现的「软」反向代理性能堪忧。上游4s左右的整个页面加载时间，反向代理之后就变成了 120s 左右。盲猜是 <code>StreamingResponse</code> 是一个字节一个字节去遍历迭代器？实测并不是。主要的锅还是 <code>Requests</code> 的 <code>.raw</code> 是按照 <code>chunked</code> 一段一段返回的。最好还是准备个 4KB 的 buffer，提高性能。解决方案是把  <code>r.raw</code> 改成 <code>r.raw.stream(4096000)</code> 性能一下就高了。注意这里不要用官方文档提供的 <code>.iter_contents()</code> 或者 <code>.iter_lines()</code> 这两者又会自作聪明的去解析文本编码或者换行符，降低了性能。</p>
+
+</article>
+
+
+<div class="comments">
+  <h2>Comments</h2>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'estblog';
+    var disqus_identifier = '202103/stdout-003';
+    var disqus_url = location.href;
+    (function() {
+    var dsq = document.createElement('script'); 
+
+    dsq.type = 'text/javascript';
+    dsq.defer = true;
+    dsq.src = '//estblog.disqus.com/embed.js';
+    (document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</div>    </main>
+<script src="/theme/js/core.js"></script>
+<script type="text/javascript">
+    if(location.protocol === "http:") location.protocol = "https:"
+</script>
+
+  </body>
+
+</html>
