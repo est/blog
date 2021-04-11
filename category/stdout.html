@@ -49,12 +49,41 @@
         <!-- new article -->
         <div class="card blog-card">
           <article class="card-body">
+            <a href="202104/stdout-005"  rel="bookmark" >
+              <h2 class="card-title">Win10 自动设置开机锁屏壁纸</h2>
+            </a>
+            <p class="card-text"><p>Win10启动后，锁屏界面有一些每天更新的漂亮的墙纸，但是每个用户进去却只能看到默认的墙纸，不能自动切换。很是遗憾，于是搞了一段小脚本弥补。</p>
+<p>找个地方比如桌面，右键新建一个 <code>est_win10_auto_wallpaper.bat</code></p>
+<pre><code>@if (@X)==(@Y) @end /* JScript comment
+@echo off
+
+cscript //E:JScript %~n0.bat
+
+exit /b %errorlevel%
+*/
+
+var oShell = new ActiveXObject("WScript.Shell") ;
+var oFSO = new ActiveXObject("Scripting.FileSystemObject");
+
+var sWinDir = oFSO.GetSpecialFolder(0);
+var sPath = oShell.ExpandEnvironmentStrings('%LOCALAPPDATA%\\Packages\\Microsoft …</code></pre></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2021-04-11T22:35:12+00:00">2021-04-11</time></p>
+<p>stdout</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
             <a href="202104/stdout-004"  rel="bookmark" >
               <h2 class="card-title">Mac 命令行终端里获得视频文件的长度</h2>
             </a>
-            <p class="card-text"><p>记录一下，MacOSX 10.6.8 或更高版本：</p>
+            <p class="card-text"><p>记录一下，Mac OS X 10.6.8 或更高版本：</p>
 <pre><code>mdls -name kMDItemDurationSeconds -name kMDItemFSName  1.mp4
 </code></pre>
+<p>这命令有一个很神经病的一点，同一个 .mp4 文件，获取只读的 TF 卡上的就没法获得视频长度，复制到可以读写的本地硬盘上就可以读出来。</p>
 <p>或者在 Finder 里新建一个叫  <code>Movies</code> 的文件夹，把视频文件放进去，然后列表展示，表头右键，就可以选择显示长度。。</p>
 <p>同理，建立一个叫  <code>Pictures</code> 的文件夹，可以列表展示图片尺寸。。</p>
 <p>来自 <a href="https://superuser.com/questions/1024894/">superuser</a> 。真是神一般的设定。</p></p>
