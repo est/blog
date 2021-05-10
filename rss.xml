@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Sun, 11 Apr 2021 22:35:12 +0000</lastBuildDate><item><title>Win10 自动设置开机锁屏壁纸</title><link>https://blog.est.im/202104/stdout-005</link><description>&lt;p&gt;Win10启动后，锁屏界面有一些每天更新的漂亮的墙纸，但是每个用户进去却只能看到默认的墙纸，不能自动切换。很是遗憾，于是搞了一段小脚本弥补。&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Mon, 10 May 2021 22:01:21 +0000</lastBuildDate><item><title>育儿心得：语音日记(a-log)</title><link>https://blog.est.im/202105/stderr-004</link><description>&lt;p&gt;娃越来越大，作为家长就不可避免的内心越来越卷。老师要求的繁杂的作业，搜集好句好文，我看来是非常吃力和浪费时间的。因为小孩的书写速度太慢了。而且年纪很低，很多词汇还不会，只能用蹩脚的拼音代替。个人观点是小学3年级以前超过10分钟的书写劳动都是一种煎熬而不是提高。&lt;/p&gt;
+&lt;p&gt;今天突然灵机一动，想到了语音日记。就拿着 MIUI 手机实践了一下，发现好处很多：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="audio log" src="/images/2021/stderr-004-1.png" /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;说话比写字的数据快得多，词汇也大得多。&lt;/li&gt;
+&lt;li&gt;可以思考好了一口气说出来。&lt;/li&gt;
+&lt;li&gt;不会出现写错了反复擦除修改浪费时间打断思绪&lt;/li&gt;
+&lt;li&gt;可以现场纠正，马上改进&lt;/li&gt;
+&lt;li&gt;因为手机笔记软件和语音识别技术的成熟，可以立刻看到实时语音转文本结果。回顾遣词造句水平和段落结构&lt;/li&gt;
+&lt;li&gt;练习标准化发音才能让 app 更好识别语音&lt;/li&gt;
+&lt;li&gt;可以训口头表达能力，语句连贯性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;想起来现在很多 Interweb celeb 都喜欢做 vlog 来发泄，但是小学生通过audio log，a-log 进行20分钟的语音日记，说不定效果不错。&lt;/p&gt;
+&lt;p&gt;准备坚持一下。说不定找个地方记录一下，作为成长的轨迹。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Mon, 10 May 2021 22:01:21 +0000</pubDate><guid isPermaLink="false">tag:None,2021-05-10:/202105/stderr-004</guid></item><item><title>Win10 自动设置开机锁屏壁纸</title><link>https://blog.est.im/202104/stdout-005</link><description>&lt;p&gt;Win10启动后，锁屏界面有一些每天更新的漂亮的墙纸，但是每个用户进去却只能看到默认的墙纸，不能自动切换。很是遗憾，于是搞了一段小脚本弥补。&lt;/p&gt;
 &lt;p&gt;找个地方比如桌面，右键新建一个 &lt;code&gt;est_win10_auto_wallpaper.bat&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@if (@X)==(@Y) @end /* JScript comment
 @echo off
@@ -120,14 +133,4 @@ for i in $(seq 1 423); do wget -t 0 -T 5  -U 'Mozilla/5.0 (iPhone; CPU iPhone OS
 为什么会有拖延症？不仅是因为自我管理不严格，而是因为只要时间资源在那里，你就会倾向于把它用光用尽。&lt;br /&gt;
 你可能会说，不对啊，做一件事需要的时间资源应该是有限的啊。从拧一颗螺丝到造一台汽车，不仅需要的时间是有数的，而且还是可以持续优化的。怎么会需要无限的时间资源呢？&lt;br /&gt;
 这就牵涉到人类社会的一个新变化了。用管理学家包政老师的话说，这是因为人类工作要处理的对象，从“物品”变成了“事情”。&lt;br /&gt;
-以前，无论是农业时代还是工业时代，我们的工作对象主要是物品，无论种一亩地的庄稼，还是在流水线上加工一个零件，物品的边界是清晰的，所需要的工作时间就是有限的。我们努力的方向，就是通过各种工具和创新，节省时间资源 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 09 Oct 2020 21:26:07 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-09:/202010/stdin-014</guid></item><item><title>《论语》by Philosophy Tube</title><link>https://blog.est.im/202010/stdin-013</link><description>&lt;iframe width="100%" height="450px" src="https://www.youtube.com/embed/bFeXJkcKYaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;最喜欢 9:15 处关于对 恕 的论述。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Do unto others as you would have them do unto you&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这句话是按作者的说法，是《圣经》《Torah》《圣训》里 Golden rule of morality 。但是 恕 还有一层意思是我之前完全没预料到的，那就是&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Do not do to others what you wouldn't want them to do to you&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这两句话区别很大。作者举了个例子，第一句话表达的其实更加 demanding，比如 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 06 Oct 2020 08:07:56 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-06:/202010/stdin-013</guid></item></channel></rss>
+以前，无论是农业时代还是工业时代，我们的工作对象主要是物品，无论种一亩地的庄稼，还是在流水线上加工一个零件，物品的边界是清晰的，所需要的工作时间就是有限的。我们努力的方向，就是通过各种工具和创新，节省时间资源 …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 09 Oct 2020 21:26:07 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-09:/202010/stdin-014</guid></item></channel></rss>
