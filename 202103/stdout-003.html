@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html">
   <head>
-    <title>FastAPI+Requests实现反向代理 - Est's Blog</title>
+    <title>FastAPI/Starlette+Requests实现反向代理 - Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +10,7 @@
     <link href="https://feeds.feedburner.com/initiative" type="application/rss+xml" rel="alternate" title="Est's Blog RSS Feed" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="FastAPI+Requests实现反向代理" />
+    <meta name="description" content="FastAPI/Starlette+Requests实现反向代理" />
 
 
 
@@ -46,7 +46,7 @@
 
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">FastAPI+Requests实现反向代理</h1>
+    <h1 class="post-title">FastAPI/Starlette+Requests实现反向代理</h1>
     <p class="post-date">Posted <time datetime="2021-03-30T15:07:01+00:00">2021-03-30</time> | <span>stdout</span></p>
   </header>
 
@@ -74,9 +74,9 @@ async def other_api(other_path: str, req: Request):
 </code></pre>
 <p>解释一下为啥要这么写：</p>
 <ol>
-<li>采用 <code>stream=True</code> + <code>StreamingResponse</code>，防止上游给你返回一个GB体量的文件把 FastAPI 撑爆</li>
-<li>只摘取浏览器的 <code>Cookie</code> + <code>Content-Type</code> 两个头。别的不给。</li>
-<li>要去掉返回的 Content-Length 头。因为 StreamingResponse 会自己定义返回形式。</li>
+<li>采用 <code>stream=True</code> + <code>StreamingResponse</code>，防止上游给你返回一个GB体量的文件把 FastAPI 进程内存撑爆</li>
+<li>只摘取浏览器的 <code>Cookie</code> + <code>Content-Type</code> 两个头。别的不给上游。</li>
+<li>要去掉返回的 Content-Length 头。因为 StreamingResponse 会自己定义返回长度。</li>
 </ol>
 <p>这样写基本能跑起来了，但是有2个问题：</p>
 <ol>
