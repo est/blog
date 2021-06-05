@@ -62,19 +62,18 @@
 <p>首先前摇，生成需要合并的视频文件路径列表</p>
 <p><code>ls -fd1 /Volumes/SD_CARD/DCIM/xxxxx/*</code> </p>
 <p>的结果写成如下格式：</p>
-<p>```<br />
-file 'input1.mov'<br />
-inpoint 10<br />
-outpoint 300<br />
-file 'input2.mov'</p>
-<h1>comment</h1>
-<p>outpoint 300 <br />
-file 'input3.mov'<br />
-outpoint 300<br />
-... <br />
-file 'inputN.mov'<br />
-outpoint 300 <br />
-```</p>
+<pre><code>file 'input1.mov'
+inpoint 10
+outpoint 300
+file 'input2.mov'
+# comment
+outpoint 300 
+file 'input3.mov'
+outpoint 300
+... 
+file 'inputN.mov'
+outpoint 300
+</code></pre>
 <p><code>inpoint 10</code> 就是从10秒开始算，<code>outpoint 300</code> 就是到300秒结束。保存上面的为 1.txt</p>
 <p>然后念 ffmpeg 咒语</p>
 <p><code>ffmpeg -hwaccel cuda -hwaccel_output_format cuda -safe 0 -r 48  -f concat -i 1.txt -an -vf "select=concatdec_select,scale_cuda=w=1280:h=720:interp_algo=lanczos,setpts=0.125*PTS" -c:v h264_nvenc -preset:v p7 -profile:v high -tune:v hq -cq:v 19 -qmax 22 -b:v 0 -maxrate 8M -rc vbr out.mp4</code></p>
@@ -101,12 +100,12 @@ outpoint 300 <br />
 </ul>
 <p>还有一些坑点：</p>
 <ul>
-<li>2k@60fps的分辨率需要指定 <code>-level 51</code>。因为默认的 H.264 支持不了。。。</li>
-<li>如果不缩放原始尺寸压制，很有可能会出错 No decoder surfaces left. Error while decoding stream #0:0: Invalid data found when processing input。这是 <a href="https://trac.ffmpeg.org/ticket/7562">ffmpeg 4.1 以后的 bug</a> 解决方案是 <code>-extra_hw_frames 2</code> 或者更大。但是 CUDA 最多支持32所以估计会报错，然后 CPu 负责解码 GPU 负责编码。</li>
+<li>2k@60fps的分辨率需要指定 <code>-level 51</code>。因为默认的 <a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding#Levels">H.264 级别</a>太低frame size支持不了。。。</li>
+<li>如果不缩放原始尺寸压制，很有可能会出错 No decoder surfaces left. Error while decoding stream #0:0: Invalid data found when processing input。这是 <a href="https://trac.ffmpeg.org/ticket/7562">ffmpeg 4.1 以后的 bug</a> 解决方案是 <code>-extra_hw_frames 2</code> 或者更大。但是 CUDA 最多支持32所以估计会报错，就只能 CPU 负责解码 GPU 负责编码。</li>
 <li>压制的时候发现 TF 卡或者是读卡器20M/s是瓶颈。拷到本地发现 GPU decoder 是100%，encoder只有30%左右。</li>
 <li>2k分辨率20Mbps码率30fps的原始视频占用体积太大，1080p 16Mbps码率效果比 720p 8Mbps好不了多少。最后选择的是8M码率。在超快移动的时候有色块，其他堵车的时候画质很高。识别车牌几乎不受影响</li>
 </ul>
-<p>总的来说，ffmpeg 真是操作糟糕而功能强大的工具的典型。</p>
+<p>总的来说，ffmpeg 真是操作糟糕而功能强大的工具的典型。以上参数为东拼西凑撞大运偶得，如有不对敬请指正。</p>
 
 </article>
 
