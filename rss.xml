@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 25 May 2021 15:46:14 +0000</lastBuildDate><item><title>Sandy Munro 看不懂 美的Midea 的注塑工艺</title><link>https://blog.est.im/202105/stdin-004</link><description>&lt;p&gt;看了好多 Tesla 的拆车视频，对 Youtube 上这个 &lt;a href="https://www.youtube.com/c/MunroLive/videos"&gt;Sandy Munro 老爷子&lt;/a&gt;还是挺有好感的。查了下&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Sat, 05 Jun 2021 20:42:15 +0000</lastBuildDate><item><title>行车记录仪视频ffmpeg合并转录存档</title><link>https://blog.est.im/202106/stdout-006</link><description>&lt;p&gt;手上有几个行车记录仪&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VOSONIC 勤宇V10，也叫群华 路不平，用的 联咏 Novatek NT96550BG 的芯片，1080p&lt;/li&gt;
+&lt;li&gt;BLACKVIEW 凌度A12，采用 安霸(Ambarella) A12 方案，2k&lt;/li&gt;
+&lt;li&gt;PAPAGO 趴趴狗，GoSafe 560WiFi，采用 NT96670 芯片+IMX415的 sony CMOS，4k&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;特点是每5分钟切割成一个单独的文件，为了防止每两个视频之间丢秒，所以会额外重复写入1秒的内容&lt;/p&gt;
+&lt;p&gt;现在想把一段时间的视频合并成一个存档，并且要跳过那些额外的1秒，上 ffmpeg。&lt;/p&gt;
+&lt;p&gt;首先前摇，生成需要合并的视频文件路径列表&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ls -fd1 /Volumes/SD_CARD/DCIM/xxxxx/*&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;的结果写成如下格式：&lt;/p&gt;
+&lt;p&gt;```&lt;br /&gt;
+file 'input1.mov'&lt;br /&gt;
+inpoint …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 05 Jun 2021 20:42:15 +0000</pubDate><guid isPermaLink="false">tag:None,2021-06-05:/202106/stdout-006</guid></item><item><title>Sandy Munro 看不懂 美的Midea 的注塑工艺</title><link>https://blog.est.im/202105/stdin-004</link><description>&lt;p&gt;看了好多 Tesla 的拆车视频，对 Youtube 上这个 &lt;a href="https://www.youtube.com/c/MunroLive/videos"&gt;Sandy Munro 老爷子&lt;/a&gt;还是挺有好感的。查了下&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;桑迪·蒙罗（Sandy Munro）是一个汽车工程师，专门研究机床和制造，在加拿大安大略省的温莎出生长大，后来加入了Valiant Machine＆Tool公司，这个公司主要为通用汽车提供配套，1978年加入福特公司，成为制造工程师，改进了发动机组装方法，1988年在密歇根州开办了自己的咨询公司。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -133,9 +146,4 @@ for i in $(seq 1 423); do wget -t 0 -T 5  -U 'Mozilla/5.0 (iPhone; CPU iPhone OS
 &lt;p&gt;然后里面各个人的个性都很强，没有谁含蓄 迁就大家 跟风什么的。&lt;/p&gt;
 &lt;p&gt;大部分人都善于表达和思考，为了别人的生死也敢于犯众怒。真是需要勇气和正值啊。&lt;/p&gt;
 &lt;p&gt;但是，抽烟真是的。。满屋子都是。&lt;/p&gt;
-&lt;p&gt;我感觉吧，「民主 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sun, 01 Nov 2020 23:44:37 +0000</pubDate><guid isPermaLink="false">tag:None,2020-11-01:/202011/stderr-010</guid></item><item><title>nsq-py, pynsq, gnsq compared</title><link>https://blog.est.im/202010/stdout-011</link><description>&lt;p&gt;&lt;a href="https://nsq.io"&gt;nsq&lt;/a&gt; is a lightweight message queue like Kafka/RabbitMQ/RocketMQ/RedisQueue/Celery.&lt;/p&gt;
-&lt;p&gt;For python bindings there ware three libraries out there:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;pynsq: the official build, but requires &lt;code&gt;tornado&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;gnsq: the gevent only consumer/publisher, might have race condition in state machine. Don't use.&lt;/li&gt;
-&lt;li&gt;nsq-py: &lt;code&gt;select()&lt;/code&gt; based, but compatible with gevent …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 30 Oct 2020 15:35:45 +0000</pubDate><guid isPermaLink="false">tag:None,2020-10-30:/202010/stdout-011</guid></item></channel></rss>
+&lt;p&gt;我感觉吧，「民主 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sun, 01 Nov 2020 23:44:37 +0000</pubDate><guid isPermaLink="false">tag:None,2020-11-01:/202011/stderr-010</guid></item></channel></rss>
