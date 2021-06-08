@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html">
   <head>
-    <title>行车记录仪视频ffmpeg合并转录存档 - Est's Blog</title>
+    <title>行车记录仪视频ffmpeg合并转录存档，跳过重复的漏秒 - Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +10,7 @@
     <link href="https://feeds.feedburner.com/initiative" type="application/rss+xml" rel="alternate" title="Est's Blog RSS Feed" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="行车记录仪视频ffmpeg合并转录存档" />
+    <meta name="description" content="行车记录仪视频ffmpeg合并转录存档，跳过重复的漏秒" />
 
 
 
@@ -46,7 +46,7 @@
 
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">行车记录仪视频ffmpeg合并转录存档</h1>
+    <h1 class="post-title">行车记录仪视频ffmpeg合并转录存档，跳过重复的漏秒</h1>
     <p class="post-date">Posted <time datetime="2021-06-05T20:42:15+00:00">2021-06-05</time> | <span>stdout</span></p>
   </header>
 
@@ -57,8 +57,8 @@
 <li>BLACKVIEW 凌度A12，采用 安霸(Ambarella) A12 方案，2k</li>
 <li>PAPAGO 趴趴狗，GoSafe 560WiFi，采用 NT96670 芯片+IMX415的 sony CMOS，4k</li>
 </ul>
-<p>特点是每5分钟切割成一个单独的文件，为了防止每两个视频之间丢秒，所以会额外重复写入1秒的内容</p>
-<p>现在想把一段时间的视频合并成一个存档，并且要跳过那些额外的1秒，上 ffmpeg。</p>
+<p>特点是每5分钟切割成一个单独的文件，为了防止每两个视频之间漏秒，所以会额外重复写入1秒的内容</p>
+<p>现在想把一段时间的视频合并成一个存档，并且要<a href="https://www.v2ex.com/t/248037">跳过那些额外的1秒</a>，上 ffmpeg。</p>
 <p>首先前摇，生成需要合并的视频文件路径列表</p>
 <p><code>ls -fd1 /Volumes/SD_CARD/DCIM/xxxxx/*</code> </p>
 <p>的结果写成如下格式：</p>
