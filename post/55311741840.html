@@ -47,20 +47,20 @@
 <article class="post">
   <header class="post-header">
     <h1 class="post-title">android cid</h1>
-    <p class="post-date">Posted <time datetime="2013-07-12T23:30:03+00:00">2013-07-12</time> | <span>text</span></p>
+    <p class="post-date">Posted <time datetime="2013-07-12T23:30:03+00:00">2013-07-12</time> | <span>archive</span></p>
   </header>
 
   
   <p>this pdf</p>
 <p>http://events.ccc.de/congress/2010/Fahrplan/attachments/1781_27c3-android-geolocation.pdf</p>
 <p>注意看截图：</p>
-<p><img alt="" src="http://media.tumblr.com/1aba685c56c3d52e21ee5130a554724a/tumblr_inline_mpuuw8l0Vj1qz4rgp.png" /></p>
+<p><img alt="" src="/images/tumblr/55311741840_0.png" /></p>
 <p>20801，其中MCC=208，MNC=01<br />
 LAC=0403 <br />
 CID=61E00</p>
 <p>有这个信息之后，我们打开国产CID定位工具：</p>
 <p>http://www.minigps.net/map.html</p>
-<p><img alt="" src="http://media.tumblr.com/afc8be934f582937cbfc61193e242d5c/tumblr_inline_mpuuztfM431qz4rgp.png" /></p>
+<p><img alt="" src="/images/tumblr/55311741840_1.png" /></p>
 <p>就得到了基站位置。</p>
 <p>在自己手机上也可以直接通过下边命令来即时刷新：</p>
 <pre><code># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
