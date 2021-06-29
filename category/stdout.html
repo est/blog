@@ -53,6 +53,27 @@
         <!-- new article -->
         <div class="card blog-card">
           <article class="card-body">
+            <a href="/202106/stdout-008"  rel="bookmark" >
+              <h2 class="card-title">MySQL on duplicate keys in SQLAlchemy</h2>
+            </a>
+            <p class="card-text"><p>A simple function to upsert something atomically into MySQL</p>
+<pre><code>def upsert(val1, val2, **kwargs):
+    """upsert val1-val2 pair into mysql and return the pk"""
+    from sqlalchemy.dialects.mysql import insert
+    from sqlalchemy.sql.expression import func
+
+    # this val1-val2 pair should have UNIQUE KEY constraint in MySQL table.
+    stmt = insert(MyModel.__table__ …</code></pre></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2021-06-29T11:55:13+00:00">2021-06-29</time></p>
+<p>stdout</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
             <a href="/202106/stdout-007"  rel="bookmark" >
               <h2 class="card-title">古墓丽影9（Tomb Raider 2013）治3D眩晕必备FOV补丁+禁镜头晃动</h2>
             </a>
