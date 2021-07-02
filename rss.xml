@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Tue, 29 Jun 2021 11:55:13 +0000</lastBuildDate><item><title>MySQL on duplicate keys in SQLAlchemy</title><link>https://blog.est.im/202106/stdout-008</link><description>&lt;p&gt;A simple function to upsert something atomically into MySQL&lt;/p&gt;
+<rss version="2.0"><channel><title>Est's Blog</title><link>https://blog.est.im/</link><description>This blog is rated&amp;nbsp;&amp;nbsp;R⃣ , viewer discretion is advised</description><lastBuildDate>Fri, 02 Jul 2021 15:51:19 +0000</lastBuildDate><item><title>macOS 这只加速浏览器在糟糕网络下的访问体验</title><link>https://blog.est.im/2021/stdout-009</link><description>&lt;p&gt;心里多年的疙瘩居然被解开了。&lt;/p&gt;
+&lt;p&gt;由于墙内糟糕的网络环境，而且ISP甚至wifi内还有墙中墙，所以很多域名是打不开的。&lt;/p&gt;
+&lt;p&gt;每次看浏览器在傻乎乎的转菊花，就觉得浪费时间。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo sysctl  net.inet.tcp.keepinit=3000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这一条指令可以直接设置 macOS 的 TCP Keepalive 心跳包初始化时间设置为3000毫秒。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;net.inet.tcp.keepinit&lt;/code&gt;默认值是 75000 ，单位是毫秒。注意 Linux 下没这设置，而且单位是 秒&lt;/p&gt;
+&lt;p&gt;这句话学究式的解释可以通过 &lt;code&gt;man 4 tcp&lt;/code&gt; 得到，摘录几条：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TCP_CONNECTIONTIMEOUT  The TCP_CONNECTIONTIMEOUT option allows to specify the timeout, in seconds, for new …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 02 Jul 2021 15:51:19 +0000</pubDate><guid isPermaLink="false">tag:None,2021-07-02:/2021/stdout-009</guid></item><item><title>MySQL on duplicate keys in SQLAlchemy</title><link>https://blog.est.im/202106/stdout-008</link><description>&lt;p&gt;A simple function to upsert something atomically into MySQL&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;def upsert(val1, val2, **kwargs):
     """upsert val1-val2 pair into mysql and return the pk"""
     from sqlalchemy.dialects.mysql import insert
@@ -150,7 +159,4 @@ I think my generation is the first one …&lt;/p&gt;&lt;/blockquote&gt;</descrip
 &lt;p&gt;添加一个重启的定时任务，在重启之间执行一个命令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;uci set network.wan.mac_addr=$(hexdump -n3 -e'1/3 "8c:8d:8e" 3/1 ":%02X" "\n"' /dev/random) &amp;amp;&amp;amp; uci commit network
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;为什么要在拨号前随机生成WAN口的 MAC 地址呢？嘿嘿。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 01 Jan 2021 00:27:52 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-01:/202101/stdout-001</guid></item><item><title>北美 VPS 推荐：Racknerd</title><link>https://blog.est.im/202012/stderr-012</link><description>&lt;p&gt;以前买的 hostmem 总感觉高峰期速度不行。Racknerd 这家看上去英语比较地道，感觉还行？于是跑了个脚本把它家的套餐遍历了一下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir -p ~/Downloads/racknerd; cd $_
-
-for i in $(seq 1 423); do wget -t 0 -T 5  -U 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 …&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Sat, 26 Dec 2020 01:03:36 +0000</pubDate><guid isPermaLink="false">tag:None,2020-12-26:/202012/stderr-012</guid></item></channel></rss>
+&lt;p&gt;为什么要在拨号前随机生成WAN口的 MAC 地址呢？嘿嘿。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 01 Jan 2021 00:27:52 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-01:/202101/stdout-001</guid></item></channel></rss>

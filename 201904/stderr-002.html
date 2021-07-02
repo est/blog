@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html">
   <head>
-    <title>MySQL on duplicate keys in SQLAlchemy - Est's Blog</title>
+    <title>群众治理和民科 - Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +10,7 @@
     <link href="https://feeds.feedburner.com/initiative" type="application/rss+xml" rel="alternate" title="Est's Blog RSS Feed" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="MySQL on duplicate keys in SQLAlchemy" />
+    <meta name="description" content="群众治理和民科" />
 
 
 
@@ -39,9 +39,9 @@
       <li><a href="/" class="hamburger-menu-overlay-link">Home</a></li>
 
         <li><a href="/category/archive.html" class="hamburger-menu-overlay-link">archive</a></li>
-        <li><a href="/category/stderr.html" class="hamburger-menu-overlay-link">stderr</a></li>
+        <li><a href="/category/stderr.html" class="hamburger-menu-overlay-link active">stderr</a></li>
         <li><a href="/category/stdin.html" class="hamburger-menu-overlay-link">stdin</a></li>
-        <li><a href="/category/stdout.html" class="hamburger-menu-overlay-link active">stdout</a></li>
+        <li><a href="/category/stdout.html" class="hamburger-menu-overlay-link">stdout</a></li>
 
     </ul>
   </div>
@@ -50,37 +50,21 @@
 
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">MySQL on duplicate keys in SQLAlchemy</h1>
-    <p class="post-date">Posted <time datetime="2021-06-29T11:55:13+00:00">2021-06-29</time> | <span>stdout</span></p>
+    <h1 class="post-title">群众治理和民科</h1>
+    <p class="post-date">Posted <time datetime="2019-04-03T09:47:59+08:00">2019-04-03</time> | <span>stderr</span></p>
   </header>
 
   
-  <p>A simple function to upsert something atomically into MySQL</p>
-<pre><code>def upsert(val1, val2, **kwargs):
-    """upsert val1-val2 pair into mysql and return the pk"""
-    from sqlalchemy.dialects.mysql import insert
-    from sqlalchemy.sql.expression import func
-
-    # this val1-val2 pair should have UNIQUE KEY constraint in MySQL table.
-    stmt = insert(MyModel.__table__).values(col1=val1, col2=val2)
-    if kwargs:
-        stmt = stmt.on_duplicate_key_update(kwargs)
-    else:
-        # get lastrowid https://stackoverflow.com/a/29722203/41948
-        stmt = stmt.on_duplicate_key_update(id=func.LAST_INSERT_ID(MyModel.id))
-    # inserted_primary_key (dbapi, return 0 when only insert) or lastrowid (mysql)
-    pk = db.session().execute(stmt).lastrowid
-    if not pk:
-        pk = MyModel.query.options(load_only('id')).filter_by(
-            col1=val1, col2=val2
-        ).first().id
-    return pk
-</code></pre>
-<p>Writing complex SQL is hard, sqlalchemy makes it harder. Prefer other ORMs in Python.</p>
-<p>I really hate fighting the infamous sqlalchemy API. Everything wrong about it can be shown in this one-liner:</p>
-<pre><code>from sqlalchemy.orm import Load, load_only, joinedload
-</code></pre>
-<p>You have the three styles of CamelCase, under_score, and concatfunctionnames fucked up together. Bad and leaky abstraction.</p>
+  <p>在 zhihu 上看到一个巨糟糕的问题：《<a href="https://www.zhihu.com/question/41737110/answer/256504039">反对民科是不是反对民主？</a>》</p>
+<p>有个回答眼前一亮：</p>
+<blockquote>
+<p>姜源 法学、法律 话题的优秀回答者<br />
+这个问题并没有看上去那么糟糕，实际上这是个极其经典而且不那么容易回答的问题。<br />
+最早提出这个问题的人是柏拉图。柏拉图的问题是：既然我们在医学领域依赖拥有专业知识技术的权威也就是医生，在航海领域依赖拥有专业知识技术的权威也就是船长（所以有个冷笑话说，“大海航行靠舵手”最早由柏拉图提出），那么为什么在政治领域却拒绝权威，反而依赖缺乏专业知识技术的大众？当然，柏拉图的问题和我们现在的问题恰好相反。在柏拉图心目中，自然科学领域（尽管当时不存在这个概念）相信权威是显而易见的，而在政治领域相信民主却是可疑的。</p>
+</blockquote>
+<p>我的想法：</p>
+<p>自然科学，对于绝大多数智人来说，是身外之物。无论对于个体和群体，面对自然的利益关系的是一致的。君王拿氧化还原反应来打仗，农民拿氧化还原来吃土。建立一个直观统一的理性方法论，这就是科学。</p>
+<p>而社会和人类学其实要解决的根本问题就是个体和群体之间的价值冲突。社会分工导致一部分人肯定要依附他人才能生存的。从这个角度出发，「群众治理」是一种妥协的艺术。不是科学。</p>
 
 </article>
 
@@ -90,7 +74,7 @@
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_shortname = 'estblog';
-    var disqus_identifier = '202106/stdout-008';
+    var disqus_identifier = '201904/stderr-002';
     var disqus_url = location.href;
     (function() {
     var dsq = document.createElement('script'); 

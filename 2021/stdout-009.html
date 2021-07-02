@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html">
   <head>
-    <title>MySQL on duplicate keys in SQLAlchemy - Est's Blog</title>
+    <title>macOS 这只加速浏览器在糟糕网络下的访问体验 - Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +10,7 @@
     <link href="https://feeds.feedburner.com/initiative" type="application/rss+xml" rel="alternate" title="Est's Blog RSS Feed" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="MySQL on duplicate keys in SQLAlchemy" />
+    <meta name="description" content="macOS 这只加速浏览器在糟糕网络下的访问体验" />
 
 
 
@@ -50,37 +50,25 @@
 
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">MySQL on duplicate keys in SQLAlchemy</h1>
-    <p class="post-date">Posted <time datetime="2021-06-29T11:55:13+00:00">2021-06-29</time> | <span>stdout</span></p>
+    <h1 class="post-title">macOS 这只加速浏览器在糟糕网络下的访问体验</h1>
+    <p class="post-date">Posted <time datetime="2021-07-02T15:51:19+00:00">2021-07-02</time> | <span>stdout</span></p>
   </header>
 
   
-  <p>A simple function to upsert something atomically into MySQL</p>
-<pre><code>def upsert(val1, val2, **kwargs):
-    """upsert val1-val2 pair into mysql and return the pk"""
-    from sqlalchemy.dialects.mysql import insert
-    from sqlalchemy.sql.expression import func
-
-    # this val1-val2 pair should have UNIQUE KEY constraint in MySQL table.
-    stmt = insert(MyModel.__table__).values(col1=val1, col2=val2)
-    if kwargs:
-        stmt = stmt.on_duplicate_key_update(kwargs)
-    else:
-        # get lastrowid https://stackoverflow.com/a/29722203/41948
-        stmt = stmt.on_duplicate_key_update(id=func.LAST_INSERT_ID(MyModel.id))
-    # inserted_primary_key (dbapi, return 0 when only insert) or lastrowid (mysql)
-    pk = db.session().execute(stmt).lastrowid
-    if not pk:
-        pk = MyModel.query.options(load_only('id')).filter_by(
-            col1=val1, col2=val2
-        ).first().id
-    return pk
+  <p>心里多年的疙瘩居然被解开了。</p>
+<p>由于墙内糟糕的网络环境，而且ISP甚至wifi内还有墙中墙，所以很多域名是打不开的。</p>
+<p>每次看浏览器在傻乎乎的转菊花，就觉得浪费时间。</p>
+<pre><code>sudo sysctl  net.inet.tcp.keepinit=3000
 </code></pre>
-<p>Writing complex SQL is hard, sqlalchemy makes it harder. Prefer other ORMs in Python.</p>
-<p>I really hate fighting the infamous sqlalchemy API. Everything wrong about it can be shown in this one-liner:</p>
-<pre><code>from sqlalchemy.orm import Load, load_only, joinedload
-</code></pre>
-<p>You have the three styles of CamelCase, under_score, and concatfunctionnames fucked up together. Bad and leaky abstraction.</p>
+<p>这一条指令可以直接设置 macOS 的 TCP Keepalive 心跳包初始化时间设置为3000毫秒。</p>
+<p><code>net.inet.tcp.keepinit</code>默认值是 75000 ，单位是毫秒。注意 Linux 下没这设置，而且单位是 秒</p>
+<p>这句话学究式的解释可以通过 <code>man 4 tcp</code> 得到，摘录几条：</p>
+<blockquote>
+<p>TCP_CONNECTIONTIMEOUT  The TCP_CONNECTIONTIMEOUT option allows to specify the timeout, in seconds, for new, non established TCP connections. This option can be useful for both active and passive TCP connections. The default value is specified by the MIB variable net.inet.tcp.keepinit.<br />
+tcp.keepinit Timeout, in milliseconds, for new, non-established TCP connections.</p>
+</blockquote>
+<p>换句话说，就是 TCP 第一个 syn 包最多给3秒等待。超过3秒就拉倒，直接报 <code>ERR_CONNECTION_TIMED_OUT</code> 完事。</p>
+<p>我觉得，如果一个域名和TCP端口3秒钟内无法完成握手，就别执着了。你再干等75秒也不可能连上。这个值只会影响初始连接的超时，一旦连上了怎么idle都不影响，所以不会影响游戏的tcp或者websocket的长连接。也不影响udp。</p>
 
 </article>
 
@@ -90,7 +78,7 @@
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_shortname = 'estblog';
-    var disqus_identifier = '202106/stdout-008';
+    var disqus_identifier = '2021/stdout-009';
     var disqus_url = location.href;
     (function() {
     var dsq = document.createElement('script'); 
