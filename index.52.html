@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>Est's Blog</title>
+  <head>
+    <title>Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,6 +24,7 @@
         background: #ecedef url("/theme/img/ignasi_pattern_s.png") repeat;
       }
     </style>
+  </head>
   <body class="list-body">
 <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="/" class="nav-text">
@@ -48,6 +50,75 @@
         <p class="list-header-subtext">This blog is rated&nbsp;&nbsp;R⃣ , viewer discretion is advised</p>
         <!-- <h1 class="list-header-title">Est's Blog</h1> -->
       </header>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/archives/1160"  rel="bookmark" >
+              <h2 class="card-title">禁用wordpress的texturize</h2>
+            </a>
+            <p class="card-text"><p>Wordpress有一个很脑残的功能，把半角引号自动替换成全角的。我一开始也以为是CSS做的。折腾了半天没结果。原来这个功能叫<a href="http://wordpress.org/tags/texturize">Texturize</a>，是在<code>wp-includes/formatting.php</code>里实现的</p>
+
+<p>网上找到<a href="http://www.ibjx.com/2009/11/%E9%98%B2%E6%AD%A2wordpress%E8%8B%B1%E6%96%87%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7%E5%8D%8A%E8%A7%92%E8%BD%AC%E5%85%A8%E8%A7%92/">一篇教程</a>，如下修改代码：</p>
+
+<p>把</p>
+
+<pre><code>// static strings 
+$curl = str_replace($static_characters, $static_replacements, $curl); 
+// regular e-xpressions 
+$curl = preg_replace($dynamic_characters, $dynamic_replacements, $curl);
+</code></pre>
+
+<p>都注释掉就OK了。</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2010-02-09T14:32:17+00:00">2010-02-09</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/archives/1158"  rel="bookmark" >
+              <h2 class="card-title">Robert Anton Wilson: A Multiplex of Causality</h2>
+            </a>
+            <p class="card-text"><blockquote>
+  <p>The use of atomic weapons was widely blamed on a primate named Albert Einstein. Even Einstein himself had agreed with this opinion. He was a pacifist and had suffered abominable pangs of conscience over what had been done with his scientific discoveries.</p>
+
+  <p>"I should have been a plumber," Einstein said …</p></blockquote></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2010-02-09T14:17:10+00:00">2010-02-09</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/archives/1150"  rel="bookmark" >
+              <h2 class="card-title">G Streetview的驾驶员被抓住当街撒尿。。。。</h2>
+            </a>
+            <p class="card-text"><p>fffff.at在<a href="http://www.reddit.com/r/geek/comments/ayyj0/google_had_one_of_their_streeview_camera_cars/">前天</a>还是什么时候发现Google Street View的拍摄车出现在柏林，于是几个geek就商量一起在车子下面不显眼的地方贴了个廉价的GPS跟踪装置。。。</p>
+
+<p>还大张旗鼓的做了个<a href="http://fffff.at/google-streetcar-berlin/">网页</a>，来实时显示这个拍摄车走到哪里了</p>
+
+<p><img src="http://blog.est.im/wp-content/uploads/2010/02/112.jpg" alt=""></p>
+
+<p><a href="http://www.reddit.com/r/google/comments/azl7z/google_streeview_driver_caught_urinating_in_public/">今天</a>，非常囧的事情出现了，有人拍到了这个<a href="http://fffff.at/google-streeview-driver-caught-urinating-in-public/">拍摄车驾驶员当街撒尿</a>的<a href="http://vimeo.com/9296216">视频</a>。。。囧。。。</p>
+
+<p><img src="http://blog.est.im/wp-content/uploads/2010/02/23.jpg" alt=""></p>
+
+<p>这个视频太过分了。。。。。虽然很LMAO。。。。德国人还是一如既往的彪悍作风，当着全大街那么多围观群众的面撒尿。。。。强！</p>
+
+<p>想象一下，组装廉价微型GPS装置，而且要保证长时间供电，隐蔽，和偷偷摸摸去安装，还有接受信号，制作动态网页。。而且这网页还抗住了reddit那么大的流量。。。只能说，这帮德国人动手能力太强了。。。。。。</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2010-02-09T11:34:08+00:00">2010-02-09</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
 
 
         <!-- new article -->
@@ -408,83 +479,6 @@ Shanghai Electronic Certification Authority Co.Ltd. (SHECA)<br>
 标 …</blockquote></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2010-02-07T06:20:03+00:00">2010-02-07</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/archives/1040"  rel="bookmark" >
-              <h2 class="card-title">[转载]高人解读《三国演义》魏之武将</h2>
-            </a>
-            <p class="card-text"><p>NewSMTH上看到一个吐槽神物，转载至此。。。。</p>
-
-<p>发信人: changjiu (唱酒), 信区: Sanguo<br>
-标  题: 高人解读魏之武将<br>
-发信站: 水木社区 (Fri Feb  5 22:08:00 2010), 站内</p>
-
-<p><a href="http://tieba.baidu.com/f?kz=693600790">http://tieba.baidu.com/f?kz=693600790</a></p>
-
-<p>该楼主十分强大。。。另请关注回帖。。</p>
-
-<blockquote><br>
-本人熟读三国十遍，于此发表对魏国武将之评论。<br>
- <br>
-魏之神将张文顺<br>
-<br>
-1位粉丝<br>
-<br>
-1楼<br>
-　　大家好，今天我将介绍魏国武将，以供吧友学习参考。<br>
-<br>
-　　首先，我介绍的是魏国最有名气，也是在正史中唯一可以和五虎上将平起平坐的组合！     ‘五良子将’他们五人分别是张辽，李典，徐晃，于禁，庞德和乐进。<br>
-<br>
-　　先说乐进，字文谦。原是文官出身，后弃文从武 …</blockquote></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2010-02-07T06:12:55+00:00">2010-02-07</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/archives/1036"  rel="bookmark" >
-              <h2 class="card-title">原教旨主义博客的黄昏：blogazines的崛起</h2>
-            </a>
-            <p class="card-text"><p>今天在HN上看到<a href="http://blog.peepcode.com/tutorials/2010/what-pythonistas-think-of-ruby">一篇python vs ruby的博文</a>，被它的排版吸引了</p>
-
-<p><img src="http://blog.est.im/wp-content/uploads/2010/02/15.jpg" alt=""></p>
-
-<p>结果HN下面的<a href="http://news.ycombinator.com/item?id=1097819">讨论</a>提到这就是传说中的blogazines</p>
-
-<p>原教旨主义的Blog都是又臭又长的文字。而blog+magazine的组合证明了eye-candy和design重要性。还有排版和字体。例如<a href="http://news.ycombinator.com/item?id=1095003">最近</a>一个<a href="http://iampaddy.com/lifebelow600/">Life Below 600px</a>就很有意思。</p>
-
-<p>SmashingMagazine也<a href="http://news.ycombinator.com/item?id=950321">提到</a>了这个现象：<a href="http://www.smashingmagazine.com/the-death-of-the-blog-post/">The death of the
-boring blog post?</a></p>
-
-<p>如果说blog是内容的革命，质的革命，那么blogazines就是表的革命，商业化和文化的冲击将到来。</p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2010-02-04T00:27:02+00:00">2010-02-04</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/archives/1032"  rel="bookmark" >
-              <h2 class="card-title">暴君不可怕，最可恨的是奴才</h2>
-            </a>
-            <p class="card-text"><p>看图不说话。。。。</p>
-
-<p><a href="http://cq.people.com.cn/news/201023/20102394654.htm"><img src="http://blog.est.im/wp-content/uploads/2010/02/6.jpg" width="500"></a></p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2010-02-03T23:51:39+00:00">2010-02-03</time></p>
 <p>archive</p>            </div>
           </article>
         </div>

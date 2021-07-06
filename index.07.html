@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>Est's Blog</title>
+  <head>
+    <title>Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,6 +24,7 @@
         background: #ecedef url("/theme/img/ignasi_pattern_s.png") repeat;
       }
     </style>
+  </head>
   <body class="list-body">
 <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="/" class="nav-text">
@@ -48,6 +50,66 @@
         <p class="list-header-subtext">This blog is rated&nbsp;&nbsp;R⃣ , viewer discretion is advised</p>
         <!-- <h1 class="list-header-title">Est's Blog</h1> -->
       </header>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/68759151296"  rel="bookmark" >
+              <h2 class="card-title">GoLang with Sublime on Windows</h2>
+            </a>
+            <p class="card-text"><p>好吧。还在力战渣windows。非管理员权限。<a href="http://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DArchive">下载zip包</a>解压到 D:\dev\go</p>
+<p>sublime处理中文路径一直很bug。需要修改 /Data/Packages/Default/exec.py:45 行：</p>
+<pre><code>    for k, v in proc_env.iteritems():
+        nv =  os.path.expandvars(v)
+        if isinstance(v, unicode):
+            import locale
+            nv = nv.encode(locale.getdefaultlocale()[1])
+        proc_env[k] = nv
+</code></pre>
+<p>然后菜单 Tools -&gt; Build System -&gt; New...</p>
+<pre><code>{
+    "cmd": ["go …</code></pre></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-12-02T01:25:18+00:00">2013-12-02</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/68445610297"  rel="bookmark" >
+              <h2 class="card-title">SSRF - 看了这个slides，再也不相信procfs里的fd了</h2>
+            </a>
+            <p class="card-text"><iframe src="http://www.slideshare.net/slideshow/embed_code/15264310" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+
+<p><div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/d0znpp/ssrf-attacks-and-sockets-smorgasbord-of-vulnerabilities" title="SSRF attacks and sockets: smorgasbord of vulnerabilities" target="_blank">SSRF attacks and sockets: smorgasbord of vulnerabilities</a> </strong> from <strong><a href="http://www.slideshare.net/d0znpp" target="_blank">Ivan Novikov</a></strong> </div></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-11-29T03:02:37+00:00">2013-11-29</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/68199814606"  rel="bookmark" >
+              <h2 class="card-title">bitcoin —— 末日的狂欢</h2>
+            </a>
+            <p class="card-text"><p>bitcoin —— 末日的狂欢</p>
+<p>bitcoin的出现，对于每一个geek和码农都是boner级别的兴奋的。码农对金融这块“白富美”垂涎已久，过去能接入银行API的，少之又少。而bitcoin直接把胚胎状的一个“白富美”免费送给了每一个愿意上的人。Programmable money。多么响亮的口号。</p>
+<p>bitcoin有更多响亮的口号，让一批先驱者坚信不移的认为这是未来。也让另一部分怀疑者直接给bitcoin打上“传销”的标签。</p>
+<p>比如说p2p。对于geek来说，这就是 安全，潮，不可阻止。对于hash构成的blockchain，对于pseudo geek来说，这就是牛逼算法和创新。但是我觉得，blockchain就是末日的狂欢。</p>
+<p>什么是bitcoin？bitcoin就是一个冻结blockchian的p2p网络。为什么bitcoin能火？我觉得这就得从货币、交易和支付的本质说起。钱是啥？钱的<a href="http://www.douban.com/note/317278205/">本质就是个“账簿”</a> 。A把10元钱给B，这个本质就是A的账簿-10，B的账簿+10 。交易本生，其实就是信息传递。</p>
+<p>过去信息传递的方式是什么？物物交换、黄金货币 …</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-11-26T17:17:00+00:00">2013-11-26</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
 
 
         <!-- new article -->
@@ -398,76 +460,6 @@ fallback_host:tc.v11.cache6.c.youtube.com</p></p>
 <p>同时，我越来越觉得Google像Microsoft了。很多 NIH 综合症。Airplay不支持也就算了，现有的Miracast，DLNA都被华丽的无视了。非得自己搞个专有的websocket协议。</p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-07-25T09:17:50+00:00">2013-07-25</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/55847613758"  rel="bookmark" >
-              <h2 class="card-title">菊花塞个涡喷发动机 + 滑雪</h2>
-            </a>
-            <p class="card-text"><iframe width="640" height="360" src="http://www.youtube.com/embed/icUCcDucII8?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-
-<p>开挂的老外</p>
-<p><a href="http://www.reddit.com/r/videos/comments/1il8zi/snow_ski_jet_pack_awesome/">via</a></p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-07-19T01:23:23+00:00">2013-07-19</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/55421780172"  rel="bookmark" >
-              <h2 class="card-title">Sally-Anne test</h2>
-            </a>
-            <p class="card-text"><p>好吧，看了这么久acfun居然<a href="http://www.acfun.tv/v/ac644991">学到了姿势</a></p>
-<p>这是一个心理学和认知学的实验。Sally-Anne test</p>
-<p>Sally和Anne在同一个房间</p>
-<p>Sally有一个<strong>盒子</strong></p>
-<p>Anne有一个<strong>篮子</strong></p>
-<p>这两个容器都是有盖不透明的。</p>
-<p>现在Sally把一块饼干放在<strong>盒子</strong>里，然后出门离开了</p>
-<p>Anne 随后，把饼干从 <strong>盒子</strong> 取出来，放到自己的<strong>篮子</strong>里，盖好。</p>
-<p>一会儿，Sally回到房间。这个时候她去寻找自己的饼干，请问Sally会去 盒子 还是 篮子 寻找？</p>
-<p>心智不成熟，小于四岁的孩子会回答：篮子。</p>
-<p>其他参考：</p>
-<p>译言： http://article.yeeyan.org/compare/322659</p>
-<p>http://www.huanqiukexue.com/html/newgc …</p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-07-14T09:34:42+00:00">2013-07-14</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/55311741840"  rel="bookmark" >
-              <h2 class="card-title">android cid</h2>
-            </a>
-            <p class="card-text"><p>this pdf</p>
-<p>http://events.ccc.de/congress/2010/Fahrplan/attachments/1781_27c3-android-geolocation.pdf</p>
-<p>注意看截图：</p>
-<p><img alt="" src="/images/tumblr/55311741840_0.png" /></p>
-<p>20801，其中MCC=208，MNC=01<br />
-LAC=0403 <br />
-CID=61E00</p>
-<p>有这个信息之后，我们打开国产CID定位工具：</p>
-<p>http://www.minigps.net/map.html</p>
-<p><img alt="" src="/images/tumblr/55311741840_1.png" /></p>
-<p>就得到了基站位置。</p>
-<p>在自己手机上也可以直接通过下边命令来即时刷新：</p>
-<pre><code># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
-# logcat -b radio RILJ:D | grep SM | grep OPERA …</code></pre></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-07-12T23:30:03+00:00">2013-07-12</time></p>
 <p>archive</p>            </div>
           </article>
         </div>

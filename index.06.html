@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>Est's Blog</title>
+  <head>
+    <title>Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,6 +24,7 @@
         background: #ecedef url("/theme/img/ignasi_pattern_s.png") repeat;
       }
     </style>
+  </head>
   <body class="list-body">
 <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="/" class="nav-text">
@@ -48,6 +50,72 @@
         <p class="list-header-subtext">This blog is rated&nbsp;&nbsp;R⃣ , viewer discretion is advised</p>
         <!-- <h1 class="list-header-title">Est's Blog</h1> -->
       </header>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/91803677460"  rel="bookmark" >
+              <h2 class="card-title">A rule of thumb is that you have security by obscurity</h2>
+            </a>
+            <p class="card-text"><p>摘录一些</p>
+<blockquote>
+<p>Jack Voth, Algenol’s information technology chief, stumbled on something odd: a telnet connection to its videoconference camera from an Internet Protocol address in China</p>
+<p>Hacking attacks come from many countries, he says, but most are efforts to steal credit-card information. Chinese hackers, by contrast, tend to target trade …</p></blockquote></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2014-07-14T22:01:22+00:00">2014-07-14</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/84684285685"  rel="bookmark" >
+              <h2 class="card-title">Haskell, Ruby, Python, Nodejs如何把一个句子的词语倒序</h2>
+            </a>
+            <p class="card-text"><p>Haskell:   </p>
+<pre><code>unwords . reverse . words $ sentence
+</code></pre>
+<p>Ruby:   </p>
+<pre><code>sentence.split.reverse.join ' '
+</code></pre>
+<p>Python:   </p>
+<pre><code>" ".join(reversed(sentence.split()))
+</code></pre>
+<p>Node.js:    </p>
+<pre><code>var EventEmitter = require('events').EventEmitter;
+
+var emitter = new EventEmitter();
+
+emitter.on('got sentence', function(sentence) {
+    emitter.emit('split sentense', sentence.split(' '));
+});
+emitter.on('split sentense', function(splitted) {
+    emitter.emit('reversed', splitted.reverse());
+});
+emitter …</code></pre></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2014-05-04T00:05:00+00:00">2014-05-04</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/84292694490"  rel="bookmark" >
+              <h2 class="card-title">蓝翔技校的黑阔暴露了</h2>
+            </a>
+            <p class="card-text"><p><img alt="" src="/images/tumblr/84292694490.png" /></p>
+<p><a href="https://groups.google.com/d/topic/python-cn/9CAHfvaPrBg/discussion">via</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2014-04-29T23:51:08+00:00">2014-04-29</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
 
 
         <!-- new article -->
@@ -405,66 +473,6 @@ for vec in permutations(cols):
 <p><a href="http://www.reddit.com/r/technology/comments/1rwuhw/predictions_about_the_web_from_1995_the_truth_in/cdrx2ep">via</a></p></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-12-03T01:27:50+00:00">2013-12-03</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/68759151296"  rel="bookmark" >
-              <h2 class="card-title">GoLang with Sublime on Windows</h2>
-            </a>
-            <p class="card-text"><p>好吧。还在力战渣windows。非管理员权限。<a href="http://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DArchive">下载zip包</a>解压到 D:\dev\go</p>
-<p>sublime处理中文路径一直很bug。需要修改 /Data/Packages/Default/exec.py:45 行：</p>
-<pre><code>    for k, v in proc_env.iteritems():
-        nv =  os.path.expandvars(v)
-        if isinstance(v, unicode):
-            import locale
-            nv = nv.encode(locale.getdefaultlocale()[1])
-        proc_env[k] = nv
-</code></pre>
-<p>然后菜单 Tools -&gt; Build System -&gt; New...</p>
-<pre><code>{
-    "cmd": ["go …</code></pre></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-12-02T01:25:18+00:00">2013-12-02</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/68445610297"  rel="bookmark" >
-              <h2 class="card-title">SSRF - 看了这个slides，再也不相信procfs里的fd了</h2>
-            </a>
-            <p class="card-text"><iframe src="http://www.slideshare.net/slideshow/embed_code/15264310" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-
-<p><div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/d0znpp/ssrf-attacks-and-sockets-smorgasbord-of-vulnerabilities" title="SSRF attacks and sockets: smorgasbord of vulnerabilities" target="_blank">SSRF attacks and sockets: smorgasbord of vulnerabilities</a> </strong> from <strong><a href="http://www.slideshare.net/d0znpp" target="_blank">Ivan Novikov</a></strong> </div></p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-11-29T03:02:37+00:00">2013-11-29</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/68199814606"  rel="bookmark" >
-              <h2 class="card-title">bitcoin —— 末日的狂欢</h2>
-            </a>
-            <p class="card-text"><p>bitcoin —— 末日的狂欢</p>
-<p>bitcoin的出现，对于每一个geek和码农都是boner级别的兴奋的。码农对金融这块“白富美”垂涎已久，过去能接入银行API的，少之又少。而bitcoin直接把胚胎状的一个“白富美”免费送给了每一个愿意上的人。Programmable money。多么响亮的口号。</p>
-<p>bitcoin有更多响亮的口号，让一批先驱者坚信不移的认为这是未来。也让另一部分怀疑者直接给bitcoin打上“传销”的标签。</p>
-<p>比如说p2p。对于geek来说，这就是 安全，潮，不可阻止。对于hash构成的blockchain，对于pseudo geek来说，这就是牛逼算法和创新。但是我觉得，blockchain就是末日的狂欢。</p>
-<p>什么是bitcoin？bitcoin就是一个冻结blockchian的p2p网络。为什么bitcoin能火？我觉得这就得从货币、交易和支付的本质说起。钱是啥？钱的<a href="http://www.douban.com/note/317278205/">本质就是个“账簿”</a> 。A把10元钱给B，这个本质就是A的账簿-10，B的账簿+10 。交易本生，其实就是信息传递。</p>
-<p>过去信息传递的方式是什么？物物交换、黄金货币 …</p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-11-26T17:17:00+00:00">2013-11-26</time></p>
 <p>archive</p>            </div>
           </article>
         </div>

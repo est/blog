@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>Est's Blog</title>
+  <head>
+    <title>Est's Blog</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,6 +24,7 @@
         background: #ecedef url("/theme/img/ignasi_pattern_s.png") repeat;
       }
     </style>
+  </head>
   <body class="list-body">
 <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="/" class="nav-text">
@@ -48,6 +50,76 @@
         <p class="list-header-subtext">This blog is rated&nbsp;&nbsp;R⃣ , viewer discretion is advised</p>
         <!-- <h1 class="list-header-title">Est's Blog</h1> -->
       </header>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/55847613758"  rel="bookmark" >
+              <h2 class="card-title">菊花塞个涡喷发动机 + 滑雪</h2>
+            </a>
+            <p class="card-text"><iframe width="640" height="360" src="http://www.youtube.com/embed/icUCcDucII8?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<p>开挂的老外</p>
+<p><a href="http://www.reddit.com/r/videos/comments/1il8zi/snow_ski_jet_pack_awesome/">via</a></p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-07-19T01:23:23+00:00">2013-07-19</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/55421780172"  rel="bookmark" >
+              <h2 class="card-title">Sally-Anne test</h2>
+            </a>
+            <p class="card-text"><p>好吧，看了这么久acfun居然<a href="http://www.acfun.tv/v/ac644991">学到了姿势</a></p>
+<p>这是一个心理学和认知学的实验。Sally-Anne test</p>
+<p>Sally和Anne在同一个房间</p>
+<p>Sally有一个<strong>盒子</strong></p>
+<p>Anne有一个<strong>篮子</strong></p>
+<p>这两个容器都是有盖不透明的。</p>
+<p>现在Sally把一块饼干放在<strong>盒子</strong>里，然后出门离开了</p>
+<p>Anne 随后，把饼干从 <strong>盒子</strong> 取出来，放到自己的<strong>篮子</strong>里，盖好。</p>
+<p>一会儿，Sally回到房间。这个时候她去寻找自己的饼干，请问Sally会去 盒子 还是 篮子 寻找？</p>
+<p>心智不成熟，小于四岁的孩子会回答：篮子。</p>
+<p>其他参考：</p>
+<p>译言： http://article.yeeyan.org/compare/322659</p>
+<p>http://www.huanqiukexue.com/html/newgc …</p></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-07-14T09:34:42+00:00">2013-07-14</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
+
+
+        <!-- new article -->
+        <div class="card blog-card">
+          <article class="card-body">
+            <a href="/post/55311741840"  rel="bookmark" >
+              <h2 class="card-title">android cid</h2>
+            </a>
+            <p class="card-text"><p>this pdf</p>
+<p>http://events.ccc.de/congress/2010/Fahrplan/attachments/1781_27c3-android-geolocation.pdf</p>
+<p>注意看截图：</p>
+<p><img alt="" src="/images/tumblr/55311741840_0.png" /></p>
+<p>20801，其中MCC=208，MNC=01<br />
+LAC=0403 <br />
+CID=61E00</p>
+<p>有这个信息之后，我们打开国产CID定位工具：</p>
+<p>http://www.minigps.net/map.html</p>
+<p><img alt="" src="/images/tumblr/55311741840_1.png" /></p>
+<p>就得到了基站位置。</p>
+<p>在自己手机上也可以直接通过下边命令来即时刷新：</p>
+<pre><code># logcat -b radio RILJ:D | grep SM | grep REGISTRATION_STATE
+# logcat -b radio RILJ:D | grep SM | grep OPERA …</code></pre></p>
+            <div class="card-subtext muted-text">
+              <p>Posted <time datetime="2013-07-12T23:30:03+00:00">2013-07-12</time></p>
+<p>archive</p>            </div>
+          </article>
+        </div>
 
 
         <!-- new article -->
@@ -414,73 +486,6 @@ $ brew install rtlsdr gr-osmosdr …</code></pre></p>
 # somehow lost the second block, use the third block the …</code></pre></p>
             <div class="card-subtext muted-text">
               <p>Posted <time datetime="2013-05-21T03:07:00+00:00">2013-05-21</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/50487021215"  rel="bookmark" >
-              <h2 class="card-title">get rid of example.com for Django's default site</h2>
-            </a>
-            <p class="card-text"><p>Suppose you have the following model:</p>
-<pre><code>class MyModel(models.Model):
-    def get_absolute_url(self, *args, **kwargs):
-        return '/show/%s' % self.pk
-</code></pre>
-<p>The "View on site" button on admin will always take you to example.com, which is bullshit.</p>
-<p>Even if you override it with <code>ABSOLUTE_URL_OVERRIDES</code> in settings.py.</p>
-<p>The solution is …</p></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-05-15T05:39:29+00:00">2013-05-15</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/50388604760"  rel="bookmark" >
-              <h2 class="card-title">比奥数题还脑残的Python题</h2>
-            </a>
-            <p class="card-text"><p>下边的问题是在CPython interactive shell 里<strong>按顺序</strong>执行的，请在 下划线处  ____  填上答案。</p>
-<pre><code>&gt;&gt;&gt; x = [1, 2, 3]
-&gt;&gt;&gt; for number in x:
-...     number += 1
-... 
-&gt;&gt;&gt; print x
-__________________
-&gt;&gt;&gt; print 1 == True
-__________________
-&gt;&gt;&gt; print 0 == False
-__________________
-&gt;&gt;&gt; print 2 == True
-__________________
-&gt;&gt;&gt; item = 'x'
-&gt;&gt;&gt; print item == "y" or "z"
-___________________
-&gt;&gt;&gt; l = [1,6,4,2,3,9 …</code></pre></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-05-13T21:55:01+00:00">2013-05-13</time></p>
-<p>archive</p>            </div>
-          </article>
-        </div>
-
-
-        <!-- new article -->
-        <div class="card blog-card">
-          <article class="card-body">
-            <a href="/post/50147253283"  rel="bookmark" >
-              <h2 class="card-title">微软到底出了什么问题</h2>
-            </a>
-            <p class="card-text"><p>最近HN上有个<a href="https://news.ycombinator.com/item?id=5688151">关于Linux 3.1内核tickless新特性</a>的讨论，然后一位微软员工，自称来自NT内核组，发个帖子抱怨微软：</p>
-<blockquote>
-<p>See, component owners are generally openly hostile to outside patches: if you're a dev, accepting an outside patch makes your <strong>lead</strong> angry (due to the need to maintain this patch and to justify in in shiproom the unplanned design change), makes <strong>test …</strong></p></blockquote></p>
-            <div class="card-subtext muted-text">
-              <p>Posted <time datetime="2013-05-11T01:52:00+00:00">2013-05-11</time></p>
 <p>archive</p>            </div>
           </article>
         </div>
