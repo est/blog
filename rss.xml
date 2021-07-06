@@ -8,7 +8,7 @@
 &lt;p&gt;&lt;code&gt;net.inet.tcp.keepinit&lt;/code&gt;默认值是 75000 ，单位是毫秒。注意 Linux 下没这设置，而且单位是 秒&lt;/p&gt;
 &lt;p&gt;这句话学究式的解释可以通过 &lt;code&gt;man 4 tcp&lt;/code&gt; 得到，摘录几条：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;TCP_CONNECTIONTIMEOUT  The TCP_CONNECTIONTIMEOUT option allows to specify the timeout, in seconds, for new …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 02 Jul 2021 15:51:19 +0000</pubDate><guid isPermaLink="false">tag:None,2021-07-02:/2021/stdout-009</guid></item><item><title>MySQL on duplicate keys in SQLAlchemy</title><link>https://blog.est.im/202106/stdout-008</link><description>&lt;p&gt;A simple function to upsert something atomically into MySQL&lt;/p&gt;
+&lt;p&gt;TCP_CONNECTIONTIMEOUT  The TCP_CONNECTIONTIMEOUT option allows to specify the timeout, in seconds, for new …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Fri, 02 Jul 2021 15:51:19 +0000</pubDate><guid isPermaLink="false">tag:None,2021-07-02:/2021/stdout-009</guid></item><item><title>MySQL on duplicate key in SQLAlchemy</title><link>https://blog.est.im/202106/stdout-008</link><description>&lt;p&gt;A simple function to upsert something atomically into MySQL&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;def upsert(val1, val2, **kwargs):
     """upsert val1-val2 pair into mysql and return the pk"""
     from sqlalchemy.dialects.mysql import insert

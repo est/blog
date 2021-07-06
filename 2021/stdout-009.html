@@ -69,6 +69,10 @@ tcp.keepinit Timeout, in milliseconds, for new, non-established TCP connections.
 </blockquote>
 <p>换句话说，就是 TCP 第一个 syn 包最多给3秒等待。超过3秒就拉倒，直接报 <code>ERR_CONNECTION_TIMED_OUT</code> 完事。</p>
 <p>我觉得，如果一个域名和TCP端口3秒钟内无法完成握手，就别执着了。你再干等75秒也不可能连上。这个值只会影响初始连接的超时，一旦连上了怎么idle都不影响，所以不会影响游戏的tcp或者websocket的长连接。也不影响udp。</p>
+<p>2021-07-06 补充：</p>
+<p>重启保持有效：</p>
+<pre><code>echo net.inet.tcp.keepinit=3000 | sudo tee -a /etc/sysctl.conf
+</code></pre>
 
 </article>
 
