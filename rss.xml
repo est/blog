@@ -141,7 +141,7 @@ async def other_api(other_path: str, req: Request):
 &lt;p&gt;无独有偶，在&lt;a href="https://news.ycombinator.com/item?id=25723851"&gt;Hacker News上&lt;/a&gt;也看到一篇趣文 「&lt;a href="https://boyle.substack.com/p/can-zoom-save-the-american-family"&gt;视频聊天软件 ZOOM 能拯救美式家庭吗 Can Zoom Save the American Family?&lt;/a&gt;」&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Corporate families, as defined by Steven Ruggles, a professor of history at …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">est</dc:creator><pubDate>Tue, 26 Jan 2021 05:49:36 +0000</pubDate><guid isPermaLink="false">tag:None,2021-01-26:/202101/stderr-001</guid></item><item><title>阶级滑落已经在发生</title><link>https://blog.est.im/202101/stdin-002</link><description>&lt;p&gt;刷到个视频&lt;/p&gt;
-&lt;div class="div-iframe"&gt;&lt;iframe src="https://www.youtube.com/embed/XXWYPeEfOb8?start=12:10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div class="div-iframe"&gt;&lt;iframe src="https://www.youtube.com/embed/XXWYPeEfOb8?start=12:10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;p&gt;12:10 开始那个哥说的话，很有感触&lt;/p&gt;
 &lt;blockquote&gt;
